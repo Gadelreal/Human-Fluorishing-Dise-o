@@ -545,15 +545,71 @@ ol {
   margin-left: 1.5rem;
 }
 
-/* Secciones de lección */
+/* Secciones de lección - Sistema de alternancia automática */
 .lesson-section {
   margin-bottom: 10rem; /* Duplicado de 5rem a 10rem */
   padding-bottom: 2rem; /* Aumentado de 1.5rem a 2rem */
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .lesson-section:last-child {
   border-bottom: none;
+}
+
+/* Módulos con fondo blanco (impares) - comportamiento por defecto */
+.lesson-section:nth-child(odd) {
+  background-color: white;
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Módulos con fondo gris (pares) - ancho completo del viewport */
+.lesson-section:nth-child(even) {
+  background-color: #f5f5f5;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 0;
+  box-sizing: border-box;
+}
+
+/* Contenido dentro de los módulos con fondo gris */
+.lesson-section:nth-child(even) > * {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Ajustes responsivos para los módulos alternados */
+@media (max-width: 768px) {
+  .lesson-section:nth-child(odd) {
+    padding: 1rem;
+  }
+
+  .lesson-section:nth-child(even) {
+    padding: 2rem 0;
+  }
+
+  .lesson-section:nth-child(even) > * {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lesson-section:nth-child(even) {
+    padding: 1.5rem 0;
+  }
 }
 
 /* Puntos clave - Versión mejorada */
