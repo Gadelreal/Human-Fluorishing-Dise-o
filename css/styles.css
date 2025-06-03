@@ -3326,3 +3326,49 @@ main::after,
 .survey-background::after {
   display: none !important;
 }
+
+/* Añadir estilos específicos para el módulo "Welcome to the course" */
+
+/* Títulos de video y secciones para el módulo Welcome - Open Sans Light 32px */
+.welcome-module h2,
+.welcome-module .video-title {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 32px;
+  color: #000;
+  margin: 1.5rem 0 1rem;
+  line-height: 1.4;
+}
+
+/* Eliminar sombra del poster de video en el módulo Welcome */
+.welcome-module .video-container img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none; /* Eliminar sombra */
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.welcome-module .video-container img:hover {
+  transform: translateY(-5px);
+  box-shadow: none; /* Mantener sin sombra en hover */
+}
+
+/* Ajustes responsivos para el módulo Welcome */
+@media (max-width: 768px) {
+  .welcome-module h2,
+  .welcome-module .video-title {
+    font-size: 28px; /* Reducir ligeramente en tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-module h2,
+  .welcome-module .video-title {
+    font-size: 24px; /* Reducir más en móviles */
+  }
+}
