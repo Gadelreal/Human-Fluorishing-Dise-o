@@ -3453,3 +3453,51 @@ body h2 {
   font-size: 32px !important;
   margin-bottom: 48px !important;
 }
+
+/* Eliminar sombras de videos en módulos con fondo gris */
+.lesson-section:nth-child(even) .responsive-video,
+.lesson-section:nth-child(even) .video-container,
+.lesson-section:nth-child(even) .video-js,
+.lesson-section:nth-child(even) video,
+.lesson-section:nth-child(even) iframe {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras en hover para videos en módulos con fondo gris */
+.lesson-section:nth-child(even) .responsive-video:hover,
+.lesson-section:nth-child(even) .video-container:hover,
+.lesson-section:nth-child(even) .video-js:hover,
+.lesson-section:nth-child(even) video:hover,
+.lesson-section:nth-child(even) iframe:hover {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras de videos en módulos con clase module-background */
+.module-background .responsive-video,
+.module-background .video-container,
+.module-background .video-js,
+.module-background video,
+.module-background iframe {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras en hover para videos en módulos con clase module-background */
+.module-background .responsive-video:hover,
+.module-background .video-container:hover,
+.module-background .video-js:hover,
+.module-background video:hover,
+.module-background iframe:hover {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
