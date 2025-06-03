@@ -388,30 +388,34 @@ well-being. Here's how you can do it:</p>
       
       <!-- 7. Fondo blanco -->
       <section class="lesson-section no-borders">
-        <h2>The Broaden and Build Theory</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="broaden-build-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w6v05"
-            data-logo="assets/images/logo-ie-small.png"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v05-the-broaden-and-build-theory/mp4/w6v05-the-broaden-and-build-theory_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-          </video>
-        </div>
-        
-        <div class="key-point">
-          <h3>Key Point</h3>
-          <p>The Broaden and Build Theory, developed by Barbara Fredrickson, suggests that 
-          positive emotions broaden our awareness and visual field. As a result, we develop a 
-          greater appreciation of and ability to engage with the world around us.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>The Broaden and Build Theory</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="broaden-build-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w6v05"
+                data-logo="assets/images/logo-ie-small.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v05-the-broaden-and-build-theory/mp4/w6v05-the-broaden-and-build-theory_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+            
+            <div class="key-point">
+              <h3>Key Point</h3>
+              <p>The Broaden and Build Theory, developed by Barbara Fredrickson, suggests that 
+              positive emotions broaden our awareness and visual field. As a result, we develop a 
+              greater appreciation of and ability to engage with the world around us.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -450,68 +454,72 @@ well-being. Here's how you can do it:</p>
       
       <!-- 9. Fondo blanco -->
       <section class="lesson-section no-borders">
-        <h2>Activity: Practicing Metacognition</h2>
-        <p>Now it's time to practice some ways to elevate your metacognition. Choose at least two 
-        of these practices and try them out!</p>
-        
-        <div class="metacognition-exercise">
-          <div class="checkbox-container">
-            <input type="checkbox" id="practice1" class="metacognition-checkbox">
-            <label for="practice1">
-              <strong>Journaling:</strong> Writing down your thoughts, feelings, and experiences helps 
-              increase self-awareness and provides insights into your thinking patterns.
-            </label>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Activity: Practicing Metacognition</h2>
+            <p>Now it's time to practice some ways to elevate your metacognition. Choose at least two 
+            of these practices and try them out!</p>
+            
+            <div class="metacognition-exercise">
+              <div class="checkbox-container">
+                <input type="checkbox" id="practice1" class="metacognition-checkbox">
+                <label for="practice1">
+                  <strong>Journaling:</strong> Writing down your thoughts, feelings, and experiences helps 
+                  increase self-awareness and provides insights into your thinking patterns.
+                </label>
+              </div>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="practice2" class="metacognition-checkbox">
+                <label for="practice2">
+                  <strong>Mindfulness:</strong> Focusing your awareness on the present moment can reduce 
+                  stress and improve cognitive clarity by preventing your mind from wandering.
+                </label>
+              </div>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="practice3" class="metacognition-checkbox">
+                <label for="practice3">
+                  <strong>Take time to pause:</strong> Deliberately pausing before reacting allows you to 
+                  consider your thoughts and responses, leading to more thoughtful decision-
+                  making.
+                </label>
+              </div>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="practice4" class="metacognition-checkbox">
+                <label for="practice4">
+                  <strong>Stand up and move around:</strong> Physical movement can boost boost brain function and 
+                  creativity, helping you think more clearly and effectively.
+                </label>
+              </div>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="practice5" class="metacognition-checkbox">
+                <label for="practice5">
+                  <strong>Appreciate nature:</strong> Spending time in nature, or even just looking through a 
+                  window to appreciate the natural world, can reduce stress and enhance your 
+                  mood, providing a fresh perspective and mental clarity.
+                </label>
+              </div>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="practice6" class="metacognition-checkbox">
+                <label for="practice6">
+                  <strong>Connect with another human being:</strong> Engaging in meaningful conversations 
+                  can provide new insights and help you reflect on your own thoughts and 
+                  feelings.
+                </label>
+              </div>
+              
+              <div class="validation-message" id="metacognition-validation">
+                Please select at least 2 practices to try.
+              </div>
+              
+              <button id="save-metacognition" class="save-button">Confirm Selection</button>
+              <span class="save-feedback" id="feedback-metacognition"></span>
+            </div>
           </div>
-          
-          <div class="checkbox-container">
-            <input type="checkbox" id="practice2" class="metacognition-checkbox">
-            <label for="practice2">
-              <strong>Mindfulness:</strong> Focusing your awareness on the present moment can reduce 
-              stress and improve cognitive clarity by preventing your mind from wandering.
-            </label>
-          </div>
-          
-          <div class="checkbox-container">
-            <input type="checkbox" id="practice3" class="metacognition-checkbox">
-            <label for="practice3">
-              <strong>Take time to pause:</strong> Deliberately pausing before reacting allows you to 
-              consider your thoughts and responses, leading to more thoughtful decision-
-              making.
-            </label>
-          </div>
-          
-          <div class="checkbox-container">
-            <input type="checkbox" id="practice4" class="metacognition-checkbox">
-            <label for="practice4">
-              <strong>Stand up and move around:</strong> Physical movement can boost boost brain function and 
-              creativity, helping you think more clearly and effectively.
-            </label>
-          </div>
-          
-          <div class="checkbox-container">
-            <input type="checkbox" id="practice5" class="metacognition-checkbox">
-            <label for="practice5">
-              <strong>Appreciate nature:</strong> Spending time in nature, or even just looking through a 
-              window to appreciate the natural world, can reduce stress and enhance your 
-              mood, providing a fresh perspective and mental clarity.
-            </label>
-          </div>
-          
-          <div class="checkbox-container">
-            <input type="checkbox" id="practice6" class="metacognition-checkbox">
-            <label for="practice6">
-              <strong>Connect with another human being:</strong> Engaging in meaningful conversations 
-              can provide new insights and help you reflect on your own thoughts and 
-              feelings.
-            </label>
-          </div>
-          
-          <div class="validation-message" id="metacognition-validation">
-            Please select at least 2 practices to try.
-          </div>
-          
-          <button id="save-metacognition" class="save-button">Confirm Selection</button>
-          <span class="save-feedback" id="feedback-metacognition"></span>
         </div>
       </section>
       
@@ -543,16 +551,20 @@ well-being. Here's how you can do it:</p>
       
       <!-- 11. Fondo blanco -->
       <section class="lesson-section no-borders">
-        <h2>Activity: Leveraging Body, Mind, and Soul</h2>
-        <p>We can leverage the integration of body, mind, and soul to support our awareness, 
-        emotions, and cognition. Specifically, we can leverage aspects of the body, mind, and 
-        soul so that they enhance each other. For example, if we're feeling mentally sluggish at 
-        work, we can activate the body by going for a walk. By energizing the body through 
-        physical activity, we can energize the mind. Similarly, if we're feeling physically tired, 
-        we can tap into the soul by connecting with others. By energizing the soul with human 
-        connection, we can energize the body.</p>
-        <p>Given these examples, what practices can you cultivate to better leverage the body, 
-        mind, and soul connection to support you in your flourishing?</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Activity: Leveraging Body, Mind, and Soul</h2>
+            <p>We can leverage the integration of body, mind, and soul to support our awareness, 
+            emotions, and cognition. Specifically, we can leverage aspects of the body, mind, and 
+            soul so that they enhance each other. For example, if we're feeling mentally sluggish at 
+            work, we can activate the body by going for a walk. By energizing the body through 
+            physical activity, we can energize the mind. Similarly, if we're feeling physically tired, 
+            we can tap into the soul by connecting with others. By energizing the soul with human 
+            connection, we can energize the body.</p>
+            <p>Given these examples, what practices can you cultivate to better leverage the body, 
+            mind, and soul connection to support you in your flourishing?</p>
+          </div>
+        </div>
       </section>
       
       <!-- 12. Fondo gris -->
@@ -583,23 +595,27 @@ well-being. Here's how you can do it:</p>
       
       <!-- 13. Fondo blanco -->
       <section class="lesson-section no-borders">
-        <h2>Closing Meditation: Lesson 2</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="meditation-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w7v02"
-            data-logo="assets/images/logo-ie-small.png"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v02-deepening-awareness-of-motions-and-thoughts/mp4/w7v02-deepening-awareness-of-motions-and-thoughts_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-          </video>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Closing Meditation: Lesson 2</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="meditation-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w7v02"
+                data-logo="assets/images/logo-ie-small.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v02-deepening-awareness-of-motions-and-thoughts/mp4/w7v02-deepening-awareness-of-motions-and-thoughts_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+          </div>
         </div>
       </section>
       
