@@ -620,18 +620,16 @@ ol {
   border: 1px solid #e0e0e0 !important;
   border-radius: 0 !important; /* Sin esquinas redondeadas */
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
+  margin: 32px auto 1.5rem auto !important; /* 32px de separación superior del video */
   position: relative;
   box-shadow: none !important; /* Sin sombras */
   transition: none !important; /* Eliminar transiciones */
   width: 100% !important;
+  max-width: none !important; /* Eliminar max-width para que use el del contenedor padre */
   box-sizing: border-box !important;
-  max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
 
-/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
+/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación exacta */
 .lesson-section:nth-child(even) .key-point,
 .module-background .key-point,
 .survey-background .key-point {
@@ -640,42 +638,39 @@ ol {
   box-shadow: none !important;
   border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px auto 1.5rem auto !important;
-  max-width: 1200px !important;
-  width: calc(100% - 4rem) !important; /* Ajustar para mantener el mismo ancho que el contenido */
-  box-sizing: border-box !important;
-}
-
-/* Corregir específicamente la alineación en módulos con fondo gris */
-.lesson-section:nth-child(even) > .key-point {
-  padding-left: calc(2rem + 3.5rem) !important; /* Alinear con el contenido del módulo */
-  padding-right: 2rem !important;
+  margin: 32px 0 1.5rem 0 !important;
   width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  max-width: none !important;
   box-sizing: border-box !important;
 }
 
-/* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
-.module-background .key-point,
-.survey-background .key-point {
-  width: calc(100% - 4rem) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+/* Crear un contenedor específico para alinear Key Points con videos */
+.video-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
-/* Eliminar el padding extra en dispositivos móviles */
+/* En módulos con fondo gris, asegurar que el Key Point esté dentro del mismo contenedor que el video */
+.lesson-section:nth-child(even) .video-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Ajustes responsivos para mantener la alineación */
 @media (max-width: 768px) {
+  .video-content-container,
+  .lesson-section:nth-child(even) .video-content-container {
+    padding: 0 1rem;
+  }
+
   .lesson-section:nth-child(even) .key-point,
   .module-background .key-point,
   .survey-background .key-point {
-    width: calc(100% - 2rem) !important;
     padding-left: 3.5rem !important;
-    padding-right: 1rem !important;
-  }
-
-  .lesson-section:nth-child(even) > .key-point {
-    padding-left: calc(1rem + 3.5rem) !important;
     padding-right: 1rem !important;
   }
 }
@@ -3152,445 +3147,3 @@ html {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Mejorar la visibilidad del menú de navegación */
-.hamburger-nav a {
-  padding: 1rem 1.5rem;
-  display: block;
-  text-decoration: none;
-  color: var(--text-color-dark);
-}
-
-.hamburger-nav a:hover,
-.hamburger-nav a:focus {
-  background-color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.hamburger-nav a.active {
-  font-weight: bold;
-  color: var(--primary-color);
-  border-left: 3px solid var(--primary-color);
-}
-
-/* Mejorar la visibilidad del estado activo */
-.nav-button:active,
-.start-button:active,
-.save-button:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Asegurar que los videos tengan controles accesibles */
-.video-js .vjs-control-bar {
-  background-color: rgba(0, 0, 0, 0.7); /* Mejor contraste */
-}
-
-/* Mejorar la visibilidad de los elementos de formulario */
-.checkbox-container {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.checkbox-container input[type="checkbox"] {
-  margin-top: 0.3rem;
-  margin-right: 0.8rem;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-/* Asegurar que el texto de los botones sea visible */
-.nav-button,
-.start-button,
-.save-button {
-  color: white !important;
-}
-
-/* Después de la definición de .content-aligned-container */
-.content-aligned-container {
-  background-color: white;
-  padding: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajuste responsivo para la clase content-aligned-container */
-@media (max-width: 768px) {
-  .content-aligned-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 120px; /* Ajustar para tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .content-aligned-container {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* También ajustar el main para que tenga un padding-top adecuado cuando no usa content-aligned-container */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para main */
-@media (max-width: 768px) {
-  main {
-    padding-top: 120px; /* Ajustar para tablets */
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  main {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* Añadir estas reglas al final del archivo CSS para asegurar que tengan prioridad */
-
-/* Eliminar todos los bordes y outlines magenta de cualquier elemento */
-* {
-  outline: none !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-}
-
-/* Eliminar específicamente los bordes de los contenedores de módulos */
-.module-background,
-.survey-background,
-.module-content,
-.survey-content,
-main,
-body,
-html {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar cualquier pseudo-elemento que pueda estar causando las líneas */
-.module-background::before,
-.module-background::after,
-.survey-background::before,
-.survey-background::after,
-.module-content::before,
-.module-content::after,
-.survey-content::before,
-.survey-content::after,
-main::before,
-main::after,
-body::before,
-body::after {
-  display: none !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-/* Asegurar que no haya bordes en estados focus/active */
-*:focus,
-*:active,
-*:focus-visible,
-*:focus-within {
-  outline: none !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar específicamente los bordes magenta */
-*[style*="border-color: #d6208f"],
-*[style*="border-color:#d6208f"],
-*[style*="border: 1px solid #d6208f"],
-*[style*="border:1px solid #d6208f"] {
-  border-color: transparent !important;
-}
-
-/* Eliminar cualquier borde vertical en los contenedores principales */
-body > *,
-main > *,
-.content-aligned-container > *,
-.content-container > * {
-  border-left: none !important;
-  border-right: none !important;
-}
-
-/* Asegurar que los módulos solo tengan efectos de hover controlados */
-.module-background,
-.survey-background {
-  border-left: none !important;
-  border-right: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Mantener solo el efecto de hover para los módulos */
-.module-background:hover,
-.survey-background:hover {
-  background-color: var(--module-bg-hover);
-}
-
-/* Eliminar cualquier borde o outline en los elementos que puedan recibir focus */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-[tabindex]:focus,
-.module-background:focus,
-.survey-background:focus,
-.module-content:focus,
-.survey-content:focus {
-  outline: none !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar cualquier borde magenta en toda la página */
-[style*="border-color: #d6208f"],
-[style*="border-color:#d6208f"],
-[style*="border-left-color: #d6208f"],
-[style*="border-left-color:#d6208f"],
-[style*="border-right-color: #d6208f"],
-[style*="border-right-color:#d6208f"] {
-  border-color: transparent !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-}
-
-/* Asegurar que no haya bordes en los contenedores principales */
-html,
-body {
-  overflow-x: hidden;
-}
-
-/* Eliminar cualquier borde en los elementos que puedan estar causando el problema */
-.module-background,
-.survey-background {
-  position: relative;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  left: 0;
-  right: 0;
-  border-left: none !important;
-  border-right: none !important;
-}
-
-/* Corregir el cálculo del ancho y margen que podría estar causando el problema */
-.module-background,
-.survey-background {
-  width: 100%;
-  margin-left: 0;
-  transform: none;
-}
-
-/* Eliminar cualquier borde o línea vertical en toda la página */
-body::before,
-body::after,
-main::before,
-main::after,
-.content-aligned-container::before,
-.content-aligned-container::after,
-.content-container::before,
-.content-container::after,
-.module-background::before,
-.module-background::after,
-.survey-background::before,
-.survey-background::after {
-  display: none !important;
-}
-
-/* Añadir estilos específicos para el módulo "Welcome to the course" */
-
-/* Títulos de video y secciones para el módulo Welcome - Open Sans Light 32px */
-.welcome-module h2,
-.welcome-module .video-title {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300; /* Light */
-  font-size: 32px;
-  color: #000;
-  margin: 1.5rem 0 1rem;
-  line-height: 1.4;
-}
-
-/* Eliminar sombra del poster de video en el módulo Welcome */
-.welcome-module .video-container img {
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: none; /* Eliminar sombra */
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.welcome-module .video-container img:hover {
-  transform: translateY(-5px);
-  box-shadow: none; /* Mantener sin sombra en hover */
-}
-
-/* Añadir espaciado específico entre el título y el video en el módulo Welcome */
-.welcome-module h2 + .responsive-video {
-  margin-top: 64px; /* Espaciado de 64px entre título y video */
-}
-
-/* Ajustes responsivos para el espaciado */
-@media (max-width: 768px) {
-  .welcome-module h2 + .responsive-video {
-    margin-top: 48px; /* Reducir ligeramente en tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2 + .responsive-video {
-    margin-top: 40px; /* Reducir más en móviles */
-  }
-}
-
-/* Ajustes responsivos para el módulo Welcome */
-@media (max-width: 768px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 28px; /* Reducir ligeramente en tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 24px; /* Reducir más en móviles */
-  }
-}
-
-/* Estilos más específicos para eliminar la sombra y aplicar el espaciado: */
-
-/* Estilos específicos para el módulo Welcome to the Course */
-.welcome-module h2 {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  color: #000;
-  margin-bottom: 64px !important;
-}
-
-.welcome-module .responsive-video {
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.welcome-module .video-js {
-  box-shadow: none !important;
-}
-
-/* Eliminar cualquier sombra en el contenedor del video */
-.welcome-module .responsive-video,
-.welcome-module .video-container,
-.welcome-module .video-js,
-.welcome-module video {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-}
-
-/* Asegurar que no hay sombras en el hover */
-.welcome-module .responsive-video:hover,
-.welcome-module .video-container:hover,
-.welcome-module .video-js:hover,
-.welcome-module video:hover {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .welcome-module h2 {
-    font-size: 28px;
-    margin-bottom: 48px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2 {
-    font-size: 24px;
-    margin-bottom: 40px !important;
-  }
-}
-
-/* Aplicar Open Sans Light 32px a todos los títulos h2 del body y añadir separación vertical de 48px */
-body h2 {
-  font-family: "Open Sans", sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 32px !important;
-  margin-bottom: 48px !important;
-}
-
-/* Eliminar sombras de videos en módulos con fondo gris */
-.lesson-section:nth-child(even) .responsive-video,
-.lesson-section:nth-child(even) .video-container,
-.lesson-section:nth-child(even) .video-js,
-.lesson-section:nth-child(even) video,
-.lesson-section:nth-child(even) iframe {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Eliminar sombras en hover para videos en módulos con fondo gris */
-.lesson-section:nth-child(even) .responsive-video:hover,
-.lesson-section:nth-child(even) .video-container:hover,
-.lesson-section:nth-child(even) .video-js:hover,
-.lesson-section:nth-child(even) video:hover,
-.lesson-section:nth-child(even) iframe:hover {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Eliminar sombras de videos en módulos con clase module-background */
-.module-background .responsive-video,
-.module-background .video-container,
-.module-background .video-js,
-.module-background video,
-.module-background iframe {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Eliminar sombras en hover para videos en módulos con clase module-background */
-.module-background .responsive-video:hover,
-.module-background .video-container:hover,
-.module-background .video-js:hover,
-.module-background video:hover,
-.module-background iframe:hover {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
