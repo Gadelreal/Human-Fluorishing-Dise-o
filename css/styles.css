@@ -547,7 +547,7 @@ ol {
 
 /* Secciones de lección */
 .lesson-section {
-  margin-bottom: 5rem; /* Aumentado de 3rem a 5rem */
+  margin-bottom: 10rem; /* Duplicado de 5rem a 10rem */
   padding-bottom: 2rem; /* Aumentado de 1.5rem a 2rem */
   border-bottom: 1px solid #eee;
 }
@@ -2686,8 +2686,8 @@ main {
   background-color: var(--module-bg-color);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  margin-bottom: 5rem; /* Aumentado de 3rem a 5rem */
-  margin-top: 3rem; /* Aumentado de 2rem a 3rem */
+  margin-bottom: 10rem; /* Duplicado de 3rem a 5rem */
+  margin-top: 6rem; /* Aumentado de 2rem a 3rem */
   position: relative;
   left: 0;
   right: 0;
@@ -2707,8 +2707,8 @@ main {
   background-color: var(--module-bg-color);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  margin-bottom: 5rem; /* Aumentado de 3rem a 5rem */
-  margin-top: 3rem; /* Aumentado de 2rem a 3rem */
+  margin-bottom: 10rem; /* Duplicado de 3rem a 5rem */
+  margin-top: 6rem; /* Aumentado de 2rem a 3rem */
   position: relative;
   left: 0;
   right: 0;
@@ -2734,8 +2734,8 @@ main {
   margin-left: -50vw;
   margin-right: -50vw;
   padding: 3rem 0;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
+  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
   box-sizing: border-box;
 }
 
@@ -2758,8 +2758,8 @@ main {
   margin-left: -50vw;
   margin-right: -50vw;
   padding: 3rem 0;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
+  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
   box-sizing: border-box;
 }
 
