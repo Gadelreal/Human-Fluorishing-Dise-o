@@ -518,11 +518,29 @@ h1 {
   font-weight: 700;
 }
 
+/* ESTILOS GLOBALES PARA TODOS LOS H2 - Open Sans Light 32px con espaciado de 64px */
 h2 {
-  color: #000;
-  margin: 1.5rem 0 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-weight: 300 !important; /* Light */
+  font-size: 32px !important;
+  color: #000 !important;
+  margin: 1.5rem 0 64px !important; /* 64px de margen inferior */
+  line-height: 1.4 !important;
+}
+
+/* Ajustes responsivos para todos los h2 */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px !important;
+    margin-bottom: 48px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 24px !important;
+    margin-bottom: 40px !important;
+  }
 }
 
 h3 {
@@ -1007,6 +1025,37 @@ button,
   color: #555;
 }
 
+/* ESTILOS GLOBALES PARA ELIMINAR SOMBRAS DE TODOS LOS VIDEOS */
+.responsive-video,
+.video-container,
+.video-js,
+video,
+.youtube-container .responsive-video,
+iframe[src*="youtube"],
+iframe[src*="vimeo"] {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras en estados hover y focus */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+.youtube-container .responsive-video:hover,
+iframe[src*="youtube"]:hover,
+iframe[src*="vimeo"]:hover,
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
 /* Estilos para videos responsivos */
 .responsive-video {
   position: relative;
@@ -1014,7 +1063,6 @@ button,
   width: 100%;
   margin: 1.5rem 0;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .video-description {
@@ -1035,7 +1083,6 @@ button,
   overflow: hidden;
   max-width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .youtube-container .responsive-video iframe {
@@ -2268,7 +2315,7 @@ footer {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: #000;
+  background-color: #000; /* Cambiado de var(--primary-color) a negro */
   border-radius: 3px;
   opacity: 1;
   left: 0;
@@ -2396,10 +2443,6 @@ footer {
 
   h1 {
     font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
   }
 
   h3 {
@@ -2550,6 +2593,7 @@ p {
 main {
   flex: 1;
   padding: 2rem 0;
+  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -2578,6 +2622,13 @@ main {
   main {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 120px; /* Ajustar para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 100px; /* Ajustar para móviles */
   }
 }
 
@@ -2976,7 +3027,6 @@ label {
 p,
 li,
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -3064,26 +3114,6 @@ html {
   border-width: 0;
 }
 
-/* Mejorar la visibilidad del menú de navegación */
-.hamburger-nav a {
-  padding: 1rem 1.5rem;
-  display: block;
-  text-decoration: none;
-  color: var(--text-color-dark);
-}
-
-.hamburger-nav a:hover,
-.hamburger-nav a:focus {
-  background-color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.hamburger-nav a.active {
-  font-weight: bold;
-  color: var(--primary-color);
-  border-left: 3px solid var(--primary-color);
-}
-
 /* Mejorar la visibilidad del estado activo */
 .nav-button:active,
 .start-button:active,
@@ -3142,32 +3172,6 @@ html {
 
 @media (max-width: 480px) {
   .content-aligned-container {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* También ajustar el main para que tenga un padding-top adecuado cuando no usa content-aligned-container */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para main */
-@media (max-width: 768px) {
-  main {
-    padding-top: 120px; /* Ajustar para tablets */
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  main {
     padding-top: 100px; /* Ajustar para móviles */
   }
 }
