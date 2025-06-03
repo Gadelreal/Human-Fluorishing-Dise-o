@@ -591,6 +591,68 @@ ol {
   position: relative;
 }
 
+/* Corregir el espaciado de videos en módulos con fondo gris */
+.lesson-section:nth-child(even) .video-container {
+  margin: 1.5rem auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.lesson-section:nth-child(even) .video-container img,
+.lesson-section:nth-child(even) .responsive-video,
+.lesson-section:nth-child(even) .youtube-container .responsive-video {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Corregir el posicionamiento de key points en módulos con fondo gris */
+.lesson-section:nth-child(even) .key-point {
+  margin: 1.5rem auto;
+  max-width: 1200px;
+  width: calc(100% - 4rem);
+  position: relative;
+}
+
+.lesson-section:nth-child(even) .key-point::before {
+  left: 1rem;
+  top: 1.2rem;
+  position: absolute;
+}
+
+/* Asegurar que todos los elementos internos respeten el contenedor */
+.lesson-section:nth-child(even) h1,
+.lesson-section:nth-child(even) h2,
+.lesson-section:nth-child(even) h3,
+.lesson-section:nth-child(even) p,
+.lesson-section:nth-child(even) ul,
+.lesson-section:nth-child(even) ol {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+/* Corregir el espaciado de ejercicios de reflexión en módulos con fondo gris */
+.lesson-section:nth-child(even) .reflection-exercise,
+.lesson-section:nth-child(even) .metacognition-exercise {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Corregir las tarjetas de lectura en módulos con fondo gris */
+.lesson-section:nth-child(even) .reading-cards {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
 /* Ajustes responsivos para los módulos alternados */
 @media (max-width: 768px) {
   .lesson-section:nth-child(odd) {
@@ -601,8 +663,24 @@ ol {
     padding: 2rem 0;
   }
 
-  .lesson-section:nth-child(even) > * {
-    padding: 0 1rem;
+  .lesson-section:nth-child(even) > *,
+  .lesson-section:nth-child(even) .video-container,
+  .lesson-section:nth-child(even) .key-point,
+  .lesson-section:nth-child(even) h1,
+  .lesson-section:nth-child(even) h2,
+  .lesson-section:nth-child(even) h3,
+  .lesson-section:nth-child(even) p,
+  .lesson-section:nth-child(even) ul,
+  .lesson-section:nth-child(even) ol,
+  .lesson-section:nth-child(even) .reflection-exercise,
+  .lesson-section:nth-child(even) .metacognition-exercise,
+  .lesson-section:nth-child(even) .reading-cards {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lesson-section:nth-child(even) .key-point {
+    width: calc(100% - 2rem);
   }
 }
 
