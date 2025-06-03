@@ -626,9 +626,12 @@ ol {
   transition: none !important; /* Eliminar transiciones */
   width: 100% !important;
   box-sizing: border-box !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente */
+/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
 .lesson-section:nth-child(even) .key-point,
 .module-background .key-point,
 .survey-background .key-point {
@@ -637,10 +640,46 @@ ol {
   box-shadow: none !important;
   border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important;
+  margin: 32px auto 1.5rem auto !important;
+  max-width: 1200px !important;
+  width: calc(100% - 4rem) !important; /* Ajustar para mantener el mismo ancho que el contenido */
+  box-sizing: border-box !important;
 }
 
-/* Eliminar completamente el efecto hover */
+/* Corregir específicamente la alineación en módulos con fondo gris */
+.lesson-section:nth-child(even) > .key-point {
+  padding-left: calc(2rem + 3.5rem) !important; /* Alinear con el contenido del módulo */
+  padding-right: 2rem !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
+.module-background .key-point,
+.survey-background .key-point {
+  width: calc(100% - 4rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Eliminar el padding extra en dispositivos móviles */
+@media (max-width: 768px) {
+  .lesson-section:nth-child(even) .key-point,
+  .module-background .key-point,
+  .survey-background .key-point {
+    width: calc(100% - 2rem) !important;
+    padding-left: 3.5rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .lesson-section:nth-child(even) > .key-point {
+    padding-left: calc(1rem + 3.5rem) !important;
+    padding-right: 1rem !important;
+  }
+}
+
 .key-point:hover {
   transform: none !important;
   box-shadow: none !important;
