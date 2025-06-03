@@ -3446,9 +3446,10 @@ main::after,
   }
 }
 
-/* Aplicar Open Sans Light 32px a todos los títulos h2 del body */
+/* Aplicar Open Sans Light 32px a todos los títulos h2 del body y añadir separación vertical de 48px */
 body h2 {
   font-family: "Open Sans", sans-serif !important;
   font-weight: 300 !important;
   font-size: 32px !important;
+  margin-bottom: 48px !important;
 }
