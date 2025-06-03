@@ -76,6 +76,40 @@
         margin: 0.5rem 0;
       }
     }
+
+    .survey-section {
+      text-align: left;
+    }
+
+    .survey-button-container {
+      margin-top: 32px;
+      text-align: left;
+    }
+
+    .survey-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .survey-button:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+
+    .survey-button i {
+      margin-right: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -196,22 +230,21 @@
       </section>
       
       <section class="lesson-section no-borders">
-        
-            
-              <h2>Initial Survey</h2>
-              <p>In order to explore your well-being and flourishing and how they evolve by putting into 
-              practice what you learn throughout this course, we encourage you to take the following 
-              survey. This will allow you to have a baseline to compare to after completing the course 
-              in order to track your progress:</p>
-              
-              <a href="#" class="download-button" aria-label="Take Initial Survey">
-                <i class="fas fa-poll" aria-hidden="true"></i>
-                Take Initial Survey
-              </a>
-            
-          
-        
-      </section>
+  <div class="survey-section">
+    <h2>Initial Survey</h2>
+    <p>In order to explore your well-being and flourishing and how they evolve by putting into 
+    practice what you learn throughout this course, we encourage you to take the following 
+    survey. This will allow you to have a baseline to compare to after completing the course 
+    in order to track your progress:</p>
+    
+    <div class="survey-button-container">
+      <a href="#" class="survey-button" aria-label="Take Initial Survey">
+        <i class="fas fa-poll" aria-hidden="true"></i>
+        Take Initial Survey
+      </a>
+    </div>
+  </div>
+</section>
       
       <section class="lesson-section no-borders">
   <h2>Lesson 0 Learning Objectives</h2>
