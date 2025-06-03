@@ -3358,6 +3358,24 @@ main::after,
   box-shadow: none; /* Mantener sin sombra en hover */
 }
 
+/* Añadir espaciado específico entre el título y el video en el módulo Welcome */
+.welcome-module h2 + .responsive-video {
+  margin-top: 64px; /* Espaciado de 64px entre título y video */
+}
+
+/* Ajustes responsivos para el espaciado */
+@media (max-width: 768px) {
+  .welcome-module h2 + .responsive-video {
+    margin-top: 48px; /* Reducir ligeramente en tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-module h2 + .responsive-video {
+    margin-top: 40px; /* Reducir más en móviles */
+  }
+}
+
 /* Ajustes responsivos para el módulo Welcome */
 @media (max-width: 768px) {
   .welcome-module h2,
@@ -3370,5 +3388,60 @@ main::after,
   .welcome-module h2,
   .welcome-module .video-title {
     font-size: 24px; /* Reducir más en móviles */
+  }
+}
+
+/* Estilos más específicos para eliminar la sombra y aplicar el espaciado: */
+
+/* Estilos específicos para el módulo Welcome to the Course */
+.welcome-module h2 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 64px !important;
+}
+
+.welcome-module .responsive-video {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.welcome-module .video-js {
+  box-shadow: none !important;
+}
+
+/* Eliminar cualquier sombra en el contenedor del video */
+.welcome-module .responsive-video,
+.welcome-module .video-container,
+.welcome-module .video-js,
+.welcome-module video {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Asegurar que no hay sombras en el hover */
+.welcome-module .responsive-video:hover,
+.welcome-module .video-container:hover,
+.welcome-module .video-js:hover,
+.welcome-module video:hover {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .welcome-module h2 {
+    font-size: 28px;
+    margin-bottom: 48px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-module h2 {
+    font-size: 24px;
+    margin-bottom: 40px !important;
   }
 }
