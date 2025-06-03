@@ -3449,3 +3449,24 @@ main::after,
     margin-bottom: 40px !important;
   }
 }
+
+/* Corregir la alineación de los títulos h2 dentro de los módulos con fondo gris */
+.module-background h2,
+.survey-background h2 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ajustes responsivos para la alineación de títulos */
+@media (max-width: 768px) {
+  .module-background h2,
+  .survey-background h2 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
