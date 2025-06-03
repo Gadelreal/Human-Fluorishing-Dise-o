@@ -616,19 +616,19 @@ ol {
 
 /* Puntos clave - Versión mejorada */
 .key-point {
-  background: white !important; /* Fondo blanco */
-  border: 1px solid #e0e0e0;
-  border-radius: 0; /* Sin esquinas redondeadas */
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem;
-  margin: 32px 0 1.5rem 0; /* 32px de separación superior del video */
+  background: white !important; /* Fondo blanco forzado */
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0 !important; /* Sin esquinas redondeadas */
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
   position: relative;
   box-shadow: none !important; /* Sin sombras */
-  transition: none; /* Eliminar transiciones */
-  width: 100%;
-  box-sizing: border-box;
+  transition: none !important; /* Eliminar transiciones */
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* Ensure Key Points in gray modules maintain white background */
+/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente */
 .lesson-section:nth-child(even) .key-point,
 .module-background .key-point,
 .survey-background .key-point {
@@ -636,12 +636,15 @@ ol {
   border: 1px solid #e0e0e0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  margin: 32px 0 1.5rem 0 !important;
 }
 
-/* Eliminar el efecto hover */
+/* Eliminar completamente el efecto hover */
 .key-point:hover {
-  transform: none;
+  transform: none !important;
   box-shadow: none !important;
+  background: white !important;
 }
 
 .key-point::before {
@@ -657,25 +660,45 @@ ol {
   opacity: 0.8;
 }
 
-/* Estilo para el título "Key Point" */
+/* Estilo para el título "Key Point" - Open Sans 24px Regular */
 .key-point h3 {
   color: #000 !important;
-  margin-top: 0;
+  margin-top: 0 !important;
   font-family: "Open Sans", sans-serif !important;
   font-size: 24px !important; /* Tamaño 24px */
   font-weight: 400 !important; /* Regular */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0.8rem !important;
 }
 
 .key-point p {
   color: #000 !important;
-  margin-bottom: 0;
-  line-height: 1.6;
+  margin-bottom: 0 !important;
+  line-height: 1.6 !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
-/* Eliminar la animación */
+/* Asegurar que los Key Points después de videos tengan el espaciado correcto */
+.responsive-video + .key-point,
+.video-container + .key-point,
+.youtube-container + .key-point {
+  margin-top: 32px !important;
+}
+
+/* Forzar estilos en todos los contextos posibles */
+body .key-point,
+main .key-point,
+.content-container .key-point,
+.content-aligned-container .key-point {
+  background: white !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 32px !important;
+}
+
+/* Eliminar cualquier animación */
 @keyframes keyPointFadeIn {
   from {
     opacity: 1;
@@ -685,13 +708,6 @@ ol {
     opacity: 1;
     transform: none;
   }
-}
-
-/* Asegurar que los Key Points después de videos tengan el espaciado correcto */
-.responsive-video + .key-point,
-.video-container + .key-point,
-.youtube-container + .key-point {
-  margin-top: 32px !important;
 }
 
 /* Estilos para tarjetas de lectura */
@@ -2076,6 +2092,13 @@ footer {
 
 /* Modificar los estilos del menú hamburguesa desplegable */
 .hamburger-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 33.33%;
+  min-width: 250px;
+  max-width: 400px;
   display: none;
   position: absolute;
   top: 100%;
