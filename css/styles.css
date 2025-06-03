@@ -582,14 +582,105 @@ ol {
   margin-bottom: 10rem;
 }
 
-/* Contenido dentro de los módulos con fondo gris */
-.lesson-section:nth-child(even) > * {
+/* Contenido dentro de los módulos con fondo gris - TODOS los elementos centrados */
+.lesson-section:nth-child(even) > *,
+.lesson-section:nth-child(even) .video-container,
+.lesson-section:nth-child(even) .key-point,
+.lesson-section:nth-child(even) .reading-cards,
+.lesson-section:nth-child(even) .reflection-exercise,
+.lesson-section:nth-child(even) .metacognition-exercise,
+.lesson-section:nth-child(even) h1,
+.lesson-section:nth-child(even) h2,
+.lesson-section:nth-child(even) h3,
+.lesson-section:nth-child(even) p,
+.lesson-section:nth-child(even) ul,
+.lesson-section:nth-child(even) ol,
+.lesson-section:nth-child(even) div {
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   box-sizing: border-box;
   position: relative;
+}
+
+/* Asegurar que los elementos anidados también estén centrados */
+.lesson-section:nth-child(even) .video-container > *,
+.lesson-section:nth-child(even) .key-point > *,
+.lesson-section:nth-child(even) .reading-cards > *,
+.lesson-section:nth-child(even) .reflection-exercise > *,
+.lesson-section:nth-child(even) .metacognition-exercise > * {
+  max-width: none;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Espaciado específico para videos en módulos grises */
+.lesson-section:nth-child(even) .video-container {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Espaciado específico para key points en módulos grises */
+.lesson-section:nth-child(even) .key-point {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icono específico para key points en módulos grises */
+.lesson-section:nth-child(even) .key-point::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="%23D6208F"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+/* Títulos específicos para key points en módulos grises */
+.lesson-section:nth-child(even) .key-point h3 {
+  color: #000;
+  margin-top: 0;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Espaciado para otros elementos en módulos grises */
+.lesson-section:nth-child(even) .reading-cards,
+.lesson-section:nth-child(even) .reflection-exercise,
+.lesson-section:nth-child(even) .metacognition-exercise {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Asegurar que los títulos principales también estén centrados */
+.lesson-section:nth-child(even) > h1,
+.lesson-section:nth-child(even) > h2 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 /* Espaciado específico para videos en módulos grises */
@@ -655,8 +746,21 @@ ol {
     padding: 2rem 0;
   }
 
-  .lesson-section:nth-child(even) > * {
-    padding: 0 1rem;
+  .lesson-section:nth-child(even) > *,
+  .lesson-section:nth-child(even) .video-container,
+  .lesson-section:nth-child(even) .key-point,
+  .lesson-section:nth-child(even) .reading-cards,
+  .lesson-section:nth-child(even) .reflection-exercise,
+  .lesson-section:nth-child(even) .metacognition-exercise,
+  .lesson-section:nth-child(even) h1,
+  .lesson-section:nth-child(even) h2,
+  .lesson-section:nth-child(even) h3,
+  .lesson-section:nth-child(even) p,
+  .lesson-section:nth-child(even) ul,
+  .lesson-section:nth-child(even) ol,
+  .lesson-section:nth-child(even) div {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .lesson-section:nth-child(even) .key-point {
