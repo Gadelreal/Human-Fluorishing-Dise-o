@@ -110,6 +110,31 @@
     .survey-button i {
       margin-right: 0.5rem;
     }
+
+    .hero-title-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-icon {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      
+      .hero-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -159,7 +184,10 @@
 
 <section class="hero-section">
   <div class="hero-content">
-    <h1 class="hero-title">Introduction to the Course</h1>
+    <div class="hero-title-container">
+      <img src="assets/images/icon-hf.png" alt="Human Flourishing Icon" class="hero-icon">
+      <h1 class="hero-title">Introduction to the Course</h1>
+    </div>
   </div>
 </section>
 
