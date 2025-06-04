@@ -4285,10 +4285,10 @@ body h2 {
 /* Hero Section Styles */
 .hero-section {
   width: 100%;
-  height: 600px; /* Increased from 400px to 600px to show the complete fingerprint pattern */
+  height: 600px;
   background-image: url("../assets/images/background-hero.png");
-  background-size: cover;
-  background-position: center;
+  background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
+  background-position: left center; /* Position from left to ensure fingerprints show at bottom */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
