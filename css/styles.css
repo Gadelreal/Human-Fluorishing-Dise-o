@@ -631,7 +631,7 @@ ol {
   margin-right: auto !important;
 }
 
-/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
+/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación exacta */
 .lesson-section:nth-child(even) .key-point,
 .module-background .key-point,
 .survey-background .key-point {
@@ -640,44 +640,25 @@ ol {
   box-shadow: none !important;
   border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px auto 1.5rem auto !important;
-  max-width: 1200px !important;
-  width: calc(100% - 4rem) !important; /* Ajustar para mantener el mismo ancho que el contenido */
+  margin: 32px 0 1.5rem 0 !important;
+  width: 100% !important; /* Usar 100% del contenedor padre */
+  max-width: none !important; /* Eliminar restricción de ancho máximo */
   box-sizing: border-box !important;
 }
 
-/* Corregir específicamente la alineación en módulos con fondo gris */
+/* Eliminar las reglas específicas que causaban problemas de alineación */
 .lesson-section:nth-child(even) > .key-point {
-  padding-left: calc(2rem + 3.5rem) !important; /* Alinear con el contenido del módulo */
-  padding-right: 2rem !important;
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
   width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 32px 0 1.5rem 0 !important;
   box-sizing: border-box !important;
 }
 
 /* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
 .module-background .key-point,
 .survey-background .key-point {
-  width: calc(100% - 4rem) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Eliminar el padding extra en dispositivos móviles */
-@media (max-width: 768px) {
-  .lesson-section:nth-child(even) .key-point,
-  .module-background .key-point,
-  .survey-background .key-point {
-    width: calc(100% - 2rem) !important;
-    padding-left: 3.5rem !important;
-    padding-right: 1rem !important;
-  }
-
-  .lesson-section:nth-child(even) > .key-point {
-    padding-left: calc(1rem + 3.5rem) !important;
-    padding-right: 1rem !important;
-  }
+  width: 100% !important;
+  margin: 32px 0 1.5rem 0 !important;
 }
 
 .key-point:hover {
@@ -3593,4 +3574,19 @@ body h2 {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   border: none !important;
+}
+
+/* Eliminar el padding extra en dispositivos móviles */
+@media (max-width: 768px) {
+  .lesson-section:nth-child(even) .key-point,
+  .module-background .key-point,
+  .survey-background .key-point {
+    width: 100% !important;
+    padding: 1.2rem 1rem 1.2rem 3.5rem !important;
+  }
+
+  .lesson-section:nth-child(even) > .key-point {
+    padding: 1.2rem 1rem 1.2rem 3.5rem !important;
+    width: 100% !important;
+  }
 }
