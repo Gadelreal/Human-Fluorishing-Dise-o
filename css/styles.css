@@ -4285,7 +4285,7 @@ body h2 {
 /* Hero Section Styles */
 .hero-section {
   width: 100%;
-  height: 400px;
+  height: 600px; /* Increased from 400px to 600px to show the complete fingerprint pattern */
   background-image: url("../assets/images/background-hero.png");
   background-size: cover;
   background-position: center;
@@ -4296,36 +4296,15 @@ body h2 {
   margin-bottom: 2rem;
 }
 
-.hero-content {
-  text-align: center;
-  z-index: 2;
-}
-
-.hero-title {
-  color: white;
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive adjustments for hero */
+/* Responsive adjustments for hero - also update these values */
 @media (max-width: 768px) {
   .hero-section {
-    height: 300px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
+    height: 500px; /* Increased from 300px to 500px for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 250px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
+    height: 400px; /* Increased from 250px to 400px for mobile */
   }
 }
