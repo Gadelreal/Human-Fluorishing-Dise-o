@@ -4285,20 +4285,15 @@ body h2 {
 /* Hero Section Styles */
 .hero-section {
   width: 100%;
-  height: 400px;
-  background-image: url("../assets/images/background-hero.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
   margin-bottom: 2rem;
 }
 
 .hero-content {
   text-align: center;
   z-index: 2;
+  padding: 80px 20px;
 }
 
 .hero-title {
@@ -4309,10 +4304,23 @@ body h2 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/background-hero.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Responsive adjustments for hero */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 300px;
+  .hero-content {
+    padding: 60px 20px;
   }
 
   .hero-title {
@@ -4321,8 +4329,8 @@ body h2 {
 }
 
 @media (max-width: 480px) {
-  .hero-section {
-    height: 250px;
+  .hero-content {
+    padding: 40px 20px;
   }
 
   .hero-title {
