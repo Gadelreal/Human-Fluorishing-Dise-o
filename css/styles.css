@@ -8,10 +8,10 @@
   box-sizing: border-box;
 }
 
-/* Añadir estas variables de contraste mejorado */
+/* Variables de contraste mejorado */
 :root {
-  --primary-color: #d6208f; /* Color magenta IE */
-  --primary-color-dark: #b01a75; /* Versión más oscura para mejor contraste */
+  --primary-color: #d6208f;
+  --primary-color-dark: #b01a75;
   --secondary-color: #f5f5f5;
   --text-color: #333;
   --text-color-dark: #222;
@@ -19,17 +19,13 @@
   --link-hover-color: #b01a75;
   --focus-outline-color: #d6208f;
   --focus-outline-width: 3px;
-  --key-point-bg: #fce4f0;
-  --key-point-border: #f8c2dd;
-  --key-point-gradient-start: #fce4f0;
-  --key-point-gradient-end: #f5b8d1;
-  --success-color: #2e8540; /* Verde más oscuro para mejor contraste */
-  --error-color: #d32f2f; /* Rojo para errores con buen contraste */
+  --success-color: #2e8540;
+  --error-color: #d32f2f;
   --module-bg-color: #f5f5f5;
   --module-bg-hover: #f0f0f0;
 }
 
-/* Mejorar el contraste de texto */
+/* Estilos base del body */
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -37,10 +33,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Estilos para la accesibilidad */
-/* Mejorar el enfoque para accesibilidad por teclado */
 a:focus,
 button:focus,
 input:focus,
@@ -50,7 +46,6 @@ textarea:focus,
   outline-offset: 2px;
 }
 
-/* Modificar el estilo para el enlace de saltar al contenido para que esté oculto visualmente pero accesible para lectores de pantalla */
 .skip-to-content {
   position: absolute;
   width: 1px;
@@ -83,7 +78,7 @@ textarea:focus,
   outline: 2px solid #d6208f;
 }
 
-/* Modificar los estilos del encabezado para alinear elementos en una sola línea */
+/* Estilos del header */
 header {
   background-color: white;
   padding: 0.75rem 1rem;
@@ -97,7 +92,6 @@ header {
   width: 100%;
 }
 
-/* Añadir estas clases para la cabecera fija y su versión reducida */
 .header-fixed {
   position: fixed;
   top: 0;
@@ -110,7 +104,7 @@ header {
 }
 
 .header-fixed.scrolled {
-  height: 70px !important; /* Altura reducida al hacer scroll */
+  height: 70px !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,48 +118,6 @@ header {
   font-size: 1.2rem;
   transition: font-size 0.3s ease;
 }
-
-/* Añadir un espaciador para compensar la altura del header fijo */
-.header-spacer {
-  display: none;
-}
-
-.header-spacer.active {
-  display: block;
-}
-
-/* Ajustes responsivos para el header fijo */
-@media (max-width: 768px) {
-  .header-fixed.scrolled {
-    height: 60px !important;
-  }
-
-  .header-fixed.scrolled .logo-container.tiny-logo {
-    max-width: 35px !important;
-    width: 35px !important;
-  }
-
-  .header-fixed.scrolled .header-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-fixed.scrolled {
-    height: 50px !important;
-  }
-
-  .header-fixed.scrolled .logo-container.tiny-logo {
-    max-width: 30px !important;
-    width: 30px !important;
-  }
-
-  .header-fixed.scrolled .header-title {
-    font-size: 1rem;
-  }
-}
-
-/* Añadir estilos para la cabecera a ancho completo y el logo más pequeño */
 
 /* Cabecera a ancho completo */
 .full-width {
@@ -195,206 +147,46 @@ header {
   flex: 0 0 auto;
 }
 
-/* Logo más pequeño (50% del tamaño original) */
-.smaller-logo {
-  max-width: 50px; /* Reducir a la mitad del tamaño original (100px) */
+/* Estilos del logo */
+.logo-container {
+  text-align: left;
+  margin-bottom: 0;
+  display: block;
+  max-width: 100px;
+  flex-shrink: 0;
 }
 
-.smaller-logo .logo {
-  width: 100%;
-  height: auto;
-}
-
-/* Logo extra pequeño (25% del tamaño original) */
-.extra-small-logo {
-  max-width: 25px; /* Reducir a un 25% del tamaño original (100px) */
-}
-
-.extra-small-logo .logo {
-  width: 100%;
-  height: auto;
-}
-
-/* Modificar la clase tiny-logo para que tenga un ancho de 50px */
 .tiny-logo {
-  max-width: 50px !important; /* Ajustado a 50px de ancho */
+  max-width: 50px !important;
   width: 50px !important;
 }
 
 .tiny-logo .logo {
   width: 100%;
-  height: auto; /* Esto asegura que se mantengan las proporciones */
+  height: auto;
+}
+
+.logo {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  width: 100%;
 }
 
 /* Ajustar el espaciado entre el logo y el título */
 .header-left {
   display: flex;
   align-items: center;
-  gap: 0.9rem; /* Ligeramente aumentado para mejor separación */
+  gap: 0.9rem;
 }
 
 /* Estilos para el título en la cabecera */
 .header-title {
   margin: 0;
-  font-size: 1.4rem; /* Aumentado de 1.2rem a 1.4rem */
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #000; /* Cambiado de var(--primary-color) a negro */
+  color: #000;
   white-space: nowrap;
-}
-
-/* Ajustes responsivos para el título en la cabecera */
-@media (max-width: 768px) {
-  .header-title {
-    font-size: 1.2rem; /* Aumentado de 1rem a 1.2rem */
-  }
-}
-
-@media (max-width: 480px) {
-  .header-left {
-    gap: 0.5rem;
-  }
-
-  .header-title {
-    font-size: 1.1rem; /* Aumentado de 0.9rem a 1.1rem */
-  }
-}
-
-/* Ajustar el espaciado en la cabecera para mantener la alineación */
-.full-width .main-nav {
-  margin-left: 2rem;
-}
-
-/* Reducir el tamaño del logo */
-.logo-container {
-  text-align: left;
-  margin-bottom: 0;
-  display: block;
-  max-width: 100px; /* Reducir el tamaño del logo */
-  flex-shrink: 0;
-}
-
-/* Estilo para el logotipo alineado a la derecha en la portada */
-.logo-container.right-aligned {
-  max-width: 120px;
-  margin-bottom: 2rem;
-  align-self: flex-end;
-}
-
-.logo-container.right-aligned .logo {
-  width: 100%;
-  height: auto;
-}
-
-.logo-container.left-aligned {
-  max-width: 80px;
-  margin-bottom: 1.5rem;
-  align-self: flex-start;
-}
-
-.logo-container.left-aligned .logo {
-  width: 100%;
-  height: auto;
-}
-
-/* Modificar la clase top-left para alinear con el contenido en lugar de la esquina */
-.logo-container.top-left {
-  position: absolute;
-  top: 20px;
-  left: 3rem; /* Alinear con el padding del contenido */
-  max-width: 80px;
-  z-index: 10;
-}
-
-.logo-container.top-left .logo {
-  width: 100%;
-  height: auto;
-}
-
-/* Ajustar la posición del contenido para dar espacio al logo */
-.split-cover-content .cover-text {
-  padding-top: 80px;
-  position: relative; /* Para posicionamiento correcto */
-}
-
-.small-logo {
-  max-width: 80px; /* Reducir el tamaño del logo */
-}
-
-.logo {
-  height: auto;
-  max-width: 100%; /* Asegurar que el logo sea responsive */
-  display: block;
-  width: 100%; /* Asegurar que el logo ocupe todo el ancho del contenedor */
-}
-
-/* Estilos para indicar el estado de carga del logo */
-.logo-container-loaded {
-  position: relative;
-}
-
-.logo-container-loaded::after {
-  content: "✓";
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
-}
-
-.logo-error {
-  position: relative;
-}
-
-.logo-error::after {
-  content: "!";
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  background-color: #f44336;
-  color: white;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Añadir un efecto sutil al pasar el cursor sobre el logo */
-.logo-container a:hover {
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-/* Mejorar la visualización en dispositivos móviles */
-@media (max-width: 480px) {
-  .logo-container {
-    max-width: 100px; /* Reducir ligeramente el tamaño en móviles */
-    margin: 0 auto 1rem; /* Centrar en dispositivos móviles */
-  }
 }
 
 /* Navegación */
@@ -431,7 +223,7 @@ header {
   font-weight: bold;
 }
 
-/* Ajustar el selector de idioma para que esté en línea */
+/* Selector de idioma */
 .language-selector {
   margin-bottom: 0;
   font-size: 0.9rem;
@@ -458,12 +250,6 @@ header {
   background-color: var(--secondary-color);
 }
 
-/* Selector de idioma mejorado */
-.language-selector-enhanced {
-  position: relative;
-  z-index: 100;
-}
-
 /* Contenido principal */
 main {
   flex: 1;
@@ -474,18 +260,11 @@ main {
   box-sizing: border-box;
 }
 
-/* Asegurar que el contenido principal se ajuste correctamente con la nueva cabecera */
-main {
-  padding-top: 1rem;
-}
-
-/* Después de la definición de .content-container */
 .content-container {
   background-color: white;
   padding: 2rem;
 }
 
-/* Añadir esta nueva clase para alinear el contenido con el header */
 .content-aligned-container {
   background-color: white;
   padding: 2rem;
@@ -497,20 +276,7 @@ main {
   box-sizing: border-box;
 }
 
-/* Ajuste responsivo para la clase content-aligned-container */
-@media (max-width: 768px) {
-  .content-aligned-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* Estilo específico para mantener los bordes en otras páginas */
-.with-borders {
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Tipografía */
 h1 {
   color: #000;
   margin-bottom: 1.5rem;
@@ -545,10 +311,27 @@ ol {
   margin-left: 1.5rem;
 }
 
-/* Secciones de lección - Sistema de alternancia automática */
+/* Estilos para títulos h2 en el body - Open Sans Light 32px con separación de 48px */
+body h2 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 32px !important;
+  margin-top: 48px !important;
+  margin-bottom: 24px !important;
+  color: #000 !important;
+  line-height: 1.3 !important;
+}
+
+body h2:first-of-type,
+.content-container h2:first-child,
+.content-aligned-container h2:first-child {
+  margin-top: 24px !important;
+}
+
+/* Secciones de lección */
 .lesson-section {
-  margin-bottom: 10rem; /* Duplicado de 5rem a 10rem */
-  padding-bottom: 2rem; /* Aumentado de 1.5rem a 2rem */
+  margin-bottom: 10rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid #eee;
   position: relative;
 }
@@ -557,7 +340,6 @@ ol {
   border-bottom: none;
 }
 
-/* Módulos con fondo blanco (impares) - comportamiento por defecto */
 .lesson-section:nth-child(odd) {
   background-color: white;
   padding: 2rem;
@@ -568,7 +350,6 @@ ol {
   box-sizing: border-box;
 }
 
-/* Módulos con fondo gris (pares) - ancho completo del viewport */
 .lesson-section:nth-child(even) {
   background-color: #f5f5f5;
   width: 100vw;
@@ -581,7 +362,6 @@ ol {
   box-sizing: border-box;
 }
 
-/* Contenido dentro de los módulos con fondo gris */
 .lesson-section:nth-child(even) > * {
   max-width: 1200px;
   width: 100%;
@@ -591,112 +371,21 @@ ol {
   position: relative;
 }
 
-/* Ajustes responsivos para los módulos alternados */
-@media (max-width: 768px) {
-  .lesson-section:nth-child(odd) {
-    padding: 1rem;
-  }
-
-  .lesson-section:nth-child(even) {
-    padding: 2rem 0;
-  }
-
-  .lesson-section:nth-child(even) > * {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .lesson-section:nth-child(even) {
-    padding: 1.5rem 0;
-  }
-}
-
-/* Buscar la sección de "Puntos clave - Versión mejorada" y reemplazarla con esto: */
-
-/* Puntos clave - Versión mejorada */
+/* Puntos clave */
 .key-point {
-  background: white !important; /* Fondo blanco forzado */
+  background: white !important;
   border: 1px solid #e0e0e0 !important;
-  border-radius: 0 !important; /* Sin esquinas redondeadas */
+  border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
+  margin: 32px 0 1.5rem 0 !important;
   position: relative;
-  box-shadow: none !important; /* Sin sombras */
-  transition: none !important; /* Eliminar transiciones */
+  box-shadow: none !important;
+  transition: none !important;
   width: 100% !important;
   box-sizing: border-box !important;
   max-width: 1200px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
-.lesson-section:nth-child(even) .key-point,
-.module-background .key-point,
-.survey-background .key-point {
-  background: white !important;
-  border: 1px solid #e0e0e0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px auto 1.5rem auto !important;
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  box-sizing: border-box !important;
-}
-
-/* Corregir específicamente la alineación en módulos con fondo gris */
-.lesson-section:nth-child(even) > .key-point {
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  box-sizing: border-box !important;
-}
-
-/* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
-.module-background .key-point,
-.survey-background .key-point {
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
-}
-
-/* Ajustes responsivos para tablets */
-@media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .key-point,
-  .module-background .key-point,
-  .survey-background .key-point,
-  .lesson-section:nth-child(even) > .key-point {
-    width: calc(100% - 4rem) !important;
-    max-width: 1136px !important;
-  }
-}
-
-/* Eliminar el padding extra en dispositivos móviles */
-@media (max-width: 768px) {
-  .lesson-section:nth-child(even) .key-point,
-  .module-background .key-point,
-  .survey-background .key-point {
-    width: calc(100% - 2rem) !important;
-    max-width: none !important;
-    padding-left: 3.5rem !important;
-    padding-right: 1rem !important;
-  }
-
-  .lesson-section:nth-child(even) > .key-point {
-    width: calc(100% - 2rem) !important;
-    max-width: none !important;
-    padding-left: calc(1rem + 3.5rem) !important;
-    padding-right: 1rem !important;
-  }
-}
-
-.key-point:hover {
-  transform: none !important;
-  box-shadow: none !important;
-  background: white !important;
 }
 
 .key-point::before {
@@ -712,13 +401,12 @@ ol {
   opacity: 0.8;
 }
 
-/* Estilo para el título "Key Point" - Open Sans 24px Regular */
 .key-point h3 {
   color: #000 !important;
   margin-top: 0 !important;
   font-family: "Open Sans", sans-serif !important;
-  font-size: 24px !important; /* Tamaño 24px */
-  font-weight: 400 !important; /* Regular */
+  font-size: 24px !important;
+  font-weight: 400 !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding-bottom: 0.5rem !important;
   margin-bottom: 0.8rem !important;
@@ -731,208 +419,72 @@ ol {
   font-family: "Open Sans", sans-serif !important;
 }
 
-/* Asegurar que los Key Points después de videos tengan el espaciado correcto */
-.responsive-video + .key-point,
-.video-container + .key-point,
-.youtube-container + .key-point {
-  margin-top: 32px !important;
-}
-
-/* Forzar estilos en todos los contextos posibles */
-body .key-point,
-main .key-point,
-.content-container .key-point,
-.content-aligned-container .key-point {
-  background: white !important;
-  border: 1px solid #e0e0e0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  margin-top: 32px !important;
-}
-
-/* Eliminar cualquier animación */
-@keyframes keyPointFadeIn {
-  from {
-    opacity: 1;
-    transform: none;
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* Estilos para tarjetas de lectura */
-.reading-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.reading-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: all 0.3s ease;
+/* Estilos para videos responsivos */
+.responsive-video {
   position: relative;
-  border: 1px solid #eaeaea;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.reading-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border-color: #d0d0d0;
-}
-
-.reading-card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background-color: var(--primary-color);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.3s ease;
-}
-
-.reading-card:hover:before {
-  transform: scaleY(1);
-}
-
-.reading-card-content {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.reading-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.8rem;
-  color: #000;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.reading-card p {
+.video-description {
+  margin-top: 0.5rem;
+  font-style: italic;
   color: #555;
-  margin-bottom: 1.5rem;
-  flex: 1;
 }
 
-.reading-card-footer {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #f0f0f0;
-}
-
-.reading-link {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: color 0.2s ease;
-}
-
-.reading-link:hover {
-  color: var(--link-hover-color);
-  text-decoration: none;
-}
-
-.reading-arrow {
-  display: inline-block;
-  margin-left: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.reading-link:hover .reading-arrow {
-  transform: translateX(4px);
-}
-
-/* Estilos responsivos para tarjetas de lectura */
-@media (max-width: 768px) {
-  .reading-cards {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .reading-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Estilos para ejercicios de reflexión */
-.reflection-exercise {
-  margin: 3rem 0; /* Aumentado de 2rem a 3rem */
-}
-
-.reflection-question {
+/* Contenedor de video */
+.video-container {
   background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #eee;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.reflection-question:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.reflection-question h3 {
-  color: #000;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.reflection-textarea {
+.video-container img {
   width: 100%;
-  min-height: 120px;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-  resize: vertical;
-  margin-bottom: 1rem;
-  transition: border-color 0.3s;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
-.reflection-textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(214, 32, 143, 0.2);
+.video-container img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.button-container {
-  display: flex;
-  align-items: center;
+/* Enlaces */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
-/* Asegurar que los botones tengan suficiente padding para ser clickeables */
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Botones */
 button,
 .button,
 .nav-button,
 .start-button,
 .save-button {
   padding: 0.75rem 1.5rem;
-  min-height: 44px; /* Altura mínima para objetivos táctiles */
-  min-width: 44px; /* Ancho mínimo para objetivos táctiles */
+  min-height: 44px;
+  min-width: 44px;
 }
 
-/* Mejorar el contraste de los botones */
 .nav-button,
 .start-button,
 .save-button {
@@ -967,275 +519,6 @@ button,
   transform: scale(0.98);
 }
 
-.save-feedback {
-  margin-left: 1rem;
-  font-size: 0.9rem;
-  color: var(--success-color);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.save-feedback.show {
-  opacity: 1;
-  animation: fadeInOut 3s forwards;
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Estilos para ejercicio de metacognición */
-.metacognition-exercise {
-  margin: 3rem 0; /* Aumentado de 2rem a 3rem */
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem; /* Aumentado de 1.5rem a 2rem */
-}
-
-.checkbox-container {
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-  display: flex;
-  align-items: flex-start;
-}
-
-.checkbox-container:hover {
-  background-color: #f0f0f0;
-}
-
-.checkbox-container input[type="checkbox"] {
-  margin-top: 0.3rem;
-  margin-right: 0.8rem;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.checkbox-container label {
-  cursor: pointer;
-  flex: 1;
-  line-height: 1.5;
-}
-
-.checkbox-container.selected {
-  background-color: rgba(214, 32, 143, 0.1);
-}
-
-/* Mejorar la visibilidad de los mensajes de error */
-.validation-message {
-  color: var(--error-color);
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
-  font-weight: 500;
-}
-
-.validation-message.show {
-  display: block;
-  animation: shake 0.5s ease-in-out;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  20%,
-  60% {
-    transform: translateX(-5px);
-  }
-  40%,
-  80% {
-    transform: translateX(5px);
-  }
-}
-
-#save-metacognition {
-  margin-top: 1rem;
-}
-
-.checkbox-container.disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Contenedor de video */
-.video-container {
-  background-color: #f9f9f9;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para los posters de video */
-.video-container img {
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: block;
-}
-
-.video-container img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.video-container p {
-  margin-top: 10px;
-  font-style: italic;
-  color: #555;
-}
-
-/* Estilos para videos responsivos */
-.responsive-video {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: 1.5rem 0;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.video-description {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #555;
-}
-
-/* Estilos para videos de YouTube embebidos */
-.youtube-container {
-  margin: 2rem 0;
-}
-
-.youtube-container .responsive-video {
-  position: relative;
-  padding-bottom: 56.25%; /* Proporción 16:9 */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.youtube-container .responsive-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.youtube-container .video-description {
-  margin-top: 1rem;
-  font-style: italic;
-  color: #555;
-  text-align: center;
-}
-
-/* Estilos para VideoJS */
-.video-js {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-}
-
-.vjs-ie-skin .vjs-control-bar {
-  background-color: rgba(214, 32, 143, 0.8); /* Color magenta IE semi-transparente */
-}
-
-.vjs-ie-skin .vjs-big-play-button {
-  background-color: rgba(214, 32, 143, 0.8);
-  border-color: white;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  font-size: 3.5em;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.vjs-ie-skin .vjs-big-play-button:hover {
-  background-color: var(--primary-color);
-}
-
-.vjs-ie-skin .vjs-progress-holder .vjs-play-progress {
-  background-color: white;
-}
-
-.vjs-logo-overlay {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.vjs-logo-overlay:hover {
-  opacity: 1;
-}
-
-.vjs-logo {
-  width: 60px;
-  height: auto;
-}
-
-.video-checkmark {
-  display: inline-block;
-  margin-left: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  position: relative;
-}
-
-.video-checkmark.watched::after {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-/* Enlaces */
-/* Asegurar que los enlaces tengan un subrayado visible */
-a {
-  color: var(--link-color);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
-
 /* Botones de navegación */
 .navigation-buttons {
   display: flex;
@@ -1252,1264 +535,72 @@ a:hover {
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: bold; /* Añadir negrita para coincidir con el botón Start Course */
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: var(--primary-color-dark); /* Un magenta más oscuro */
-  color: white !important; /* Forzar color blanco */
+  background-color: var(--primary-color-dark);
+  color: white !important;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.nav-button.prev .arrow-left {
-  margin-right: 8px;
-  transition: transform 0.3s ease;
-}
-
-.nav-button.next .arrow-right {
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.nav-button.prev:hover .arrow-left {
-  transform: translateX(-4px);
-}
-
-.nav-button.next:hover .arrow-right {
-  transform: translateX(4px);
-}
-
-/* Estilos para la portada */
-.cover-page {
-  background-color: var(--secondary-color);
-}
-
-.cover-content {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.cover-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.author,
-.duration,
-.code {
-  margin-bottom: 0.5rem;
-}
-
-/* Añadir una clase para hacer el logo más pequeño */
-.small-logo {
-  max-width: 80px; /* Reducir el tamaño del logo */
-}
-
-/* Añadir una clase para el título en negro */
-.black-title {
-  color: #000 !important; /* Asegurar que el título sea negro */
-}
-
-/* Modificar la clase para la barra separadora magenta */
-.title-separator.blue {
-  width: 60px;
-  height: 3px;
-  background-color: var(--primary-color); /* Color magenta IE */
-  margin-bottom: 1.5rem;
-}
-
-/* Asegurar que el estilo para el autor esté correctamente definido */
-.author,
-.duration,
-.code {
-  margin-bottom: 0.3rem; /* Punto medio para el espacio entre elementos */
-  font-size: 0.9rem; /* Punto medio para el tamaño de la fuente */
-  color: #000;
-  line-height: 1.2; /* Punto medio para el interlineado */
-}
-
-.start-button-container {
-  margin-top: 3rem;
-}
-
-.start-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 1.2rem;
-  transition: background-color 0.3s;
-}
-
-.start-button:hover {
-  background-color: var(--primary-color-dark); /* Un magenta más oscuro */
-  color: white;
-}
-
-/* Estilos para la portada simple */
-.simple-cover-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  gap: 3rem;
-}
-
-.simple-cover-content .cover-image {
-  flex: 1;
-  max-width: 50%;
-  border-radius: 10px;
+/* Estilos para la sección hero - NUEVA IMPLEMENTACIÓN */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 0;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.simple-cover-content .cover-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.simple-cover-content .cover-text {
-  flex: 1;
-  text-align: left;
-}
-
-.simple-cover-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-
-.simple-cover-content .author,
-.simple-cover-content .duration,
-.simple-cover-content .code {
-  margin-bottom: 0.8rem;
-}
-
-.simple-cover-content .start-button-container {
-  margin-top: 2rem;
-}
-
-/* Estilos responsivos para la portada simple */
-@media (max-width: 768px) {
-  .simple-cover-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .simple-cover-content .cover-image {
-    max-width: 100%;
-    order: -1; /* Imagen primero en móvil */
-  }
-
-  .simple-cover-content .cover-text {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .simple-cover-content {
-    padding: 1rem;
-  }
-
-  .simple-cover-content h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Estilos para la portada con fondo blanco */
-.white-cover {
-  background-color: white;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-.white-cover-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-}
-
-.white-cover-header {
-  background-color: transparent;
-  box-shadow: none;
-  padding: 1.5rem 2rem;
-  position: relative;
-  z-index: 10;
-  display: block;
-}
-
-.white-cover .logo-container {
-  max-width: 150px;
-  position: absolute;
-  top: 1.5rem;
-  left: 2rem;
-  margin-bottom: 1rem;
-}
-
-.white-cover main {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
 }
 
-.white-cover .cover-text {
-  width: 100%;
-  max-width: 800px;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.dark-text h1 {
-  color: #000;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-.title-separator.dark {
-  width: 60px;
-  height: 3px;
-  background-color: #333;
-  margin-bottom: 1.5rem;
-}
-
-.dark-text .subtitle {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  color: #000;
-}
-
-.dark-text .author,
-.dark-text .duration,
-.dark-text .code {
-  margin-bottom: 0.3rem;
-  font-size: 0.9rem;
-  color: #000;
-  line-height: 1.2;
-}
-
-.blue-button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem 2.5rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-  font-size: 1.2rem;
-}
-
-.blue-button:hover {
-  background-color: var(--primary-color-dark); /* Un magenta más oscuro */
-  color: white; /* Mantener el texto en blanco */
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.white-footer {
-  background-color: transparent;
-  padding: 1.5rem 3rem;
-  text-align: center;
-  width: 100%;
-}
-
-.dark-text {
-  color: #000;
-}
-
-/* Estilos responsivos para la portada con fondo blanco */
-@media (max-width: 768px) {
-  .white-cover .logo-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 0 0 2rem 0;
-  }
-
-  .white-cover-header {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .white-cover .cover-text {
-    padding: 1rem 2rem;
-  }
-
-  .dark-text h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .white-cover .cover-text {
-    padding: 1rem;
-  }
-
-  .dark-text h1 {
-    font-size: 2rem;
-  }
-
-  .dark-text .author,
-  .dark-text .duration,
-  .dark-text .code {
-    font-size: 1rem;
-  }
-
-  .dark-text .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .title-separator.dark {
-    width: 40px;
-    margin: 0 auto 1.2rem;
-  }
-}
-
-/* Estilos para la portada dividida (imagen izquierda, contenido derecho) */
-.split-cover {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-.split-cover-layout {
-  display: flex;
-  min-height: 100vh;
-}
-
-.split-cover-image {
-  position: relative;
-  width: 50%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.split-cover-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.image-logo-container {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  z-index: 10;
-}
-
-.white-logo {
-  filter: brightness(0) invert(1); /* Hace que el logo sea blanco */
-}
-
-.split-cover-content {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-}
-
-.split-cover-content .cover-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem;
-  text-align: left;
-}
-
-/* Modificar el estilo del footer para la portada dividida */
-.split-cover-content .white-footer {
-  padding: 1.5rem 3rem;
-  text-align: right; /* Alinear a la derecha */
-}
-
-/* Estilos responsivos para la portada dividida */
-@media (max-width: 768px) {
-  .split-cover-layout {
-    flex-direction: column;
-  }
-
-  .split-cover-image {
-    width: 100%;
-    height: 40vh;
-  }
-
-  .split-cover-content {
-    width: 100%;
-  }
-
-  .split-cover-content .cover-text {
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .title-separator.dark {
-    margin: 0 auto 1.5rem;
-  }
-
-  .logo-container.top-left {
-    top: 15px;
-    left: 2rem; /* Ajustar en tablets */
-    max-width: 70px;
-  }
-
-  .split-cover-content .cover-text {
-    padding-top: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .split-cover-image {
-    height: 30vh;
-  }
-
-  .image-logo-container {
-    top: 1rem;
-    left: 1rem;
-  }
-
-  .image-logo-container .logo {
-    max-width: 100px;
-  }
-
-  .split-cover-content .cover-text {
-    padding: 1.5rem;
-  }
-
-  .logo-container.top-left {
-    top: 10px;
-    left: 1.5rem; /* Ajustar en móviles */
-    max-width: 60px;
-  }
-
-  .split-cover-content .cover-text {
-    padding-top: 50px;
-  }
-}
-
-/* Estilos para la portada con fondo azul completo (mantener para compatibilidad) */
-.full-blue-cover {
-  background-color: #d6208f;
-  color: white;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-.full-cover-layout {
-  display: flex;
-  min-height: 100vh;
-  position: relative;
-}
-
-.full-cover-image {
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.full-cover-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
+  background-image: url("../assets/images/background-hero.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   z-index: 1;
 }
 
-/* Mantener los estilos específicos de la portada */
-.full-blue-cover header {
-  background-color: transparent;
-  box-shadow: none;
-  padding: 1.5rem 2rem;
+.hero-content {
   position: relative;
-  z-index: 10;
-  display: block; /* Revertir a la visualización original para la portada */
-}
-
-.full-blue-cover .logo-container {
-  max-width: 150px;
-  position: absolute;
-  top: 1.5rem;
-  left: 2rem;
-  margin-bottom: 1rem;
-}
-
-.full-blue-cover .logo {
-  filter: brightness(0) invert(1); /* Hace que el logo sea blanco */
-}
-
-.full-blue-cover main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
-}
-
-.full-blue-cover .cover-text {
-  width: 50%;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-}
-
-.full-blue-cover h1 {
-  color: white; /* Mantener blanco para fondos oscuros */
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-transform: none; /* Asegurar que no se aplique transformación de texto */
-}
-
-.title-separator {
-  width: 60px;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 1.5rem;
-}
-
-.subtitle {
-  font-size: 1.4rem;
-  font-weight: 500; /* Peso medio entre el título y el resto del contenido */
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.full-blue-cover .author,
-.full-blue-cover .duration,
-.full-blue-cover .code {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.full-blue-cover .start-button {
-  background-color: white;
-  color: #d6208f;
-  padding: 1rem 2.5rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-  font-size: 1.2rem;
-}
-
-.full-blue-cover .start-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.full-blue-cover footer {
-  background-color: transparent;
-  padding: 1.5rem 3rem;
-  text-align: right;
-  width: 50%;
-  margin-left: auto;
-}
-
-/* Estilos responsivos para la portada con fondo azul */
-@media (max-width: 768px) {
-  .full-cover-layout {
-    flex-direction: column;
-  }
-
-  .full-cover-image {
-    position: relative;
-    width: 100%;
-    height: 40vh;
-  }
-
-  .full-blue-cover .logo-container {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 20;
-  }
-
-  .full-blue-cover main {
-    justify-content: center;
-  }
-
-  .full-blue-cover .cover-text {
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .full-blue-cover h1 {
-    font-size: 2.5rem;
-  }
-
-  .full-blue-cover footer {
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .full-cover-image {
-    height: 30vh;
-  }
-
-  .full-blue-cover .logo-container {
-    max-width: 100px;
-  }
-
-  .full-blue-cover .cover-text {
-    padding: 1.5rem;
-  }
-
-  .full-blue-cover h1 {
-    font-size: 2rem;
-  }
-
-  .full-blue-cover .author,
-  .full-blue-cover .duration,
-  .full-blue-cover .code {
-    font-size: 1rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .title-separator {
-    width: 40px;
-    margin: 0 auto 1.2rem;
-  }
-}
-
-/* Estilos para la portada mejorada */
-.enhanced-cover {
-  min-height: 100vh;
-  background: linear-gradient(rgba(214, 32, 143, 0.8), rgba(214, 32, 143, 0.6)),
-    url("../assets/images/flourishing-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.enhanced-cover header {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.enhanced-cover .logo-container {
-  max-width: 150px;
-}
-
-.enhanced-cover .logo {
-  filter: brightness(0) invert(1);
-}
-
-.enhanced-cover .language-selector a {
-  color: white;
-}
-
-.enhanced-cover .language-selector a.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.enhanced-cover-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
+  z-index: 2;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-}
-
-.enhanced-cover-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  padding: 0 2rem;
+  display: flex;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.cover-image {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  justify-content: flex-start;
   height: 100%;
-  max-height: 400px;
-  position: relative;
 }
 
-.cover-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.cover-image:hover img {
-  transform: scale(1.05);
-}
-
-.cover-text {
+.hero-content h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: left;
-  color: white;
 }
 
-.cover-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  color: #000;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* Ajustar el contenido principal para que no tenga padding-top cuando hay hero */
+.has-hero main {
+  padding-top: 0;
 }
 
-.cover-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-}
-
-.cover-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.feature-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 1rem;
-  border-radius: 8px;
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.feature-item:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.enhanced-start-button {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background-color: white;
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin-top: 2rem;
-}
-
-.enhanced-start-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos responsivos para la portada mejorada */
-@media (max-width: 768px) {
-  .enhanced-cover-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cover-text {
-    text-align: center;
-  }
-
-  .cover-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .cover-features {
-    justify-content: center;
-  }
-
-  .feature-item {
-    flex: 1 1 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .enhanced-cover-content {
-    padding: 1rem;
-  }
-
-  .cover-text h1 {
-    font-size: 2rem;
-  }
-
-  .cover-text p {
-    font-size: 1rem;
-  }
-
-  .feature-item {
-    flex: 1 1 100%;
-  }
-}
-
-/* Estilos para objetivos de aprendizaje */
-.learning-objectives {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.learning-objectives h3 {
-  color: #000;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.learning-objectives ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.learning-objectives li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-}
-
-.learning-objectives li::before {
-  content: "🎯";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2rem;
-}
-
-/* Estilos para el menú móvil */
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--primary-color);
-  padding: 0.5rem;
-}
-
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.mobile-menu.active {
-  display: block;
-}
-
-.mobile-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 1rem 0;
-}
-
-.mobile-menu li {
-  margin: 0;
-}
-
-.mobile-menu a {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: var(--link-color);
-  text-decoration: none;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.mobile-menu a:hover,
-.mobile-menu a.active {
-  background-color: var(--secondary-color);
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    padding: 1rem;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-  }
-
-  .language-selector {
-    order: -1;
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  .content-container {
-    padding: 1rem;
-  }
-
-  .lesson-section {
-    margin-bottom: 3rem;
-  }
-
-  .navigation-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav-button {
-    text-align: center;
-  }
-
-  .reading-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .reflection-exercise {
-    margin: 2rem 0;
-  }
-
-  .metacognition-exercise {
-    margin: 2rem 0;
-    padding: 1rem;
-  }
-
-  .cover-content {
-    padding: 2rem 1rem;
-  }
-
-  .cover-content h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-container {
-    max-width: 80px;
-  }
-
-  .cover-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .start-button {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  .reflection-textarea {
-    min-height: 100px;
-  }
-
-  .checkbox-container {
-    padding: 0.5rem;
-  }
-
-  .video-container {
-    padding: 1rem;
-  }
-}
-
-/* Estilos para el quiz */
-.quiz-container {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.quiz-question {
-  margin-bottom: 2rem;
-}
-
-.quiz-question h3 {
-  color: #000;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.quiz-options {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.quiz-options li {
-  margin-bottom: 0.8rem;
-}
-
-.quiz-options label {
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-  padding: 0.8rem;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.quiz-options label:hover {
-  background-color: #f0f0f0;
-}
-
-.quiz-options input[type="radio"] {
-  margin-right: 0.8rem;
-  margin-top: 0.3rem;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.quiz-submit {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
-}
-
-.quiz-submit:hover {
-  background-color: var(--link-hover-color);
-}
-
-.quiz-result {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.quiz-result.correct {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.quiz-result.incorrect {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-/* Estilos para el footer */
-footer {
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  text-align: center;
-  margin-top: auto;
-  border-top: 1px solid #eee;
-}
-
-/* Estilos para la encuesta inicial */
-.survey-container {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.survey-question {
-  margin-bottom: 2rem;
-}
-
-.survey-question h3 {
-  color: #000;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.survey-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.survey-option {
-  display: flex;
-  align-items: center;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background-color: white;
-}
-
-.survey-option:hover {
-  background-color: #f0f0f0;
-  border-color: var(--primary-color);
-}
-
-.survey-option input[type="radio"] {
-  margin-right: 0.8rem;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.survey-option.selected {
-  background-color: rgba(214, 32, 143, 0.1);
-  border-color: var(--primary-color);
-}
-
-.survey-submit {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.survey-submit:hover {
-  background-color: var(--link-hover-color);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.survey-submit:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-.survey-result {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  border-radius: 6px;
-  text-align: center;
-}
-
-/* Estilos responsivos para la encuesta */
-@media (max-width: 768px) {
-  .survey-container {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-
-  .survey-option {
-    padding: 0.6rem;
-  }
-
-  .survey-submit {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-}
-
-/* Estilos para el botón de tomar encuesta inicial */
-.take-survey-button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.take-survey-button:hover {
-  background-color: var(--link-hover-color);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.has-hero .content-aligned-container {
+  padding-top: 2rem;
 }
 
 /* Estilos para el fondo de módulos */
@@ -2522,10 +613,12 @@ footer {
   margin-left: -50vw;
   margin-right: -50vw;
   padding: 3rem 0;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   box-sizing: border-box;
 }
 
-.module-background > * {
+.module-content {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -2543,10 +636,12 @@ footer {
   margin-left: -50vw;
   margin-right: -50vw;
   padding: 3rem 0;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   box-sizing: border-box;
 }
 
-.survey-background > * {
+.survey-content {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -2555,376 +650,9 @@ footer {
   position: relative;
 }
 
-/* Ajustes responsivos para fondos de módulos */
-@media (max-width: 768px) {
-  .module-background {
-    padding: 2rem 0;
-  }
-
-  .module-background > * {
-    padding: 0 1rem;
-  }
-
-  .survey-background {
-    padding: 2rem 0;
-  }
-
-  .survey-background > * {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .module-background {
-    padding: 1.5rem 0;
-  }
-
-  .survey-background {
-    padding: 1.5rem 0;
-  }
-}
-
-/* Estilos para el contenido del módulo */
-.module-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-/* Asegurar que videos y key points tengan el mismo ancho en módulos grises */
-.module-content .responsive-video,
-.module-content .video-container,
-.module-content .youtube-container,
-.module-content .key-point {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para el contenido del módulo */
-@media (max-width: 768px) {
-  .module-content {
-    padding: 0 1rem;
-  }
-}
-
-/* Estilos para títulos h2 en el body - Open Sans Light 32px con separación de 48px */
-body h2 {
-  font-family: "Open Sans", sans-serif !important;
-  font-weight: 300 !important; /* Light */
-  font-size: 32px !important;
-  margin-top: 48px !important; /* Separación vertical de 48px */
-  margin-bottom: 24px !important; /* Separación inferior estándar */
-  color: #000 !important;
-  line-height: 1.3 !important;
-}
-
-/* Asegurar que el primer h2 no tenga margen superior excesivo */
-body h2:first-of-type,
-.content-container h2:first-child,
-.content-aligned-container h2:first-child {
-  margin-top: 24px !important;
-}
-
-/* Ajustes responsivos para h2 */
-@media (max-width: 768px) {
-  body h2 {
-    font-size: 28px !important;
-    margin-top: 36px !important;
-    margin-bottom: 20px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  body h2 {
-    font-size: 24px !important;
-    margin-top: 32px !important;
-    margin-bottom: 18px !important;
-  }
-}
-
-/* Asegurar que los videos en módulos grises no tengan sombras */
-.lesson-section:nth-child(even) .responsive-video,
-.lesson-section:nth-child(even) .video-container,
-.lesson-section:nth-child(even) .youtube-container,
-.module-background .responsive-video,
-.module-background .video-container,
-.module-background .youtube-container {
-  box-shadow: none !important;
-}
-
-.lesson-section:nth-child(even) .responsive-video iframe,
-.lesson-section:nth-child(even) .video-container video,
-.lesson-section:nth-child(even) .youtube-container iframe,
-.module-background .responsive-video iframe,
-.module-background .video-container video,
-.module-background .youtube-container iframe {
-  box-shadow: none !important;
-}
-
-/* Asegurar que los videos y key points en módulos grises tengan exactamente el mismo ancho */
-.lesson-section:nth-child(even) .module-content,
-.module-background .module-content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; /* Asegurar que todos los elementos tengan el mismo ancho */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-.lesson-section:nth-child(even) .module-content > *,
-.module-background .module-content > * {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Específicamente para key points en módulos grises */
-.lesson-section:nth-child(even) .module-content .key-point,
-.module-background .module-content .key-point {
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding-left: 3.5rem !important;
-  padding-right: 1.5rem !important;
-  box-sizing: border-box !important;
-}
-
-/* Ajustes responsivos para módulos grises */
-@media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .module-content .key-point,
-  .module-background .module-content .key-point {
-    width: calc(100% - 4rem) !important;
-    max-width: 1136px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .lesson-section:nth-child(even) .module-content,
-  .module-background .module-content {
-    padding: 0 1rem;
-  }
-
-  .lesson-section:nth-child(even) .module-content .key-point,
-  .module-background .module-content .key-point {
-    width: calc(100% - 2rem) !important;
-    max-width: none !important;
-    padding-left: calc(1rem + 3.5rem) !important;
-    padding-right: 1rem !important;
-  }
-}
-
-/* Pie de página */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-}
-
-/* También actualizar el estilo para el copyright */
-.white-footer .copyright {
-  text-align: right;
-  color: #000; /* Cambiar a negro */
-}
-
-.copyright {
-  font-size: 0.9rem;
-  color: white;
-}
-
-/* Utilidades */
-.hidden {
-  display: none;
-}
-
-/* Estilos para el menú hamburguesa en todos los dispositivos */
-.always-visible {
-  display: block !important;
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 100;
-}
-
-/* Buscar la sección del menú hamburguesa y reemplazar con estos estilos mejorados */
-
-/* Modificar los estilos del menú hamburguesa desplegable */
-.hamburger-nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  padding: 0;
-  border: 1px solid #eee;
-  border-top: none;
-  transform-origin: top right;
-  transform: scaleY(0);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  border-radius: 0 0 0 8px;
-}
-
-.hamburger-nav.active {
-  display: block;
-  transform: scaleY(1);
-  opacity: 1;
-}
-
-/* Asegurar que el menú se posicione correctamente en la página de introducción */
-.header-full-bottom .hamburger-nav {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: auto;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-}
-
-/* Ajustes responsivos para el menú hamburguesa */
-@media (max-width: 768px) {
-  .hamburger-nav,
-  .header-full-bottom .hamburger-nav {
-    width: 50%;
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hamburger-nav,
-  .header-full-bottom .hamburger-nav {
-    width: 80%;
-    right: 0;
-  }
-}
-
-/* Mejorar el estilo de la lista de navegación */
-.hamburger-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.hamburger-nav li {
-  width: 100%;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.hamburger-nav li:last-child {
-  border-bottom: none;
-}
-
-/* Mejorar la visibilidad del menú de navegación */
-.hamburger-nav a {
-  padding: 1rem 1.5rem;
-  display: block;
-  text-decoration: none;
-  color: var(--text-color-dark);
-}
-
-.hamburger-nav a:hover,
-.hamburger-nav a:focus {
-  background-color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.hamburger-nav a.active {
-  font-weight: bold;
-  color: var(--primary-color);
-  border-left: 3px solid var(--primary-color);
-}
-
-/* Ajustes responsivos para el menú hamburguesa */
-@media (max-width: 768px) {
-  .hamburger-nav {
-    width: 50%; /* Aumentar ancho en tablets */
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hamburger-nav {
-    width: 80%; /* Aumentar ancho en móviles */
-    right: 0;
-  }
-}
-
-/* Animación para el botón hamburguesa */
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(1) {
-  top: 8px;
-  transform: rotate(45deg);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-  transform: translateX(-20px);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(3) {
-  opacity: 0;
-  transform: translateX(20px);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(4) {
-  top: 8px;
-  transform: rotate(-45deg);
-}
-
-.hamburger-icon span {
-  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
-}
-
-/* Añadir un overlay para cerrar el menú al hacer clic fuera */
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.menu-overlay.active {
-  display: block;
-  opacity: 1;
-}
-
-/* Ajustar el layout del header para el nuevo menú */
-
-/* Ajustar el estilo del botón de hamburguesa */
+/* Menú hamburguesa */
 .mobile-menu-toggle {
+  display: none;
   background: none;
   border: none;
   padding: 0.5rem;
@@ -2937,49 +665,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Asegurar que los elementos interactivos tengan estados de foco visibles */
-.mobile-menu-toggle:focus {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-}
-
-/* Eliminar los estilos responsivos que ocultan el menú en pantallas grandes */
-@media (min-width: 769px) {
-  .hamburger-nav {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .hamburger-nav ul {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-}
-
-/* Menú hamburguesa para móvil */
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.mobile-menu-toggle:focus {
-  outline: 2px solid var(--primary-color);
-}
-
-/* Corregir el posicionamiento de las líneas del menú hamburguesa */
 .hamburger-icon {
   display: block;
   position: relative;
@@ -3013,844 +698,51 @@ footer {
   top: 16px;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo-container {
-    max-width: 80px;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem;
-    border-top: 1px solid #eee;
-    width: 100%;
-  }
-
-  .main-nav.active {
-    display: block;
-    animation: slideDown 0.3s ease-out forwards;
-  }
-
-  .language-selector {
-    margin-right: 0.5rem;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem;
-    border-top: 1px solid #eee;
-  }
-
-  .main-nav.active {
-    display: block;
-    animation: slideDown 0.3s ease-out forwards;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    display: block;
-    padding: 0.8rem;
-    border-radius: 4px;
-  }
-
-  .navigation-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav-button {
-    text-align: center;
-  }
-
-  .cover-content h1 {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .language-selector {
-    margin-right: 3rem; /* Espacio para el botón de hamburguesa */
-  }
-
-  .full-width .language-selector {
-    margin-right: 1rem;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
-  main {
-    padding: 1rem;
-  }
-
-  .content-container {
-    padding: 1rem;
-  }
-
-  .cover-content {
-    padding: 2rem 1rem;
-  }
-
-  .cover-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .lesson-section {
-    margin-bottom: 1.5rem;
-  }
-
-  .key-point {
-    padding: 1rem 1rem 1rem 3rem;
-  }
-
-  .key-point::before {
-    left: 0.7rem;
-    top: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .reflection-question {
-    padding: 1rem;
-  }
-
-  .reflection-textarea {
-    min-height: 100px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .save-feedback {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-}
-
-/* Mejoras de tipografía */
-p,
-li,
-a,
-button,
-input,
-textarea {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #000;
-}
-
-.cover-text h1 {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #000;
-}
-
-.key-point p {
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.author,
-.duration,
-.code {
-  font-weight: 300;
-}
-
-/* Ajustar el peso de la fuente para los botones */
-.start-button,
-.nav-button,
-.save-button {
-  font-weight: 600;
-}
-
-/* Añadir la clase plain-title para el título sin efectos y con menor peso */
-.plain-title {
-  font-weight: 400 !important; /* Reducir el peso de la fuente */
-  letter-spacing: normal !important;
-  text-shadow: none !important;
-}
-
-.arrow-icon {
-  display: inline-block;
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.start-button:hover .arrow-icon {
-  transform: translateX(4px);
-}
-
-/* Ajustes responsivos para la cabecera a ancho completo */
-@media (max-width: 768px) {
-  .full-width {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .smaller-logo {
-    max-width: 40px;
-  }
-}
-
-/* Alineación del header con el contenedor principal */
-.content-aligned {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  box-sizing: border-box;
-}
-
-/* Ajustar el padding del contenedor principal para que coincida con el header */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Asegurar que el logo esté alineado con el contenido */
-.content-aligned .header-left {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Asegurar que el menú hamburguesa esté alineado con el contenido */
-.content-aligned .mobile-menu-toggle {
-  margin-right: 0;
-  padding-right: 0;
-}
-
-/* Ajustar el espaciado en dispositivos móviles */
-@media (max-width: 768px) {
-  .content-aligned {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  main {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* Añadir estos estilos after the definition of .content-aligned */
-
-/* Estilo especial para la cabecera de la página de introducción */
-.header-full-bottom {
-  max-width: 100%;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  padding-left: 0;
-  padding-right: 0;
-  height: 120px; /* Altura fija para la cabecera */
-}
-
-/* Mantener el contenido alineado dentro de la cabecera */
-.header-full-bottom .header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 100%; /* Asegurar que el contenido ocupe toda la altura */
-  position: relative; /* Para posicionamiento de elementos absolutos */
-}
-
-/* Modificar los estilos para el contenedor de controles del header */
-.header-controls {
-  display: flex;
-  flex-direction: row; /* Asegurar que los elementos estén en fila */
-  align-items: center;
-  justify-content: flex-end; /* Alinear a la derecha */
-  gap: 1rem; /* Espacio entre elementos */
-  margin-left: auto;
-  position: relative; /* Asegurar posicionamiento correcto */
-}
-
-/* Ajustar el selector de idioma */
-.language-selector {
-  margin: 0;
-  padding: 0;
-  position: static; /* Evitar posicionamiento absoluto */
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap; /* Evitar que se rompa en varias líneas */
-}
-
-/* Ajustar el botón de menú hamburguesa */
-.mobile-menu-toggle.always-visible {
-  position: static; /* Evitar posicionamiento absoluto */
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-/* Asegurar que no haya superposición en dispositivos móviles */
-@media (max-width: 768px) {
-  .header-controls {
-    gap: 1rem; /* Mantener espacio incluso en pantallas pequeñas */
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
-  }
-
-  .language-selector {
-    margin-right: 0; /* Eliminar margen derecho que podría causar problemas */
-  }
-}
-
-/* Agrupar el selector de idioma y el menú hamburguesa */
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Separación entre el selector de idioma y el menú hamburguesa */
-  margin-left: auto; /* Empuja los controles hacia la derecha */
-}
-
-/* Asegurar que el selector de idioma esté alineado con el menú hamburguesa */
-.header-full-bottom .language-selector {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-/* Asegurar que el menú hamburguesa esté centrado verticalmente */
-.mobile-menu-toggle.always-visible {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-/* Ajustar el menú de navegación para la cabecera con altura fija */
-.header-full-bottom .hamburger-nav {
-  top: 120px; /* Alinear con la nueva altura de la cabecera */
-  right: 2rem; /* Alinear con el padding del contenedor */
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .header-controls {
-    gap: 0.5rem; /* Reducir la separación en pantallas pequeñas */
-  }
-
-  .header-full-bottom {
-    height: 100px; /* Reducir altura en tablets */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 100px; /* Ajustar posición del menú en tablets */
-    right: 1rem;
-  }
-
-  .header-full-bottom .header-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-full-bottom {
-    height: 80px; /* Reducir altura en móviles */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 80px; /* Ajustar posición del menú en móviles */
-    right: 1rem;
-  }
-}
-
-/* Cambiar el color de las líneas del menú hamburguesa a negro */
-.hamburger-icon span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #000; /* Cambiado de var(--primary-color) a negro */
-  border-radius: 3px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-}
-
-/* Eliminar bordes de las secciones */
-.no-borders {
-  border-bottom: none !important;
-}
-
-/* Estilos para la sección hero */
-.hero-section {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Altura ajustable según necesidad */
-  margin-bottom: 2rem;
-  overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/images/background-hero.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.hero-content h1 {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Ajustes responsivos para la sección hero */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 200px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: 150px;
-  }
-
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Estilos para el fondo de la sección de encuesta */
-.survey-background {
-  background-color: var(--module-bg-color);
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-bottom: 10rem; /* Duplicado de 3rem a 5rem */
-  margin-top: 6rem; /* Aumentado de 2rem a 3rem */
-  position: relative;
-  left: 0;
-  right: 0;
-  transition: background-color 0.3s ease;
-}
-
-.survey-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem; /* Aumentado el padding vertical de 2rem a 3rem */
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* Estilos para el fondo de los módulos */
-.module-background {
-  background-color: var(--module-bg-color);
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-bottom: 10rem; /* Duplicado de 3rem a 5rem */
-  margin-top: 6rem; /* Aumentado de 2rem a 3rem */
-  position: relative;
-  left: 0;
-  right: 0;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.module-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem; /* Aumentado el padding vertical de 2rem a 3rem */
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* Estilos para el fondo de los módulos - versión corregida */
-.module-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
-  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
-  box-sizing: border-box;
-}
-
-.module-content {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Aplicar los mismos estilos a survey-background y survey-content */
-.survey-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
-  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
-  box-sizing: border-box;
-}
-
-.survey-content {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Asegurar que el body no tenga overflow horizontal */
-body {
-  overflow-x: hidden;
-}
-
-/* Ajustes responsivos para las secciones con fondo */
-@media (max-width: 768px) {
-  .module-background,
-  .survey-background {
-    padding: 2rem 0;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .module-content,
-  .survey-content {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .module-background,
-  .survey-background {
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-
-/* Eliminar las clases que ya no se usan */
-.full-width-bg,
-.survey-container {
+.hamburger-nav {
   display: none;
-}
-
-/* Estilos para los objetivos de aprendizaje - Grid original (3 columnas) */
-.learning-objectives-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-/* Estilos para los objetivos de aprendizaje - Grid 2x2 (solo para Chapter 2) */
-.learning-objectives-grid-2x2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-/* Responsive adjustments for learning objectives */
-@media (max-width: 768px) {
-  .learning-objectives-grid,
-  .learning-objectives-grid-2x2 {
-    grid-template-columns: 1fr;
-  }
-}
-
-.learning-objective-card {
-  display: flex;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1.5rem;
-  border-left: 4px solid #d6208f;
-}
-
-.learning-objective-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-.objective-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(214, 32, 143, 0.1);
-  border-radius: 50%;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
-.objective-icon i {
-  font-size: 1.5rem;
-  color: #d6208f;
-}
-
-.objective-content {
-  flex: 1;
-}
-
-.objective-content h4 {
-  margin: 0 0 0.5rem 0;
-  color: #d6208f;
-  font-size: 1.1rem;
-}
-
-.objective-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #333;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .learning-objectives-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .learning-objective-card {
-    padding: 1.25rem;
-  }
-
-  .objective-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .objective-icon i {
-    font-size: 1.2rem;
-  }
-}
-
-/* Asegurar que los formularios sean accesibles */
-input,
-textarea,
-select {
-  font-size: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #767676; /* Color con suficiente contraste */
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-/* Asegurar que el texto tenga suficiente contraste */
-p,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--text-color-dark);
-}
-
-/* Asegurar que el texto sea redimensionable */
-html {
-  font-size: 100%; /* Permite al usuario cambiar el tamaño del texto en el navegador */
-  scroll-padding-top: 140px; /* Añadir scroll-padding-top para mejorar el comportamiento de los enlaces de anclaje */
-}
-
-@media (max-width: 768px) {
-  html {
-    scroll-padding-top: 120px; /* Ajustar para tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    scroll-padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* Mejorar la visibilidad del header fijo */
-.header-fixed {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 33.33%;
+  min-width: 250px;
+  max-width: 400px;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  padding: 0;
+  border: 1px solid #eee;
+  border-top: none;
+  transform-origin: top right;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  border-radius: 0 0 0 8px;
 }
 
-/* Asegurar que el espaciado sea adecuado */
-.content-aligned-container,
-.content-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.hamburger-nav.active {
+  display: block;
+  transform: scaleY(1);
+  opacity: 1;
 }
 
-/* Mejorar la visibilidad de los elementos de navegación */
-.navigation-buttons {
-  margin-top: 2rem;
+.hamburger-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
 }
 
-/* Asegurar que los iconos tengan suficiente contraste */
-.objective-icon i {
-  color: var(--primary-color);
-  font-size: 1.5rem;
+.hamburger-nav li {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-/* Mejorar la visibilidad de los mensajes de retroalimentación */
-.save-feedback {
-  margin-left: 1rem;
-  font-size: 0.9rem;
-  color: var(--success-color);
-  font-weight: 500;
+.hamburger-nav li:last-child {
+  border-bottom: none;
 }
 
-/* Asegurar que los elementos ocultos sean accesibles para lectores de pantalla cuando sea necesario */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* No ocultar el contenido solo con display: none si debe ser accesible */
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Mejorar la visibilidad del menú de navegación */
 .hamburger-nav a {
   padding: 1rem 1.5rem;
   display: block;
@@ -3870,476 +762,296 @@ html {
   border-left: 3px solid var(--primary-color);
 }
 
-/* Mejorar la visibilidad del estado activo */
-.nav-button:active,
-.start-button:active,
-.save-button:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+/* Estilo especial para la cabecera de la página de introducción */
+.header-full-bottom {
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+  height: 120px;
 }
 
-/* Asegurar que los videos tengan controles accesibles */
-.video-js .vjs-control-bar {
-  background-color: rgba(0, 0, 0, 0.7); /* Mejor contraste */
-}
-
-/* Mejorar la visibilidad de los elementos de formulario */
-.checkbox-container {
+.header-full-bottom .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.checkbox-container input[type="checkbox"] {
-  margin-top: 0.3rem;
-  margin-right: 0.8rem;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-/* Asegurar que el texto de los botones sea visible */
-.nav-button,
-.start-button,
-.save-button {
-  color: white !important;
-}
-
-/* Después de la definición de .content-aligned-container */
-.content-aligned-container {
-  background-color: white;
-  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajuste responsivo para la clase content-aligned-container */
-@media (max-width: 768px) {
-  .content-aligned-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 120px; /* Ajustar para tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .content-aligned-container {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* También ajustar el main para que tenga un padding-top adecuado cuando no usa content-aligned-container */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para main */
-@media (max-width: 768px) {
-  main {
-    padding-top: 120px; /* Ajustar para tablets */
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  main {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* Añadir estas reglas al final del archivo CSS para asegurar que tengan prioridad */
-
-/* Eliminar todos los bordes y outlines magenta de cualquier elemento */
-* {
-  outline: none !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-}
-
-/* Eliminar específicamente los bordes de los contenedores de módulos */
-.module-background,
-.survey-background,
-.module-content,
-.survey-content,
-main,
-body,
-html {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar cualquier pseudo-elemento que pueda estar causando las líneas */
-.module-background::before,
-.module-background::after,
-.survey-background::before,
-.survey-background::after,
-.module-content::before,
-.module-content::after,
-.survey-content::before,
-.survey-content::after,
-main::before,
-main::after,
-body::before,
-body::after {
-  display: none !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-/* Asegurar que no haya bordes en estados focus/active */
-*:focus,
-*:active,
-*:focus-visible,
-*:focus-within {
-  outline: none !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar específicamente los bordes magenta */
-*[style*="border-color: #d6208f"],
-*[style*="border-color:#d6208f"],
-*[style*="border: 1px solid #d6208f"],
-*[style*="border:1px solid #d6208f"] {
-  border-color: transparent !important;
-}
-
-/* Eliminar cualquier borde vertical en los contenedores principales */
-body > *,
-main > *,
-.content-aligned-container > *,
-.content-container > * {
-  border-left: none !important;
-  border-right: none !important;
-}
-
-/* Asegurar que los módulos solo tengan efectos de hover controlados */
-.module-background,
-.survey-background {
-  border-left: none !important;
-  border-right: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Mantener solo el efecto de hover para los módulos */
-.module-background:hover,
-.survey-background:hover {
-  background-color: var(--module-bg-hover);
-}
-
-/* Eliminar cualquier borde o outline en los elementos que puedan recibir focus */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-[tabindex]:focus,
-.module-background:focus,
-.survey-background:focus,
-.module-content:focus,
-.survey-content:focus {
-  outline: none !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar cualquier borde magenta en toda la página */
-[style*="border-color: #d6208f"],
-[style*="border-color:#d6208f"],
-[style*="border-left-color: #d6208f"],
-[style*="border-left-color:#d6208f"],
-[style*="border-right-color: #d6208f"],
-[style*="border-right-color:#d6208f"] {
-  border-color: transparent !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-}
-
-/* Asegurar que no haya bordes en los contenedores principales */
-html,
-body {
-  overflow-x: hidden;
-}
-
-/* Eliminar cualquier borde en los elementos que puedan estar causando el problema */
-.module-background,
-.survey-background {
+  height: 100%;
   position: relative;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  left: 0;
-  right: 0;
-  border-left: none !important;
-  border-right: none !important;
 }
 
-/* Corregir el cálculo del ancho y margen que podría estar causando el problema */
-.module-background,
-.survey-background {
-  width: 100%;
-  margin-left: 0;
-  transform: none;
-}
-
-/* Eliminar cualquier borde o línea vertical en toda la página */
-body::before,
-body::after,
-main::before,
-main::after,
-.content-aligned-container::before,
-.content-aligned-container::after,
-.content-container::before,
-.content-container::after,
-.module-background::before,
-.module-background::after,
-.survey-background::before,
-.survey-background::after {
-  display: none !important;
-}
-
-/* Añadir estilos específicos para el módulo "Welcome to the course" */
-
-/* Títulos de video y secciones para el módulo Welcome - Open Sans Light 32px */
-.welcome-module h2,
-.welcome-module .video-title {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300; /* Light */
-  font-size: 32px;
-  color: #000;
-  margin: 1.5rem 0 1rem;
-  line-height: 1.4;
-}
-
-/* Eliminar sombra del poster de video en el módulo Welcome */
-.welcome-module .video-container img {
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: none; /* Eliminar sombra */
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.welcome-module .video-container img:hover {
-  transform: translateY(-5px);
-  box-shadow: none; /* Mantener sin sombra en hover */
-}
-
-/* Añadir espaciado específico entre el título y el video en el módulo Welcome */
-.welcome-module h2 + .responsive-video {
-  margin-top: 64px; /* Espaciado de 64px entre título y video */
-}
-
-/* Ajustes responsivos para el espaciado */
-@media (max-width: 768px) {
-  .welcome-module h2 + .responsive-video {
-    margin-top: 48px; /* Reducir ligeramente en tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2 + .responsive-video {
-    margin-top: 40px; /* Reducir más en móviles */
-  }
-}
-
-/* Ajustes responsivos para el módulo Welcome */
-@media (max-width: 768px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 28px; /* Reducir ligeramente en tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 24px; /* Reducir más en móviles */
-  }
-}
-
-/* Estilos más específicos para eliminar la sombra y aplicar el espaciado: */
-
-/* Estilos específicos para el módulo Welcome to the Course */
-.welcome-module h2 {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  color: #000;
-  margin-bottom: 64px !important;
-}
-
-.welcome-module .responsive-video {
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.welcome-module .video-js {
-  box-shadow: none !important;
-}
-
-/* Eliminar cualquier sombra en el contenedor del video */
-.welcome-module .responsive-video,
-.welcome-module .video-container,
-.welcome-module .video-js,
-.welcome-module video {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-}
-
-/* Asegurar que no hay sombras en el hover */
-.welcome-module .responsive-video:hover,
-.welcome-module .video-container:hover,
-.welcome-module .video-js:hover,
-.welcome-module video:hover {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .welcome-module h2 {
-    font-size: 28px;
-    margin-bottom: 48px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2 {
-    font-size: 24px;
-    margin-bottom: 40px !important;
-  }
-}
-
-/* Aplicar Open Sans Light 32px a todos los títulos h2 del body y añadir separación vertical de 48px */
-body h2 {
-  font-family: "Open Sans", sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 32px !important;
-  margin-bottom: 48px !important;
-}
-
-/* Eliminar sombras de videos en módulos con fondo gris */
-.lesson-section:nth-child(even) .responsive-video,
-.lesson-section:nth-child(even) .video-container,
-.lesson-section:nth-child(even) .video-js,
-.lesson-section:nth-child(even) video,
-.lesson-section:nth-child(even) iframe {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Eliminar sombras en hover para videos en módulos con fondo gris */
-.lesson-section:nth-child(even) .responsive-video:hover,
-.lesson-section:nth-child(even) .video-container:hover,
-.lesson-section:nth-child(even) .video-js:hover,
-.lesson-section:nth-child(even) video:hover,
-.lesson-section:nth-child(even) iframe:hover {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Eliminar sombras de videos en módulos con clase module-background */
-.module-background .responsive-video,
-.module-background .video-container,
-.module-background .video-js,
-.module-background video,
-.module-background iframe {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Eliminar sombras en hover para videos en módulos con clase module-background */
-.module-background .responsive-video:hover,
-.module-background .video-container:hover,
-.module-background .video-js:hover,
-.module-background video:hover,
-.module-background iframe:hover {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  border: none !important;
-}
-
-/* Asegurar que los videos y key points en módulos grises tengan exactamente el mismo ancho */
-.lesson-section:nth-child(even) .module-content,
-.module-background .module-content {
+.header-controls {
   display: flex;
-  flex-direction: column;
-  align-items: stretch; /* Asegurar que todos los elementos tengan el mismo ancho */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-left: auto;
+  position: relative;
 }
 
-.lesson-section:nth-child(even) .module-content > *,
-.module-background .module-content > * {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
+.language-selector {
+  margin: 0;
+  padding: 0;
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
-/* Específicamente para key points en módulos grises */
-.lesson-section:nth-child(even) .module-content .key-point,
-.module-background .module-content .key-point {
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding-left: 3.5rem !important;
-  padding-right: 1.5rem !important;
-  box-sizing: border-box !important;
+.mobile-menu-toggle.always-visible {
+  position: static;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 0;
 }
 
-/* Ajustes responsivos para módulos grises */
-@media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .module-content .key-point,
-  .module-background .module-content .key-point {
-    width: calc(100% - 4rem) !important;
-    max-width: 1136px !important;
-  }
+.header-full-bottom .hamburger-nav {
+  top: 120px;
+  right: 2rem;
 }
 
+/* Estilos responsivos */
 @media (max-width: 768px) {
-  .lesson-section:nth-child(even) .module-content,
-  .module-background .module-content {
+  .header-fixed.scrolled {
+    height: 60px !important;
+  }
+
+  .header-fixed.scrolled .logo-container.tiny-logo {
+    max-width: 35px !important;
+    width: 35px !important;
+  }
+
+  .header-fixed.scrolled .header-title {
+    font-size: 1.1rem;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+  }
+
+  .header-left {
+    gap: 0.5rem;
+  }
+
+  .content-aligned-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+
+  .hero-content {
     padding: 0 1rem;
   }
 
-  .lesson-section:nth-child(even) .module-content .key-point,
-  .module-background .module-content .key-point {
-    width: calc(100% - 2rem) !important;
-    max-width: none !important;
-    padding-left: calc(1rem + 3.5rem) !important;
-    padding-right: 1rem !important;
+  .hero-content h1 {
+    font-size: 2rem;
   }
+
+  body h2 {
+    font-size: 28px !important;
+    margin-top: 36px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .lesson-section:nth-child(odd) {
+    padding: 1rem;
+  }
+
+  .lesson-section:nth-child(even) {
+    padding: 2rem 0;
+  }
+
+  .lesson-section:nth-child(even) > * {
+    padding: 0 1rem;
+  }
+
+  .module-background,
+  .survey-background {
+    padding: 2rem 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .module-content,
+  .survey-content {
+    padding: 0 1rem;
+  }
+
+  .hamburger-nav,
+  .header-full-bottom .hamburger-nav {
+    width: 50%;
+    right: 0;
+  }
+
+  .header-controls {
+    gap: 0.5rem;
+  }
+
+  .header-full-bottom {
+    height: 100px;
+  }
+
+  .header-full-bottom .hamburger-nav {
+    top: 100px;
+    right: 1rem;
+  }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-button {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-fixed.scrolled {
+    height: 50px !important;
+  }
+
+  .header-fixed.scrolled .logo-container.tiny-logo {
+    max-width: 30px !important;
+    width: 30px !important;
+  }
+
+  .header-fixed.scrolled .header-title {
+    font-size: 1rem;
+  }
+
+  .header-title {
+    font-size: 1.1rem;
+  }
+
+  .logo-container {
+    max-width: 80px;
+  }
+
+  .hero-section {
+    height: 250px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  body h2 {
+    font-size: 24px !important;
+    margin-top: 32px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .lesson-section:nth-child(even) {
+    padding: 1.5rem 0;
+  }
+
+  .module-background,
+  .survey-background {
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hamburger-nav,
+  .header-full-bottom .hamburger-nav {
+    width: 80%;
+    right: 0;
+  }
+
+  .header-full-bottom {
+    height: 80px;
+  }
+
+  .header-full-bottom .hamburger-nav {
+    top: 80px;
+    right: 1rem;
+  }
+
+  .key-point {
+    padding: 1rem 1rem 1rem 3rem;
+  }
+
+  .key-point::before {
+    left: 0.7rem;
+    top: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Eliminar sombras de videos en módulos grises */
+.lesson-section:nth-child(even) .responsive-video,
+.lesson-section:nth-child(even) .video-container,
+.lesson-section:nth-child(even) .youtube-container,
+.module-background .responsive-video,
+.module-background .video-container,
+.module-background .youtube-container {
+  box-shadow: none !important;
+}
+
+.lesson-section:nth-child(even) .responsive-video iframe,
+.lesson-section:nth-child(even) .video-container video,
+.lesson-section:nth-child(even) .youtube-container iframe,
+.module-background .responsive-video iframe,
+.module-background .video-container video,
+.module-background .youtube-container iframe {
+  box-shadow: none !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Utilidades */
+.hidden {
+  display: none;
+}
+
+.always-visible {
+  display: block !important;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Eliminar bordes de las secciones */
+.no-borders {
+  border-bottom: none !important;
 }
