@@ -1767,158 +1767,29 @@ a:hover {
 .full-blue-cover .logo-container {
   max-width: 150px;
   position: absolute;
-  top: 1.5rem;
-  left: 2rem;
-  margin-bottom: 1rem;
-}
-
-.full-blue-cover .logo {
-  filter: brightness(0) invert(1); /* Hace que el logo sea blanco */
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
 }
 
 .full-blue-cover main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
+  justify-content: center;
 }
 
 .full-blue-cover .cover-text {
-  width: 50%;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
 }
 
 .full-blue-cover h1 {
-  color: white; /* Mantener blanco para fondos oscuros */
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-transform: none; /* Asegurar que no se aplique transformación de texto */
-}
-
-.title-separator {
-  width: 60px;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 1.5rem;
-}
-
-.subtitle {
-  font-size: 1.4rem;
-  font-weight: 500; /* Peso medio entre el título y el resto del contenido */
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.full-blue-cover .author,
-.full-blue-cover .duration,
-.full-blue-cover .code {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.full-blue-cover .start-button {
-  background-color: white;
-  color: #d6208f;
-  padding: 1rem 2.5rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-  font-size: 1.2rem;
-}
-
-.full-blue-cover .start-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 2.5rem;
 }
 
 .full-blue-cover footer {
-  background-color: transparent;
-  padding: 1.5rem 3rem;
-  text-align: right;
-  width: 50%;
-  margin-left: auto;
-}
-
-/* Estilos responsivos para la portada con fondo azul */
-@media (max-width: 768px) {
-  .full-cover-layout {
-    flex-direction: column;
-  }
-
-  .full-cover-image {
-    position: relative;
-    width: 100%;
-    height: 40vh;
-  }
-
-  .full-blue-cover .logo-container {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 20;
-  }
-
-  .full-blue-cover main {
-    justify-content: center;
-  }
-
-  .full-blue-cover .cover-text {
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .full-blue-cover h1 {
-    font-size: 2.5rem;
-  }
-
-  .full-blue-cover footer {
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .full-cover-image {
-    height: 30vh;
-  }
-
-  .full-blue-cover .logo-container {
-    max-width: 100px;
-  }
-
-  .full-blue-cover .cover-text {
-    padding: 1.5rem;
-  }
-
-  .full-blue-cover h1 {
-    font-size: 2rem;
-  }
-
-  .full-blue-cover .author,
-  .full-blue-cover .duration,
-  .full-blue-cover .code {
-    font-size: 1rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .title-separator {
-    width: 40px;
-    margin: 0 auto 1.2rem;
-  }
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 /* Estilos para la portada mejorada */
@@ -2197,7 +2068,7 @@ a:hover {
 @media (max-width: 768px) {
   header {
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .main-nav {
@@ -2210,7 +2081,7 @@ a:hover {
 
   .language-selector {
     order: -1;
-    margin-right: 0;
+    margin-right: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
@@ -2281,963 +2152,6 @@ a:hover {
 
   .video-container {
     padding: 1rem;
-  }
-}
-
-/* Estilos para el quiz */
-.quiz-container {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.quiz-question {
-  margin-bottom: 2rem;
-}
-
-.quiz-question h3 {
-  color: #000;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.quiz-options {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.quiz-options li {
-  margin-bottom: 0.8rem;
-}
-
-.quiz-options label {
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-  padding: 0.8rem;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.quiz-options label:hover {
-  background-color: #f0f0f0;
-}
-
-.quiz-options input[type="radio"] {
-  margin-right: 0.8rem;
-  margin-top: 0.3rem;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.quiz-submit {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
-}
-
-.quiz-submit:hover {
-  background-color: var(--link-hover-color);
-}
-
-.quiz-result {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.quiz-result.correct {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.quiz-result.incorrect {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-/* Estilos para el footer */
-footer {
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  text-align: center;
-  margin-top: auto;
-  border-top: 1px solid #eee;
-}
-
-/* Estilos para la encuesta inicial */
-.survey-container {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.survey-question {
-  margin-bottom: 2rem;
-}
-
-.survey-question h3 {
-  color: #000;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.survey-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.survey-option {
-  display: flex;
-  align-items: center;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background-color: white;
-}
-
-.survey-option:hover {
-  background-color: #f0f0f0;
-  border-color: var(--primary-color);
-}
-
-.survey-option input[type="radio"] {
-  margin-right: 0.8rem;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.survey-option.selected {
-  background-color: rgba(214, 32, 143, 0.1);
-  border-color: var(--primary-color);
-}
-
-.survey-submit {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.survey-submit:hover {
-  background-color: var(--link-hover-color);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.survey-submit:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-.survey-result {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  border-radius: 6px;
-  text-align: center;
-}
-
-/* Estilos responsivos para la encuesta */
-@media (max-width: 768px) {
-  .survey-container {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-
-  .survey-option {
-    padding: 0.6rem;
-  }
-
-  .survey-submit {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-}
-
-/* Estilos para el botón de tomar encuesta inicial */
-.take-survey-button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.take-survey-button:hover {
-  background-color: var(--link-hover-color);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Estilos para el fondo de módulos */
-.module-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  box-sizing: border-box;
-}
-
-.module-background > * {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.survey-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  box-sizing: border-box;
-}
-
-.survey-background > * {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Ajustes responsivos para fondos de módulos */
-@media (max-width: 768px) {
-  .module-background {
-    padding: 2rem 0;
-  }
-
-  .module-background > * {
-    padding: 0 1rem;
-  }
-
-  .survey-background {
-    padding: 2rem 0;
-  }
-
-  .survey-background > * {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .module-background {
-    padding: 1.5rem 0;
-  }
-
-  .survey-background {
-    padding: 1.5rem 0;
-  }
-}
-
-/* Estilos para el contenido del módulo */
-.module-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-/* Asegurar que videos y key points tengan el mismo ancho en módulos grises */
-.module-content .responsive-video,
-.module-content .video-container,
-.module-content .youtube-container,
-.module-content .key-point {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para el contenido del módulo */
-@media (max-width: 768px) {
-  .module-content {
-    padding: 0 1rem;
-  }
-}
-
-/* Estilos para títulos h2 en el body - Open Sans Light 32px con separación de 48px */
-body h2 {
-  font-family: "Open Sans", sans-serif !important;
-  font-weight: 300 !important; /* Light */
-  font-size: 32px !important;
-  margin-top: 48px !important; /* Separación vertical de 48px */
-  margin-bottom: 24px !important; /* Separación inferior estándar */
-  color: #000 !important;
-  line-height: 1.3 !important;
-}
-
-/* Asegurar que el primer h2 no tenga margen superior excesivo */
-body h2:first-of-type,
-.content-container h2:first-child,
-.content-aligned-container h2:first-child {
-  margin-top: 24px !important;
-}
-
-/* Ajustes responsivos para h2 */
-@media (max-width: 768px) {
-  body h2 {
-    font-size: 28px !important;
-    margin-top: 36px !important;
-    margin-bottom: 20px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  body h2 {
-    font-size: 24px !important;
-    margin-top: 32px !important;
-    margin-bottom: 18px !important;
-  }
-}
-
-/* Asegurar que los videos en módulos grises no tengan sombras */
-.lesson-section:nth-child(even) .responsive-video,
-.lesson-section:nth-child(even) .video-container,
-.lesson-section:nth-child(even) .youtube-container,
-.module-background .responsive-video,
-.module-background .video-container,
-.module-background .youtube-container {
-  box-shadow: none !important;
-}
-
-.lesson-section:nth-child(even) .responsive-video iframe,
-.lesson-section:nth-child(even) .video-container video,
-.lesson-section:nth-child(even) .youtube-container iframe,
-.module-background .responsive-video iframe,
-.module-background .video-container video,
-.module-background .youtube-container iframe {
-  box-shadow: none !important;
-}
-
-/* Asegurar que los videos y key points en módulos grises tengan exactamente el mismo ancho */
-.lesson-section:nth-child(even) .module-content,
-.module-background .module-content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; /* Asegurar que todos los elementos tengan el mismo ancho */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-.lesson-section:nth-child(even) .module-content > *,
-.module-background .module-content > * {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Específicamente para key points en módulos grises */
-.lesson-section:nth-child(even) .module-content .key-point,
-.module-background .module-content .key-point {
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding-left: 3.5rem !important;
-  padding-right: 1.5rem !important;
-  box-sizing: border-box !important;
-}
-
-/* Ajustes responsivos para módulos grises */
-@media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .module-content .key-point,
-  .module-background .module-content .key-point {
-    width: calc(100% - 4rem) !important;
-    max-width: 1136px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .lesson-section:nth-child(even) .module-content,
-  .module-background .module-content {
-    padding: 0 1rem;
-  }
-
-  .lesson-section:nth-child(even) .module-content .key-point,
-  .module-background .module-content .key-point {
-    width: calc(100% - 2rem) !important;
-    max-width: none !important;
-    padding-left: calc(1rem + 3.5rem) !important;
-    padding-right: 1rem !important;
-  }
-}
-
-/* Hero Section Styles */
-.hero-section {
-  width: 100%;
-  height: 600px;
-  background-image: url("../assets/images/background-hero.png");
-  background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: left center; /* Position from left to ensure fingerprints show at bottom */
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Change from center to flex-start */
-  margin-bottom: 2rem;
-}
-
-/* Add styles for hero content alignment and typography */
-.hero-content {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-.hero-title {
-  font-family: "Open Sans", Arial, sans-serif !important;
-  font-weight: 300 !important; /* Light */
-  font-size: 48px !important;
-  color: white !important;
-  margin: 0 !important;
-  text-align: left !important;
-  line-height: 1.2 !important;
-}
-
-/* Responsive adjustments for hero title */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 40px !important;
-  }
-
-  .hero-content {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 32px !important;
-  }
-}
-
-/* Pie de página */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-}
-
-/* También actualizar el estilo para el copyright */
-.white-footer .copyright {
-  text-align: right;
-  color: #000; /* Cambiar a negro */
-}
-
-.copyright {
-  font-size: 0.9rem;
-  color: white;
-}
-
-/* Utilidades */
-.hidden {
-  display: none;
-}
-
-/* Estilos para el menú hamburguesa en todos los dispositivos */
-.always-visible {
-  display: block !important;
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 100;
-}
-
-/* Buscar la sección del menú hamburguesa y reemplazar con estos estilos mejorados */
-
-/* Modificar los estilos del menú hamburguesa desplegable */
-.hamburger-nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  padding: 0;
-  border: 1px solid #eee;
-  border-top: none;
-  transform-origin: top right;
-  transform: scaleY(0);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  border-radius: 0 0 0 8px;
-}
-
-.hamburger-nav.active {
-  display: block;
-  transform: scaleY(1);
-  opacity: 1;
-}
-
-/* Asegurar que el menú se posicione correctamente en la página de introducción */
-.header-full-bottom .hamburger-nav {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: auto;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-}
-
-/* Ajustes responsivos para el menú hamburguesa */
-@media (max-width: 768px) {
-  .hamburger-nav,
-  .header-full-bottom .hamburger-nav {
-    width: 50%;
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hamburger-nav,
-  .header-full-bottom .hamburger-nav {
-    width: 80%;
-    right: 0;
-  }
-}
-
-/* Mejorar el estilo de la lista de navegación */
-.hamburger-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.hamburger-nav li {
-  width: 100%;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.hamburger-nav li:last-child {
-  border-bottom: none;
-}
-
-/* Mejorar la visibilidad del menú de navegación */
-.hamburger-nav a {
-  padding: 1rem 1.5rem;
-  display: block;
-  text-decoration: none;
-  color: var(--text-color-dark);
-}
-
-.hamburger-nav a:hover,
-.hamburger-nav a:focus {
-  background-color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.hamburger-nav a.active {
-  font-weight: bold;
-  color: var(--primary-color);
-  border-left: 3px solid var(--primary-color);
-}
-
-/* Ajustes responsivos para el menú hamburguesa */
-@media (max-width: 768px) {
-  .hamburger-nav {
-    width: 50%; /* Aumentar ancho en tablets */
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hamburger-nav {
-    width: 80%; /* Aumentar ancho en móviles */
-    right: 0;
-  }
-}
-
-/* Animación para el botón hamburguesa */
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(1) {
-  top: 8px;
-  transform: rotate(45deg);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-  transform: translateX(-20px);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(3) {
-  opacity: 0;
-  transform: translateX(20px);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(4) {
-  top: 8px;
-  transform: rotate(-45deg);
-}
-
-.hamburger-icon span {
-  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
-}
-
-/* Añadir un overlay para cerrar el menú al hacer clic fuera */
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.menu-overlay.active {
-  display: block;
-  opacity: 1;
-}
-
-/* Ajustar el layout del header para el nuevo menú */
-
-/* Ajustar el estilo del botón de hamburguesa */
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Asegurar que los elementos interactivos tengan estados de foco visibles */
-.mobile-menu-toggle:focus {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-}
-
-/* Eliminar los estilos responsivos que ocultan el menú en pantallas grandes */
-@media (min-width: 769px) {
-  .hamburger-nav {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .hamburger-nav ul {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-}
-
-/* Menú hamburguesa para móvil */
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.mobile-menu-toggle:focus {
-  outline: 2px solid var(--primary-color);
-}
-
-/* Corregir el posicionamiento de las líneas del menú hamburguesa */
-.hamburger-icon {
-  display: block;
-  position: relative;
-  width: 24px;
-  height: 18px;
-}
-
-.hamburger-icon span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #000;
-  border-radius: 3px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-}
-
-.hamburger-icon span:nth-child(1) {
-  top: 0px;
-}
-
-.hamburger-icon span:nth-child(2),
-.hamburger-icon span:nth-child(3) {
-  top: 8px;
-}
-
-.hamburger-icon span:nth-child(4) {
-  top: 16px;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo-container {
-    max-width: 80px;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem;
-    border-top: 1px solid #eee;
-    width: 100%;
-  }
-
-  .main-nav.active {
-    display: block;
-    animation: slideDown 0.3s ease-out forwards;
-  }
-
-  .language-selector {
-    margin-right: 0.5rem;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem;
-    border-top: 1px solid #eee;
-  }
-
-  .main-nav.active {
-    display: block;
-    animation: slideDown 0.3s ease-out forwards;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    display: block;
-    padding: 0.8rem;
-    border-radius: 4px;
-  }
-
-  .navigation-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav-button {
-    text-align: center;
-  }
-
-  .cover-content h1 {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .language-selector {
-    margin-right: 3rem; /* Espacio para el botón de hamburguesa */
-  }
-
-  .full-width .language-selector {
-    margin-right: 1rem;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
-  main {
-    padding: 1rem;
-  }
-
-  .content-container {
-    padding: 1rem;
-  }
-
-  .cover-content {
-    padding: 2rem 1rem;
-  }
-
-  .cover-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .lesson-section {
-    margin-bottom: 1.5rem;
-  }
-
-  .key-point {
-    padding: 1rem 1rem 1rem 3rem;
-  }
-
-  .key-point::before {
-    left: 0.7rem;
-    top: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .reflection-question {
-    padding: 1rem;
-  }
-
-  .reflection-textarea {
-    min-height: 100px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .save-feedback {
-    margin-left: 0;
-    margin-top: 0.5rem;
   }
 }
 
@@ -3414,82 +2328,6 @@ main {
   width: 40px;
   padding: 0;
   margin: 0;
-}
-
-/* Asegurar que no haya superposición en dispositivos móviles */
-@media (max-width: 768px) {
-  .header-controls {
-    gap: 1rem; /* Mantener espacio incluso en pantallas pequeñas */
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
-  }
-
-  .language-selector {
-    margin-right: 0; /* Eliminar margen derecho que podría causar problemas */
-  }
-}
-
-/* Agrupar el selector de idioma y el menú hamburguesa */
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Separación entre el selector de idioma y el menú hamburguesa */
-  margin-left: auto; /* Empuja los controles hacia la derecha */
-}
-
-/* Asegurar que el selector de idioma esté alineado con el menú hamburguesa */
-.header-full-bottom .language-selector {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-/* Asegurar que el menú hamburguesa esté centrado verticalmente */
-.mobile-menu-toggle.always-visible {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-/* Ajustar el menú de navegación para la cabecera con altura fija */
-.header-full-bottom .hamburger-nav {
-  top: 120px; /* Alinear con la nueva altura de la cabecera */
-  right: 2rem; /* Alinear con el padding del contenedor */
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .header-controls {
-    gap: 0.5rem; /* Reducir la separación en pantallas pequeñas */
-  }
-
-  .header-full-bottom {
-    height: 100px; /* Reducir altura en tablets */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 100px; /* Ajustar posición del menú en tablets */
-    right: 1rem;
-  }
-
-  .header-full-bottom .header-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-full-bottom {
-    height: 80px; /* Reducir altura en móviles */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 80px; /* Ajustar posición del menú en móviles */
-    right: 1rem;
-  }
 }
 
 /* Cambiar el color de las líneas del menú hamburguesa a negro */
@@ -3915,7 +2753,7 @@ html {
 }
 
 @media (max-width: 480px) {
-  .content-aligned-container {
+  main {
     padding-top: 100px; /* Ajustar para móviles */
   }
 }
@@ -4150,26 +2988,11 @@ main::after,
   }
 }
 
-/* Ajustes responsivos para el módulo Welcome */
-@media (max-width: 768px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 28px; /* Reducir ligeramente en tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 24px; /* Reducir más en móviles */
-  }
-}
-
 /* Estilos más específicos para eliminar la sombra y aplicar el espaciado: */
 
 /* Estilos específicos para el módulo Welcome to the Course */
 .welcome-module h2 {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 32px;
   color: #000;
@@ -4344,6 +3167,19 @@ body h2 {
   align-items: center;
   justify-content: flex-start; /* Change from center to flex-start */
   margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for hero background alignment */
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: calc(50% - 600px + 1rem) center; /* Adjust for mobile padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    background-position: calc(50% - 600px + 1rem) center; /* Maintain alignment on small screens */
+  }
 }
 
 /* Add styles for hero content alignment and typography */
@@ -5024,82 +3860,6 @@ main {
   margin: 0;
 }
 
-/* Asegurar que no haya superposición en dispositivos móviles */
-@media (max-width: 768px) {
-  .header-controls {
-    gap: 1rem; /* Mantener espacio incluso en pantallas pequeñas */
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
-  }
-
-  .language-selector {
-    margin-right: 0; /* Eliminar margen derecho que podría causar problemas */
-  }
-}
-
-/* Agrupar el selector de idioma y el menú hamburguesa */
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Separación entre el selector de idioma y el menú hamburguesa */
-  margin-left: auto; /* Empuja los controles hacia la derecha */
-}
-
-/* Asegurar que el selector de idioma esté alineado con el menú hamburguesa */
-.header-full-bottom .language-selector {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-/* Asegurar que el menú hamburguesa esté centrado verticalmente */
-.mobile-menu-toggle.always-visible {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-/* Ajustar el menú de navegación para la cabecera con altura fija */
-.header-full-bottom .hamburger-nav {
-  top: 120px; /* Alinear con la nueva altura de la cabecera */
-  right: 2rem; /* Alinear con el padding del contenedor */
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .header-controls {
-    gap: 0.5rem; /* Reducir la separación en pantallas pequeñas */
-  }
-
-  .header-full-bottom {
-    height: 100px; /* Reducir altura en tablets */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 100px; /* Ajustar posición del menú en tablets */
-    right: 1rem;
-  }
-
-  .header-full-bottom .header-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-full-bottom {
-    height: 80px; /* Reducir altura en móviles */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 80px; /* Ajustar posición del menú en móviles */
-    right: 1rem;
-  }
-}
-
 /* Cambiar el color de las líneas del menú hamburguesa a negro */
 .hamburger-icon span {
   display: block;
@@ -5175,4 +3935,2148 @@ main {
   margin-top: 6rem; /* Duplicado de 3rem a 6rem */
   margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
   box-sizing: border-box;
+}
+
+.module-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Aplicar los mismos estilos a survey-background y survey-content */
+.survey-background {
+  background-color: #f5f5f5;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 0;
+  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
+  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
+  box-sizing: border-box;
+}
+
+.survey-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Asegurar que el body no tenga overflow horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Ajustes responsivos para las secciones con fondo */
+@media (max-width: 768px) {
+  .module-background,
+  .survey-background {
+    padding: 2rem 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .module-content,
+  .survey-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-background,
+  .survey-background {
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Eliminar las clases que ya no se usan */
+.full-width-bg,
+.survey-container {
+  display: none;
+}
+
+/* Estilos para los objetivos de aprendizaje - Grid original (3 columnas) */
+.learning-objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilos para los objetivos de aprendizaje - Grid 2x2 (solo para Chapter 2) */
+.learning-objectives-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments for learning objectives */
+@media (max-width: 768px) {
+  .learning-objectives-grid,
+  .learning-objectives-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.learning-objective-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  border-left: 4px solid #d6208f;
+}
+
+.learning-objective-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.objective-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(214, 32, 143, 0.1);
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.objective-icon i {
+  font-size: 1.5rem;
+  color: #d6208f;
+}
+
+.objective-content {
+  flex: 1;
+}
+
+.objective-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #d6208f;
+  font-size: 1.1rem;
+}
+
+.objective-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .learning-objectives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-objective-card {
+    padding: 1.25rem;
+  }
+
+  .objective-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .objective-icon i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Asegurar que los formularios sean accesibles */
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #767676; /* Color con suficiente contraste */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Asegurar que el texto tenga suficiente contraste */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color-dark);
+}
+
+/* Asegurar que el texto sea redimensionable */
+html {
+  font-size: 100%; /* Permite al usuario cambiar el tamaño del texto en el navegador */
+  scroll-padding-top: 140px; /* Añadir scroll-padding-top para mejorar el comportamiento de los enlaces de anclaje */
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 120px; /* Ajustar para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 100px; /* Ajustar para móviles */
+  }
+}
+
+/* Mejorar la visibilidad del header fijo */
+.header-fixed {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Asegurar que el espaciado sea adecuado */
+.content-aligned-container,
+.content-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mejorar la visibilidad de los elementos de navegación */
+.navigation-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Asegurar que los iconos tengan suficiente contraste */
+.objective-icon i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/* Mejorar la visibilidad de los mensajes de retroalimentación */
+.save-feedback {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+/* Asegurar que los elementos ocultos sean accesibles para lectores de pantalla cuando sea necesario */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* No ocultar el contenido solo con display: none si debe ser accesible */
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mejorar la visibilidad del menú de navegación */
+.hamburger-nav a {
+  padding: 1rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+.hamburger-nav a:hover,
+.hamburger-nav a:focus {
+  background-color: #f0f0f0;
+  text-decoration: underline;
+}
+
+.hamburger-nav a.active {
+  font-weight: bold;
+  color: var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Mejorar la visibilidad del estado activo */
+.nav-button:active,
+.start-button:active,
+.save-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Asegurar que los videos tengan controles accesibles */
+.video-js .vjs-control-bar {
+  background-color: rgba(0, 0, 0, 0.7); /* Mejor contraste */
+}
+
+/* Mejorar la visibilidad de los elementos de formulario */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-top: 0.3rem;
+  margin-right: 0.8rem;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* Asegurar que el texto de los botones sea visible */
+.nav-button,
+.start-button,
+.save-button {
+  color: white !important;
+}
+
+/* Después de la definición de .content-aligned-container */
+.content-aligned-container {
+  background-color: white;
+  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajuste responsivo para la clase content-aligned-container */
+@media (max-width: 768px) {
+  .content-aligned-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 120px; /* Ajustar para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 100px; /* Ajustar para móviles */
+  }
+}
+
+/* Añadir estas reglas al final del archivo CSS para asegurar que tengan prioridad */
+
+/* Eliminar todos los bordes y outlines magenta de cualquier elemento */
+* {
+  outline: none !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+/* Eliminar específicamente los bordes de los contenedores de módulos */
+.module-background,
+.survey-background,
+.module-content,
+.survey-content,
+main,
+body,
+html {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar cualquier pseudo-elemento que pueda estar causando las líneas */
+.module-background::before,
+.module-background::after,
+.survey-background::before,
+.survey-background::after,
+.module-content::before,
+.module-content::after,
+.survey-content::before,
+.survey-content::after,
+main::before,
+main::after,
+body::before,
+body::after {
+  display: none !important;
+}
+
+/* Asegurar que no haya bordes en estados focus/active */
+*:focus,
+*:active,
+*:focus-visible,
+*:focus-within {
+  outline: none !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar específicamente los bordes magenta */
+*[style*="border-color: #d6208f"],
+*[style*="border-color:#d6208f"],
+*[style*="border: 1px solid #d6208f"],
+*[style*="border:1px solid #d6208f"] {
+  border-color: transparent !important;
+}
+
+/* Eliminar cualquier borde vertical en los contenedores principales */
+body > *,
+main > *,
+.content-aligned-container > *,
+.content-container > *,
+.lesson-section > * {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Asegurar que los módulos solo tengan efectos de hover controlados */
+.module-background,
+.survey-background {
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Mantener solo el efecto de hover para los módulos */
+.module-background:hover,
+.survey-background:hover {
+  background-color: var(--module-bg-hover);
+}
+
+/* Eliminar cualquier borde o outline en los elementos que puedan recibir focus */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+[tabindex]:focus,
+.module-background:focus,
+.survey-background:focus,
+.module-content:focus,
+.survey-content:focus {
+  outline: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar cualquier borde magenta en toda la página */
+[style*="border-color: #d6208f"],
+[style*="border-color:#d6208f"],
+[style*="border-left-color: #d6208f"],
+[style*="border-left-color:#d6208f"],
+[style*="border-right-color: #d6208f"],
+[style*="border-right-color:#d6208f"] {
+  border-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+/* Asegurar que no haya bordes en los contenedores principales */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Eliminar cualquier borde en los elementos que puedan estar causando el problema */
+.module-background,
+.survey-background {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Corregir el cálculo del ancho y margen que podría estar causando el problema */
+.module-background,
+.survey-background {
+  width: 100%;
+  margin-left: 0;
+  transform: none;
+}
+
+/* Eliminar cualquier borde o línea vertical en toda la página */
+body::before,
+body::after,
+main::before,
+main::after,
+.content-aligned-container::before,
+.content-aligned-container::after,
+.content-container::before,
+.content-container::after,
+.module-background::before,
+.module-background::after,
+.survey-background::before,
+.survey-background::after {
+  display: none !important;
+}
+
+/* Eliminar bordes grises de videos específicos */
+.video-js {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de todos los videos */
+.responsive-video,
+.video-container,
+.video-js,
+video,
+iframe {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes específicamente de los videos mencionados */
+[data-video-id="c1v01"],
+[data-video-id="c1v02"],
+[data-video-id="c1v08"] {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los contenedores de video */
+.responsive-video {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video */
+.video-js {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.video-js:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.video-js:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.video-js:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.video-js:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.video-js:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en hover */
+.responsive-video:hover,
+.video-container:hover,
+.video-js:hover,
+video:hover,
+iframe:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus */
+.responsive-video:focus,
+.video-container:focus,
+.video-js:focus,
+video:focus,
+iframe:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en active */
+.responsive-video:active,
+.video-container:active,
+.video-js:active,
+video:active,
+iframe:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-visible */
+.responsive-video:focus-visible,
+.video-container:focus-visible,
+.video-js:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Eliminar bordes de los elementos de video en focus-within */
+.responsive-video:focus-within,
+.video-container:focus-within,
+.video-js:focus-within,
+video:focus-within,
+iframe:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Reducir el tamaño de los círculos fingerprint en el hero */
+.hero-section {
+  background-size: auto 80%; /* Reducir el tamaño de los círculos fingerprint en un 20% */
 }
