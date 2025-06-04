@@ -641,27 +641,37 @@ ol {
   border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
   margin: 32px auto 1.5rem auto !important;
-  max-width: 1200px !important;
-  width: 100% !important; /* Cambiado de calc(100% - 4rem) a 100% */
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
   box-sizing: border-box !important;
 }
 
 /* Corregir específicamente la alineación en módulos con fondo gris */
 .lesson-section:nth-child(even) > .key-point {
-  padding-left: calc(2rem + 3.5rem) !important; /* Alinear con el contenido del módulo */
-  padding-right: 2rem !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
   box-sizing: border-box !important;
 }
 
 /* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
 .module-background .key-point,
 .survey-background .key-point {
-  width: 100% !important; /* Cambiado de calc(100% - 4rem) a 100% */
-  margin-left: auto !important;
-  margin-right: auto !important;
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
+}
+
+/* Ajustes responsivos para tablets */
+@media (max-width: 1200px) {
+  .lesson-section:nth-child(even) .key-point,
+  .module-background .key-point,
+  .survey-background .key-point,
+  .lesson-section:nth-child(even) > .key-point {
+    width: calc(100% - 4rem) !important;
+    max-width: 1136px !important;
+  }
 }
 
 /* Eliminar el padding extra en dispositivos móviles */
@@ -669,12 +679,15 @@ ol {
   .lesson-section:nth-child(even) .key-point,
   .module-background .key-point,
   .survey-background .key-point {
-    width: 100% !important; /* Cambiado de calc(100% - 2rem) a 100% */
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
     padding-left: 3.5rem !important;
     padding-right: 1rem !important;
   }
 
   .lesson-section:nth-child(even) > .key-point {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
     padding-left: calc(1rem + 3.5rem) !important;
     padding-right: 1rem !important;
   }
@@ -2679,16 +2692,23 @@ body h2:first-of-type,
 /* Específicamente para key points en módulos grises */
 .lesson-section:nth-child(even) .module-content .key-point,
 .module-background .module-content .key-point {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
   padding-left: 3.5rem !important;
   padding-right: 1.5rem !important;
   box-sizing: border-box !important;
 }
 
 /* Ajustes responsivos para módulos grises */
+@media (max-width: 1200px) {
+  .lesson-section:nth-child(even) .module-content .key-point,
+  .module-background .module-content .key-point {
+    width: calc(100% - 4rem) !important;
+    max-width: 1136px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .lesson-section:nth-child(even) .module-content,
   .module-background .module-content {
@@ -2697,6 +2717,8 @@ body h2:first-of-type,
 
   .lesson-section:nth-child(even) .module-content .key-point,
   .module-background .module-content .key-point {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
     padding-left: calc(1rem + 3.5rem) !important;
     padding-right: 1rem !important;
   }
@@ -4228,16 +4250,23 @@ body h2 {
 /* Específicamente para key points en módulos grises */
 .lesson-section:nth-child(even) .module-content .key-point,
 .module-background .module-content .key-point {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
   padding-left: 3.5rem !important;
   padding-right: 1.5rem !important;
   box-sizing: border-box !important;
 }
 
 /* Ajustes responsivos para módulos grises */
+@media (max-width: 1200px) {
+  .lesson-section:nth-child(even) .module-content .key-point,
+  .module-background .module-content .key-point {
+    width: calc(100% - 4rem) !important;
+    max-width: 1136px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .lesson-section:nth-child(even) .module-content,
   .module-background .module-content {
@@ -4246,6 +4275,8 @@ body h2 {
 
   .lesson-section:nth-child(even) .module-content .key-point,
   .module-background .module-content .key-point {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
     padding-left: calc(1rem + 3.5rem) !important;
     padding-right: 1rem !important;
   }
