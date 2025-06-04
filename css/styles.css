@@ -557,10 +557,10 @@ ol {
   border-bottom: none;
 }
 
-/* Módulos con fondo blanco (impares) - comportamiento por defecto */
-.lesson-section:nth-child(odd) {
-  background-color: white;
-  padding: 2rem;
+/* Módulos con fondo blanco (por defecto) - SIN fondo gris */
+.lesson-section {
+  background-color: transparent; /* Sin fondo por defecto */
+  padding: 0; /* Sin padding extra por defecto */
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -568,8 +568,8 @@ ol {
   box-sizing: border-box;
 }
 
-/* Módulos con fondo gris (pares) - ancho completo del viewport */
-.lesson-section:nth-child(even) {
+/* SOLO módulos específicos con fondo gris - aplicar manualmente con clase */
+.lesson-section.gray-background {
   background-color: #f5f5f5;
   width: 100vw;
   position: relative;
@@ -582,7 +582,7 @@ ol {
 }
 
 /* Contenido dentro de los módulos con fondo gris */
-.lesson-section:nth-child(even) > * {
+.lesson-section.gray-background > * {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -591,23 +591,19 @@ ol {
   position: relative;
 }
 
-/* Ajustes responsivos para los módulos alternados */
+/* Ajustes responsivos para los módulos con fondo gris */
 @media (max-width: 768px) {
-  .lesson-section:nth-child(odd) {
-    padding: 1rem;
-  }
-
-  .lesson-section:nth-child(even) {
+  .lesson-section.gray-background {
     padding: 2rem 0;
   }
 
-  .lesson-section:nth-child(even) > * {
+  .lesson-section.gray-background > * {
     padding: 0 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .lesson-section:nth-child(even) {
+  .lesson-section.gray-background {
     padding: 1.5rem 0;
   }
 }
@@ -632,7 +628,7 @@ ol {
 }
 
 /* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
-.lesson-section:nth-child(even) .key-point,
+.lesson-section.gray-background .key-point,
 .module-background .key-point,
 .survey-background .key-point {
   background: white !important;
@@ -647,7 +643,7 @@ ol {
 }
 
 /* Corregir específicamente la alineación en módulos con fondo gris */
-.lesson-section:nth-child(even) > .key-point {
+.lesson-section.gray-background > .key-point {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
   margin: 32px auto 1.5rem auto !important; /* Centrado */
@@ -665,10 +661,10 @@ ol {
 
 /* Ajustes responsivos para tablets */
 @media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .key-point,
+  .lesson-section.gray-background .key-point,
   .module-background .key-point,
   .survey-background .key-point,
-  .lesson-section:nth-child(even) > .key-point {
+  .lesson-section.gray-background > .key-point {
     width: calc(100% - 4rem) !important;
     max-width: 1136px !important;
   }
@@ -676,7 +672,7 @@ ol {
 
 /* Eliminar el padding extra en dispositivos móviles */
 @media (max-width: 768px) {
-  .lesson-section:nth-child(even) .key-point,
+  .lesson-section.gray-background .key-point,
   .module-background .key-point,
   .survey-background .key-point {
     width: calc(100% - 2rem) !important;
@@ -685,7 +681,7 @@ ol {
     padding-right: 1rem !important;
   }
 
-  .lesson-section:nth-child(even) > .key-point {
+  .lesson-section.gray-background > .key-point {
     width: calc(100% - 2rem) !important;
     max-width: none !important;
     padding-left: calc(1rem + 3.5rem) !important;
@@ -2650,26 +2646,26 @@ body h2:first-of-type,
 }
 
 /* Asegurar que los videos en módulos grises no tengan sombras */
-.lesson-section:nth-child(even) .responsive-video,
-.lesson-section:nth-child(even) .video-container,
-.lesson-section:nth-child(even) .youtube-container,
+.lesson-section.gray-background .responsive-video,
+.lesson-section.gray-background .video-container,
+.lesson-section.gray-background .youtube-container,
 .module-background .responsive-video,
 .module-background .video-container,
 .module-background .youtube-container {
   box-shadow: none !important;
 }
 
-.lesson-section:nth-child(even) .responsive-video iframe,
-.lesson-section:nth-child(even) .video-container video,
-.lesson-section:nth-child(even) .youtube-container iframe,
+.lesson-section.gray-background .responsive-video iframe,
+.lesson-section.gray-background .video-container video,
+.lesson-section.gray-background .youtube-container iframe,
 .module-background .responsive-video iframe,
 .module-background .video-container video,
 .module-background .youtube-container iframe {
   box-shadow: none !important;
 }
 
-/* Asegurar que los videos y key points en módulos grises tengan exactamente el mismo ancho */
-.lesson-section:nth-child(even) .module-content,
+/* Asegurar que los videos y key points en módulos grises tengan exactly el mismo ancho */
+.lesson-section.gray-background .module-content,
 .module-background .module-content {
   display: flex;
   flex-direction: column;
@@ -2680,7 +2676,7 @@ body h2:first-of-type,
   box-sizing: border-box;
 }
 
-.lesson-section:nth-child(even) .module-content > *,
+.lesson-section.gray-background .module-content > *,
 .module-background .module-content > * {
   width: 100% !important;
   max-width: 100% !important;
@@ -2690,7 +2686,7 @@ body h2:first-of-type,
 }
 
 /* Específicamente para key points en módulos grises */
-.lesson-section:nth-child(even) .module-content .key-point,
+.lesson-section.gray-background .module-content .key-point,
 .module-background .module-content .key-point {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
@@ -2702,7 +2698,7 @@ body h2:first-of-type,
 
 /* Ajustes responsivos para módulos grises */
 @media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .module-content .key-point,
+  .lesson-section.gray-background .module-content .key-point,
   .module-background .module-content .key-point {
     width: calc(100% - 4rem) !important;
     max-width: 1136px !important;
@@ -2710,12 +2706,12 @@ body h2:first-of-type,
 }
 
 @media (max-width: 768px) {
-  .lesson-section:nth-child(even) .module-content,
+  .lesson-section.gray-background .module-content,
   .module-background .module-content {
     padding: 0 1rem;
   }
 
-  .lesson-section:nth-child(even) .module-content .key-point,
+  .lesson-section.gray-background .module-content .key-point,
   .module-background .module-content .key-point {
     width: calc(100% - 2rem) !important;
     max-width: none !important;
@@ -4179,11 +4175,11 @@ body h2 {
 }
 
 /* Eliminar sombras de videos en módulos con fondo gris */
-.lesson-section:nth-child(even) .responsive-video,
-.lesson-section:nth-child(even) .video-container,
-.lesson-section:nth-child(even) .video-js,
-.lesson-section:nth-child(even) video,
-.lesson-section:nth-child(even) iframe {
+.lesson-section.gray-background .responsive-video,
+.lesson-section.gray-background .video-container,
+.lesson-section.gray-background .video-js,
+.lesson-section.gray-background video,
+.lesson-section.gray-background iframe {
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -4191,11 +4187,11 @@ body h2 {
 }
 
 /* Eliminar sombras en hover para videos en módulos con fondo gris */
-.lesson-section:nth-child(even) .responsive-video:hover,
-.lesson-section:nth-child(even) .video-container:hover,
-.lesson-section:nth-child(even) .video-js:hover,
-.lesson-section:nth-child(even) video:hover,
-.lesson-section:nth-child(even) iframe:hover {
+.lesson-section.gray-background .responsive-video:hover,
+.lesson-section.gray-background .video-container:hover,
+.lesson-section.gray-background .video-js:hover,
+.lesson-section.gray-background video:hover,
+.lesson-section.gray-background iframe:hover {
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -4227,7 +4223,7 @@ body h2 {
 }
 
 /* Asegurar que los videos y key points en módulos grises tengan exactamente el mismo ancho */
-.lesson-section:nth-child(even) .module-content,
+.lesson-section.gray-background .module-content,
 .module-background .module-content {
   display: flex;
   flex-direction: column;
@@ -4238,7 +4234,7 @@ body h2 {
   box-sizing: border-box;
 }
 
-.lesson-section:nth-child(even) .module-content > *,
+.lesson-section.gray-background .module-content > *,
 .module-background .module-content > * {
   width: 100% !important;
   max-width: 100% !important;
@@ -4248,7 +4244,7 @@ body h2 {
 }
 
 /* Específicamente para key points en módulos grises */
-.lesson-section:nth-child(even) .module-content .key-point,
+.lesson-section.gray-background .module-content .key-point,
 .module-background .module-content .key-point {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
@@ -4260,7 +4256,7 @@ body h2 {
 
 /* Ajustes responsivos para módulos grises */
 @media (max-width: 1200px) {
-  .lesson-section:nth-child(even) .module-content .key-point,
+  .lesson-section.gray-background .module-content .key-point,
   .module-background .module-content .key-point {
     width: calc(100% - 4rem) !important;
     max-width: 1136px !important;
@@ -4268,12 +4264,12 @@ body h2 {
 }
 
 @media (max-width: 768px) {
-  .lesson-section:nth-child(even) .module-content,
+  .lesson-section.gray-background .module-content,
   .module-background .module-content {
     padding: 0 1rem;
   }
 
-  .lesson-section:nth-child(even) .module-content .key-point,
+  .lesson-section.gray-background .module-content .key-point,
   .module-background .module-content .key-point {
     width: calc(100% - 2rem) !important;
     max-width: none !important;
