@@ -39,181 +39,6 @@ body {
   flex-direction: column;
 }
 
-/* SECCIÓN HERO - Para todas las páginas excepto home */
-.hero-section {
-  position: relative;
-  width: 100vw;
-  height: 400px; /* Altura base, ajustable según necesidades */
-  margin-left: calc(-50vw + 50%);
-  margin-top: 0;
-  margin-bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Capa 1: Background con imagen */
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/placeholder.svg?height=400&width=1200");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-/* Overlay opcional para mejorar legibilidad del contenido */
-.hero-background::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Overlay semitransparente */
-  z-index: 2;
-}
-
-/* Capa 2: Contenido del hero */
-.hero-content {
-  position: relative;
-  z-index: 3;
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 2rem;
-  text-align: center;
-  color: white;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-.hero-content .subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  color: white;
-  opacity: 0.9;
-}
-
-/* Breadcrumb navigation en el hero */
-.hero-breadcrumb {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-}
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: white;
-  opacity: 0.8;
-}
-
-.breadcrumb a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.breadcrumb a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.breadcrumb-separator {
-  margin: 0 0.5rem;
-  opacity: 0.6;
-}
-
-/* Ajustes responsivos para el hero */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 300px;
-  }
-
-  .hero-content {
-    padding: 0 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content .subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-breadcrumb {
-    bottom: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: 250px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content .subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-}
-
-/* Variantes del hero para diferentes tipos de página */
-.hero-section.hero-lesson {
-  height: 350px;
-}
-
-.hero-section.hero-chapter {
-  height: 400px;
-}
-
-.hero-section.hero-introduction {
-  height: 450px;
-}
-
-/* Ajustar el contenido principal para que no se superponga con el hero */
-body:not(.home-page) main {
-  margin-top: 0;
-  padding-top: 2rem;
-}
-
-/* Asegurar que el header se posicione correctamente sobre el hero */
-body:not(.home-page) .header-full-bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-}
-
-/* Ajustar el padding-top del contenido cuando hay hero */
-body:not(.home-page) .content-aligned-container {
-  padding-top: 2rem; /* Reducir ya que el hero proporciona el espaciado superior */
-}
-
 /* Estilos para la accesibilidad */
 /* Mejorar el enfoque para accesibilidad por teclado */
 a:focus,
@@ -2689,7 +2514,7 @@ footer {
 
 /* Estilos para el fondo de módulos */
 .module-background {
-  background-color: var(--module-bg-color);
+  background-color: #f5f5f5;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -2710,7 +2535,7 @@ footer {
 }
 
 .survey-background {
-  background-color: var(--module-bg-color);
+  background-color: #f5f5f5;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -4113,217 +3938,346 @@ body::after {
   background: transparent !important;
 }
 
-/* Asegurar que no h
-
-/* SECCIÓN HERO PARA CHAPTER1.HTML */
-.chapter-hero-section {
-  /* Ocupar 100% del ancho del viewport */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-
-  /* Imagen de fondo */
-  background-image: url("../assets/images/BACKGROUND_HERO.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  /* Altura y espaciado */
-  min-height: 400px;
-  padding: 6rem 2rem 4rem 2rem;
-
-  /* Flexbox para centrar el contenido */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Posicionamiento */
-  margin-top: 0;
-  margin-bottom: 0;
-
-  /* Asegurar que esté por debajo del header fijo */
-  position: relative;
-  z-index: 1;
+/* Asegurar que no haya bordes en estados focus/active */
+*:focus,
+*:active,
+*:focus-visible,
+*:focus-within {
+  outline: none !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  box-shadow: none !important;
 }
 
-.hero-title {
-  /* Estilo del texto */
-  color: white;
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
-
-  /* Sombra para mejorar legibilidad */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-  /* Espaciado de letras para mejor impacto visual */
-  letter-spacing: 0.02em;
-  line-height: 1.2;
+/* Eliminar específicamente los bordes magenta */
+*[style*="border-color: #d6208f"],
+*[style*="border-color:#d6208f"],
+*[style*="border: 1px solid #d6208f"],
+*[style*="border:1px solid #d6208f"] {
+  border-color: transparent !important;
 }
 
-/* Ajustar el contenido principal para que no tenga padding-top excesivo */
-.content-aligned-container {
-  background-color: white;
-  padding: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem !important; /* Eliminar el padding-top de 140px */
-  max-width: 1200px;
-  margin: 0 auto;
+/* Eliminar cualquier borde vertical en los contenedores principales */
+body > *,
+main > *,
+.content-aligned-container > *,
+.content-container > * {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Asegurar que los módulos solo tengan efectos de hover controlados */
+.module-background,
+.survey-background {
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Mantener solo el efecto de hover para los módulos */
+.module-background:hover,
+.survey-background:hover {
+  background-color: var(--module-bg-hover);
+}
+
+/* Eliminar cualquier borde o outline en los elementos que puedan recibir focus */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+[tabindex]:focus,
+.module-background:focus,
+.survey-background:focus,
+.module-content:focus,
+.survey-content:focus {
+  outline: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar cualquier borde magenta en toda la página */
+[style*="border-color: #d6208f"],
+[style*="border-color:#d6208f"],
+[style*="border-left-color: #d6208f"],
+[style*="border-left-color:#d6208f"],
+[style*="border-right-color: #d6208f"],
+[style*="border-right-color:#d6208f"] {
+  border-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+/* Asegurar que no haya bordes en los contenedores principales */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Eliminar cualquier borde en los elementos que puedan estar causando el problema */
+.module-background,
+.survey-background {
+  position: relative;
   width: 100%;
-  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  border-left: none !important;
+  border-right: none !important;
 }
 
-/* Ajustes responsivos para la sección hero */
+/* Corregir el cálculo del ancho y margen que podría estar causando el problema */
+.module-background,
+.survey-background {
+  width: 100%;
+  margin-left: 0;
+  transform: none;
+}
+
+/* Eliminar cualquier borde o línea vertical en toda la página */
+body::before,
+body::after,
+main::before,
+main::after,
+.content-aligned-container::before,
+.content-aligned-container::after,
+.content-container::before,
+.content-container::after,
+.module-background::before,
+.module-background::after,
+.survey-background::before,
+.survey-background::after {
+  display: none !important;
+}
+
+/* Añadir estilos específicos para el módulo "Welcome to the course" */
+
+/* Títulos de video y secciones para el módulo Welcome - Open Sans Light 32px */
+.welcome-module h2,
+.welcome-module .video-title {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 32px;
+  color: #000;
+  margin: 1.5rem 0 1rem;
+  line-height: 1.4;
+}
+
+/* Eliminar sombra del poster de video en el módulo Welcome */
+.welcome-module .video-container img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none; /* Eliminar sombra */
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.welcome-module .video-container img:hover {
+  transform: translateY(-5px);
+  box-shadow: none; /* Mantener sin sombra en hover */
+}
+
+/* Añadir espaciado específico entre el título y el video en el módulo Welcome */
+.welcome-module h2 + .responsive-video {
+  margin-top: 64px; /* Espaciado de 64px entre título y video */
+}
+
+/* Ajustes responsivos para el espaciado */
 @media (max-width: 768px) {
-  .chapter-hero-section {
-    min-height: 300px;
-    padding: 4rem 1rem 3rem 1rem;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .content-aligned-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.5rem !important;
+  .welcome-module h2 + .responsive-video {
+    margin-top: 48px; /* Reducir ligeramente en tablets */
   }
 }
 
 @media (max-width: 480px) {
-  .chapter-hero-section {
-    min-height: 250px;
-    padding: 3rem 1rem 2rem 1rem;
-    background-position: center top; /* Ajustar posición en móviles */
-  }
-
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.1;
-  }
-
-  .content-aligned-container {
-    padding-top: 1rem !important;
+  .welcome-module h2 + .responsive-video {
+    margin-top: 40px; /* Reducir más en móviles */
   }
 }
 
-/* Asegurar que el main no tenga padding-top cuando hay hero */
-body:has(.chapter-hero-section) main {
-  padding-top: 0 !important;
-}
-
-/* Fallback para navegadores que no soportan :has() */
-.chapter-hero-section + .content-aligned-container {
-  margin-top: 0;
-}
-/* SECCIÓN HERO PARA CHAPTER1.HTML */
-.chapter-hero-section {
-  /* Ocupar 100% del ancho del viewport */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-
-  /* Imagen de fondo */
-  background-image: url("../assets/images/BACKGROUND_HERO.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  /* Altura y espaciado */
-  min-height: 400px;
-  padding: 6rem 2rem 4rem 2rem;
-
-  /* Flexbox para centrar el contenido */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Posicionamiento */
-  margin-top: 0;
-  margin-bottom: 0;
-
-  /* Asegurar que esté por debajo del header fijo */
-  position: relative;
-  z-index: 1;
-}
-
-.hero-title {
-  /* Estilo del texto */
-  color: white;
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
-
-  /* Sombra para mejorar legibilidad */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-  /* Espaciado de letras para mejor impacto visual */
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-}
-
-/* Ajustar el contenido principal para que no tenga padding-top excesivo */
-.content-aligned-container {
-  background-color: white;
-  padding: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem !important; /* Eliminar el padding-top de 140px */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para la sección hero */
+/* Ajustes responsivos para el módulo Welcome */
 @media (max-width: 768px) {
-  .chapter-hero-section {
-    min-height: 300px;
-    padding: 4rem 1rem 3rem 1rem;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .content-aligned-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.5rem !important;
+  .welcome-module h2,
+  .welcome-module .video-title {
+    font-size: 28px; /* Reducir ligeramente en tablets */
   }
 }
 
 @media (max-width: 480px) {
-  .chapter-hero-section {
-    min-height: 250px;
-    padding: 3rem 1rem 2rem 1rem;
-    background-position: center top; /* Ajustar posición en móviles */
-  }
-
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.1;
-  }
-
-  .content-aligned-container {
-    padding-top: 1rem !important;
+  .welcome-module h2,
+  .welcome-module .video-title {
+    font-size: 24px; /* Reducir más en móviles */
   }
 }
 
-/* Asegurar que el main no tenga padding-top cuando hay hero */
-body:has(.chapter-hero-section) main {
-  padding-top: 0 !important;
+/* Estilos más específicos para eliminar la sombra y aplicar el espaciado: */
+
+/* Estilos específicos para el módulo Welcome to the Course */
+.welcome-module h2 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 64px !important;
 }
 
-/* Fallback para navegadores que no soportan :has() */
-.chapter-hero-section + .content-aligned-container {
-  margin-top: 0;
+.welcome-module .responsive-video {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.welcome-module .video-js {
+  box-shadow: none !important;
+}
+
+/* Eliminar cualquier sombra en el contenedor del video */
+.welcome-module .responsive-video,
+.welcome-module .video-container,
+.welcome-module .video-js,
+.welcome-module video {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Asegurar que no hay sombras en el hover */
+.welcome-module .responsive-video:hover,
+.welcome-module .video-container:hover,
+.welcome-module .video-js:hover,
+.welcome-module video:hover {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .welcome-module h2 {
+    font-size: 28px;
+    margin-bottom: 48px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-module h2 {
+    font-size: 24px;
+    margin-bottom: 40px !important;
+  }
+}
+
+/* Aplicar Open Sans Light 32px a todos los títulos h2 del body y añadir separación vertical de 48px */
+body h2 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 32px !important;
+  margin-bottom: 48px !important;
+}
+
+/* Eliminar sombras de videos en módulos con fondo gris */
+.lesson-section:nth-child(even) .responsive-video,
+.lesson-section:nth-child(even) .video-container,
+.lesson-section:nth-child(even) .video-js,
+.lesson-section:nth-child(even) video,
+.lesson-section:nth-child(even) iframe {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras en hover para videos en módulos con fondo gris */
+.lesson-section:nth-child(even) .responsive-video:hover,
+.lesson-section:nth-child(even) .video-container:hover,
+.lesson-section:nth-child(even) .video-js:hover,
+.lesson-section:nth-child(even) video:hover,
+.lesson-section:nth-child(even) iframe:hover {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras de videos en módulos con clase module-background */
+.module-background .responsive-video,
+.module-background .video-container,
+.module-background .video-js,
+.module-background video,
+.module-background iframe {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Eliminar sombras en hover para videos en módulos con clase module-background */
+.module-background .responsive-video:hover,
+.module-background .video-container:hover,
+.module-background .video-js:hover,
+.module-background video:hover,
+.module-background iframe:hover {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  border: none !important;
+}
+
+/* Asegurar que los videos y key points en módulos grises tengan exactamente el mismo ancho */
+.lesson-section:nth-child(even) .module-content,
+.module-background .module-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Asegurar que todos los elementos tengan el mismo ancho */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.lesson-section:nth-child(even) .module-content > *,
+.module-background .module-content > * {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Específicamente para key points en módulos grises */
+.lesson-section:nth-child(even) .module-content .key-point,
+.module-background .module-content .key-point {
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
+  padding-left: 3.5rem !important;
+  padding-right: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Ajustes responsivos para módulos grises */
+@media (max-width: 1200px) {
+  .lesson-section:nth-child(even) .module-content .key-point,
+  .module-background .module-content .key-point {
+    width: calc(100% - 4rem) !important;
+    max-width: 1136px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-section:nth-child(even) .module-content,
+  .module-background .module-content {
+    padding: 0 1rem;
+  }
+
+  .lesson-section:nth-child(even) .module-content .key-point,
+  .module-background .module-content .key-point {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    padding-left: calc(1rem + 3.5rem) !important;
+    padding-right: 1rem !important;
+  }
 }
