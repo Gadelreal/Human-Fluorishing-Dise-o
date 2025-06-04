@@ -4161,6 +4161,11 @@ main::after,
     font-size: 28px;
     margin-bottom: 48px !important;
   }
+@media (max-width: 768px) {
+  .welcome-module h2 {
+    font-size: 28px;
+    margin-bottom: 48px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4280,4 +4285,70 @@ body h2 {
     padding-left: calc(1rem + 3.5rem) !important;
     padding-right: 1rem !important;
   }
+}
+
+/* Hero Section Styles */
+.hero-section {
+  width: 100vw;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('../assets/images/background-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+/* Responsive adjustments for hero */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 40vh;
+    min-height: 250px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* Adjust main content spacing to account for hero */
+.content-aligned-container {
+  padding-top: 2rem;
 }
