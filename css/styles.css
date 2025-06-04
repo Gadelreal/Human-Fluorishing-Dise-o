@@ -631,7 +631,7 @@ ol {
   margin-right: auto !important;
 }
 
-/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación exacta */
+/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
 .lesson-section:nth-child(even) .key-point,
 .module-background .key-point,
 .survey-background .key-point {
@@ -640,25 +640,41 @@ ol {
   box-shadow: none !important;
   border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important;
-  width: 100% !important; /* Usar 100% del contenedor padre */
+  margin: 32px auto 1.5rem auto !important;
+  width: auto !important; /* Usar el ancho automático para coincidir con el video */
   max-width: none !important; /* Eliminar restricción de ancho máximo */
   box-sizing: border-box !important;
 }
 
-/* Eliminar las reglas específicas que causaban problemas de alineación */
+/* Corregir específicamente la alineación en módulos con fondo gris */
 .lesson-section:nth-child(even) > .key-point {
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  width: 100% !important;
-  margin: 32px 0 1.5rem 0 !important;
+  width: auto !important; /* Usar el ancho automático para coincidir con el video */
+  margin-left: auto !important;
+  margin-right: auto !important;
   box-sizing: border-box !important;
 }
 
 /* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
 .module-background .key-point,
 .survey-background .key-point {
-  width: 100% !important;
-  margin: 32px 0 1.5rem 0 !important;
+  width: auto !important; /* Usar el ancho automático para coincidir con el video */
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Eliminar el padding extra en dispositivos móviles */
+@media (max-width: 768px) {
+  .lesson-section:nth-child(even) .key-point,
+  .module-background .key-point,
+  .survey-background .key-point {
+    width: auto !important; /* Mantener el ancho automático en móviles */
+    padding: 1.2rem 1rem 1.2rem 3.5rem !important;
+  }
+
+  .lesson-section:nth-child(even) > .key-point {
+    padding: 1.2rem 1rem 1.2rem 3.5rem !important;
+    width: auto !important; /* Mantener el ancho automático en móviles */
+  }
 }
 
 .key-point:hover {
@@ -3248,6 +3264,37 @@ main {
 
 /* Añadir estas reglas al final del archivo CSS para asegurar que tengan prioridad */
 
+/* Asegurar que el Key Point tenga el mismo ancho que el video */
+.responsive-video,
+.video-container,
+.video-js,
+.key-point {
+  width: auto !important;
+  max-width: 100% !important;
+}
+
+/* Asegurar que en módulos con fondo gris, el Key Point tenga el mismo ancho que el video */
+.module-background .responsive-video,
+.module-background .video-container,
+.module-background .video-js,
+.module-background .key-point,
+.lesson-section:nth-child(even) .responsive-video,
+.lesson-section:nth-child(even) .video-container,
+.lesson-section:nth-child(even) .video-js,
+.lesson-section:nth-child(even) .key-point {
+  width: auto !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Contenedor específico para mantener alineados el video y el Key Point */
+.module-content > *,
+.survey-content > * {
+  max-width: 100% !important;
+  width: auto !important;
+}
+
 /* Eliminar todos los bordes y outlines magenta de cualquier elemento */
 * {
   outline: none !important;
@@ -3581,12 +3628,12 @@ body h2 {
   .lesson-section:nth-child(even) .key-point,
   .module-background .key-point,
   .survey-background .key-point {
-    width: 100% !important;
+    width: auto !important;
     padding: 1.2rem 1rem 1.2rem 3.5rem !important;
   }
 
   .lesson-section:nth-child(even) > .key-point {
     padding: 1.2rem 1rem 1.2rem 3.5rem !important;
-    width: 100% !important;
+    width: auto !important;
   }
 }
