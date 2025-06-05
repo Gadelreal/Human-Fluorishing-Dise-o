@@ -2726,16 +2726,22 @@ body h2:first-of-type,
 
 /* Hero Section Styles */
 .hero-section {
-  width: 100%;
+  width: 100vw; /* Cambiar de 100% a 100vw para cubrir toda la pantalla */
   height: 600px;
   background-image: url("../assets/images/background-hero.png");
   background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: center bottom; /* Change from 'left bottom' to 'center bottom' */
+  background-position: left bottom; /* Cambiar de 'center bottom' a 'left bottom' para alinear con el título */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 2rem;
+  /* Añadir estas propiedades para asegurar que cubra toda la pantalla */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 /* Add styles for hero content alignment and typography */
@@ -3626,7 +3632,7 @@ body {
   .module-background,
   .survey-background {
     padding: 1.5rem 0;
-    margin-top: 2rem;
+    margin-top: 2.rem;
     margin-bottom: 2rem;
   }
 }
