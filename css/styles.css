@@ -2730,11 +2730,11 @@ body h2:first-of-type,
   height: 600px;
   background-image: url("../assets/images/background-hero.png");
   background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: left bottom; /* Change from 'left center' to 'left bottom' */
+  background-position: center bottom; /* Change from 'left bottom' to 'center bottom' */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Change from center to flex-start */
+  justify-content: flex-start;
   margin-bottom: 2rem;
 }
 
@@ -4161,7 +4161,6 @@ main::after,
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 32px;
-  color: #000;
   margin-bottom: 64px !important;
 }
 
