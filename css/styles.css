@@ -3446,17 +3446,19 @@ body {
 .learning-objective-card {
   display: flex;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: none;
   padding: 1.5rem;
+  border-left: 4px solid #d6208f;
+  border: 1px solid #e0e0e0;
   border-left: 4px solid #d6208f;
 }
 
 .learning-objective-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: none;
+  box-shadow: none;
 }
 
 .objective-icon {
@@ -3482,7 +3484,7 @@ body {
 
 .objective-content h4 {
   margin: 0 0 0.5rem 0;
-  color: #d6208f;
+  color: #000;
   font-size: 1.1rem;
 }
 
