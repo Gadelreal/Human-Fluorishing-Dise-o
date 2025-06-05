@@ -2730,7 +2730,7 @@ body h2:first-of-type,
   height: 600px;
   background-image: url("../assets/images/background-hero.png");
   background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: left center; /* Position from left to ensure fingerprints show at bottom */
+  background-position: left bottom; /* Change from 'left center' to 'left bottom' */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -4151,21 +4151,6 @@ main::after,
 @media (max-width: 480px) {
   .welcome-module h2 + .responsive-video {
     margin-top: 40px; /* Reducir más en móviles */
-  }
-}
-
-/* Ajustes responsivos para el módulo Welcome */
-@media (max-width: 768px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 28px; /* Reducir ligeramente en tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-module h2,
-  .welcome-module .video-title {
-    font-size: 24px; /* Reducir más en móviles */
   }
 }
 
