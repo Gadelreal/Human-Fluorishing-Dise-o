@@ -1101,10 +1101,10 @@ button,
 .video-container {
   background-color: #f9f9f9;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 0 !important; /* Eliminar bordes redondeados */
   padding: 1.5rem;
   margin: 1.5rem 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none !important; /* Eliminar sombras */
 }
 
 /* Estilos para los posters de video */
@@ -1137,8 +1137,8 @@ button,
   overflow: hidden;
   width: 100%;
   margin: 1.5rem 0;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 !important; /* Eliminar bordes redondeados */
+  box-shadow: none !important; /* Eliminar sombras */
 }
 
 .video-description {
@@ -1158,8 +1158,8 @@ button,
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 0 !important; /* Eliminar bordes redondeados */
+  box-shadow: none !important; /* Eliminar sombras */
 }
 
 .youtube-container .responsive-video iframe {
@@ -1183,6 +1183,8 @@ button,
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+  border-radius: 0 !important; /* Eliminar bordes redondeados */
+  box-shadow: none !important; /* Eliminar sombras */
 }
 
 .vjs-ie-skin .vjs-control-bar {
@@ -1246,6 +1248,31 @@ button,
   transform: translate(-50%, -50%);
   color: var(--primary-color);
   font-weight: bold;
+}
+
+/* Eliminar bordes redondeados y sombras de todos los videos */
+video,
+.video-js,
+.responsive-video,
+.video-container,
+.youtube-container .responsive-video,
+iframe[src*="youtube"],
+iframe[src*="vimeo"] {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Asegurar que los videos en módulos con fondo también no tengan bordes ni sombras */
+.module-background video,
+.module-background .video-js,
+.module-background .responsive-video,
+.module-background .video-container,
+.survey-background video,
+.survey-background .video-js,
+.survey-background .responsive-video,
+.survey-background .video-container {
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 /* Enlaces */
