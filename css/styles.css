@@ -797,7 +797,7 @@ main .key-point,
 
 .reading-card {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: all 0.3s ease;
@@ -905,7 +905,7 @@ main .key-point,
 .reflection-question {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1025,14 +1025,14 @@ button,
   margin: 3rem 0; /* Aumentado de 2rem a 3rem */
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 2rem; /* Aumentado de 1.5rem a 2rem */
 }
 
 .checkbox-container {
   margin-bottom: 1rem;
   padding: 0.8rem;
-  border-radius: 6px;
+  border-radius: 0;
   transition: background-color 0.2s;
   display: flex;
   align-items: flex-start;
@@ -2162,7 +2162,7 @@ a:hover {
 .learning-objectives {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 2rem;
   margin: 2rem 0;
 }
@@ -2249,13 +2249,17 @@ a:hover {
 .quiz-container {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .quiz-question {
   margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid #ddd;
 }
 
 .quiz-question h3 {
@@ -2343,7 +2347,7 @@ footer {
 .survey-container {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 2rem;
   margin: 2rem 0;
   max-width: 800px;
@@ -2373,7 +2377,7 @@ footer {
   align-items: center;
   padding: 0.8rem;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.2s ease;
   background-color: white;
@@ -2430,7 +2434,7 @@ footer {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
-  border-radius: 6px;
+  border-radius: 0;
   text-align: center;
 }
 
@@ -3685,47 +3689,4 @@ html {
   padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajuste responsivo para la clase content-aligned-container */
-@media (max-width: 768px) {
-  .content-aligned-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 120px; /* Ajustar para tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .content-aligned-container {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
-}
-
-/* También ajustar el main para que tenga un padding-top adecuado cuando no usa content-aligned-container */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para main */
-@media (max-width: 768px) {
-  main {
-    padding-top: 120px; /* Ajustar para tablets */
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  main {
-    padding-top: 100px; /* Ajustar para móviles */
-  }
 }
