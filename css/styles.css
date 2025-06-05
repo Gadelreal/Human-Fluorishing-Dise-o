@@ -2621,7 +2621,7 @@ body h2:first-of-type,
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Add styles for hero content alignment and typography */
