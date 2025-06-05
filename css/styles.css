@@ -2730,7 +2730,7 @@ body h2:first-of-type,
   height: 600px;
   background-image: url("../assets/images/background-hero.png");
   background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: 2rem center; /* Alinear con el padding del contenido (2rem desde la izquierda) */
+  background-position: left center; /* Position from left to ensure fingerprints show at bottom */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -2771,19 +2771,6 @@ body h2:first-of-type,
 @media (max-width: 480px) {
   .hero-title {
     font-size: 32px !important;
-  }
-}
-
-/* Responsive adjustments for hero background alignment */
-@media (max-width: 768px) {
-  .hero-section {
-    background-position: 1rem center; /* Ajustar para tablets con padding de 1rem */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    background-position: 1rem center; /* Mantener alineación en móviles */
   }
 }
 
@@ -4163,6 +4150,21 @@ main::after,
   }
 }
 
+/* Ajustes responsivos para el módulo Welcome */
+@media (max-width: 768px) {
+  .welcome-module h2,
+  .welcome-module .video-title {
+    font-size: 28px; /* Reducir ligeramente en tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-module h2,
+  .welcome-module .video-title {
+    font-size: 24px; /* Reducir más en móviles */
+  }
+}
+
 /* Estilos más específicos para eliminar la sombra y aplicar el espaciado: */
 
 /* Estilos específicos para el módulo Welcome to the Course */
@@ -4336,7 +4338,7 @@ body h2 {
   height: 600px;
   background-image: url("../assets/images/background-hero.png");
   background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: 2rem center; /* Alinear con el padding del contenido (2rem desde la izquierda) */
+  background-position: left center; /* Position from left to ensure fingerprints show at bottom */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -4377,19 +4379,6 @@ body h2 {
 @media (max-width: 480px) {
   .hero-title {
     font-size: 32px !important;
-  }
-}
-
-/* Responsive adjustments for hero background alignment */
-@media (max-width: 768px) {
-  .hero-section {
-    background-position: 1rem center; /* Ajustar para tablets con padding de 1rem */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    background-position: 1rem center; /* Mantener alineación en móviles */
   }
 }
 
@@ -5178,4 +5167,12 @@ main {
   background-color: #f5f5f5;
   width: 100vw;
   position: relative;
-  left\
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 0;
+  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
+  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
+  box-sizing: border-box;
+}
