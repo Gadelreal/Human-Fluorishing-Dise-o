@@ -250,14 +250,14 @@ textarea:focus,
 .header-left {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Aumentado de 0.9rem a 1.5rem */
+  gap: 2.5rem; /* Aumentado de 1.5rem a 2.5rem para mayor separación */
   position: relative;
 }
 
 .header-left::after {
   content: "";
   position: absolute;
-  left: calc(50px + 0.75rem); /* Cambiado de 0.45rem a 0.75rem para más separación del logo */
+  left: calc(50px + 1.25rem); /* Cambiado de 0.75rem a 1.25rem para más separación del logo */
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
@@ -281,11 +281,11 @@ textarea:focus,
   }
 
   .header-left {
-    gap: 1.2rem; /* Reducir gap en tablets */
+    gap: 2rem; /* Reducir gap en tablets pero mantener proporción */
   }
 
   .header-left::after {
-    left: calc(50px + 0.6rem); /* Ajustar posición en tablets */
+    left: calc(50px + 1rem); /* Ajustar posición en tablets */
   }
 }
 
@@ -295,11 +295,11 @@ textarea:focus,
   }
 
   .header-left {
-    gap: 1rem; /* Reducir gap en móviles */
+    gap: 1.5rem; /* Reducir gap en móviles pero mantener proporción */
   }
 
   .header-left::after {
-    left: calc(50px + 0.5rem); /* Ajustar posición en móviles */
+    left: calc(50px + 0.75rem); /* Ajustar posición en móviles */
   }
 }
 
@@ -2325,31 +2325,6 @@ footer {
   gap: 1rem;
 }
 
-/* Estilos para el selector de idioma en el footer */
-.footer-language-selector {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-language-selector a {
-  color: white;
-  text-decoration: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.footer-language-selector a.active {
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.footer-language-selector a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 /* Ajustes responsivos para el footer */
 @media (max-width: 768px) {
   footer {
@@ -3655,3 +3630,31 @@ html {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* Eliminar estos estilos:
+\`\`\`css
+/* Estilos para el selector de idioma en el footer */
+/*.footer-language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-language-selector a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.footer-language-selector a.active {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-language-selector a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+\`\`\` */
