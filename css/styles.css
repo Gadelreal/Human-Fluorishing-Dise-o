@@ -255,14 +255,14 @@ textarea:focus,
 .header-left {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1.5rem; /* Aumentado de 0.9rem a 1.5rem */
   position: relative;
 }
 
 .header-left::after {
   content: "";
   position: absolute;
-  left: calc(50px + 0.45rem); /* Posición después del logo tiny de 50px + la mitad del gap */
+  left: calc(50px + 0.75rem); /* Cambiado de 0.45rem a 0.75rem para más separación del logo */
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
@@ -273,7 +273,7 @@ textarea:focus,
 /* Estilos para el título en la cabecera */
 .header-title {
   margin: 0;
-  font-size: 16px; /* Cambiado de 1.4rem a 16px */
+  font-size: 16px !important; /* Forzar 16px */
   font-weight: 600;
   color: #000; /* Cambiado de var(--primary-color) a negro */
   white-space: nowrap;
@@ -282,13 +282,29 @@ textarea:focus,
 /* Ajustes responsivos para el título en la cabecera */
 @media (max-width: 768px) {
   .header-title {
-    font-size: 14px; /* Reducido proporcionalmente */
+    font-size: 14px !important; /* Forzar tamaño reducido */
+  }
+
+  .header-left {
+    gap: 1.2rem; /* Reducir gap en tablets */
+  }
+
+  .header-left::after {
+    left: calc(50px + 0.6rem); /* Ajustar posición en tablets */
   }
 }
 
 @media (max-width: 480px) {
   .header-title {
-    font-size: 12px; /* Reducido proporcionalmente */
+    font-size: 12px !important; /* Forzar tamaño reducido */
+  }
+
+  .header-left {
+    gap: 1rem; /* Reducir gap en móviles */
+  }
+
+  .header-left::after {
+    left: calc(50px + 0.5rem); /* Ajustar posición en móviles */
   }
 }
 
