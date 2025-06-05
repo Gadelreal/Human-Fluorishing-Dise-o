@@ -210,14 +210,9 @@ textarea:focus,
   flex: 0 0 auto;
 }
 
-.full-width .language-selector {
-  flex: 1 0 auto;
-  text-align: right;
-  margin-right: 1rem;
-}
-
 .full-width .mobile-menu-toggle {
   flex: 0 0 auto;
+  margin-left: auto; /* Empujar el menú hamburguesa hacia la derecha */
 }
 
 /* Logo más pequeño (50% del tamaño original) */
@@ -274,7 +269,7 @@ textarea:focus,
 .header-title {
   margin: 0;
   font-size: 16px !important; /* Forzar 16px */
-  font-weight: 600;
+  font-weight: 400 !important; /* Cambiado de 600 a 400 (regular) */
   color: #000; /* Cambiado de var(--primary-color) a negro */
   white-space: nowrap;
 }
@@ -478,39 +473,6 @@ textarea:focus,
 
 .main-nav a.active {
   font-weight: bold;
-}
-
-/* Ajustar el selector de idioma para que esté en línea */
-.language-selector {
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 1rem;
-}
-
-.language-selector a {
-  text-decoration: none;
-  color: var(--link-color);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.language-selector a.active {
-  font-weight: bold;
-  background-color: var(--secondary-color);
-}
-
-.language-selector a:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Selector de idioma mejorado */
-.language-selector-enhanced {
-  position: relative;
-  z-index: 100;
 }
 
 /* Contenido principal */
@@ -2023,14 +1985,6 @@ a:hover {
   filter: brightness(0) invert(1);
 }
 
-.enhanced-cover .language-selector a {
-  color: white;
-}
-
-.enhanced-cover .language-selector a.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 .enhanced-cover-content {
   flex: 1;
   display: flex;
@@ -2360,11 +2314,47 @@ a:hover {
 
 /* Estilos para el footer */
 footer {
-  background-color: var(--secondary-color);
-  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
   text-align: center;
+  padding: 1rem;
   margin-top: auto;
-  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilos para el selector de idioma en el footer */
+.footer-language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-language-selector a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.footer-language-selector a.active {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-language-selector a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ajustes responsivos para el footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 1.5rem 1rem;
+  }
 }
 
 /* Estilos para la encuesta inicial */
@@ -2688,15 +2678,6 @@ body h2:first-of-type,
   }
 }
 
-/* Pie de página */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-}
-
 /* También actualizar el estilo para el copyright */
 .white-footer .copyright {
   text-align: right;
@@ -2951,10 +2932,6 @@ footer {
     animation: slideDown 0.3s ease-out forwards;
   }
 
-  .language-selector {
-    margin-right: 0.5rem;
-  }
-
   @keyframes slideDown {
     from {
       opacity: 0;
@@ -3004,14 +2981,6 @@ footer {
 
   h3 {
     font-size: 1.1rem;
-  }
-
-  .language-selector {
-    margin-right: 3rem; /* Espacio para el botón de hamburguesa */
-  }
-
-  .full-width .language-selector {
-    margin-right: 1rem;
   }
 }
 
@@ -3213,19 +3182,8 @@ main {
   flex-direction: row; /* Asegurar que los elementos estén en fila */
   align-items: center;
   justify-content: flex-end; /* Alinear a la derecha */
-  gap: 1rem; /* Espacio entre elementos */
   margin-left: auto;
   position: relative; /* Asegurar posicionamiento correcto */
-}
-
-/* Ajustar el selector de idioma */
-.language-selector {
-  margin: 0;
-  padding: 0;
-  position: static; /* Evitar posicionamiento absoluto */
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap; /* Evitar que se rompa en varias líneas */
 }
 
 /* Ajustar el botón de menú hamburguesa */
@@ -3243,12 +3201,7 @@ main {
 /* Asegurar que no haya superposición en dispositivos móviles */
 @media (max-width: 768px) {
   .header-controls {
-    gap: 1rem; /* Mantener espacio incluso en pantallas pequeñas */
     flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
-  }
-
-  .language-selector {
-    margin-right: 0; /* Eliminar margen derecho que podría causar problemas */
   }
 }
 
@@ -3256,15 +3209,7 @@ main {
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Separación entre el selector de idioma y el menú hamburguesa */
   margin-left: auto; /* Empuja los controles hacia la derecha */
-}
-
-/* Asegurar que el selector de idioma esté alineado con el menú hamburguesa */
-.header-full-bottom .language-selector {
-  margin: 0;
-  display: flex;
-  align-items: center;
 }
 
 /* Asegurar que el menú hamburguesa esté centrado verticalmente */
@@ -3286,10 +3231,6 @@ main {
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
-  .header-controls {
-    gap: 0.5rem; /* Reducir la separación en pantallas pequeñas */
-  }
-
   .header-full-bottom {
     height: 100px; /* Reducir altura en tablets */
   }
