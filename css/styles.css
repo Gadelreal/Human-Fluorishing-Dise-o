@@ -2620,6 +2620,29 @@ body h2:first-of-type,
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  overflow: hidden;
+}
+
+/* Ensure no pseudo-elements add fingerprint overlays */
+.hero-section::before,
+.hero-section::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove any potential fingerprint overlays from child elements */
+.hero-section *::before,
+.hero-section *::after {
+  background-image: none !important;
+}
+
+/* Ensure hero content doesn't have background images */
+.hero-content,
+.hero-content *,
+.hero-title-container,
+.hero-title-container * {
+  background-image: none !important;
+  background: none !important;
 }
 
 /* Add styles for hero content alignment and typography */
