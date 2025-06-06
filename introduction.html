@@ -4,14 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Human Flourishing - Introduction</title>
-  <link rel="stylesheet" href="css/part1.css">
-  <link rel="stylesheet" href="css/part2.css">
-  <link rel="stylesheet" href="css/part3.css">
-  <link rel="stylesheet" href="css/part4.css">
-  <link rel="stylesheet" href="css/part5.css">
-  <link rel="stylesheet" href="css/part6.css">
-  <link rel="stylesheet" href="css/part7.css">
-  <link rel="stylesheet" href="css/part8.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- VideoJS CSS -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <!-- Font Awesome para iconos -->
@@ -83,63 +76,6 @@
         margin: 0.5rem 0;
       }
     }
-
-    .survey-section {
-      text-align: left;
-    }
-
-    .survey-button-container {
-      margin-top: 32px;
-      text-align: left;
-    }
-
-    .survey-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #D6208F;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-    }
-
-    .survey-button:hover {
-      background-color: #b01a75;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      text-decoration: none;
-    }
-
-    .survey-button i {
-      margin-right: 0.5rem;
-    }
-
-    .hero-title-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .hero-icon {
-      object-fit: contain;
-    }
-
-    .hero-content {
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    @media (max-width: 768px) {
-      .hero-title-container {
-        gap: 0.5rem;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -159,6 +95,10 @@
     </div>
     <!-- Modificar la estructura de los controles del header para evitar superposición -->
     <div class="header-controls">
+      <div class="language-selector">
+        <span id="language-label" class="sr-only">Select language:</span>
+        <a href="introduction.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="es/introduccion.html" aria-labelledby="language-label">Español</a>
+      </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <div class="hamburger-icon">
           <span></span>
@@ -179,27 +119,14 @@
       <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
       <li><a href="chapter4.html">4. Building Resilience</a></li>
       <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-      <li class="language-selector-menu">
-        <span class="menu-separator"></span>
-        <span id="language-label" class="sr-only">Select language:</span>
-        <a href="introduction.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="es/introduccion.html" aria-labelledby="language-label">Español</a>
-      </li>
     </ul>
   </nav>
 </header>
 
-<section class="hero-section">
-  <div class="hero-content">
-    <div class="hero-title-container">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-      <h1 class="hero-title">Introduction to the Course</h1>
-    </div>
-  </div>
-</section>
-
   <main id="main-content" tabindex="-1">
     <div class="content-aligned-container">
-      
+      <h1>LESSON 0: Introduction to the Course</h1>
+      <div class="title-separator blue" aria-hidden="true"></div>
       
       <section class="lesson-section no-borders">
         <h2>Course Description and Learning Objectives</h2>
@@ -269,21 +196,23 @@
       </section>
       
       <section class="lesson-section no-borders">
-  <div class="survey-section">
-    <h2>Initial Survey</h2>
-    <p>In order to explore your well-being and flourishing and how they evolve by putting into 
-    practice what you learn throughout this course, we encourage you to take the following 
-    survey. This will allow you to have a baseline to compare to after completing the course 
-    in order to track your progress:</p>
-    
-    <div class="survey-button-container">
-      <a href="#" class="survey-button" aria-label="Take Initial Survey">
-        <i class="fas fa-poll" aria-hidden="true"></i>
-        Take Initial Survey
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="module-background">
+          <div class="module-content">
+            <div class="final-section" style="background-color: white;">
+              <h2>Initial Survey</h2>
+              <p>In order to explore your well-being and flourishing and how they evolve by putting into 
+              practice what you learn throughout this course, we encourage you to take the following 
+              survey. This will allow you to have a baseline to compare to after completing the course 
+              in order to track your progress:</p>
+              
+              <a href="#" class="download-button" aria-label="Take Initial Survey">
+                <i class="fas fa-poll" aria-hidden="true"></i>
+                Take Initial Survey
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section class="lesson-section no-borders">
   <h2>Lesson 0 Learning Objectives</h2>
@@ -321,59 +250,60 @@
   </div>
 </section>
       
-      <section class="lesson-section no-borders welcome-module">
-  <h2 style="font-family: 'Open Sans', Arial, sans-serif; font-weight: 300; font-size: 32px; margin-bottom: 64px;">Welcome to the Course</h2>
-  
-  <div class="responsive-video" style="box-shadow: none;">
-    <video 
-      id="welcome-video" 
-      class="video-js vjs-ie-skin vjs-big-play-centered" 
-      controls 
-      preload="auto" 
-      poster="assets/images/human-flourishing-poster.jpg"
-      data-video-id="w0v01"
-      data-logo="assets/images/logo-ie-small.png"
-      aria-label="Welcome to the Course video"
-      style="box-shadow: none;"
-    >
-      <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v01-welcome-to-the-course/mp4/w0v01-welcome-to-the-course_1080p.mp4" type="video/mp4">
-      <p class="vjs-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a
-        web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-      </p>
-      <track kind="captions" src="captions/welcome-to-the-course.vtt" srclang="en" label="English" default>
-    </video>
-  </div>
-</section>
-      
-<section class="lesson-section no-borders">
-  
-    
-      <h2>Optional Reading</h2>
-      <p>Read more about IE's Center for Health and Well-Being, its mission, and the Body, 
-      Mind, & Soul Framework here.</p>
-      
-      <div class="reading-cards">
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>IE Center for Health and Well-Being</h3>
-            <p>Explore the mission, vision, and initiatives of IE's Center for Health and Well-Being. Learn about their holistic approach to wellness and how they integrate the Body, Mind, & Soul Framework into their programs.</p>
-            <div class="reading-card-footer">
-              <a href="https://www.ie.edu/center-for-health-and-well-being/" target="_blank" class="reading-link" aria-label="Visit IE Center for Health and Well-Being website (opens in new tab)">
-                Visit Website
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
+      <section class="lesson-section no-borders">
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Welcome to the Course</h2>
+            
+              
+              <div class="responsive-video">
+                <video 
+                  id="welcome-video" 
+                  class="video-js vjs-ie-skin vjs-big-play-centered" 
+                  controls 
+                  preload="auto" 
+                  poster="assets/images/human-flourishing-poster.jpg"
+                  data-video-id="w0v01"
+                  data-logo="assets/images/logo-ie-small.png"
+                  aria-label="Welcome to the Course video"
+                >
+                  <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v01-welcome-to-the-course/mp4/w0v01-welcome-to-the-course_1080p.mp4" type="video/mp4">
+                  <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                  </p>
+                  <track kind="captions" src="captions/welcome-to-the-course.vtt" srclang="en" label="English" default>
+                </video>
+              </div>
+            
           </div>
         </div>
-      </div>
-    
+      </section>
+      
+<section class="lesson-section no-borders">
+  <h2>Optional Reading</h2>
+  <p>Read more about IE's Center for Health and Well-Being, its mission, and the Body, 
+  Mind, & Soul Framework here.</p>
   
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>IE Center for Health and Well-Being</h3>
+        <p>Explore the mission, vision, and initiatives of IE's Center for Health and Well-Being. Learn about their holistic approach to wellness and how they integrate the Body, Mind, & Soul Framework into their programs.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/center-for-health-and-well-being/" target="_blank" class="reading-link" aria-label="Visit IE Center for Health and Well-Being website (opens in new tab)">
+            Visit Website
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
       <section class="lesson-section no-borders">
-        
-            
+        <div class="module-background">
+          <div class="module-content">
             <h2>A Special Welcome from Mario Alonso Puig</h2>
             
               
@@ -397,50 +327,48 @@
                 </video>
               </div>
             
-          
-        
+          </div>
+        </div>
       </section>
       
       <section class="lesson-section no-borders">
-  
-    
-      <h2>What Does Well-Being Mean?</h2>
-      
-      <div class="responsive-video">
-        <video 
-          id="wellbeing-video" 
-          class="video-js vjs-ie-skin vjs-big-play-centered" 
-          controls 
-          preload="auto" 
-          poster="assets/images/well-being-poster.png"
-          data-video-id="w0v03"
-          data-logo="assets/images/logo-ie-small.png"
-          aria-label="What Does Well-Being Mean? video"
-        >
-          <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v03-what-does-well-being-mean/mp4/w0v03-what-does-well-being-mean_1080p.mp4" type="video/mp4">
-          <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-          <track kind="captions" src="captions/what-does-well-being-mean.vtt" srclang="en" label="English" default>
-        </video>
-      </div>
-      
-      <div class="key-point" role="note" aria-label="Key point about well-being versus wellness">
-        <h3>Key Point</h3>
-        <p>Well-Being vs. Wellness: Well-being and wellness are often used interchangeably, 
-        but they have distinct meanings. Wellness is more focused on physical care for 
-        ourselves. In contrast, well-being considers a more integral combination of body, 
-        mind, and soul and encompasses the elements of balance, appreciation, and 
-        perspective.</p>
-      </div>
-    
-  
-</section>
+        <h2>What Does Well-Being Mean?</h2>
+        
+          
+          <div class="responsive-video">
+            <video 
+              id="wellbeing-video" 
+              class="video-js vjs-ie-skin vjs-big-play-centered" 
+              controls 
+              preload="auto" 
+              poster="assets/images/well-being-poster.png"
+              data-video-id="w0v03"
+              data-logo="assets/images/logo-ie-small.png"
+              aria-label="What Does Well-Being Mean? video"
+            >
+              <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v03-what-does-well-being-mean/mp4/w0v03-what-does-well-being-mean_1080p.mp4" type="video/mp4">
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+              <track kind="captions" src="captions/what-does-well-being-mean.vtt" srclang="en" label="English" default>
+            </video>
+          </div>
+        
+        
+        <div class="key-point" role="note" aria-label="Key point about well-being versus wellness">
+          <h3>Key Point</h3>
+          <p>Well-Being vs. Wellness: Well-being and wellness are often used interchangeably, 
+          but they have distinct meanings. Wellness is more focused on physical care for 
+          ourselves. In contrast, well-being considers a more integral combination of body, 
+          mind, and soul and encompasses the elements of balance, appreciation, and 
+          perspective.</p>
+        </div>
+      </section>
       
       <section class="lesson-section no-borders">
-        
-            
+        <div class="module-background">
+          <div class="module-content">
             <h2>A Brief Background on Positive Psychology</h2>
             
               
@@ -472,63 +400,59 @@
               lives to get to a "neutral" state, a goal of positive psychology is to empower individuals 
               to go beyond a neutral state to cultivate a flourishing state.</p>
             </div>
-          
-        
+          </div>
+        </div>
       </section>
       
       <section class="lesson-section no-borders">
+  <h2>Optional Reading</h2>
+  <p>See the resources below if you're interested in learning more.</p>
   
-    
-      <h2>Optional Reading</h2>
-      <p>See the resources below if you're interested in learning more.</p>
-      
-      <div class="reading-cards">
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>Antonio Damasio: Descartes' Error</h3>
-            <p>Explore how emotions influence decision-making and rational thought. Damasio challenges traditional views by demonstrating that feelings are integral to reasoning and consciousness.</p>
-            <div class="reading-card-footer">
-              <a href="#" class="reading-link" aria-label="Find Antonio Damasio's book: Descartes' Error">
-                Find Book
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>Martin Seligman: Flourish</h3>
-            <p>Discover a visionary understanding of happiness and well-being from the founder of positive psychology. Learn about the PERMA model and practical strategies for living a fulfilling life.</p>
-            <div class="reading-card-footer">
-              <a href="#" class="reading-link" aria-label="Find Martin Seligman's book: Flourish">
-                Find Book
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>Barbara Fredrickson: Love 2.0</h3>
-            <p>Examine how our supreme emotion affects everything we feel, think, do, and become. Fredrickson presents groundbreaking research on how positive emotions and connections shape our lives.</p>
-            <div class="reading-card-footer">
-              <a href="#" class="reading-link" aria-label="Find Barbara Fredrickson's book: Love 2.0">
-                Find Book
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Antonio Damasio: Descartes' Error</h3>
+        <p>Explore how emotions influence decision-making and rational thought. Damasio challenges traditional views by demonstrating that feelings are integral to reasoning and consciousness.</p>
+        <div class="reading-card-footer">
+          <a href="#" class="reading-link" aria-label="Find Antonio Damasio's book: Descartes' Error">
+            Find Book
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
+    </div>
     
-  
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Martin Seligman: Flourish</h3>
+        <p>Discover a visionary understanding of happiness and well-being from the founder of positive psychology. Learn about the PERMA model and practical strategies for living a fulfilling life.</p>
+        <div class="reading-card-footer">
+          <a href="#" class="reading-link" aria-label="Find Martin Seligman's book: Flourish">
+            Find Book
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Barbara Fredrickson: Love 2.0</h3>
+        <p>Examine how our supreme emotion affects everything we feel, think, do, and become. Fredrickson presents groundbreaking research on how positive emotions and connections shape our lives.</p>
+        <div class="reading-card-footer">
+          <a href="#" class="reading-link" aria-label="Find Barbara Fredrickson's book: Love 2.0">
+            Find Book
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
       
       <section class="lesson-section no-borders">
-        
-            
+        <div class="module-background">
+          <div class="module-content">
             <h2>A Word on the Visual Design of this Course</h2>
             <p>The visual design of this course on Human Flourishing was carefully created to reflect 
             the course's values and learning objectives.</p>
@@ -545,8 +469,8 @@
             things.</p>
             <p>We hope that this visual design adds meaning to your experience in this course. 
             Enjoy!</p>
-          
-        
+          </div>
+        </div>
       </section>
       
       <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
@@ -557,10 +481,8 @@
   </main>
 
   <footer role="contentinfo">
-  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
   <!-- VideoJS JavaScript -->
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>

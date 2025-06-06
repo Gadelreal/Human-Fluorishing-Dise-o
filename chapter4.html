@@ -4,14 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Human Flourishing - Chapter 4</title>
-  <link rel="stylesheet" href="css/part1.css">
-  <link rel="stylesheet" href="css/part2.css">
-  <link rel="stylesheet" href="css/part3.css">
-  <link rel="stylesheet" href="css/part4.css">
-  <link rel="stylesheet" href="css/part5.css">
-  <link rel="stylesheet" href="css/part6.css">
-  <link rel="stylesheet" href="css/part7.css">
-  <link rel="stylesheet" href="css/part8.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- VideoJS CSS -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <!-- Font Awesome para iconos -->
@@ -120,6 +113,10 @@
       <h2 class="header-title">Human Flourishing</h2>
     </div>
     <div class="header-controls">
+      <div class="language-selector">
+        <span id="language-label" class="sr-only">Select language:</span>
+        <a href="chapter4.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo4.html" aria-labelledby="language-label">Español</a>
+      </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <div class="hamburger-icon">
           <span></span>
@@ -139,23 +136,9 @@
       <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
       <li><a href="chapter4.html" class="active" aria-current="page">4. Building Resilience</a></li>
       <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-      <li class="language-selector-menu">
-        <span class="menu-separator"></span>
-        <span id="language-label" class="sr-only">Select language:</span>
-        <a href="chapter4.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo4.html" aria-labelledby="language-label">Español</a>
-      </li>
     </ul>
   </nav>
 </header>
-
-<section class="hero-section">
-  <div class="hero-content">
-    <div class="hero-title-container">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-      <h1 class="hero-title">LESSON 4: Building Resilience</h1>
-    </div>
-  </div>
-</section>
 
   <main id="main-content" tabindex="-1">
     <div class="content-aligned-container">
@@ -201,34 +184,38 @@
       
       <!-- 2. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>How Can We Define Resilience?</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="resilience-definition-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w4v01"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="How Can We Define Resilience? video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v01-how-can-we-define-resilience/mp4/w4v01-how-can-we-define-resilience_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/how-can-we-define-resilience.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about defining resilience">
-          <h3>Key Point</h3>
-          <p>We can consider an "evolved" definition of resilience to be the capacity to recognize 
-          what is needed and respond in the most appropriate way, considering the learning that 
-          comes with the experience. In this sense, resilience is not about enduring pressure at 
-          all costs, but about maintaining balance and recognizing when to take breaks or adapt 
-          approaches.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>How Can We Define Resilience?</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="resilience-definition-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w4v01"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="How Can We Define Resilience? video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v01-how-can-we-define-resilience/mp4/w4v01-how-can-we-define-resilience_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/how-can-we-define-resilience.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about defining resilience">
+              <h3>Key Point</h3>
+              <p>We can consider an "evolved" definition of resilience to be the capacity to recognize 
+              what is needed and respond in the most appropriate way, considering the learning that 
+              comes with the experience. In this sense, resilience is not about enduring pressure at 
+              all costs, but about maintaining balance and recognizing when to take breaks or adapt 
+              approaches.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -255,33 +242,37 @@
       
       <!-- 4. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>What Are Character Strengths and How Do They Support Resilience?</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="character-strengths-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w4v02"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="What Are Character Strengths and How Do They Support Resilience? video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience/mp4/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/character-strengths-and-resilience.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about character strengths">
-          <h3>Key Point</h3>
-          <p>Our character strengths are natural tendencies that we have that support our vitality. 
-          The VIA Institute on Character provides us with 24 research-backed character 
-          strengths, grouped into 6 "virtues." We can leverage these strengths to build our 
-          resilience in times of adversity.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>What Are Character Strengths and How Do They Support Resilience?</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="character-strengths-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w4v02"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="What Are Character Strengths and How Do They Support Resilience? video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience/mp4/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/character-strengths-and-resilience.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about character strengths">
+              <h3>Key Point</h3>
+              <p>Our character strengths are natural tendencies that we have that support our vitality. 
+              The VIA Institute on Character provides us with 24 research-backed character 
+              strengths, grouped into 6 "virtues." We can leverage these strengths to build our 
+              resilience in times of adversity.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -322,33 +313,37 @@
       
       <!-- 6. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>Overcoming Procrastination</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="procrastination-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w4v03"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="Overcoming Procrastination video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-overcoming-prorastination/mp4/w4v03-overcoming-prorastination_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/overcoming-procrastination.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about procrastination">
-          <h3>Key Point</h3>
-          <p>Procrastination can't simply be brushed off as laziness: it's rooted in a feeling of 
-          discomfort with a task, often due to a feeling that we lack the capacity to complete that 
-          task. We can overcome procrastination by leveraging our strengths as a way to 
-          energize us as well as by chunking the task into smaller, more manageable parts.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Overcoming Procrastination</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="procrastination-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w4v03"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="Overcoming Procrastination video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-overcoming-prorastination/mp4/w4v03-overcoming-prorastination_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/overcoming-procrastination.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about procrastination">
+              <h3>Key Point</h3>
+              <p>Procrastination can't simply be brushed off as laziness: it's rooted in a feeling of 
+              discomfort with a task, often due to a feeling that we lack the capacity to complete that 
+              task. We can overcome procrastination by leveraging our strengths as a way to 
+              energize us as well as by chunking the task into smaller, more manageable parts.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -375,30 +370,34 @@
       
       <!-- 8. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>Closing Meditation: Lesson 4</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="closing-meditation-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w7v04"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="Cultivating Resilience from Within meditation video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-cultivating-resilience-from-within/mp4/w7v04-cultivating-resilience-from-within_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/cultivating-resilience-from-within.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about resilience meditation">
-          <h3>Key Point</h3>
-          <p>This guided meditation helps us cultivate inner resilience and strength. Through mindful reflection, we can develop the capacity to navigate challenges with greater balance and wisdom, drawing on our inner resources for support.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Closing Meditation: Lesson 4</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="closing-meditation-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w7v04"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="Cultivating Resilience from Within meditation video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-cultivating-resilience-from-within/mp4/w7v04-cultivating-resilience-from-within_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/cultivating-resilience-from-within.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about resilience meditation">
+              <h3>Key Point</h3>
+              <p>This guided meditation helps us cultivate inner resilience and strength. Through mindful reflection, we can develop the capacity to navigate challenges with greater balance and wisdom, drawing on our inner resources for support.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -444,10 +443,8 @@
   </main>
 
   <footer role="contentinfo">
-  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
   <!-- VideoJS JavaScript -->
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>

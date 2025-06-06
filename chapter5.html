@@ -4,15 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Human Flourishing - Chapter 5</title>
-  <!-- Reemplazo de la línea de estilos -->
-  <link rel="stylesheet" href="css/part1.css">
-  <link rel="stylesheet" href="css/part2.css">
-  <link rel="stylesheet" href="css/part3.css">
-  <link rel="stylesheet" href="css/part4.css">
-  <link rel="stylesheet" href="css/part5.css">
-  <link rel="stylesheet" href="css/part6.css">
-  <link rel="stylesheet" href="css/part7.css">
-  <link rel="stylesheet" href="css/part8.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- VideoJS CSS -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <!-- Font Awesome para iconos -->
@@ -192,7 +184,7 @@
       margin-bottom: 1rem;
     }
 
-    @media (max-width: 768px}) {
+    @media (max-width: 768px) {
       .quiz-container {
         padding: 1rem;
       }
@@ -210,35 +202,6 @@
         justify-content: center;
         margin: 0.5rem 0;
       }
-    }
-
-    .hero-section {
-      background-color: #f0f8ff;
-      padding: 3rem 0;
-      text-align: center;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero-title-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-icon {
-      width: 50px;
-      height: 50px;
-      margin-right: 1rem;
-    }
-
-    .hero-title {
-      color: #0055a2;
-      font-size: 2.5rem;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -258,6 +221,10 @@
       <h2 class="header-title">Human Flourishing</h2>
     </div>
     <div class="header-controls">
+      <div class="language-selector">
+        <span id="language-label" class="sr-only">Select language:</span>
+        <a href="chapter5.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo5.html" aria-labelledby="language-label">Español</a>
+      </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <div class="hamburger-icon">
           <span></span>
@@ -277,27 +244,13 @@
       <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
       <li><a href="chapter4.html">4. Building Resilience</a></li>
       <li><a href="chapter5.html" class="active" aria-current="page">5. Ownership and Practice</a></li>
-      <li class="language-selector-menu">
-        <span class="menu-separator"></span>
-        <span id="language-label" class="sr-only">Select language:</span>
-        <a href="chapter5.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo5.html" aria-labelledby="language-label">Español</a>
-      </li>
     </ul>
   </nav>
 </header>
 
-<section class="hero-section">
-  <div class="hero-content">
-    <div class="hero-title-container">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-      <h1 class="hero-title">LESSON 5: Human Flourishing: Ownership and Practice</h1>
-    </div>
-  </div>
-</section>
-
   <main id="main-content" tabindex="-1">
     <div class="content-aligned-container">
-      
+      <h1>LESSON 5: Human Flourishing: Ownership and Practice</h1>
       <div class="title-separator blue" aria-hidden="true"></div>
       
       <!-- 1. Fondo blanco -->
@@ -349,34 +302,38 @@
       
       <!-- 2. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>The Appreciative Inquiry Framework</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="appreciative-inquiry-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            data-video-id="w5v01"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="The Appreciative Inquiry Framework video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v01-the-appreciative-inquiry-framework/mp4/w5v01-the-appreciative-inquiry-framework_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/appreciative-inquiry-framework.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about Appreciative Inquiry Framework">
-          <h3>Key Point</h3>
-          <p>The Appreciative Inquiry Framework is made up of four elements: <strong>Discover, 
-          Dream, Design, and Destiny</strong>. The Discover phase allows for an appreciation and 
-          understanding of self; the Dream phase allows us to create a vision for the future; the 
-          Design phase allows us to put our practices into place; and the Destiny phases allows 
-          us to exert ownership in our practice.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>The Appreciative Inquiry Framework</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="appreciative-inquiry-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w5v01"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="The Appreciative Inquiry Framework video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v01-the-appreciative-inquiry-framework/mp4/w5v01-the-appreciative-inquiry-framework_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/appreciative-inquiry-framework.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about Appreciative Inquiry Framework">
+              <h3>Key Point</h3>
+              <p>The Appreciative Inquiry Framework is made up of four elements: <strong>Discover, 
+              Dream, Design, and Destiny</strong>. The Discover phase allows for an appreciation and 
+              understanding of self; the Dream phase allows us to create a vision for the future; the 
+              Design phase allows us to put our practices into place; and the Destiny phases allows 
+              us to exert ownership in our practice.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -403,34 +360,38 @@
       
       <!-- 4. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>Activity: Applying the Appreciative Inquiry Framework</h2>
-        <p>Let's further apply the Appreciative Inquiry Framework to our own lives.</p>
-        <p><strong>Grab your journal or a notebook and go through these four quick steps — one for 
-        each stage of the AI cycle:</strong></p>
-        
-        <div class="framework-activity">
-          <div class="activity-step">
-            <h4>Discover:</h4>
-            <p>Think of a recent moment when you felt proud, energized, or truly at your best.</p>
-            <p class="instruction"><strong>Write down:</strong> What were you doing? What strengths were you using?</p>
-          </div>
-          
-          <div class="activity-step">
-            <h4>Dream:</h4>
-            <p>Now imagine a future where you live and work like that more often.</p>
-            <p class="instruction"><strong>Write down:</strong> What would your ideal day look like if that "best self" showed up regularly?</p>
-          </div>
-          
-          <div class="activity-step">
-            <h4>Design:</h4>
-            <p>What small habit or change could you introduce to move toward that dream?</p>
-            <p class="instruction"><strong>Write down:</strong> One action you can take this week.</p>
-          </div>
-          
-          <div class="activity-step">
-            <h4>Destiny:</h4>
-            <p>What's one way you'll keep this momentum going?</p>
-            <p class="instruction"><strong>Write down:</strong> How will you remind yourself to keep growing in that direction? (e.g., a sticky note, a calendar reminder, a mantra)</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Activity: Applying the Appreciative Inquiry Framework</h2>
+            <p>Let's further apply the Appreciative Inquiry Framework to our own lives.</p>
+            <p><strong>Grab your journal or a notebook and go through these four quick steps — one for 
+            each stage of the AI cycle:</strong></p>
+            
+            <div class="framework-activity">
+              <div class="activity-step">
+                <h4>Discover:</h4>
+                <p>Think of a recent moment when you felt proud, energized, or truly at your best.</p>
+                <p class="instruction"><strong>Write down:</strong> What were you doing? What strengths were you using?</p>
+              </div>
+              
+              <div class="activity-step">
+                <h4>Dream:</h4>
+                <p>Now imagine a future where you live and work like that more often.</p>
+                <p class="instruction"><strong>Write down:</strong> What would your ideal day look like if that "best self" showed up regularly?</p>
+              </div>
+              
+              <div class="activity-step">
+                <h4>Design:</h4>
+                <p>What small habit or change could you introduce to move toward that dream?</p>
+                <p class="instruction"><strong>Write down:</strong> One action you can take this week.</p>
+              </div>
+              
+              <div class="activity-step">
+                <h4>Destiny:</h4>
+                <p>What's one way you'll keep this momentum going?</p>
+                <p class="instruction"><strong>Write down:</strong> How will you remind yourself to keep growing in that direction? (e.g., a sticky note, a calendar reminder, a mantra)</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -469,19 +430,23 @@
       
       <!-- 6. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>Optional Reading</h2>
-        <p>Explore the following reading if you're interested in learning more about PERMA!</p>
-        
-        <div class="reading-cards">
-          <div class="reading-card">
-            <div class="reading-card-content">
-              <h3>PERMA Theory of Well-Being and PERMA Workshops</h3>
-              <p>Dive deeper into Martin Seligman's PERMA theory and discover how these five elements can be cultivated through structured workshops and practical applications in daily life.</p>
-              <div class="reading-card-footer">
-                <a href="https://ppc.sas.upenn.edu/learn-more/perma-theory-well-being-and-perma-workshops" target="_blank" class="reading-link" aria-label="Read about PERMA Theory (opens in new tab)">
-                  Read Article
-                  <span class="reading-arrow" aria-hidden="true">→</span>
-                </a>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Optional Reading</h2>
+            <p>Explore the following reading if you're interested in learning more about PERMA!</p>
+            
+            <div class="reading-cards">
+              <div class="reading-card">
+                <div class="reading-card-content">
+                  <h3>PERMA Theory of Well-Being and PERMA Workshops</h3>
+                  <p>Dive deeper into Martin Seligman's PERMA theory and discover how these five elements can be cultivated through structured workshops and practical applications in daily life.</p>
+                  <div class="reading-card-footer">
+                    <a href="https://ppc.sas.upenn.edu/learn-more/perma-theory-well-being-and-perma-workshops" target="_blank" class="reading-link" aria-label="Read about PERMA Theory (opens in new tab)">
+                      Read Article
+                      <span class="reading-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -525,36 +490,40 @@
       
       <!-- 8. Fondo gris -->
       <section class="lesson-section no-borders">
-        <h2>Activity: Establishing Accountability</h2>
-        <p>Read the following article from Harvard Business Review and consider how you can 
-        create a plan for holding yourself accountable for your flourishing using the <strong>3 strategies 
-        suggested:</strong></p>
-        
-        <div class="accountability-strategies">
-          <div class="strategy-card">
-            <div class="strategy-number">1</div>
-            <h4>Enlist an accountability partner</h4>
-          </div>
-          <div class="strategy-card">
-            <div class="strategy-number">2</div>
-            <h4>Share your goals publicly</h4>
-          </div>
-          <div class="strategy-card">
-            <div class="strategy-number">3</div>
-            <h4>Change your environment</h4>
-          </div>
-        </div>
-        
-        <div class="reading-cards">
-          <div class="reading-card">
-            <div class="reading-card-content">
-              <h3>3 Strategies for Holding Yourself Accountable</h3>
-              <p>Discover evidence-based strategies from Harvard Business Review for creating effective accountability systems. Learn how to build sustainable habits and maintain commitment to your personal growth goals.</p>
-              <div class="reading-card-footer">
-                <a href="https://hbr.org/2022/02/3-strategies-for-holding-yourself-accountable" target="_blank" class="reading-link" aria-label="Read HBR article on accountability strategies (opens in new tab)">
-                  Read Article
-                  <span class="reading-arrow" aria-hidden="true">→</span>
-                </a>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Activity: Establishing Accountability</h2>
+            <p>Read the following article from Harvard Business Review and consider how you can 
+            create a plan for holding yourself accountable for your flourishing using the <strong>3 strategies 
+            suggested:</strong></p>
+            
+            <div class="accountability-strategies">
+              <div class="strategy-card">
+                <div class="strategy-number">1</div>
+                <h4>Enlist an accountability partner</h4>
+              </div>
+              <div class="strategy-card">
+                <div class="strategy-number">2</div>
+                <h4>Share your goals publicly</h4>
+              </div>
+              <div class="strategy-card">
+                <div class="strategy-number">3</div>
+                <h4>Change your environment</h4>
+              </div>
+            </div>
+            
+            <div class="reading-cards">
+              <div class="reading-card">
+                <div class="reading-card-content">
+                  <h3>3 Strategies for Holding Yourself Accountable</h3>
+                  <p>Discover evidence-based strategies from Harvard Business Review for creating effective accountability systems. Learn how to build sustainable habits and maintain commitment to your personal growth goals.</p>
+                  <div class="reading-card-footer">
+                    <a href="https://hbr.org/2022/02/3-strategies-for-holding-yourself-accountable" target="_blank" class="reading-link" aria-label="Read HBR article on accountability strategies (opens in new tab)">
+                      Read Article
+                      <span class="reading-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -563,65 +532,250 @@
       
       <!-- 9. Fondo blanco -->
       <section class="lesson-section no-borders">
-        <h2>Lesson 5 Quiz</h2>
-        <p>Test your knowledge by completing the following quiz!</p>
+        <h2>Closing Meditation: Lesson 5</h2>
         
-        <div class="quiz-container">
-          <div class="quiz-question">
-            <h4>Question 1: What are the four elements of the Appreciative Inquiry Framework?</h4>
-            <ul class="quiz-options">
-              <li>A) Discover, Dream, Design, Destiny</li>
-              <li>B) Plan, Do, Check, Act</li>
-              <li>C) Sense, Feel, Think, Act</li>
-              <li>D) Identify, Ideate, Prototype, Test</li>
-            </ul>
-          </div>
-          
-          <div class="quiz-question">
-            <h4>Question 2: Which of the following is NOT a component of the PERMA model?</h4>
-            <ul class="quiz-options">
-              <li>A) Positive Emotion</li>
-              <li>B) Engagement</li>
-              <li>C) Relationships</li>
-              <li>D) Wealth</li>
-            </ul>
-          </div>
-          
-          <div class="quiz-question">
-            <h4>Question 3: According to the Harvard Business Review, what is one strategy for holding yourself accountable?</h4>
-            <ul class="quiz-options">
-              <li>A) Keep your goals a secret</li>
-              <li>B) Enlist an accountability partner</li>
-              <li>C) Avoid setting deadlines</li>
-              <li>D) Focus only on long-term goals</li>
-            </ul>
+        <div class="responsive-video">
+          <video 
+            id="closing-meditation-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            data-video-id="w7v05"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Embodying Your Path to Flourishing meditation video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v05-embodying-your-path-to-flourishing/mp4/w7v05-embodying-your-path-to-flourishing_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/embodying-your-path-to-flourishing.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about embodying flourishing">
+          <h3>Key Point</h3>
+          <p>This guided meditation helps us embody and integrate all the practices we've learned throughout the course. It's a moment to reflect on our journey and commit to continuing our path toward flourishing with intention and purpose.</p>
+        </div>
+      </section>
+      
+      <!-- 10. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <div class="module-background">
+          <div class="module-content">
+            <h2>A Moment of Gratitude</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="gratitude-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w5v03"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="A Moment of Gratitude video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v03-a-moment-of-gratitude/mp4/w5v03-a-moment-of-gratitude_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/moment-of-gratitude.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
           </div>
         </div>
       </section>
       
-      <!-- 10. Fondo azul -->
+      <!-- 11. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Continuing Your Well-Being Journey</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="continuing-journey-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            data-video-id="w5v04"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Continuing Your Well-Being Journey video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v04-continuing-your-well-being-journey/mp4/w5v04-continuing-your-well-being-journey_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/continuing-well-being-journey.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+      </section>
+      
+      <!-- 12. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <div class="module-background">
+          <div class="module-content">
+            <h2>Final Quiz</h2>
+            <p><strong>Multiple Choice Quiz</strong></p>
+            
+            <div class="quiz-container">
+              <div class="quiz-question">
+                <h4>1. What does it mean to be human according to the course content?</h4>
+                <ul class="quiz-options">
+                  <li>A) Being entirely driven by instincts</li>
+                  <li>B) Having a limited capacity for memory and learning</li>
+                  <li>C) Having capacities for learning, critical thinking, creativity, innovation, and memory</li>
+                  <li>D) Relying solely on emotional responses</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>2. Which of the following best describes the concept of human flourishing as discussed in this course?</h4>
+                <ul class="quiz-options">
+                  <li>A) Achieving financial and career success</li>
+                  <li>B) Living a life free of challenges or stress</li>
+                  <li>C) Cultivating holistic well-being through intentional practices</li>
+                  <li>D) Maximizing physical health exclusively</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>3. According to the Harvard Adult Development Study, what is considered critical for human flourishing and life satisfaction?</h4>
+                <ul class="quiz-options">
+                  <li>A) High levels of academic achievement</li>
+                  <li>B) A large number of casual acquaintances</li>
+                  <li>C) A small number of very close relationships</li>
+                  <li>D) Financial success</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>4. According to the course, what is the correct sequence of our body's response to emotions?</h4>
+                <ul class="quiz-options">
+                  <li>A) Subjective appreciation → Cognitive appraisal → Behavioral response → Physiological response</li>
+                  <li>B) Physiological response → Cognitive appraisal → Behavioral response → Subjective appreciation</li>
+                  <li>C) Cognitive appraisal → Physiological response → Subjective appreciation → Behavioral response</li>
+                  <li>D) Behavioral response → Subjective appreciation → Cognitive appraisal → Physiological response</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>5. What is emotional granularity?</h4>
+                <ul class="quiz-options">
+                  <li>A) Expressing emotions openly in social settings</li>
+                  <li>B) Recognizing and distinguishing nuanced emotional experiences</li>
+                  <li>C) Avoiding negative emotions completely</li>
+                  <li>D) Prioritizing positive emotions at all times</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>6. According to Barbara Fredrickson's Broaden and Build Theory, positive emotions primarily do which of the following?</h4>
+                <ul class="quiz-options">
+                  <li>A) Narrow our focus to specific tasks</li>
+                  <li>B) Expand our awareness and capacity for engagement</li>
+                  <li>C) Reduce our resilience in difficult situations</li>
+                  <li>D) Eliminate stress permanently</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>7. Which action best exemplifies leveraging the connection between body, mind, and soul?</h4>
+                <ul class="quiz-options">
+                  <li>A) Ignoring fatigue to complete tasks faster</li>
+                  <li>B) Engaging in physical exercise to improve mental clarity</li>
+                  <li>C) Avoiding social interactions to focus more</li>
+                  <li>D) Prioritizing intellectual work exclusively</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>8. Intrinsic motivation differs from extrinsic motivation because it:</h4>
+                <ul class="quiz-options">
+                  <li>A) Depends solely on external rewards and recognition</li>
+                  <li>B) Provides long-lasting satisfaction and aligns with personal values</li>
+                  <li>C) Is driven exclusively by financial incentives</li>
+                  <li>D) Relies heavily on societal approval</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>9. According to the course, resilience involves:</h4>
+                <ul class="quiz-options">
+                  <li>A) Avoiding challenges to remain comfortable</li>
+                  <li>B) Persistently enduring stress without rest</li>
+                  <li>C) Recognizing needs, responding appropriately, and adapting effectively</li>
+                  <li>D) Eliminating setbacks entirely</li>
+                </ul>
+              </div>
+              
+              <div class="quiz-question">
+                <h4>10. What is a key aspect of living with a sense of purpose according to the course content?</h4>
+                <ul class="quiz-options">
+                  <li>A) Achieving a definitive understanding of life's meaning</li>
+                  <li>B) Prioritizing relationships and making decisions that align with personal values</li>
+                  <li>C) Ensuring family is omnipresent in daily life</li>
+                  <li>D) Focusing solely on academic or career achievements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 13. Fondo blanco -->
       <section class="lesson-section no-borders">
         <div class="final-section">
-          <h2>Congratulations!</h2>
-          <p>You've completed Lesson 5 on Ownership and Practice. Now you can download the chapter summary and continue on your journey to Human Flourishing!</p>
-          <a href="#" class="download-button">
-            <i class="fas fa-download"></i> Download Chapter Summary
+          <h2>Final Task: Create a Plan for Your Flourishing</h2>
+          <p>Please download and complete the following plan to hold yourself accountable for next 
+          steps in continuing on your journey of human flourishing. <strong>This plan is personal and 
+          completely for your own use.</strong></p>
+          
+          <a href="assets/documents/My-Well-Being-Plan.pdf" class="download-button" aria-label="Download My Well-Being Plan PDF" download="My-Well-Being-Plan.pdf">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            Download: My Well-Being Plan
           </a>
         </div>
       </section>
+      
+      <!-- 14. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <div class="module-background">
+          <div class="module-content">
+            <div class="final-section" style="background-color: white;">
+              <h2>Final Survey</h2>
+              <p>In order to explore your well-being and flourishing and how they have evolved based 
+              on what you've learned throughout the course, we encourage you to take the following 
+              survey again. That way, you can compare with your baseline results from the initial 
+              survey to assess your progress:</p>
+              
+              <a href="#" class="download-button" aria-label="Take Final Survey">
+                <i class="fas fa-poll" aria-hidden="true"></i>
+                Take Final Survey
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
+        <a href="chapter4.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
+      </div>
     </div>
   </main>
 
   <footer role="contentinfo">
-    <div class="footer-content">
-      <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-    </div>
+    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+    <!-- Trigger para el feedback al finalizar el curso -->
+    <div id="course-completed" class="hidden"></div>
   </footer>
 
-  <!-- VideoJS -->
+  <!-- VideoJS JavaScript -->
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-  <script src="js/videojs-ie.min.js"></script>
-  <script src="js/videojs-quality-selector.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
