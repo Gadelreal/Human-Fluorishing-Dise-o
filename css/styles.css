@@ -27,6 +27,7 @@
   --error-color: #d32f2f; /* Rojo para errores con buen contraste */
   --module-bg-color: #f5f5f5;
   --module-bg-hover: #f0f0f0;
+  --hero-bg-color: #0098e0; /* Nuevo color de fondo para el hero */
 }
 
 /* Mejorar el contraste de texto */
@@ -2603,14 +2604,11 @@ body h2:first-of-type,
   }
 }
 
-/* Hero Section Styles */
+/* Hero Section Styles - Updated to use solid blue background */
 .hero-section {
   width: 100vw;
   height: 600px;
-  background-image: url("../assets/images/hero-bg.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: var(--hero-bg-color);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -2623,14 +2621,14 @@ body h2:first-of-type,
   overflow: hidden;
 }
 
-/* Ensure no pseudo-elements add fingerprint overlays */
+/* Ensure no pseudo-elements add any overlays */
 .hero-section::before,
 .hero-section::after {
   display: none !important;
   content: none !important;
 }
 
-/* Remove any potential fingerprint overlays from child elements */
+/* Remove any potential overlays from child elements */
 .hero-section *::before,
 .hero-section *::after {
   background-image: none !important;
@@ -3666,31 +3664,3 @@ html {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* Eliminar estos estilos:
-\`\`\`css
-/* Estilos para el selector de idioma en el footer */
-/*.footer-language-selector {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-language-selector a {
-  color: white;
-  text-decoration: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.footer-language-selector a.active {
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.footer-language-selector a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-\`\`\` */
