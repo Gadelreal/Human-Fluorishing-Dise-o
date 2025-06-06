@@ -50,6 +50,57 @@
     max-width: 200px;
   }
 }
+
+.module-background .module-content h2 {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.module-background .responsive-video,
+.module-background .key-point {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Corregir alineación de contenido en módulos con fondo gris */
+.module-background .module-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.module-background .module-content h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.module-background .responsive-video {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.module-background .key-point {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .module-background .module-content {
+    padding: 0 1rem;
+  }
+}
   </style>
 </head>
 <body>
