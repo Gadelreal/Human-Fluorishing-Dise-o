@@ -1,0 +1,489 @@
+/* Enlaces */
+/* Asegurar que los enlaces tengan un subrayado visible */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Botones de navegación */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold; /* Añadir negrita para coincidir con el botón Start Course */
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--primary-color-dark); /* Un magenta más oscuro */
+  color: white !important; /* Forzar color blanco */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button.prev .arrow-left {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nav-button.next .arrow-right {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nav-button.prev:hover .arrow-left {
+  transform: translateX(-4px);
+}
+
+.nav-button.next:hover .arrow-right {
+  transform: translateX(4px);
+}
+
+/* Estilos para la portada */
+.cover-page {
+  background-color: var(--secondary-color);
+}
+
+.cover-content {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cover-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.author,
+.duration,
+.code {
+  margin-bottom: 0.5rem;
+}
+
+/* Añadir una clase para hacer el logo más pequeño */
+.small-logo {
+  max-width: 80px; /* Reducir el tamaño del logo */
+}
+
+/* Añadir una clase para el título en negro */
+.black-title {
+  color: #000 !important; /* Asegurar que el título sea negro */
+}
+
+/* Modificar la clase para la barra separadora magenta */
+.title-separator.blue {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color); /* Color magenta IE */
+  margin-bottom: 1.5rem;
+}
+
+/* Asegurar que el estilo para el autor esté correctamente definido */
+.author,
+.duration,
+.code {
+  margin-bottom: 0.3rem; /* Punto medio para el espacio entre elementos */
+  font-size: 0.9rem; /* Punto medio para el tamaño de la fuente */
+  color: #000;
+  line-height: 1.2; /* Punto medio para el interlineado */
+}
+
+.start-button-container {
+  margin-top: 3rem;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: var(--primary-color-dark); /* Un magenta más oscuro */
+  color: white;
+}
+
+/* Estilos para la portada simple */
+.simple-cover-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.simple-cover-content .cover-image {
+  flex: 1;
+  max-width: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.simple-cover-content .cover-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.simple-cover-content .cover-text {
+  flex: 1;
+  text-align: left;
+}
+
+.simple-cover-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.simple-cover-content .author,
+.simple-cover-content .duration,
+.simple-cover-content .code {
+  margin-bottom: 0.8rem;
+}
+
+.simple-cover-content .start-button-container {
+  margin-top: 2rem;
+}
+
+/* Estilos responsivos para la portada simple */
+@media (max-width: 768px) {
+  .simple-cover-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .simple-cover-content .cover-image {
+    max-width: 100%;
+    order: -1; /* Imagen primero en móvil */
+  }
+
+  .simple-cover-content .cover-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-cover-content {
+    padding: 1rem;
+  }
+
+  .simple-cover-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Estilos para la portada con fondo blanco */
+.white-cover {
+  background-color: white;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.white-cover-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.white-cover-header {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1.5rem 2rem;
+  position: relative;
+  z-index: 10;
+  display: block;
+}
+
+.white-cover .logo-container {
+  max-width: 150px;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.white-cover main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.white-cover .cover-text {
+  width: 100%;
+  max-width: 800px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dark-text h1 {
+  color: #000;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.title-separator.dark {
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.dark-text .subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.dark-text .author,
+.dark-text .duration,
+.dark-text .code {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #000;
+  line-height: 1.2;
+}
+
+.blue-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.blue-button:hover {
+  background-color: var(--primary-color-dark); /* Un magenta más oscuro */
+  color: white; /* Mantener el texto en blanco */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.white-footer {
+  background-color: transparent;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.dark-text {
+  color: #000;
+}
+
+/* Estilos responsivos para la portada con fondo blanco */
+@media (max-width: 768px) {
+  .white-cover .logo-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 0 2rem 0;
+  }
+
+  .white-cover-header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .white-cover .cover-text {
+    padding: 1rem 2rem;
+  }
+
+  .dark-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .white-cover .cover-text {
+    padding: 1rem;
+  }
+
+  .dark-text h1 {
+    font-size: 2rem;
+  }
+
+  .dark-text .author,
+  .dark-text .duration,
+  .dark-text .code {
+    font-size: 1rem;
+  }
+
+  .dark-text .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .title-separator.dark {
+    width: 40px;
+    margin: 0 auto 1.2rem;
+  }
+}
+
+/* Estilos para la portada dividida (imagen izquierda, contenido derecho) */
+.split-cover {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.split-cover-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.split-cover-image {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.split-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-logo-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.white-logo {
+  filter: brightness(0) invert(1); /* Hace que el logo sea blanco */
+}
+
+.split-cover-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.split-cover-content .cover-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  text-align: left;
+}
+
+/* Modificar el estilo del footer para la portada dividida */
+.split-cover-content .white-footer {
+  padding: 1.5rem 3rem;
+  text-align: right; /* Alinear a la derecha */
+}
+
+/* Estilos responsivos para la portada dividida */
+@media (max-width: 768px) {
+  .split-cover-layout {
+    flex-direction: column;
+  }
+
+  .split-cover-image {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .split-cover-content {
+    width: 100%;
+  }
+
+  .split-cover-content .cover-text {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .title-separator.dark {
+    margin: 0 auto 1.5rem;
+  }
+
+  .logo-container.top-left {
+    top: 15px;
+    left: 2rem; /* Ajustar en tablets */
+    max-width: 70px;
+  }
+
+  .split-cover-content .cover-text {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .split-cover-image {
+    height: 30vh;
+  }
+
+  .image-logo-container {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .image-logo-container .logo {
+    max-width: 100px;
+  }
+
+  .split-cover-content .cover-text {
+    padding: 1.5rem;
+  }
+
+  .logo-container.top-left {
+    top: 10px;
+    left: 1.5rem; /* Ajustar en móviles */
+    max-width: 60px;
+  }
+
+  .split-cover-content .cover-text {
+    padding-top: 50px;
+  }
+}

@@ -1,0 +1,331 @@
+/* Navegación */
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--secondary-color);
+  color: var(--link-hover-color);
+}
+
+.main-nav a.active {
+  font-weight: bold;
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegurar que el contenido principal se ajuste correctamente con la nueva cabecera */
+main {
+  padding-top: 1rem;
+}
+
+/* Después de la definición de .content-container */
+.content-container {
+  background-color: white;
+  padding: 2rem;
+}
+
+/* Añadir esta nueva clase para alinear el contenido con el header */
+.content-aligned-container {
+  background-color: white;
+  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajuste responsivo para la clase content-aligned-container */
+@media (max-width: 768px) {
+  .content-aligned-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Estilo específico para mantener los bordes en otras páginas */
+.with-borders {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #000;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: #000;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  color: #000;
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000;
+}
+
+ul,
+ol {
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+/* Secciones de lección - Sistema de alternancia automática */
+.lesson-section {
+  margin-bottom: 10rem; /* Duplicado de 5rem a 10rem */
+  padding-bottom: 2rem; /* Aumentado de 1.5rem a 2rem */
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.lesson-section:last-child {
+  border-bottom: none;
+}
+
+/* Módulos con fondo blanco (impares) - comportamiento por defecto */
+.lesson-section:nth-child(odd) {
+  background-color: white;
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Módulos con fondo gris (pares) - ancho completo del viewport */
+.lesson-section:nth-child(even) {
+  background-color: #f5f5f5;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 0;
+  box-sizing: border-box;
+}
+
+/* Contenido dentro de los módulos con fondo gris */
+.lesson-section:nth-child(even) > * {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Ajustes responsivos para los módulos alternados */
+@media (max-width: 768px) {
+  .lesson-section:nth-child(odd) {
+    padding: 1rem;
+  }
+
+  .lesson-section:nth-child(even) {
+    padding: 2rem 0;
+  }
+
+  .lesson-section:nth-child(even) > * {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lesson-section:nth-child(even) {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Buscar la sección de "Puntos clave - Versión mejorada" y reemplazarla con esto: */
+
+/* Puntos clave - Versión mejorada */
+.key-point {
+  background: white !important; /* Fondo blanco forzado */
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0 !important; /* Sin esquinas redondeadas */
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
+  position: relative;
+  box-shadow: none !important; /* Sin sombras */
+  transition: none !important; /* Eliminar transiciones */
+  width: 100% !important;
+  box-sizing: border-box !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
+.lesson-section:nth-child(even) .key-point,
+.module-background .key-point,
+.survey-background .key-point {
+  background: white !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  margin: 32px auto 1.5rem auto !important;
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  box-sizing: border-box !important;
+}
+
+/* Corregir específicamente la alineación en módulos con fondo gris */
+.lesson-section:nth-child(even) > .key-point {
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Asegurar que el contenido dentro de los módulos con fondo gris esté correctamente alineado */
+.module-background .key-point,
+.survey-background .key-point {
+  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
+  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  margin: 32px auto 1.5rem auto !important; /* Centrado */
+}
+
+/* Ajustes responsivos para tablets */
+@media (max-width: 1200px) {
+  .lesson-section:nth-child(even) .key-point,
+  .module-background .key-point,
+  .survey-background .key-point,
+  .lesson-section:nth-child(even) > .key-point {
+    width: calc(100% - 4rem) !important;
+    max-width: 1136px !important;
+  }
+}
+
+/* Eliminar el padding extra en dispositivos móviles */
+@media (max-width: 768px) {
+  .lesson-section:nth-child(even) .key-point,
+  .module-background .key-point,
+  .survey-background .key-point {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    padding-left: 3.5rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .lesson-section:nth-child(even) > .key-point {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    padding-left: calc(1rem + 3.5rem) !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.key-point:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: white !important;
+}
+
+.key-point::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="%23D6208F"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+/* Estilo para el título "Key Point" - Open Sans 24px Regular */
+.key-point h3 {
+  color: #000 !important;
+  margin-top: 0 !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 24px !important; /* Tamaño 24px */
+  font-weight: 400 !important; /* Regular */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.key-point p {
+  color: #000 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.6 !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* Asegurar que los Key Points después de videos tengan el espaciado correcto */
+.responsive-video + .key-point,
+.video-container + .key-point,
+.youtube-container + .key-point {
+  margin-top: 32px !important;
+}
+
+/* Forzar estilos en todos los contextos posibles */
+body .key-point,
+main .key-point,
+.content-container .key-point,
+.content-aligned-container .key-point {
+  background: white !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 32px !important;
+}
+
+/* Eliminar cualquier animación */
+@keyframes keyPointFadeIn {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
