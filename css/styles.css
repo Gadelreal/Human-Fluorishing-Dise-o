@@ -2605,16 +2605,21 @@ body h2:first-of-type,
 
 /* Hero Section Styles */
 .hero-section {
-  width: 100%;
+  width: 100vw;
   height: 600px;
-  background-image: url("../assets/images/background-hero.png");
-  background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: center bottom; /* Change from 'left bottom' to 'center bottom' */
+  background-image: url("../assets/images/hero-bg.png");
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5rem;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 /* Add styles for hero content alignment and typography */
@@ -2638,6 +2643,10 @@ body h2:first-of-type,
 
 /* Responsive adjustments for hero title */
 @media (max-width: 768px) {
+  .hero-section {
+    height: 500px;
+  }
+
   .hero-title {
     font-size: 40px !important;
   }
@@ -2648,6 +2657,10 @@ body h2:first-of-type,
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    height: 400px;
+  }
+
   .hero-title {
     font-size: 32px !important;
   }
