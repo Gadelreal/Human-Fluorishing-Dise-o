@@ -2317,7 +2317,7 @@ a:hover {
 footer {
   background-color: var(--primary-color);
   color: white;
-  padding: 3rem 0; /* Aumentado de 1rem a 3rem para hacerlo más alto */
+  padding: 4rem 0; /* Aumentado significativamente para mayor altura */
   margin-top: auto;
   display: flex;
   align-items: center; /* Centrado vertical */
@@ -2330,6 +2330,8 @@ footer {
   margin: 0 auto;
   padding: 0 2rem;
   box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Centrado vertical del contenido */
 }
 
 .copyright {
@@ -2342,7 +2344,7 @@ footer {
 /* Ajustes responsivos para el footer */
 @media (max-width: 768px) {
   footer {
-    padding: 2rem 0; /* Reducir un poco en tablets */
+    padding: 3rem 0; /* Reducir un poco en tablets pero mantener alto */
   }
 
   .footer-content {
@@ -2352,7 +2354,7 @@ footer {
 
 @media (max-width: 480px) {
   footer {
-    padding: 1.5rem 0; /* Reducir en móviles pero mantener más alto que antes */
+    padding: 2.5rem 0; /* Reducir en móviles pero mantener más alto que antes */
   }
 }
 
