@@ -1708,6 +1708,33 @@ a:hover {
     text-align: left; /* Cambiar de center a left */
   }
 
+  /* Forzar alineación a la izquierda en todos los elementos de texto en móviles */
+  .split-cover-content .cover-text {
+    padding: 2rem;
+    text-align: left !important; /* Forzar alineación a la izquierda */
+  }
+
+  .split-cover-content .cover-text h1,
+  .split-cover-content .cover-text .subtitle,
+  .split-cover-content .cover-text .author,
+  .split-cover-content .cover-text .duration,
+  .split-cover-content .cover-text .code {
+    text-align: left !important;
+  }
+
+  .split-cover-content .title-separator.blue {
+    margin: 0 0 1.5rem 0 !important; /* Alinear separador a la izquierda */
+  }
+
+  .split-cover-content .start-button-container {
+    text-align: left !important; /* Alinear botón a la izquierda */
+  }
+
+  .split-cover-content .white-footer {
+    text-align: left !important; /* Alinear footer a la izquierda en móvil */
+    padding: 1.5rem 2rem;
+  }
+
   .title-separator.dark {
     margin: 0 0 1.5rem 0; /* Eliminar margin auto para alinear a la izquierda */
   }
@@ -1751,6 +1778,44 @@ a:hover {
   .split-cover-content .cover-text {
     padding: 1.5rem;
     text-align: left; /* Mantener alineación a la izquierda */
+  }
+
+  .split-cover-content .cover-text {
+    padding: 1.5rem;
+    text-align: left !important; /* Mantener alineación a la izquierda */
+  }
+
+  .split-cover-content .cover-text h1,
+  .split-cover-content .cover-text .subtitle,
+  .split-cover-content .cover-text .author,
+  .split-cover-content .cover-text .duration,
+  .split-cover-content .cover-text .code {
+    text-align: left !important; /* Forzar alineación a la izquierda */
+  }
+
+  .split-cover-content .title-separator.blue {
+    margin: 0 0 1.2rem 0 !important; /* Mantener alineación a la izquierda */
+  }
+
+  .split-cover-content .start-button-container {
+    text-align: left !important; /* Forzar alineación a la izquierda */
+  }
+
+  .split-cover-content .white-footer {
+    text-align: left !important; /* Mantener footer alineado a la izquierda */
+    padding: 1.5rem;
+  }
+
+  /* Asegurar que todos los elementos de texto estén alineados a la izquierda */
+  .split-cover-content .cover-text * {
+    text-align: left !important;
+  }
+
+  /* Específicamente para el contenedor del botón */
+  .blue-button {
+    display: block !important;
+    text-align: center !important; /* El texto del botón sí debe estar centrado dentro del botón */
+    margin: 0 !important; /* Eliminar márgenes automáticos */
   }
 
   .logo-container.top-left {
@@ -3464,8 +3529,13 @@ body {
   .module-background,
   .survey-background {
     padding: 1.5rem 0;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .module-content,
+  .survey-content {
+    padding: 0 1rem;
   }
 }
 
