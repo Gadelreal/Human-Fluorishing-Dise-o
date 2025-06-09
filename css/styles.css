@@ -1705,21 +1705,32 @@ a:hover {
 
   .split-cover-content .cover-text {
     padding: 2rem;
-    text-align: center;
+    text-align: left; /* Cambiar de center a left */
   }
 
-  .title-separator.dark {
-    margin: 0 auto 1.5rem;
+  .title-separator.blue {
+    margin: 0 0 1.5rem 0; /* Eliminar margin auto para alinear a la izquierda */
   }
 
   .logo-container.top-left {
-    top: 15px;
-    left: 2rem; /* Ajustar en tablets */
+    position: relative; /* Cambiar de absolute a relative */
+    top: auto;
+    left: auto;
+    margin-bottom: 1.5rem; /* Añadir margen inferior */
     max-width: 70px;
   }
 
   .split-cover-content .cover-text {
-    padding-top: 60px;
+    padding-top: 2rem; /* Reducir padding-top ya que el logo no es absoluto */
+  }
+
+  .start-button-container {
+    text-align: left; /* Alinear botón a la izquierda */
+  }
+
+  .split-cover-content .white-footer {
+    text-align: left; /* Alinear footer a la izquierda en móvil */
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -1739,16 +1750,38 @@ a:hover {
 
   .split-cover-content .cover-text {
     padding: 1.5rem;
+    text-align: left; /* Mantener alineación a la izquierda */
   }
 
   .logo-container.top-left {
-    top: 10px;
-    left: 1.5rem; /* Ajustar en móviles */
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 1rem;
     max-width: 60px;
   }
 
   .split-cover-content .cover-text {
-    padding-top: 50px;
+    padding-top: 1.5rem;
+  }
+
+  .dark-text h1 {
+    font-size: 2rem;
+    text-align: left; /* Asegurar que el título esté alineado a la izquierda */
+  }
+
+  .dark-text .subtitle {
+    font-size: 1.2rem;
+    text-align: left; /* Alinear subtítulo a la izquierda */
+  }
+
+  .title-separator.blue {
+    margin: 0 0 1.2rem 0; /* Mantener alineación a la izquierda */
+  }
+
+  .split-cover-content .white-footer {
+    text-align: left; /* Mantener footer alineado a la izquierda */
+    padding: 1.5rem;
   }
 }
 
