@@ -1708,7 +1708,7 @@ a:hover {
     text-align: left; /* Cambiar de center a left */
   }
 
-  .title-separator.blue {
+  .title-separator.dark {
     margin: 0 0 1.5rem 0; /* Eliminar margin auto para alinear a la izquierda */
   }
 
@@ -1782,7 +1782,7 @@ a:hover {
     text-align: left !important; /* Forzar alineación a la izquierda */
   }
 
-  .title-separator.blue {
+  .title-separator.dark {
     margin: 0 0 1.2rem 0; /* Mantener alineación a la izquierda */
   }
 
