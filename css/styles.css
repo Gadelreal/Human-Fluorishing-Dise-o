@@ -1767,21 +1767,44 @@ a:hover {
 
   .dark-text h1 {
     font-size: 2rem;
-    text-align: left; /* Asegurar que el título esté alineado a la izquierda */
+    text-align: left !important; /* Forzar alineación a la izquierda */
   }
 
   .dark-text .subtitle {
     font-size: 1.2rem;
-    text-align: left; /* Alinear subtítulo a la izquierda */
+    text-align: left !important; /* Forzar alineación a la izquierda */
+  }
+
+  .dark-text .author,
+  .dark-text .duration,
+  .dark-text .code {
+    font-size: 1rem;
+    text-align: left !important; /* Forzar alineación a la izquierda */
   }
 
   .title-separator.blue {
     margin: 0 0 1.2rem 0; /* Mantener alineación a la izquierda */
   }
 
+  .start-button-container {
+    text-align: left !important; /* Forzar alineación a la izquierda */
+  }
+
   .split-cover-content .white-footer {
-    text-align: left; /* Mantener footer alineado a la izquierda */
+    text-align: left !important; /* Mantener footer alineado a la izquierda */
     padding: 1.5rem;
+  }
+
+  /* Asegurar que todos los elementos de texto estén alineados a la izquierda */
+  .split-cover-content .cover-text * {
+    text-align: left !important;
+  }
+
+  /* Específicamente para el contenedor del botón */
+  .blue-button {
+    display: block !important;
+    text-align: center !important; /* El texto del botón sí debe estar centrado dentro del botón */
+    margin: 0 !important; /* Eliminar márgenes automáticos */
   }
 }
 
