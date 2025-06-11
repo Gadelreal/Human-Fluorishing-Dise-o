@@ -8,10 +8,10 @@
   box-sizing: border-box;
 }
 
-/* Añadir estas variables de contraste mejorado */
+/* Variables de contraste mejorado */
 :root {
-  --primary-color: #d6208f; /* Color magenta IE */
-  --primary-color-dark: #b01a75; /* Versión más oscura para mejor contraste */
+  --primary-color: #d6208f;
+  --primary-color-dark: #b01a75;
   --secondary-color: #f5f5f5;
   --text-color: #333;
   --text-color-dark: #222;
@@ -23,14 +23,14 @@
   --key-point-border: #f8c2dd;
   --key-point-gradient-start: #fce4f0;
   --key-point-gradient-end: #f5b8d1;
-  --success-color: #2e8540; /* Verde más oscuro para mejor contraste */
-  --error-color: #d32f2f; /* Rojo para errores con buen contraste */
+  --success-color: #2e8540;
+  --error-color: #d32f2f;
   --module-bg-color: #f5f5f5;
   --module-bg-hover: #f0f0f0;
-  --hero-bg-color: #0098e0; /* Nuevo color de fondo para el hero */
+  --hero-bg-color: #0098e0;
 }
 
-/* Mejorar el contraste de texto */
+/* Estilos base */
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -41,8 +41,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Estilos para la accesibilidad */
-/* Mejorar el enfoque para accesibilidad por teclado */
+/* Accesibilidad */
 a:focus,
 button:focus,
 input:focus,
@@ -52,7 +51,6 @@ textarea:focus,
   outline-offset: 2px;
 }
 
-/* Modificar el estilo para el enlace de saltar al contenido para que esté oculto visualmente pero accesible para lectores de pantalla */
 .skip-to-content {
   position: absolute;
   width: 1px;
@@ -77,15 +75,15 @@ textarea:focus,
   overflow: visible;
   clip: auto;
   white-space: normal;
-  background: #d6208f;
+  background: var(--primary-color);
   color: white;
   font-weight: bold;
   text-decoration: none;
   border: 2px solid white;
-  outline: 2px solid #d6208f;
+  outline: 2px solid var(--primary-color);
 }
 
-/* Modificar los estilos del encabezado para alinear elementos en una sola línea */
+/* Cabecera */
 header {
   background-color: white;
   padding: 0.75rem 1rem;
@@ -99,7 +97,6 @@ header {
   width: 100%;
 }
 
-/* Añadir estas clases para la cabecera fija y su versión reducida */
 .header-fixed {
   position: fixed;
   top: 0;
@@ -112,7 +109,7 @@ header {
 }
 
 .header-fixed.scrolled {
-  height: 70px !important; /* Altura reducida al hacer scroll */
+  height: 70px !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -127,44 +124,12 @@ header {
   transition: font-size 0.3s ease;
 }
 
-/* Añadir un espaciador para compensar la altura del header fijo */
 .header-spacer {
   display: none;
 }
 
 .header-spacer.active {
   display: block;
-}
-
-/* Ajustes responsivos para el header fijo */
-@media (max-width: 768px) {
-  .header-fixed.scrolled {
-    height: 60px !important;
-  }
-
-  .header-fixed.scrolled .logo-container.tiny-logo {
-    max-width: 35px !important;
-    width: 35px !important;
-  }
-
-  .header-fixed.scrolled .header-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-fixed.scrolled {
-    height: 50px !important;
-  }
-
-  .header-fixed.scrolled .logo-container.tiny-logo {
-    max-width: 30px !important;
-    width: 30px !important;
-  }
-
-  .header-fixed.scrolled .header-title {
-    font-size: 1rem;
-  }
 }
 
 /* Eliminar el borde rosa/magenta que aparece al hacer clic en el contenido */
@@ -190,10 +155,8 @@ textarea:focus,
   border: none !important;
 }
 
-/* Resto del CSS permanece igual... */
 /* Añadir estilos para la cabecera a ancho completo y el logo más pequeño */
 
-/* Cabecera a ancho completo */
 .full-width {
   display: flex;
   justify-content: space-between;
@@ -251,14 +214,14 @@ textarea:focus,
 .header-left {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* Aumentado de 1.5rem a 2.5rem para mayor separación */
+  gap: 2.5rem;
   position: relative;
 }
 
 .header-left::after {
   content: "";
   position: absolute;
-  left: calc(50px + 1.25rem); /* Cambiado de 0.75rem a 1.25rem para más separación del logo */
+  left: calc(50px + 1.25rem);
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
@@ -269,9 +232,9 @@ textarea:focus,
 /* Estilos para el título en la cabecera */
 .header-title {
   margin: 0;
-  font-size: 16px !important; /* Forzar 16px */
-  font-weight: 400 !important; /* Cambiado de 600 a 400 (regular) */
-  color: #000; /* Cambiado de var(--primary-color) a negro */
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #000;
   white-space: nowrap;
 }
 
@@ -314,7 +277,7 @@ textarea:focus,
   text-align: left;
   margin-bottom: 0;
   display: block;
-  max-width: 100px; /* Reducir el tamaño del logo */
+  max-width: 100px;
   flex-shrink: 0;
 }
 
@@ -545,7 +508,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem !important;
   font-weight: 400;
   line-height: 1.7;
   color: #000;
@@ -628,14 +591,14 @@ ol {
 
 /* Puntos clave - Versión mejorada */
 .key-point {
-  background: white !important; /* Fondo blanco forzado */
+  background: white !important;
   border: 1px solid #e0e0e0 !important;
-  border-radius: 0 !important; /* Sin esquinas redondeadas */
+  border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
+  margin: 32px 0 1.5rem 0 !important;
   position: relative;
-  box-shadow: none !important; /* Sin sombras */
-  transition: none !important; /* Eliminar transiciones */
+  box-shadow: none !important;
+  transition: none !important;
   width: 100% !important;
   box-sizing: border-box !important;
   max-width: 1200px !important;
@@ -646,15 +609,16 @@ ol {
 /* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
 .lesson-section:nth-child(even) .key-point,
 .module-background .key-point,
-.survey-background .key-point {
+.survey-background .key-point,
+.lesson-section:nth-child(even) > .key-point {
   background: white !important;
   border: 1px solid #e0e0e0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
   padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
   margin: 32px auto 1.5rem auto !important;
-  width: 1136px !important; /* Ancho fijo de 1136px en desktop */
-  max-width: calc(100% - 4rem) !important; /* Responsive fallback */
+  width: 1136px !important;
+  max-width: calc(100% - 4rem) !important;
   box-sizing: border-box !important;
 }
 
@@ -729,8 +693,8 @@ ol {
   color: #000 !important;
   margin-top: 0 !important;
   font-family: "Open Sans", sans-serif !important;
-  font-size: 24px !important; /* Tamaño 24px */
-  font-weight: 400 !important; /* Regular */
+  font-size: 24px !important;
+  font-weight: 400 !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding-bottom: 0.5rem !important;
   margin-bottom: 0.8rem !important;
@@ -836,7 +800,7 @@ main .key-point,
 
 .reading-card p {
   color: #555;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   flex: 1;
 }
 
@@ -847,7 +811,7 @@ main .key-point,
 }
 
 .reading-link {
-  color: var(--primary-color);
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 600;
   display: flex;
@@ -2442,7 +2406,7 @@ a:hover {
   border: 1px solid #f5c6cb;
 }
 
-/* Reemplazar completamente los estilos del footer con estos nuevos estilos: */
+/* Reemplazar completamente los estilos del footer with these nuevos estilos: */
 
 /* Estilos para el footer */
 footer {
@@ -3819,4 +3783,188 @@ html {
   padding-top: 140px; /* Añadir padding-top para compensar la altura de la cabecera fija */
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Tipografía */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/* Eliminar bordes de las secciones */
+.no-borders {
+  border-bottom: none !important;
+}
+
+/* Menú móvil */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 0.5rem;
+}
+
+.hamburger-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 33.33%;
+  min-width: 250px;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  padding: 0;
+  border: 1px solid #eee;
+  border-top: none;
+  transform-origin: top right;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  border-radius: 0 0 0 8px;
+}
+
+.hamburger-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hamburger-nav a {
+  padding: 1rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+.hamburger-nav a:hover,
+.hamburger-nav a:focus {
+  background-color: #f0f0f0;
+  text-decoration: underline;
+}
+
+.hamburger-nav a.active {
+  font-weight: bold;
+  color: var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+}
+
+.hamburger-icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+
+  .content-aligned {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    width: 100%;
+  }
+}
+
+/* Portada dividida */
+.split-cover {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.split-cover-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.split-cover-image {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.split-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.split-cover-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.split-cover-content .cover-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  text-align: left;
+}
+
+.split-cover-content .white-footer {
+  padding: 1.5rem 3rem;
+  text-align: right;
 }
