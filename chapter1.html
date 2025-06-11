@@ -4,14 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Human Flourishing - Chapter 1</title>
-  <link rel="stylesheet" href="css/part1.css">
-<link rel="stylesheet" href="css/part2.css">
-<link rel="stylesheet" href="css/part3.css">
-<link rel="stylesheet" href="css/part4.css">
-<link rel="stylesheet" href="css/part5.css">
-<link rel="stylesheet" href="css/part6.css">
-<link rel="stylesheet" href="css/part7.css">
-<link rel="stylesheet" href="css/part8.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- VideoJS CSS -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <!-- Font Awesome para iconos -->
@@ -37,19 +30,6 @@
     .skip-to-content:focus {
       top: 0;
     }
-
-.hero-fingerprints {
-  max-width: 300px;
-  height: auto;
-  align-self: flex-start;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .hero-fingerprints {
-    max-width: 200px;
-  }
-}
   </style>
 </head>
 <body>
@@ -68,7 +48,10 @@
       <h2 class="header-title">Human Flourishing</h2>
     </div>
     <div class="header-controls">
-      
+      <div class="language-selector">
+        <span id="language-label" class="sr-only">Select language:</span>
+        <a href="chapter1.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo1.html" aria-labelledby="language-label">Español</a>
+      </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <div class="hamburger-icon">
           <span></span>
@@ -88,26 +71,14 @@
       <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
       <li><a href="chapter4.html">4. Building Resilience</a></li>
       <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-      <li class="language-selector-menu">
-  <span class="menu-separator"></span>
-  <span id="language-label" class="sr-only">Select language:</span>
-  <a href="chapter1.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo1.html" aria-labelledby="language-label">Español</a>
-</li>
     </ul>
   </nav>
 </header>
 
-<section class="hero-section">
-  <div class="hero-content">
-    <div class="hero-title-container">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-      <h1 class="hero-title">LESSON 1: Being Human</h1>
-    </div>
-  </div>
-</section>
-
   <main id="main-content" tabindex="-1">
     <div class="content-aligned-container">
+      <h1>LESSON 1: Being Human</h1>
+      <div class="title-separator blue" aria-hidden="true"></div>
       
       <section class="lesson-section no-borders">
   <h2>Lesson 1 Learning Objectives</h2>
@@ -146,36 +117,40 @@
 </section>
       
       <section class="lesson-section no-borders">
-        <h2>What Does It Mean to Be Human?</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="human-meaning-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/mario-alonso-puig-poster.jpg"
-            data-video-id="w1v01"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="What Does It Mean to Be Human? video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v01-what-does-it-mean-to-be-human/mp4/w1v01-what-does-it-mean-to-be-human_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/what-does-it-mean-to-be-human.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about human survival instinct">
-          <h3>Key Point</h3>
-          <p>As humans, we are programmed for survival. This instinct is still relevant in our lives 
-          today, even if we do not often face life-threatening situations. As a result, our brains 
-          may interpret certain events, such as an email or an exam, as a threat, even though 
-          these things are not life-threatening. Recognizing these kinds of "primitive" responses 
-          as part of our human identity is a crucial step toward self-awareness and, ultimately, 
-          flourishing.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>What Does It Mean to Be Human?</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="human-meaning-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                poster="assets/images/mario-alonso-puig-poster.jpg"
+                data-video-id="w1v01"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="What Does It Mean to Be Human? video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v01-what-does-it-mean-to-be-human/mp4/w1v01-what-does-it-mean-to-be-human_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/what-does-it-mean-to-be-human.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about human survival instinct">
+              <h3>Key Point</h3>
+              <p>As humans, we are programmed for survival. This instinct is still relevant in our lives 
+              today, even if we do not often face life-threatening situations. As a result, our brains 
+              may interpret certain events, such as an email or an exam, as a threat, even though 
+              these things are not life-threatening. Recognizing these kinds of "primitive" responses 
+              as part of our human identity is a crucial step toward self-awareness and, ultimately, 
+              flourishing.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -212,33 +187,37 @@
       </section>
       
       <section class="lesson-section no-borders">
-        <h2>The Importance of Human Social Connection</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="social-connection-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/mario-alonso-puig-poster.jpg"
-            data-video-id="w1v03"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="The Importance of Human Social Connection video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v03-the-importance-of-human-social-connection/mp4/w1v03-the-importance-of-human-social-connection_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/importance-human-social-connection.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about social connection">
-          <h3>Key Point</h3>
-          <p>As humans, we are wired for social connection. Research shows that meaningful 
-          social connection contributes to our happiness. In contrast, feelings of loneliness can 
-          have a significant detrimental impact on our well-being.</p>
+        <div class="module-background">
+          <div class="module-content">
+            <h2>The Importance of Human Social Connection</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="social-connection-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                poster="assets/images/mario-alonso-puig-poster.jpg"
+                data-video-id="w1v03"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="The Importance of Human Social Connection video"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v03-the-importance-of-human-social-connection/mp4/w1v03-the-importance-of-human-social-connection_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                <track kind="captions" src="captions/importance-human-social-connection.vtt" srclang="en" label="English" default>
+              </video>
+            </div>
+            
+            <div class="key-point" role="note" aria-label="Key point about social connection">
+              <h3>Key Point</h3>
+              <p>As humans, we are wired for social connection. Research shows that meaningful 
+              social connection contributes to our happiness. In contrast, feelings of loneliness can 
+              have a significant detrimental impact on our well-being.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -276,8 +255,8 @@
 </section>
       
       <section class="lesson-section no-borders">
-  
-    
+  <div class="module-background">
+    <div class="module-content">
       <h2>Activity: Reflecting on Your Social Connections</h2>
       <p>In light of what you've learned and read so far, please reflect on the following 
       questions:</p>
@@ -310,8 +289,8 @@
           </div>
         </div>
       </div>
-    
-  
+    </div>
+  </div>
 </section>
       
       <section class="lesson-section no-borders">
@@ -347,66 +326,70 @@
       </section>
       
       <section class="lesson-section no-borders">
-        <h2>Leading Self for Greater Impact in What We Do</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="leading-self-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/positive-psychology-poster.jpg"
-            data-video-id="w6v02"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="Leading Self for Greater Impact in What We Do video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v02-leading-self-for-greater-impact-in-what-we-do/mp4/w6v02-leading-self-for-greater-impact-in-what-we-do_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/leading-self-for-greater-impact.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about leading self">
-          <h3>Key Point</h3>
-          <p>Leading ourselves effectively is the foundation for making a positive impact in all areas of our lives. By developing self-awareness and intentional practices, we can enhance our capacity to lead with purpose and authenticity.</p>
-        </div>
-      </section>
+  <div class="module-background">
+    <div class="module-content">
+      <h2>Leading Self for Greater Impact in What We Do</h2>
+      
+      <div class="responsive-video">
+        <video 
+          id="leading-self-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          poster="assets/images/positive-psychology-poster.jpg"
+          data-video-id="w6v02"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="Leading Self for Greater Impact in What We Do video"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v02-leading-self-for-greater-impact-in-what-we-do/mp4/w6v02-leading-self-for-greater-impact-in-what-we-do_1080p.mp4" type="video/mp4">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+          <track kind="captions" src="captions/leading-self-for-greater-impact.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+      
+      <div class="key-point" role="note" aria-label="Key point about leading self">
+        <h3>Key Point</h3>
+        <p>Leading ourselves effectively is the foundation for making a positive impact in all areas of our lives. By developing self-awareness and intentional practices, we can enhance our capacity to lead with purpose and authenticity.</p>
+      </div>
+    </div>
+  </div>
+</section>
       
       <section class="lesson-section no-borders">
-        <h2>Closing Meditation: Lesson 1</h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="closing-meditation-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/positive-psychology-poster.jpg"
-            data-video-id="w7v01"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="Embracing the Fullness of Being Human meditation video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v01-embracing-the-fullness-of-being-human/mp4/w7v01-embracing-the-fullness-of-being-human_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/embracing-fullness-being-human.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about meditation practice">
-          <h3>Key Point</h3>
-          <p>This guided meditation helps us integrate the concepts we've learned about being human. Taking time for reflection and mindfulness allows us to embrace our full humanity with compassion and awareness.</p>
-        </div>
-      </section>
-      
-      <section class="lesson-section no-borders">
+  <h2>Closing Meditation: Lesson 1</h2>
   
-    
+  <div class="responsive-video">
+    <video 
+      id="closing-meditation-video" 
+      class="video-js vjs-ie-skin vjs-big-play-centered" 
+      controls 
+      preload="auto" 
+      poster="assets/images/positive-psychology-poster.jpg"
+      data-video-id="w7v01"
+      data-logo="assets/images/logo-ie-small.png"
+      aria-label="Embracing the Fullness of Being Human meditation video"
+    >
+      <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v01-embracing-the-fullness-of-being-human/mp4/w7v01-embracing-the-fullness-of-being-human_1080p.mp4" type="video/mp4">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+      <track kind="captions" src="captions/embracing-fullness-being-human.vtt" srclang="en" label="English" default>
+    </video>
+  </div>
+  
+  <div class="key-point" role="note" aria-label="Key point about meditation practice">
+    <h3>Key Point</h3>
+    <p>This guided meditation helps us integrate the concepts we've learned about being human. Taking time for reflection and mindfulness allows us to embrace our full humanity with compassion and awareness.</p>
+  </div>
+</section>
+      
+      <section class="lesson-section no-borders">
+  <div class="module-background">
+    <div class="module-content">
       <h2>Optional Reading</h2>
       <p>Please complete the following readings if they are of interest to you!</p>
       
@@ -437,8 +420,8 @@
           </div>
         </div>
       </div>
-    
-  
+    </div>
+  </div>
 </section>
       
       <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
@@ -449,10 +432,12 @@
   </main>
 
   <footer role="contentinfo">
-  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
+
+  <!-- VideoJS JavaScript -->
+    IE University. All rights reserved.</p>
+  </footer>
 
   <!-- VideoJS JavaScript -->
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
