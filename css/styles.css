@@ -1759,6 +1759,10 @@ a:hover {
     text-align: left; /* Alinear footer a la izquierda en móvil */
     padding: 1.5rem 2rem;
   }
+
+  .split-cover-content .white-footer .copyright {
+    text-align: left !important; /* Forzar alineación a la izquierda del copyright */
+  }
 }
 
 @media (max-width: 480px) {
@@ -1870,6 +1874,10 @@ a:hover {
     display: block !important;
     text-align: center !important; /* El texto del botón sí debe estar centrado dentro del botón */
     margin: 0 !important; /* Eliminar márgenes automáticos */
+  }
+
+  .split-cover-content .white-footer .copyright {
+    text-align: left !important; /* Forzar alineación a la izquierda del copyright en móviles */
   }
 }
 
