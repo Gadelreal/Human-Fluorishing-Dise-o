@@ -3,343 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Human Flourishing - Online Course</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Estilos específicos para la página de inicio */
-    .hero-section {
-      background: linear-gradient(135deg, rgba(0, 85, 162, 0.9), rgba(0, 85, 162, 0.7)), url('assets/images/hero-bg.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      padding: 2rem;
-      z-index: 2;
-    }
-
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      opacity: 0.95;
-      line-height: 1.6;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: white;
-      color: #0055a2;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      color: #0055a2;
-    }
-
-    /* Estilos para las tarjetas de capítulos */
-    .chapters-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
-    }
-
-    .chapter-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      border: 1px solid #e0e0e0;
-    }
-
-    .chapter-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .chapter-number {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      background-color: #0055a2;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .chapter-title {
-      color: #0055a2;
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .chapter-description {
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .chapter-link {
-      color: #0055a2;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
-
-    .chapter-link:hover {
-      color: #003d73;
-      transform: translateX(5px);
-    }
-
-    .chapter-link i {
-      margin-left: 0.5rem;
-    }
-
-    /* Estilos para la sección de introducción */
-    .intro-section {
-      background-color: #f8f9fa;
-      padding: 4rem 0;
-    }
-
-    .intro-content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 0 2rem;
-    }
-
-    .intro-title {
-      color: #0055a2;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .intro-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.2rem;
-      }
-
-      .chapters-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .chapter-card {
-        padding: 1.5rem;
-      }
-
-      .intro-title {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <title>Human Flourishing - Course Cover</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <img src="assets/images/icon-hf.png" alt="Human Flourishing Icon" style="width: 100px; height: 100px; margin-bottom: 2rem;">
-      <h1 class="hero-title">Human Flourishing</h1>
-      <p class="hero-subtitle">Discover the science and practice of well-being, resilience, and living with purpose</p>
-      <a href="introduction.html" class="cta-button">Start Your Journey</a>
+<body class="split-cover">
+  <div class="split-cover-layout">
+    <div class="split-cover-image">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Portada_2.png-nHXPHQWMRqu2301KAYxxVR8Iwx07Tj.jpeg" alt="Portrait representing human connection and flourishing">
     </div>
-  </section>
-
-  <!-- Navigation Header -->
-  <header class="full-width" role="banner">
-    <div class="header-content">
-      <div class="header-left">
-        <div class="logo-container">
-          <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
+    
+    <div class="split-cover-content">
+      <div class="cover-text dark-text">
+        <div class="logo-container top-left small-logo">
+          <a href="https://www.ie.edu" target="_blank">
             <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
           </a>
         </div>
-      </div>
-      <div class="header-controls">
-        <div class="language-selector">
-          <a href="index.html" class="active">English</a> | <a href="index.html">Español</a>
+        <h1 class="black-title plain-title">Human Flourishing</h1>
+        <div class="title-separator blue"></div>
+        <p class="subtitle">Center for Health and Well-Being at IE University</p>
+        <p class="author">Author: Kardina Juspkelobja</p>
+        <p class="duration">Duration: 5 Lessons</p>
+        <p class="code">Material code: XXXX</p>
+        
+        <div class="start-button-container">
+          <a href="introduction.html" class="start-button blue-button">Start Course <span class="arrow-icon">→</span></a>
         </div>
-        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-          <div class="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
       </div>
-    </div>
-    <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="introduction.html">0. Introduction</a></li>
-        <li><a href="chapter1.html">1. Being Human</a></li>
-        <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
-        <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
-        <li><a href="chapter4.html">4. Building Resilience</a></li>
-        <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Introduction Section -->
-  <section class="intro-section">
-    <div class="intro-content">
-      <h2 class="intro-title">Welcome to Human Flourishing</h2>
-      <p class="intro-text">
-        This comprehensive course explores the science and practice of human well-being. 
-        Through five engaging lessons, you'll discover evidence-based strategies for 
-        cultivating awareness, building resilience, finding purpose, and creating lasting 
-        positive change in your life.
-      </p>
-      <p class="intro-text">
-        Whether you're seeking personal growth, professional development, or simply a 
-        deeper understanding of what it means to thrive, this course provides practical 
-        tools and insights to support your journey toward flourishing.
-      </p>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main>
-    <div class="content-aligned-container">
-      <h2 style="text-align: center; color: #0055a2; font-size: 2.5rem; margin: 3rem 0 2rem 0;">Course Lessons</h2>
       
-      <div class="chapters-grid">
-        <!-- Introduction -->
-        <div class="chapter-card">
-          <div class="chapter-number">0</div>
-          <h3 class="chapter-title">Introduction</h3>
-          <p class="chapter-description">
-            Begin your journey by understanding the foundations of human flourishing and 
-            what you can expect from this transformative course.
-          </p>
-          <a href="introduction.html" class="chapter-link">
-            Start Introduction <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!-- Chapter 1 -->
-        <div class="chapter-card">
-          <div class="chapter-number">1</div>
-          <h3 class="chapter-title">Being Human</h3>
-          <p class="chapter-description">
-            Explore the complexity of human nature, our need for social connection, 
-            and how understanding our biases can lead to greater self-awareness.
-          </p>
-          <a href="chapter1.html" class="chapter-link">
-            Explore Being Human <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!-- Chapter 2 -->
-        <div class="chapter-card">
-          <div class="chapter-number">2</div>
-          <h3 class="chapter-title">Cultivating Awareness</h3>
-          <p class="chapter-description">
-            Develop emotional granularity, understand the power of positive emotions, 
-            and learn metacognitive strategies for deeper self-awareness.
-          </p>
-          <a href="chapter2.html" class="chapter-link">
-            Cultivate Awareness <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!-- Chapter 3 -->
-        <div class="chapter-card">
-          <div class="chapter-number">3</div>
-          <h3 class="chapter-title">Autonomy and Motivation</h3>
-          <p class="chapter-description">
-            Discover your core values, explore the concept of ikigai, and understand 
-            the difference between intrinsic and extrinsic motivation.
-          </p>
-          <a href="chapter3.html" class="chapter-link">
-            Find Your Purpose <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!-- Chapter 4 -->
-        <div class="chapter-card">
-          <div class="chapter-number">4</div>
-          <h3 class="chapter-title">Building Resilience</h3>
-          <p class="chapter-description">
-            Learn an evolved definition of resilience, identify your character strengths, 
-            and develop strategies for overcoming procrastination.
-          </p>
-          <a href="chapter4.html" class="chapter-link">
-            Build Resilience <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!-- Chapter 5 -->
-        <div class="chapter-card">
-          <div class="chapter-number">5</div>
-          <h3 class="chapter-title">Ownership and Practice</h3>
-          <p class="chapter-description">
-            Take ownership of your flourishing journey, create sustainable practices, 
-            and establish accountability systems for lasting change.
-          </p>
-          <a href="chapter5.html" class="chapter-link">
-            Take Ownership <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
+      <footer class="white-footer">
+        <p class="copyright dark-text">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+      </footer>
     </div>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="footer-content">
-      <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
 
   <script src="js/main.js"></script>
+  <script src="js/logo-checker.js"></script>
 </body>
 </html>
