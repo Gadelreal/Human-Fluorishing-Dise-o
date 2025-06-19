@@ -722,6 +722,20 @@ ol {
   height: 100%;
   display: flex;
   flex-direction: column;
+  cursor: pointer; /* Añadir cursor pointer */
+}
+
+/* Hacer toda la card clicable */
+.reading-card-clickable {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.reading-card-clickable:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .reading-card:hover {
