@@ -1,6 +1,6 @@
 /* === INICIO part1.css === */
 /* Importar Open Sans de Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
 /* Reset y estilos base */
 * {
@@ -32,7 +32,7 @@
 
 /* Mejorar el contraste de texto */
 body {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: var(--text-color-dark);
   min-height: 100vh;
@@ -4320,6 +4320,5 @@ select.success {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
-
-.checkmark:after,
 \
+.checkmark:after,
