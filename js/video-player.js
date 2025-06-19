@@ -3,6 +3,8 @@
 // No import needed as we're using the global videojs object.
 
 videojs.registerPlugin("examplePlugin", function (options) {
+  
+
   this.on("play", () => {
     videojs.log("The video is playing!")
   })

@@ -1,0 +1,384 @@
+/* Estilos para la portada con fondo azul completo (mantener para compatibilidad) */
+.full-blue-cover {
+  background-color: #d6208f;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.full-cover-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.full-cover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mantener los estilos específicos de la portada */
+.full-blue-cover header {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1.5rem 2rem;
+  position: relative;
+  z-index: 10;
+  display: block; /* Revertir a la visualización original para la portada */
+}
+
+.full-blue-cover .logo-container {
+  max-width: 150px;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.full-blue-cover .logo {
+  filter: brightness(0) invert(1); /* Hace que el logo sea blanco */
+}
+
+.full-blue-cover main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.full-blue-cover .cover-text {
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.full-blue-cover h1 {
+  color: white; /* Mantener blanco para fondos oscuros */
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: none; /* Asegurar que no se aplique transformación de texto */
+}
+
+.title-separator {
+  width: 60px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 500; /* Peso medio entre el título y el resto del contenido */
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.full-blue-cover .author,
+.full-blue-cover .duration,
+.full-blue-cover .code {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.full-blue-cover .start-button {
+  background-color: white;
+  color: #d6208f;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.full-blue-cover .start-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.full-blue-cover footer {
+  background-color: transparent;
+  padding: 1.5rem 3rem;
+  text-align: right;
+  width: 50%;
+  margin-left: auto;
+}
+
+/* Estilos responsivos para la portada con fondo azul */
+@media (max-width: 768px) {
+  .full-cover-layout {
+    flex-direction: column;
+  }
+
+  .full-cover-image {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .full-blue-cover .logo-container {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 20;
+  }
+
+  .full-blue-cover main {
+    justify-content: center;
+  }
+
+  .full-blue-cover .cover-text {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .full-blue-cover h1 {
+    font-size: 2.5rem;
+  }
+
+  .full-blue-cover footer {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-cover-image {
+    height: 30vh;
+  }
+
+  .full-blue-cover .logo-container {
+    max-width: 100px;
+  }
+
+  .full-blue-cover .cover-text {
+    padding: 1.5rem;
+  }
+
+  .full-blue-cover h1 {
+    font-size: 2rem;
+  }
+
+  .full-blue-cover .author,
+  .full-blue-cover .duration,
+  .full-blue-cover .code {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .title-separator {
+    width: 40px;
+    margin: 0 auto 1.2rem;
+  }
+}
+
+/* Estilos para la portada mejorada */
+.enhanced-cover {
+  min-height: 100vh;
+  background: linear-gradient(rgba(214, 32, 143, 0.8), rgba(214, 32, 143, 0.6)),
+    url("../assets/images/flourishing-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.enhanced-cover header {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.enhanced-cover .logo-container {
+  max-width: 150px;
+}
+
+.enhanced-cover .logo {
+  filter: brightness(0) invert(1);
+}
+
+.enhanced-cover-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.enhanced-cover-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cover-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  max-height: 400px;
+  position: relative;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cover-image:hover img {
+  transform: scale(1.05);
+}
+
+.cover-text {
+  text-align: left;
+  color: white;
+}
+
+.cover-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cover-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.cover-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.enhanced-start-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+.enhanced-start-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos responsivos para la portada mejorada */
+@media (max-width: 768px) {
+  .enhanced-cover-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-text {
+    text-align: center;
+  }
+
+  .cover-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .cover-features {
+    justify-content: center;
+  }
+
+  .feature-item {
+    flex: 1 1 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enhanced-cover-content {
+    padding: 1rem;
+  }
+
+  .cover-text h1 {
+    font-size: 2rem;
+  }
+
+  .cover-text p {
+    font-size: 1rem;
+  }
+
+  .feature-item {
+    flex: 1 1 100%;
+  }
+}
