@@ -2077,6 +2077,7 @@ a:hover {
   border: 1px solid #e0e0e0;
   border-radius: 0;
   padding: 2rem;
+  g: 2rem;
   margin: 2rem 0;
 }
 
@@ -2392,7 +2393,7 @@ footer {
 /* Estilos para el botón de tomar encuesta inicial */
 .take-survey-button {
   display: inline-block;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important; /* Force the new blue color */
   color: white;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -2405,7 +2406,7 @@ footer {
 }
 
 .take-survey-button:hover {
-  background-color: var(--link-hover-color);
+  background-color: var(--primary-color-dark) !important; /* Force the darker blue on hover */
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
