@@ -2636,7 +2636,7 @@ body h2:first-of-type,
 .hero-section {
   width: 100%;
   height: 600px;
-  background-color: #000066; /* Solid blue background instead of image */
+  background: linear-gradient(45deg, #000066, #3030d9); /* Gradiente diagonal desde azul oscuro a azul más claro */
   display: flex;
   align-items: center;
   justify-content: flex-start;
