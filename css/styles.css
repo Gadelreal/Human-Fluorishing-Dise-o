@@ -11,14 +11,14 @@
 
 /* Añadir estas variables de contraste mejorado */
 :root {
-  --primary-color: #d6208f; /* Color magenta IE */
-  --primary-color-dark: #b01a75; /* Versión más oscura para mejor contraste */
+  --primary-color: #000066; /* Cambiado de #d6208f a azul oscuro */
+  --primary-color-dark: #000044; /* Versión más oscura del azul para mejor contraste */
   --secondary-color: #f5f5f5;
   --text-color: #333;
   --text-color-dark: #222;
-  --link-color: #d6208f;
-  --link-hover-color: #b01a75;
-  --focus-outline-color: #d6208f;
+  --link-color: #000066; /* Cambiado de #d6208f a azul oscuro */
+  --link-hover-color: #000044; /* Cambiado de #b01a75 a azul más oscuro */
+  --focus-outline-color: #000066; /* Cambiado de #d6208f a azul oscuro */
   --focus-outline-width: 3px;
   --key-point-bg: #fce4f0;
   --key-point-border: #f8c2dd;
@@ -854,7 +854,7 @@ ol {
 .reflection-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(214, 32, 143, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 102, 0.2);
 }
 
 .button-container {
@@ -973,7 +973,7 @@ button,
 }
 
 .checkbox-container.selected {
-  background-color: rgba(214, 32, 143, 0.1);
+  background-color: rgba(0, 0, 102, 0.1);
 }
 
 /* Mejorar la visibilidad de los mensajes de error */
@@ -1104,11 +1104,11 @@ button,
 }
 
 .vjs-ie-skin .vjs-control-bar {
-  background-color: rgba(214, 32, 143, 0.8); /* Color magenta IE semi-transparente */
+  background-color: rgba(0, 0, 102, 0.8); /* Color magenta IE semi-transparente */
 }
 
 .vjs-ie-skin .vjs-big-play-button {
-  background-color: rgba(214, 32, 143, 0.8);
+  background-color: rgba(0, 0, 102, 0.8);
   border-color: white;
   border-radius: 50%;
   width: 80px;
@@ -1687,7 +1687,7 @@ a:hover {
 /* === INICIO part6.css === */
 /* Estilos para la portada con fondo azul completo (mantener para compatibilidad) */
 .full-blue-cover {
-  background-color: #d6208f;
+  background-color: #000066;
   color: white;
   margin: 0;
   padding: 0;
@@ -1796,7 +1796,7 @@ a:hover {
 
 .full-blue-cover .start-button {
   background-color: white;
-  color: #d6208f;
+  color: #000066;
   padding: 1rem 2.5rem;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -1896,8 +1896,7 @@ a:hover {
 /* Estilos para la portada mejorada */
 .enhanced-cover {
   min-height: 100vh;
-  background: linear-gradient(rgba(214, 32, 143, 0.8), rgba(214, 32, 143, 0.6)),
-    url("../assets/images/flourishing-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 102, 0.8), rgba(0, 0, 102, 0.6)), url("../assets/images/flourishing-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -2332,7 +2331,7 @@ footer {
 }
 
 .survey-option.selected {
-  background-color: rgba(214, 32, 143, 0.1);
+  background-color: rgba(0, 0, 102, 0.1);
 }
 
 .survey-submit {
@@ -3273,9 +3272,9 @@ main {
   overflow: hidden;
   transition: none;
   padding: 1.5rem;
-  border-left: 4px solid #d6208f;
+  border-left: 4px solid #000066;
   border: 1px solid #e0e0e0;
-  border-left: 4px solid #d6208f;
+  border-left: 4px solid #000066;
 }
 
 .learning-objective-card:hover {
@@ -3289,7 +3288,7 @@ main {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: rgba(214, 32, 143, 0.1);
+  background-color: rgba(0, 0, 102, 0.1);
   border-radius: 50%;
   margin-right: 1rem;
   flex-shrink: 0;
@@ -3297,7 +3296,7 @@ main {
 
 .objective-icon i {
   font-size: 1.5rem;
-  color: #d6208f;
+  color: #000066;
 }
 
 .objective-content {
