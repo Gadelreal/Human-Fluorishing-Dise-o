@@ -716,6 +716,7 @@ ol {
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  transition: all 0.3s ease;
   position: relative;
   border: 1px solid #eaeaea;
   height: 100%;
@@ -724,6 +725,8 @@ ol {
 }
 
 .reading-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-color: #d0d0d0;
 }
 
@@ -736,6 +739,8 @@ ol {
   height: 100%;
   background-color: var(--primary-color);
   transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
 }
 
 .reading-card:hover:before {
@@ -819,6 +824,11 @@ ol {
   border-radius: 0;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reflection-question:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .reflection-question h3 {
@@ -3267,10 +3277,7 @@ main {
   border-left: 4px solid #000066;
 }
 
-.learning-objective-card:hover {
-  transform: none;
-  box-shadow: none;
-}
+/* Eliminar completamente la regla :hover */
 
 .objective-icon {
   display: flex;
