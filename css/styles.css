@@ -3275,6 +3275,27 @@ main {
   border-left: 4px solid #000066;
   border: 1px solid #e0e0e0;
   border-left: 4px solid #000066;
+  pointer-events: none; /* Eliminar completamente la interacción */
+  cursor: default; /* Cursor por defecto */
+}
+
+/* Eliminar cualquier estado de focus, active o click */
+.learning-objective-card:focus,
+.learning-objective-card:active,
+.learning-objective-card:hover {
+  outline: none !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Asegurar que los elementos internos tampoco sean interactivos */
+.learning-objective-card *:focus,
+.learning-objective-card *:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Eliminar completamente la regla :hover */
