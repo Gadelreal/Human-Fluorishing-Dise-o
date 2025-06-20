@@ -1671,14 +1671,14 @@ a:hover {
   }
 
   .logo-container.top-left {
-    top: 15px;
-    left: 2rem; /* Ajustar en tablets */
+    top: 25px; /* Cambiado de 15px a 25px para más separación de la imagen */
+    left: 2rem;
     max-width: 70px;
-    margin-bottom: 3rem; /* Aumentar espaciado con el título */
+    margin-bottom: 3rem;
   }
 
   .split-cover-content .cover-text {
-    padding-top: 80px; /* Aumentar padding-top para más espacio del logo */
+    padding-top: 90px; /* Aumentado de 80px a 90px para compensar */
   }
 
   /* Mejorar espaciados verticales en tablets */
@@ -1725,14 +1725,14 @@ a:hover {
   }
 
   .logo-container.top-left {
-    top: 10px;
-    left: 1.5rem; /* Ajustar en móviles */
+    top: 20px; /* Cambiado de 10px a 20px para más separación de la imagen */
+    left: 1.5rem;
     max-width: 60px;
-    margin-bottom: 4rem; /* Aumentar aún más el espaciado con el título en móviles */
+    margin-bottom: 4rem;
   }
 
   .split-cover-content .cover-text {
-    padding-top: 90px; /* Aumentar padding-top para más espacio del logo */
+    padding-top: 100px; /* Aumentado de 90px a 100px para compensar */
   }
 
   /* Distribución armónica de espaciados en móviles */
@@ -3314,6 +3314,11 @@ main {
   .header-full-bottom .hamburger-nav {
     top: 80px; /* Ajustar posición del menú en móviles */
     right: 1rem;
+  }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
