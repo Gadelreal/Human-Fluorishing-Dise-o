@@ -255,6 +255,151 @@
         padding-left: 1rem;
       }
     }
+
+    /* Estilos para el carrusel de metacognición */
+    .metacognition-carousel {
+      position: relative;
+      margin: 2rem 0;
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease;
+      gap: 1.5rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 calc(33.333% - 1rem);
+      min-width: 0;
+    }
+
+    .metacognition-card {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
+      padding: 1.5rem;
+      border-left: 4px solid #000066;
+      border: 1px solid #e0e0e0;
+      border-left: 4px solid #000066;
+      pointer-events: none;
+      cursor: default;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .metacognition-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 102, 0.1);
+      border-radius: 50%;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .metacognition-icon i {
+      font-size: 1.5rem;
+      color: #000066;
+    }
+
+    .metacognition-content {
+      flex: 1;
+    }
+
+    .metacognition-content h4 {
+      color: #000066;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .metacognition-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    /* Controles del carrusel */
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .carousel-btn {
+      background-color: #000066;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .carousel-btn:hover {
+      background-color: #000044;
+      transform: scale(1.1);
+    }
+
+    .carousel-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-dot.active {
+      background-color: #000066;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .carousel-slide {
+        flex: 0 0 calc(50% - 0.75rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel-slide {
+        flex: 0 0 100%;
+      }
+
+      .carousel-track {
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -590,68 +735,97 @@ well-being. Here's how you can do it:</p>
       <!-- 9. Fondo blanco -->
       <section class="lesson-section no-borders">
         <h2>Activity: Practicing Metacognition</h2>
-            <p>Now it's time to practice some ways to elevate your metacognition. Choose at least two 
-            of these practices and try them out!</p>
-            
-            <div class="metacognition-exercise">
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice1" class="metacognition-checkbox">
-                <label for="practice1">
-                  <strong>Journaling:</strong> Writing down your thoughts, feelings, and experiences helps 
-                  increase self-awareness and provides insights into your thinking patterns.
-                </label>
+        <p>Here are some effective ways to elevate your metacognition and build deeper awareness:</p>
+        
+        <div class="metacognition-carousel">
+          <div class="carousel-container">
+            <div class="carousel-track" id="metacognition-track">
+              <div class="carousel-slide">
+                <div class="metacognition-card">
+                  <div class="metacognition-icon" aria-hidden="true">
+                    <i class="fas fa-pen"></i>
+                  </div>
+                  <div class="metacognition-content">
+                    <h4>Journaling</h4>
+                    <p>Writing down your thoughts, feelings, and experiences helps increase self-awareness and provides insights into your thinking patterns.</p>
+                  </div>
+                </div>
               </div>
               
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice2" class="metacognition-checkbox">
-                <label for="practice2">
-                  <strong>Mindfulness:</strong> Focusing your awareness on the present moment can reduce 
-                  stress and improve cognitive clarity by preventing your mind from wandering.
-                </label>
+              <div class="carousel-slide">
+                <div class="metacognition-card">
+                  <div class="metacognition-icon" aria-hidden="true">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <div class="metacognition-content">
+                    <h4>Mindfulness</h4>
+                    <p>Focusing your awareness on the present moment can reduce stress and improve cognitive clarity by preventing your mind from wandering.</p>
+                  </div>
+                </div>
               </div>
               
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice3" class="metacognition-checkbox">
-                <label for="practice3">
-                  <strong>Take time to pause:</strong> Deliberately pausing before reacting allows you to 
-                  consider your thoughts and responses, leading to more thoughtful decision-
-                  making.
-                </label>
+              <div class="carousel-slide">
+                <div class="metacognition-card">
+                  <div class="metacognition-icon" aria-hidden="true">
+                    <i class="fas fa-pause"></i>
+                  </div>
+                  <div class="metacognition-content">
+                    <h4>Take time to pause</h4>
+                    <p>Deliberately pausing before reacting allows you to consider your thoughts and responses, leading to more thoughtful decision-making.</p>
+                  </div>
+                </div>
               </div>
               
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice4" class="metacognition-checkbox">
-                <label for="practice4">
-                  <strong>Stand up and move around:</strong> Physical movement can boost boost brain function and 
-                  creativity, helping you think more clearly and effectively.
-                </label>
+              <div class="carousel-slide">
+                <div class="metacognition-card">
+                  <div class="metacognition-icon" aria-hidden="true">
+                    <i class="fas fa-walking"></i>
+                  </div>
+                  <div class="metacognition-content">
+                    <h4>Stand up and move around</h4>
+                    <p>Physical movement can boost brain function and creativity, helping you think more clearly and effectively.</p>
+                  </div>
+                </div>
               </div>
               
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice5" class="metacognition-checkbox">
-                <label for="practice5">
-                  <strong>Appreciate nature:</strong> Spending time in nature, or even just looking through a 
-                  window to appreciate the natural world, can reduce stress and enhance your 
-                  mood, providing a fresh perspective and mental clarity.
-                </label>
+              <div class="carousel-slide">
+                <div class="metacognition-card">
+                  <div class="metacognition-icon" aria-hidden="true">
+                    <i class="fas fa-tree"></i>
+                  </div>
+                  <div class="metacognition-content">
+                    <h4>Appreciate nature</h4>
+                    <p>Spending time in nature, or even just looking through a window to appreciate the natural world, can reduce stress and enhance your mood, providing a fresh perspective and mental clarity.</p>
+                  </div>
+                </div>
               </div>
               
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice6" class="metacognition-checkbox">
-                <label for="practice6">
-                  <strong>Connect with another human being:</strong> Engaging in meaningful conversations 
-                  can provide new insights and help you reflect on your own thoughts and 
-                  feelings.
-                </label>
+              <div class="carousel-slide">
+                <div class="metacognition-card">
+                  <div class="metacognition-icon" aria-hidden="true">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="metacognition-content">
+                    <h4>Connect with another human being</h4>
+                    <p>Engaging in meaningful conversations can provide new insights and help you reflect on your own thoughts and feelings.</p>
+                  </div>
+                </div>
               </div>
-              
-              <div class="validation-message" id="metacognition-validation">
-                Please select at least 2 practices to try.
-              </div>
-              
-              <button id="save-metacognition" class="save-button">Confirm Selection</button>
-              <span class="save-feedback" id="feedback-metacognition"></span>
             </div>
+          </div>
+          
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prev-btn" aria-label="Previous slide">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-indicators" id="carousel-indicators">
+              <!-- Dots will be generated by JavaScript -->
+            </div>
+            <button class="carousel-btn" id="next-btn" aria-label="Next slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </section>
       
       <!-- 10. Fondo gris -->
@@ -754,5 +928,90 @@ well-being. Here's how you can do it:</p>
   <script src="js/reflections.js"></script>
   <script src="js/metacognition.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    // Carrusel de metacognición
+    document.addEventListener('DOMContentLoaded', function() {
+      const track = document.getElementById('metacognition-track');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const indicatorsContainer = document.getElementById('carousel-indicators');
+      
+      if (!track || !prevBtn || !nextBtn || !indicatorsContainer) return;
+      
+      const slides = track.querySelectorAll('.carousel-slide');
+      let currentIndex = 0;
+      let slidesToShow = 3;
+      
+      // Determinar cuántas slides mostrar según el ancho de pantalla
+      function updateSlidesToShow() {
+        if (window.innerWidth <= 480) {
+          slidesToShow = 1;
+        } else if (window.innerWidth <= 768) {
+          slidesToShow = 2;
+        } else {
+          slidesToShow = 3;
+        }
+      }
+      
+      // Crear indicadores
+      function createIndicators() {
+        indicatorsContainer.innerHTML = '';
+        const totalPages = Math.ceil(slides.length / slidesToShow);
+        
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'carousel-dot';
+          if (i === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => goToSlide(i * slidesToShow));
+          indicatorsContainer.appendChild(dot);
+        }
+      }
+      
+      // Actualizar posición del carrusel
+      function updateCarousel() {
+        const slideWidth = 100 / slidesToShow;
+        const translateX = -(currentIndex * slideWidth);
+        track.style.transform = `translateX(${translateX}%)`;
+        
+        // Actualizar indicadores
+        const dots = indicatorsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === Math.floor(currentIndex / slidesToShow));
+        });
+        
+        // Actualizar botones
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= slides.length - slidesToShow;
+      }
+      
+      // Ir a una slide específica
+      function goToSlide(index) {
+        currentIndex = Math.max(0, Math.min(index, slides.length - slidesToShow));
+        updateCarousel();
+      }
+      
+      // Event listeners
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentIndex - slidesToShow);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentIndex + slidesToShow);
+      });
+      
+      // Responsive
+      window.addEventListener('resize', () => {
+        updateSlidesToShow();
+        createIndicators();
+        goToSlide(0); // Reset to first slide on resize
+      });
+      
+      // Inicializar
+      updateSlidesToShow();
+      createIndicators();
+      updateCarousel();
+    });
+  </script>
 </body>
 </html>
