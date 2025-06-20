@@ -1654,113 +1654,139 @@ a:hover {
 
   .split-cover-image {
     width: 100%;
-    height: 40vh;
+    height: 25vh; /* Reducido de 40vh a 25vh */
   }
 
   .split-cover-content {
     width: 100%;
+    min-height: 75vh; /* Asegurar que use el resto del viewport */
   }
 
   .split-cover-content .cover-text {
-    padding: 2rem;
-    text-align: left; /* Cambiado de center a left */
+    padding: 1rem 2rem; /* Reducido padding */
+    text-align: left;
+    justify-content: space-between; /* Distribuir contenido uniformemente */
   }
 
   .title-separator.blue {
-    display: none; /* Ocultar la línea separadora en tablets */
+    display: none;
   }
 
   .logo-container.top-left {
-    top: 25px; /* Cambiado de 15px a 25px para más separación de la imagen */
+    top: 15px; /* Reducido de 25px */
     left: 2rem;
-    max-width: 70px;
-    margin-bottom: 3rem;
+    max-width: 60px; /* Reducido de 70px */
+    margin-bottom: 1.5rem; /* Reducido de 3rem */
   }
 
   .split-cover-content .cover-text {
-    padding-top: 90px; /* Aumentado de 80px a 90px para compensar */
+    padding-top: 60px; /* Reducido de 90px */
   }
 
-  /* Mejorar espaciados verticales en tablets */
+  /* Espaciados más compactos en tablets */
   .split-cover-content .cover-text h1 {
-    margin-bottom: 2rem; /* Aumentar espacio después del título */
+    margin-bottom: 1rem; /* Reducido de 2rem */
+    font-size: 2.2rem; /* Reducido ligeramente */
   }
 
   .split-cover-content .cover-text .subtitle {
-    margin-bottom: 2rem; /* Aumentar espacio después del subtítulo */
+    margin-bottom: 1rem; /* Reducido de 2rem */
+    font-size: 1.1rem; /* Reducido */
   }
 
   .split-cover-content .cover-text .author,
   .split-cover-content .cover-text .duration,
   .split-cover-content .cover-text .code {
-    margin-bottom: 0.8rem; /* Espaciado más generoso entre elementos */
+    margin-bottom: 0.4rem; /* Reducido de 0.8rem */
+    font-size: 0.9rem;
   }
 
   .start-button-container {
-    margin-top: 3rem; /* Más espacio antes del botón */
+    margin-top: 1.5rem; /* Reducido de 3rem */
+  }
+
+  .split-cover-content .white-footer {
+    padding: 1rem 2rem; /* Reducido padding */
+    margin-top: 1rem; /* Reducido margen */
   }
 }
 
 @media (max-width: 480px) {
   .split-cover-image {
-    height: 30vh;
+    height: 20vh; /* Reducido de 30vh a 20vh */
+  }
+
+  .split-cover-content {
+    min-height: 80vh; /* Usar el 80% restante del viewport */
   }
 
   .image-logo-container {
-    top: 1rem;
+    top: 0.5rem;
     left: 1rem;
   }
 
   .image-logo-container .logo {
-    max-width: 100px;
+    max-width: 80px;
   }
 
   .split-cover-content .cover-text {
-    padding: 2rem 1.5rem; /* Ajustar padding lateral */
-    text-align: left; /* Asegurar que también sea left en móviles */
+    padding: 1rem 1.5rem; /* Padding muy compacto */
+    text-align: left;
+    height: 100%; /* Usar toda la altura disponible */
+    justify-content: space-between; /* Distribuir contenido */
   }
 
   .title-separator.blue {
-    display: none; /* Ocultar la línea separadora en móviles */
+    display: none;
   }
 
   .logo-container.top-left {
-    top: 20px; /* Cambiado de 10px a 20px para más separación de la imagen */
+    top: 10px; /* Reducido de 20px */
     left: 1.5rem;
-    max-width: 60px;
-    margin-bottom: 4rem;
+    max-width: 50px; /* Reducido de 60px */
+    margin-bottom: 1rem; /* Reducido de 4rem */
   }
 
   .split-cover-content .cover-text {
-    padding-top: 100px; /* Aumentado de 90px a 100px para compensar */
+    padding-top: 50px; /* Reducido de 100px */
   }
 
-  /* Distribución armónica de espaciados en móviles */
+  /* Espaciados muy compactos en móviles */
   .split-cover-content .cover-text h1 {
-    margin-bottom: 2.5rem; /* Más espacio después del título */
-    font-size: 2rem;
+    margin-bottom: 0.8rem; /* Reducido de 2.5rem */
+    font-size: 1.8rem; /* Reducido */
   }
 
   .split-cover-content .cover-text .subtitle {
-    margin-bottom: 2.5rem; /* Más espacio después del subtítulo */
-    font-size: 1.2rem;
+    margin-bottom: 0.8rem; /* Reducido de 2.5rem */
+    font-size: 1rem; /* Reducido */
   }
 
   .split-cover-content .cover-text .author,
   .split-cover-content .cover-text .duration,
   .split-cover-content .cover-text .code {
-    margin-bottom: 1rem; /* Espaciado más generoso entre elementos de información */
-    font-size: 1rem;
+    margin-bottom: 0.3rem; /* Reducido de 1rem */
+    font-size: 0.85rem; /* Reducido */
   }
 
   .start-button-container {
-    margin-top: 4rem; /* Mucho más espacio antes del botón */
+    margin-top: 1rem; /* Reducido de 4rem */
+    margin-bottom: 0.5rem; /* Añadir margen inferior pequeño */
   }
 
-  /* Ajustar el footer también */
+  .start-button {
+    padding: 0.8rem 1.5rem; /* Reducir padding del botón */
+    font-size: 1rem; /* Reducir tamaño de fuente */
+  }
+
+  /* Footer más compacto */
   .split-cover-content .white-footer {
-    padding: 2rem 1.5rem; /* Más padding en el footer */
-    margin-top: 3rem; /* Espacio adicional antes del footer */
+    padding: 0.8rem 1.5rem; /* Padding muy reducido */
+    margin-top: 0.5rem; /* Margen mínimo */
+  }
+
+  .split-cover-content .white-footer .copyright {
+    font-size: 0.8rem; /* Texto más pequeño */
   }
 }
 /* === FIN part5.css === */
