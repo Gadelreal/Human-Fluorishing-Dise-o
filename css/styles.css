@@ -2658,7 +2658,7 @@ body h2:first-of-type,
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5rem;
-  margin-top: 120px; /* Agregar margen superior para compensar la altura del header */
+  margin-top: 0; /* Eliminar el margen superior */
 }
 
 /* Add styles for hero content alignment and typography */
@@ -2702,6 +2702,25 @@ body h2:first-of-type,
 
   .hero-section {
     margin-top: 80px; /* Ajustar para móviles */
+  }
+}
+
+/* Ajuste para páginas con header fijo y hero */
+.header-full-bottom + main .hero-section {
+  padding-top: 120px; /* Usar padding en lugar de margin */
+  box-sizing: border-box;
+}
+
+/* Ajustes responsivos para el padding del hero */
+@media (max-width: 768px) {
+  .header-full-bottom + main .hero-section {
+    padding-top: 100px; /* Ajustar para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-full-bottom + main .hero-section {
+    padding-top: 80px; /* Ajustar para móviles */
   }
 }
 
