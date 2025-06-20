@@ -119,6 +119,142 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Estilos para el timeline vertical */
+    .timeline-activity {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline-activity::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #000066;
+      z-index: 1;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-number {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #000066;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
+    }
+
+    .timeline-content {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid white;
+      z-index: 3;
+    }
+
+    .timeline-content h4 {
+      color: #000066;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Ajustes responsivos para el timeline */
+    @media (max-width: 768px) {
+      .timeline-activity {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-activity::before {
+        left: 15px;
+      }
+
+      .timeline-number {
+        left: -1.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+
+      .timeline-step {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-content {
+        padding: 1rem;
+      }
+
+      .timeline-content::before {
+        left: -6px;
+        top: 15px;
+        border-right-width: 6px;
+        border-top-width: 6px;
+        border-bottom-width: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .timeline-activity {
+        padding-left: 1rem;
+      }
+
+      .timeline-activity::before {
+        left: 10px;
+      }
+
+      .timeline-number {
+        left: -1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      .timeline-step {
+        padding-left: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -325,34 +461,34 @@
 shown that this exercise has robust effects when it comes to boosting happiness and 
 well-being. Here's how you can do it:</p>
 
-            <div class="framework-activity">
-              <div class="activity-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
+            <div class="timeline-activity">
+              <div class="timeline-step">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
                   <h4>Take your journal or a notebook</h4>
                   <p>Prepare your writing materials to capture your reflections.</p>
                 </div>
               </div>
               
-              <div class="activity-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
+              <div class="timeline-step">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
                   <h4>Write down three things that went well today</h4>
                   <p>These can be big achievements or small pleasures. For example, "I had a great conversation with a friend," "I enjoyed a delicious meal," or "I completed a challenging task at work."</p>
                 </div>
               </div>
               
-              <div class="activity-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
+              <div class="timeline-step">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
                   <h4>Reflect on why each event went well</h4>
                   <p>Consider what caused these positive events and what they mean to you. This helps deepen your appreciation and understanding of the good things in your life.</p>
                 </div>
               </div>
               
-              <div class="activity-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
+              <div class="timeline-step">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
                   <h4>Consistency is key</h4>
                   <p>Do this exercise daily for at least a week, but aim for longer to see more significant benefits.</p>
                 </div>
