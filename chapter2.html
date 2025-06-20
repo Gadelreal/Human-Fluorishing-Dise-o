@@ -124,7 +124,6 @@
     .timeline-activity {
       position: relative;
       padding-left: 2rem;
-      margin-bottom: 3rem; /* Añadir margen inferior */
     }
 
     .timeline-activity::before {
@@ -140,7 +139,7 @@
 
     .timeline-step {
       position: relative;
-      margin-bottom: 3rem; /* Aumentado de 2rem a 3rem */
+      margin-bottom: 2rem;
       padding-left: 2rem;
     }
 
@@ -148,9 +147,27 @@
       margin-bottom: 0;
     }
 
+    .timeline-number {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #000066;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
+    }
+
     .timeline-content {
       background-color: white;
-      padding: 2rem; /* Aumentado de 1.5rem a 2rem */
+      padding: 1.5rem;
       border-radius: 8px;
       border: 1px solid #e0e0e0;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -172,7 +189,7 @@
 
     .timeline-content h4 {
       color: #000066;
-      margin-bottom: 1.2rem; /* Aumentado de 0.8rem a 1.2rem */
+      margin-bottom: 0.8rem;
       font-weight: 600;
       margin-top: 0;
       font-size: 1.1rem;
@@ -180,7 +197,7 @@
 
     .timeline-content p {
       margin-bottom: 0;
-      line-height: 1.8; /* Aumentado de 1.6 a 1.8 */
+      line-height: 1.6;
       color: #333;
     }
 
@@ -188,7 +205,6 @@
     @media (max-width: 768px) {
       .timeline-activity {
         padding-left: 1.5rem;
-        margin-bottom: 2.5rem; /* Añadir margen inferior en tablet */
       }
 
       .timeline-activity::before {
@@ -204,11 +220,10 @@
 
       .timeline-step {
         padding-left: 1.5rem;
-        margin-bottom: 2.5rem; /* Mantener espaciado en tablet */
       }
 
       .timeline-content {
-        padding: 1.5rem; /* Mantener padding generoso en tablet */
+        padding: 1rem;
       }
 
       .timeline-content::before {
@@ -223,7 +238,6 @@
     @media (max-width: 480px) {
       .timeline-activity {
         padding-left: 1rem;
-        margin-bottom: 2rem; /* Reducir en móvil pero mantener espacioso */
       }
 
       .timeline-activity::before {
@@ -239,29 +253,6 @@
 
       .timeline-step {
         padding-left: 1rem;
-        margin-bottom: 2rem; /* Reducir en móvil pero mantener espacioso */
-      }
-
-      .timeline-content {
-        padding: 1.2rem; /* Mantener padding cómodo en móvil */
-      }
-    }
-
-    /* Añadir espaciado antes del título Benefits */
-    .timeline-activity + h3 {
-      margin-top: 4rem !important; /* Añadir más espacio antes de Benefits */
-      margin-bottom: 2rem !important;
-    }
-
-    @media (max-width: 768px) {
-      .timeline-activity + h3 {
-        margin-top: 3rem !important; /* Reducir ligeramente en tablet */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .timeline-activity + h3 {
-        margin-top: 2.5rem !important; /* Ajustar para móvil */
       }
     }
   </style>
@@ -381,6 +372,7 @@
       preload="auto" 
       data-video-id="w2v01"
       data-logo="assets/images/logo-ie-small.png"
+      poster="assets/images/human-flourishing-poster.jpg"
     >
       <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v01-what-are-emotions/mp4/w2v01-what-are-emotions_1080p.mp4" type="video/mp4">
       <p class="vjs-no-js">
@@ -550,6 +542,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w6v05"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v05-the-broaden-and-build-theory/mp4/w6v05-the-broaden-and-build-theory_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -579,6 +572,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w2v02"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v02-metacognition-and-increasing-awareness/mp4/w2v02-metacognition-and-increasing-awareness_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -676,6 +670,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w2v03"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul/mp4/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -712,6 +707,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w6v06"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v06-an-integrated-approach-to-learning/mp4/w6v06-an-integrated-approach-to-learning_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -734,6 +730,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w7v02"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v02-deepening-awareness-of-motions-and-thoughts/mp4/w7v02-deepening-awareness-of-motions-and-thoughts_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
