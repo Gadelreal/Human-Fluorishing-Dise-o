@@ -633,15 +633,26 @@ ol {
 /* Buscar la sección de "Puntos clave - Versión mejorada" y reemplazarla con esto: */
 
 /* Puntos clave - Versión mejorada */
+/* Icono para Key Points */
+.key-point::before {
+  content: "💡";
+  position: absolute;
+  left: 1.5rem;
+  top: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  z-index: 1;
+}
+
 .key-point {
-  background: white !important; /* Fondo blanco forzado */
+  background: white !important;
   border: 1px solid #e0e0e0 !important;
-  border-radius: 0 !important; /* Sin esquinas redondeadas */
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
+  border-radius: 0 !important;
+  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top para dar espacio al icono */
+  margin: 32px 0 1.5rem 0 !important;
   position: relative;
-  box-shadow: none !important; /* Sin sombras */
-  transition: none !important; /* Eliminar transiciones */
+  box-shadow: none !important;
+  transition: none !important;
   width: 100% !important;
   box-sizing: border-box !important;
   max-width: 1200px !important;
@@ -657,7 +668,7 @@ ol {
   border: 1px solid #e0e0e0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top */
   margin: 32px auto 1.5rem auto !important;
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
@@ -669,7 +680,7 @@ ol {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
   margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top */
   box-sizing: border-box !important;
 }
 
@@ -2658,7 +2669,6 @@ body h2:first-of-type,
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5rem;
-  margin-top: 0; /* Eliminar el margen superior */
 }
 
 /* Add styles for hero content alignment and typography */
@@ -2689,38 +2699,11 @@ body h2:first-of-type,
   .hero-content {
     padding: 0 1rem;
   }
-
-  .hero-section {
-    margin-top: 100px; /* Ajustar para tablets */
-  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
     font-size: 32px !important;
-  }
-
-  .hero-section {
-    margin-top: 80px; /* Ajustar para móviles */
-  }
-}
-
-/* Ajuste para páginas con header fijo y hero */
-.header-full-bottom + main .hero-section {
-  padding-top: 120px; /* Usar padding en lugar de margin */
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para el padding del hero */
-@media (max-width: 768px) {
-  .header-full-bottom + main .hero-section {
-    padding-top: 100px; /* Ajustar para tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .header-full-bottom + main .hero-section {
-    padding-top: 80px; /* Ajustar para móviles */
   }
 }
 
