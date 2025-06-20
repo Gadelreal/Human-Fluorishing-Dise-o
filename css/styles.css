@@ -635,7 +635,7 @@ ol {
 /* Puntos clave - Versión mejorada */
 /* Icono para Key Points */
 .key-point::before {
-  content: "★";
+  content: "◉";
   position: absolute;
   left: 1.5rem;
   top: 1.2rem;
