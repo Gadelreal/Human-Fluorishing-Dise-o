@@ -1650,22 +1650,28 @@ a:hover {
 @media (max-width: 768px) {
   .split-cover-layout {
     flex-direction: column;
+    height: 100vh; /* Forzar altura completa del viewport */
   }
 
   .split-cover-image {
     width: 100%;
-    height: 25vh; /* Reducido de 40vh a 25vh */
+    height: 30vh; /* Reducir altura de imagen */
+    flex-shrink: 0;
   }
 
   .split-cover-content {
     width: 100%;
-    min-height: 75vh; /* Asegurar que use el resto del viewport */
+    height: 70vh; /* Usar el resto del viewport */
+    flex-shrink: 0;
   }
 
   .split-cover-content .cover-text {
-    padding: 1rem 2rem; /* Reducido padding */
+    padding: 1rem 2rem;
     text-align: left;
-    justify-content: space-between; /* Distribuir contenido uniformemente */
+    height: calc(70vh - 60px); /* Restar altura del footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Distribuir uniformemente */
   }
 
   .title-separator.blue {
@@ -1673,51 +1679,61 @@ a:hover {
   }
 
   .logo-container.top-left {
-    top: 15px; /* Reducido de 25px */
+    top: 10px;
     left: 2rem;
-    max-width: 60px; /* Reducido de 70px */
-    margin-bottom: 1.5rem; /* Reducido de 3rem */
+    max-width: 50px;
+    margin-bottom: 0;
   }
 
   .split-cover-content .cover-text {
-    padding-top: 60px; /* Reducido de 90px */
+    padding-top: 60px;
   }
 
-  /* Espaciados más compactos en tablets */
+  /* Espaciados compactos en tablets */
   .split-cover-content .cover-text h1 {
-    margin-bottom: 1rem; /* Reducido de 2rem */
-    font-size: 2.2rem; /* Reducido ligeramente */
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
   }
 
   .split-cover-content .cover-text .subtitle {
-    margin-bottom: 1rem; /* Reducido de 2rem */
-    font-size: 1.1rem; /* Reducido */
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
   }
 
   .split-cover-content .cover-text .author,
   .split-cover-content .cover-text .duration,
   .split-cover-content .cover-text .code {
-    margin-bottom: 0.4rem; /* Reducido de 0.8rem */
+    margin-bottom: 0.3rem;
     font-size: 0.9rem;
   }
 
   .start-button-container {
-    margin-top: 1.5rem; /* Reducido de 3rem */
+    margin-top: 0.8rem;
+    margin-bottom: 0;
   }
 
   .split-cover-content .white-footer {
-    padding: 1rem 2rem; /* Reducido padding */
-    margin-top: 1rem; /* Reducido margen */
+    padding: 1rem 2rem;
+    margin-top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
+  .split-cover-layout {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .split-cover-image {
-    height: 20vh; /* Reducido de 30vh a 20vh */
+    height: 25vh;
   }
 
   .split-cover-content {
-    min-height: 80vh; /* Usar el 80% restante del viewport */
+    height: 75vh;
   }
 
   .image-logo-container {
@@ -1726,14 +1742,14 @@ a:hover {
   }
 
   .image-logo-container .logo {
-    max-width: 80px;
+    max-width: 60px;
   }
 
   .split-cover-content .cover-text {
-    padding: 1rem 1.5rem; /* Padding muy compacto */
+    padding: 0.8rem 1.5rem;
     text-align: left;
-    height: 100%; /* Usar toda la altura disponible */
-    justify-content: space-between; /* Distribuir contenido */
+    height: calc(75vh - 50px);
+    justify-content: space-evenly;
   }
 
   .title-separator.blue {
@@ -1741,52 +1757,59 @@ a:hover {
   }
 
   .logo-container.top-left {
-    top: 10px; /* Reducido de 20px */
+    top: 8px;
     left: 1.5rem;
-    max-width: 50px; /* Reducido de 60px */
-    margin-bottom: 1rem; /* Reducido de 4rem */
+    max-width: 40px;
+    margin-bottom: 0;
   }
 
   .split-cover-content .cover-text {
-    padding-top: 50px; /* Reducido de 100px */
+    padding-top: 50px;
   }
 
   /* Espaciados muy compactos en móviles */
   .split-cover-content .cover-text h1 {
-    margin-bottom: 0.8rem; /* Reducido de 2.5rem */
-    font-size: 1.8rem; /* Reducido */
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1.1;
   }
 
   .split-cover-content .cover-text .subtitle {
-    margin-bottom: 0.8rem; /* Reducido de 2.5rem */
-    font-size: 1rem; /* Reducido */
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.2;
   }
 
   .split-cover-content .cover-text .author,
   .split-cover-content .cover-text .duration,
   .split-cover-content .cover-text .code {
-    margin-bottom: 0.3rem; /* Reducido de 1rem */
-    font-size: 0.85rem; /* Reducido */
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.1;
   }
 
   .start-button-container {
-    margin-top: 1rem; /* Reducido de 4rem */
-    margin-bottom: 0.5rem; /* Añadir margen inferior pequeño */
+    margin-top: 0.5rem;
+    margin-bottom: 0;
   }
 
   .start-button {
-    padding: 0.8rem 1.5rem; /* Reducir padding del botón */
-    font-size: 1rem; /* Reducir tamaño de fuente */
+    padding: 0.7rem 1.3rem;
+    font-size: 0.95rem;
   }
 
-  /* Footer más compacto */
+  /* Footer muy compacto */
   .split-cover-content .white-footer {
-    padding: 0.8rem 1.5rem; /* Padding muy reducido */
-    margin-top: 0.5rem; /* Margen mínimo */
+    padding: 0.8rem 1.5rem;
+    margin-top: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .split-cover-content .white-footer .copyright {
-    font-size: 0.8rem; /* Texto más pequeño */
+    font-size: 0.75rem;
   }
 }
 /* === FIN part5.css === */
