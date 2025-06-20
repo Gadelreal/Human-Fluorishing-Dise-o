@@ -635,13 +635,14 @@ ol {
 /* Puntos clave - Versión mejorada */
 /* Icono para Key Points */
 .key-point::before {
-  content: "💡";
+  content: "★";
   position: absolute;
   left: 1.5rem;
   top: 1.2rem;
   font-size: 1.5rem;
   line-height: 1;
   z-index: 1;
+  color: var(--primary-color); /* Añadir color azul principal */
 }
 
 .key-point {
