@@ -1666,18 +1666,38 @@ a:hover {
     text-align: left; /* Cambiado de center a left */
   }
 
-  .title-separator.dark {
-    margin: 0 0 1.5rem 0; /* Cambiado de margin: 0 auto 1.5rem; a margin: 0 0 1.5rem 0; */
+  .title-separator.blue {
+    display: none; /* Ocultar la línea separadora en tablets */
   }
 
   .logo-container.top-left {
     top: 15px;
     left: 2rem; /* Ajustar en tablets */
     max-width: 70px;
+    margin-bottom: 3rem; /* Aumentar espaciado con el título */
   }
 
   .split-cover-content .cover-text {
-    padding-top: 60px;
+    padding-top: 80px; /* Aumentar padding-top para más espacio del logo */
+  }
+
+  /* Mejorar espaciados verticales en tablets */
+  .split-cover-content .cover-text h1 {
+    margin-bottom: 2rem; /* Aumentar espacio después del título */
+  }
+
+  .split-cover-content .cover-text .subtitle {
+    margin-bottom: 2rem; /* Aumentar espacio después del subtítulo */
+  }
+
+  .split-cover-content .cover-text .author,
+  .split-cover-content .cover-text .duration,
+  .split-cover-content .cover-text .code {
+    margin-bottom: 0.8rem; /* Espaciado más generoso entre elementos */
+  }
+
+  .start-button-container {
+    margin-top: 3rem; /* Más espacio antes del botón */
   }
 }
 
@@ -1696,22 +1716,51 @@ a:hover {
   }
 
   .split-cover-content .cover-text {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem; /* Ajustar padding lateral */
     text-align: left; /* Asegurar que también sea left en móviles */
   }
 
-  .title-separator.dark {
-    margin: 0 0 1.5rem 0; /* Asegurar alineación a la izquierda */
+  .title-separator.blue {
+    display: none; /* Ocultar la línea separadora en móviles */
   }
 
   .logo-container.top-left {
     top: 10px;
     left: 1.5rem; /* Ajustar en móviles */
     max-width: 60px;
+    margin-bottom: 4rem; /* Aumentar aún más el espaciado con el título en móviles */
   }
 
   .split-cover-content .cover-text {
-    padding-top: 50px;
+    padding-top: 90px; /* Aumentar padding-top para más espacio del logo */
+  }
+
+  /* Distribución armónica de espaciados en móviles */
+  .split-cover-content .cover-text h1 {
+    margin-bottom: 2.5rem; /* Más espacio después del título */
+    font-size: 2rem;
+  }
+
+  .split-cover-content .cover-text .subtitle {
+    margin-bottom: 2.5rem; /* Más espacio después del subtítulo */
+    font-size: 1.2rem;
+  }
+
+  .split-cover-content .cover-text .author,
+  .split-cover-content .cover-text .duration,
+  .split-cover-content .cover-text .code {
+    margin-bottom: 1rem; /* Espaciado más generoso entre elementos de información */
+    font-size: 1rem;
+  }
+
+  .start-button-container {
+    margin-top: 4rem; /* Mucho más espacio antes del botón */
+  }
+
+  /* Ajustar el footer también */
+  .split-cover-content .white-footer {
+    padding: 2rem 1.5rem; /* Más padding en el footer */
+    margin-top: 3rem; /* Espacio adicional antes del footer */
   }
 }
 /* === FIN part5.css === */
