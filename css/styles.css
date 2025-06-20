@@ -1212,7 +1212,6 @@ iframe[src*="vimeo"] {
 .module-background .responsive-video,
 .module-background .video-container,
 .survey-background video,
-.survey-background .video-js,
 .survey-background .responsive-video,
 .survey-background .video-container {
   border-radius: 0 !important;
@@ -1664,11 +1663,11 @@ a:hover {
 
   .split-cover-content .cover-text {
     padding: 2rem;
-    text-align: center;
+    text-align: left; /* Cambiado de center a left */
   }
 
   .title-separator.dark {
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem 0; /* Cambiado de margin: 0 auto 1.5rem; a margin: 0 0 1.5rem 0; */
   }
 
   .logo-container.top-left {
@@ -1698,6 +1697,11 @@ a:hover {
 
   .split-cover-content .cover-text {
     padding: 1.5rem;
+    text-align: left; /* Asegurar que también sea left en móviles */
+  }
+
+  .title-separator.dark {
+    margin: 0 0 1.5rem 0; /* Asegurar alineación a la izquierda */
   }
 
   .logo-container.top-left {
