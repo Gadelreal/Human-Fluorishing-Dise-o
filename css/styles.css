@@ -2412,6 +2412,8 @@ footer {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 150px;
+  display: flex;
+  align-items: center;
 
 }
 
@@ -2827,7 +2829,7 @@ body h2:first-of-type,
 
 /* También actualizar el estilo para el copyright */
 .white-footer .copyright {
-  text-align: right;
+  text-align: left;
   color: #000; /* Cambiar a negro */
 }
 
