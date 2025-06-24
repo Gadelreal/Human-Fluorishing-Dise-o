@@ -1,6 +1,6 @@
 /* === INICIO part1.css === */
 /* Importar Open Sans de Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
 /* Reset y estilos base */
 * {
@@ -11,14 +11,14 @@
 
 /* Añadir estas variables de contraste mejorado */
 :root {
-  --primary-color: #d6208f; /* Color magenta IE */
-  --primary-color-dark: #b01a75; /* Versión más oscura para mejor contraste */
+  --primary-color: #000066; /* Cambiado de #d6208f a azul oscuro */
+  --primary-color-dark: #000044; /* Versión más oscura del azul para mejor contraste */
   --secondary-color: #f5f5f5;
   --text-color: #333;
   --text-color-dark: #222;
-  --link-color: #d6208f;
-  --link-hover-color: #b01a75;
-  --focus-outline-color: #d6208f;
+  --link-color: #000066; /* Cambiado de #d6208f a azul oscuro */
+  --link-hover-color: #000044; /* Cambiado de #b01a75 a azul más oscuro */
+  --focus-outline-color: #000066; /* Cambiado de #d6208f a azul oscuro */
   --focus-outline-width: 3px;
   --key-point-bg: #fce4f0;
   --key-point-border: #f8c2dd;
@@ -32,7 +32,7 @@
 
 /* Mejorar el contraste de texto */
 body {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: var(--text-color-dark);
   min-height: 100vh;
@@ -130,7 +130,7 @@ header {
 
 /* Añadir un espaciador para compensar la altura del header fijo */
 .header-spacer {
-  display: none;
+  display: block;
 }
 
 .header-spacer.active {
@@ -507,8 +507,8 @@ main {
 .content-aligned-container {
   background-color: white;
   padding: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -546,6 +546,8 @@ h2 {
 h3 {
   color: #000;
   margin: 1.5rem 0 0.75rem;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -565,7 +567,7 @@ ol {
 
 /* Secciones de lección - Sistema de alternancia automática */
 .lesson-section {
-  margin-bottom: 10rem; /* Duplicado de 5rem a 10rem */
+/*  margin-bottom: 10rem; *//* Duplicado de 5rem a 10rem */
   padding-bottom: 2rem; /* Aumentado de 1.5rem a 2rem */
   border-bottom: 1px solid #eee;
   position: relative;
@@ -578,12 +580,15 @@ ol {
 /* Módulos con fondo blanco (impares) - comportamiento por defecto */
 .lesson-section:nth-child(odd) {
   background-color: white;
-  padding: 2rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 0;
   box-sizing: border-box;
+
 }
 
 /* Módulos con fondo gris (pares) - ancho completo del viewport */
@@ -600,7 +605,7 @@ ol {
 }
 
 /* Contenido dentro de los módulos con fondo gris */
-.lesson-section:nth-child(even) > * {
+.lesson-section:nth-child(even) > *, .lesson-section:nth-child(odd) > *  {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -611,20 +616,19 @@ ol {
 
 /* Ajustes responsivos para los módulos alternados */
 @media (max-width: 768px) {
-  .lesson-section:nth-child(odd) {
-    padding: 1rem;
-  }
-
+  .lesson-section:nth-child(odd),
   .lesson-section:nth-child(even) {
     padding: 2rem 0;
   }
 
-  .lesson-section:nth-child(even) > * {
+  .lesson-section:nth-child(even) > *,
+  .lesson-section:nth-child(odd) > * {
     padding: 0 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .lesson-section:nth-child(even),
   .lesson-section:nth-child(even) {
     padding: 1.5rem 0;
   }
@@ -633,15 +637,29 @@ ol {
 /* Buscar la sección de "Puntos clave - Versión mejorada" y reemplazarla con esto: */
 
 /* Puntos clave - Versión mejorada */
+/* Icono para Key Points */
+.key-point::before {
+  content: "\f0eb";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  z-index: 1;
+  color: var(--primary-color); /* Añadir color azul principal */
+}
+
 .key-point {
-  background: white !important; /* Fondo blanco forzado */
+  background: white !important;
   border: 1px solid #e0e0e0 !important;
-  border-radius: 0 !important; /* Sin esquinas redondeadas */
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
-  margin: 32px 0 1.5rem 0 !important; /* 32px de separación superior del video */
+  border-radius: 0 !important;
+  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top para dar espacio al icono */
+  margin: 32px 0 1.5rem 0 !important;
   position: relative;
-  box-shadow: none !important; /* Sin sombras */
-  transition: none !important; /* Eliminar transiciones */
+  box-shadow: none !important;
+  transition: none !important;
   width: 100% !important;
   box-sizing: border-box !important;
   max-width: 1200px !important;
@@ -651,13 +669,14 @@ ol {
 
 /* Asegurar que los Key Points en módulos grises mantengan el estilo consistente y alineación */
 .lesson-section:nth-child(even) .key-point,
+.lesson-section:nth-child(odd) .key-point,
 .module-background .key-point,
 .survey-background .key-point {
   background: white !important;
   border: 1px solid #e0e0e0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top */
   margin: 32px auto 1.5rem auto !important;
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
@@ -665,11 +684,13 @@ ol {
 }
 
 /* Corregir específicamente la alineación en módulos con fondo gris */
-.lesson-section:nth-child(even) > .key-point {
+.lesson-section:nth-child(even) > .key-point,
+.lesson-section:nth-child(odd) > .key-point,
+ {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
   margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding: 1.2rem 1.5rem 1.2rem 3.5rem !important;
+  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top */
   box-sizing: border-box !important;
 }
 
@@ -684,9 +705,12 @@ ol {
 /* Ajustes responsivos para tablets */
 @media (max-width: 1200px) {
   .lesson-section:nth-child(even) .key-point,
+  .lesson-section:nth-child(odd) .key-point,
   .module-background .key-point,
   .survey-background .key-point,
-  .lesson-section:nth-child(even) > .key-point {
+  .lesson-section:nth-child(even) > .key-point,
+  .lesson-section:nth-child(odd) > .key-point,
+  {
     width: calc(100% - 4rem) !important;
     max-width: 1136px !important;
   }
@@ -695,6 +719,7 @@ ol {
 /* Eliminar el padding extra en dispositivos móviles */
 @media (max-width: 768px) {
   .lesson-section:nth-child(even) .key-point,
+  .lesson-section:nth-child(odd) .key-point,
   .module-background .key-point,
   .survey-background .key-point {
     width: calc(100% - 2rem) !important;
@@ -722,6 +747,20 @@ ol {
   height: 100%;
   display: flex;
   flex-direction: column;
+  cursor: pointer; /* Añadir cursor pointer */
+}
+
+/* Hacer toda la card clicable */
+.reading-card-clickable {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.reading-card-clickable:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .reading-card:hover {
@@ -854,7 +893,7 @@ ol {
 .reflection-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(214, 32, 143, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 102, 0.2);
 }
 
 .button-container {
@@ -973,7 +1012,7 @@ button,
 }
 
 .checkbox-container.selected {
-  background-color: rgba(214, 32, 143, 0.1);
+  background-color: rgba(0, 0, 102, 0.1);
 }
 
 /* Mejorar la visibilidad de los mensajes de error */
@@ -1104,11 +1143,11 @@ button,
 }
 
 .vjs-ie-skin .vjs-control-bar {
-  background-color: rgba(214, 32, 143, 0.8); /* Color magenta IE semi-transparente */
+  background-color: rgba(0, 0, 102, 0.8); /* Color magenta IE semi-transparente */
 }
 
 .vjs-ie-skin .vjs-big-play-button {
-  background-color: rgba(214, 32, 143, 0.8);
+  background-color: rgba(0, 0, 102, 0.8);
   border-color: white;
   border-radius: 50%;
   width: 80px;
@@ -1184,7 +1223,6 @@ iframe[src*="vimeo"] {
 .module-background .responsive-video,
 .module-background .video-container,
 .survey-background video,
-.survey-background .video-js,
 .survey-background .responsive-video,
 .survey-background .video-container {
   border-radius: 0 !important;
@@ -1623,63 +1661,166 @@ a:hover {
 @media (max-width: 768px) {
   .split-cover-layout {
     flex-direction: column;
+    height: 100vh; /* Forzar altura completa del viewport */
   }
 
   .split-cover-image {
     width: 100%;
-    height: 40vh;
+    height: 30vh; /* Reducir altura de imagen */
+    flex-shrink: 0;
   }
 
   .split-cover-content {
     width: 100%;
+    height: 70vh; /* Usar el resto del viewport */
+    flex-shrink: 0;
   }
 
   .split-cover-content .cover-text {
-    padding: 2rem;
-    text-align: center;
+    padding: 1rem 2rem;
+    text-align: left;
+    height: calc(70vh - 60px); /* Restar altura del footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Distribuir uniformemente */
   }
 
-  .title-separator.dark {
-    margin: 0 auto 1.5rem;
+  .title-separator.blue {
+    display: none;
   }
 
   .logo-container.top-left {
-    top: 15px;
-    left: 2rem; /* Ajustar en tablets */
-    max-width: 70px;
+    top: 10px;
+    left: 2rem;
+    max-width: 50px;
+    margin-bottom: 0;
   }
 
   .split-cover-content .cover-text {
     padding-top: 60px;
   }
+
+  /* Espaciados compactos en tablets */
+  .split-cover-content .cover-text h1 {
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+  }
+
+  .split-cover-content .cover-text .subtitle {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .split-cover-content .cover-text .author,
+  .split-cover-content .cover-text .duration,
+  .split-cover-content .cover-text .code {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .start-button-container {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .split-cover-content .white-footer {
+    padding: 1rem 2rem;
+    margin-top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
+  .split-cover-layout {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .split-cover-image {
-    height: 30vh;
+    height: 25vh;
+  }
+
+  .split-cover-content {
+    height: 75vh;
   }
 
   .image-logo-container {
-    top: 1rem;
+    top: 0.5rem;
     left: 1rem;
   }
 
   .image-logo-container .logo {
-    max-width: 100px;
-  }
-
-  .split-cover-content .cover-text {
-    padding: 1.5rem;
-  }
-
-  .logo-container.top-left {
-    top: 10px;
-    left: 1.5rem; /* Ajustar en móviles */
     max-width: 60px;
   }
 
   .split-cover-content .cover-text {
+    padding: 0.8rem 1.5rem;
+    text-align: left;
+    height: calc(75vh - 50px);
+    justify-content: center;
+  }
+
+  .title-separator.blue {
+    display: none;
+  }
+
+  .logo-container.top-left {
+    top: 8px;
+    left: 1.5rem;
+    max-width: 40px;
+    margin-bottom: 0;
+  }
+
+  .split-cover-content .cover-text {
     padding-top: 50px;
+  }
+
+  /* Espaciados muy compactos en móviles */
+  .split-cover-content .cover-text h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .split-cover-content .cover-text .subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  .split-cover-content .cover-text .author,
+  .split-cover-content .cover-text .duration,
+  .split-cover-content .cover-text .code {
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
+
+  .start-button-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .start-button {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.95rem;
+  }
+
+  /* Footer muy compacto */
+  .split-cover-content .white-footer {
+    padding: 0.8rem 1.5rem;
+    margin-top: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .split-cover-content .white-footer .copyright {
+    font-size: 0.75rem;
   }
 }
 /* === FIN part5.css === */
@@ -1687,7 +1828,7 @@ a:hover {
 /* === INICIO part6.css === */
 /* Estilos para la portada con fondo azul completo (mantener para compatibilidad) */
 .full-blue-cover {
-  background-color: #d6208f;
+  background-color: #000066;
   color: white;
   margin: 0;
   padding: 0;
@@ -1796,7 +1937,7 @@ a:hover {
 
 .full-blue-cover .start-button {
   background-color: white;
-  color: #d6208f;
+  color: #000066;
   padding: 1rem 2.5rem;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -1896,8 +2037,7 @@ a:hover {
 /* Estilos para la portada mejorada */
 .enhanced-cover {
   min-height: 100vh;
-  background: linear-gradient(rgba(214, 32, 143, 0.8), rgba(214, 32, 143, 0.6)),
-    url("../assets/images/flourishing-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 102, 0.8), rgba(0, 0, 102, 0.6)), url("../assets/images/flourishing-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -2078,6 +2218,7 @@ a:hover {
   border: 1px solid #e0e0e0;
   border-radius: 0;
   padding: 2rem;
+  g: 2rem;
   margin: 2rem 0;
 }
 
@@ -2270,6 +2411,8 @@ footer {
   box-sizing: border-box;
   padding-left: 2rem;
   padding-right: 2rem;
+  height: 150px;
+
 }
 
 @media (max-width: 768px) {
@@ -2332,7 +2475,7 @@ footer {
 }
 
 .survey-option.selected {
-  background-color: rgba(214, 32, 143, 0.1);
+  background-color: rgba(0, 0, 102, 0.1);
 }
 
 .survey-submit {
@@ -2393,7 +2536,7 @@ footer {
 /* Estilos para el botón de tomar encuesta inicial */
 .take-survey-button {
   display: inline-block;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important; /* Force the new blue color */
   color: white;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -2406,7 +2549,7 @@ footer {
 }
 
 .take-survey-button:hover {
-  background-color: var(--link-hover-color);
+  background-color: var(--primary-color-dark) !important; /* Force the darker blue on hover */
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -2599,7 +2742,7 @@ body {
 
 /* Estilos para títulos h2 en el body - Open Sans Light 32px con separación de 48px */
 body h2 {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Rubik", sans-serif !important;
   font-weight: 300 !important; /* Light */
   font-size: 32px !important;
   margin-top: 48px !important; /* Separación vertical de 48px */
@@ -2636,9 +2779,9 @@ body h2:first-of-type,
 .hero-section {
   width: 100%;
   height: 600px;
-  background-image: url("../assets/images/background-hero.png");
-  background-size: auto 100%; /* Show image at 100% height, allow width to adjust */
-  background-position: center bottom; /* Change from 'left bottom' to 'center bottom' */
+  background-image: url("../assets/images/hero-background.png");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -2656,7 +2799,7 @@ body h2:first-of-type,
 }
 
 .hero-title {
-  font-family: "Open Sans", Arial, sans-serif !important;
+  font-family: "Rubik", Arial, sans-serif !important;
   font-weight: 300 !important; /* Light */
   font-size: 48px !important;
   color: white !important;
@@ -3049,11 +3192,11 @@ a,
 button,
 input,
 textarea {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
   font-weight: 400;
   line-height: 1.7;
   color: #000;
@@ -3125,6 +3268,7 @@ p {
 main {
   flex: 1;
   padding: 2rem 0;
+  padding-top: 0;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -3234,6 +3378,11 @@ main {
     top: 80px; /* Ajustar posición del menú en móviles */
     right: 1rem;
   }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* Eliminar bordes de las secciones */
@@ -3271,17 +3420,34 @@ main {
   border-radius: 0;
   box-shadow: none;
   overflow: hidden;
-  transition: none;
   padding: 1.5rem;
-  border-left: 4px solid #d6208f;
+  border-left: 4px solid #000066;
   border: 1px solid #e0e0e0;
-  border-left: 4px solid #d6208f;
+  border-left: 4px solid #000066;
+  pointer-events: none; /* Eliminar completamente la interacción */
+  cursor: default; /* Cursor por defecto */
 }
 
+/* Eliminar cualquier estado de focus, active o click */
+.learning-objective-card:focus,
+.learning-objective-card:active,
 .learning-objective-card:hover {
-  transform: none;
-  box-shadow: none;
+  outline: none !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
+
+/* Asegurar que los elementos internos tampoco sean interactivos */
+.learning-objective-card *:focus,
+.learning-objective-card *:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar completamente la regla :hover */
 
 .objective-icon {
   display: flex;
@@ -3289,7 +3455,7 @@ main {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: rgba(214, 32, 143, 0.1);
+  background-color: rgba(0, 0, 102, 0.1);
   border-radius: 50%;
   margin-right: 1rem;
   flex-shrink: 0;
@@ -3297,18 +3463,780 @@ main {
 
 .objective-icon i {
   font-size: 1.5rem;
-  color: #d6208f;
+  color: #000066;
 }
 
 .objective-content {
   flex: 1;
 }
 
-
-/* === FIN part8.css === */ 
+/* === FIN part8.css === */
 
 /* Refuerzo: nunca mostrar outline ni box-shadow en body o html al recibir focus */
-body:focus, html:focus, #main-content:focus {
+body:focus,
+html:focus,
+#main-content:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+
+/* === Introduction === */
+
+
+ /* Estilos para la sección final */
+    .final-section {
+      background-color: #f0f8ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .download-button:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-button i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .final-section {
+        padding: 1.5rem;
+      }
+
+      .download-button {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+    }
+
+    .survey-section {
+      text-align: left;
+    }
+
+    .survey-button-container {
+      margin-top: 32px;
+      text-align: left;
+    }
+
+    .survey-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000066;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .survey-button:hover {
+      background-color: #000044;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+
+    .survey-button i {
+      margin-right: 0.5rem;
+    }
+
+    .hero-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .hero-icon {
+      object-fit: contain;
+    }
+
+    .hero-content {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title-container {
+        gap: 0.5rem;
+      }
+    }
+
+    /* Aumentar espaciado entre párrafos */
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .lesson-section p {
+      margin-bottom: 1.5rem;
+    }
+
+    .key-point p {
+      margin-bottom: 1.5rem;
+    }
+
+    .reading-card-content p {
+      margin-bottom: 1rem;
+    }
+
+    .survey-section p {
+      margin-bottom: 1.5rem;
+    }
+
+
+
+/* === Chapter 1 === */
+
+    /* Estilos adicionales para VideoJS */
+    .video-js .vjs-control-bar {
+      background-color: rgba(0, 85, 162, 0.8);
+    }
+    
+    /* Estilo para el enlace de saltar al contenido */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0055a2;
+      color: white;
+      padding: 8px;
+      z-index: 9999;
+      transition: top 0.3s;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+.hero-fingerprints {
+  max-width: 300px;
+  height: auto;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-fingerprints {
+    max-width: 200px;
+  }
+}
+
+/* === Chapter 2 === */
+
+    /* Estilos para pasos numerados */
+    .activity-step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 6px;
+      border-left: 4px solid #0055a2;
+    }
+
+    .activity-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #0055a2;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h4 {
+      color: #0055a2;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .activity-step {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Estilos para las tarjetas de beneficios */
+    .benefits-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .benefit-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-color: #0055a2;
+    }
+
+    .benefit-content h4 {
+      color: #0055a2;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    .benefit-content p {
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .benefits-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Estilos para el timeline vertical */
+    .timeline-activity {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline-activity::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #000066;
+      z-index: 1;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-number {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #000066;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
+    }
+
+    .timeline-content {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid white;
+      z-index: 3;
+    }
+
+    .timeline-content h4 {
+      color: #000066;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Ajustes responsivos para el timeline */
+    @media (max-width: 768px) {
+      .timeline-activity {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-activity::before {
+        left: 15px;
+      }
+
+      .timeline-number {
+        left: -1.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+
+      .timeline-step {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-content {
+        padding: 1rem;
+      }
+
+      .timeline-content::before {
+        left: -6px;
+        top: 15px;
+        border-right-width: 6px;
+        border-top-width: 6px;
+        border-bottom-width: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .timeline-activity {
+        padding-left: 1rem;
+      }
+
+      .timeline-activity::before {
+        left: 10px;
+      }
+
+      .timeline-number {
+        left: -1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      .timeline-step {
+        padding-left: 1rem;
+      }
+    }
+
+
+/* === Chapter 3 === */
+
+    /* Estilos para la lista de valores */
+    .values-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+      margin: 1.5rem 0 ;
+      padding: 1.5rem !important;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      max-width: 69% !important;
+    }
+
+    .values-list li {
+      list-style: none;
+      padding: 0.5rem;
+      background-color: white;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .values-list li:hover {
+      background-color: #e6f3ff;
+      border-color: #0055a2;
+      transform: translateY(-2px);
+    }
+
+    /* Estilos para el diagrama de Ikigai */
+    .ikigai-container {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+
+    @media (max-width: 768px) {
+      .values-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+    }
+
+    /* Estilos para el grid de preguntas de reflexión */
+    .reflection-questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      margin-top: 2rem !important;
+      margin-bottom: 2rem !important;
+    }
+
+    .reflection-question-card {
+      background-color: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .reflection-question-card:hover {
+      border-color: #0055a2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 85, 162, 0.15);
+    }
+
+    .question-number {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background-color: #0055a2;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .question-text {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .reflection-questions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .reflection-question-card {
+        padding: 1rem;
+      }
+    }
+
+/* === Chapter 4 === */
+
+
+    /* Estilos para la actividad de fortalezas de carácter */
+    .character-strengths-activity {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      max-width: 69% !important;
+    }
+
+    .activity-part {
+      margin-bottom: 2rem;
+    }
+
+    .activity-part:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-part h3 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .survey-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .survey-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      max-width: fit-content;
+    }
+
+    .survey-link:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .survey-link i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .survey-links {
+        align-items: stretch;
+      }
+
+      .survey-link {
+        max-width: 100%;
+        justify-content: center;
+      }
+    }
+
+
+/* === Chapter 5 === */
+    /* Estilos para las actividades estructuradas */
+    .framework-activity {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .activity-step {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 6px;
+      border-left: 4px solid #0055a2;
+    }
+
+    .activity-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-step h4 {
+      color: #0055a2;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .activity-step p {
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-step .instruction {
+      font-style: italic;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    /* Estilos para el quiz */
+    .quiz-container {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-question {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .quiz-question h4 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .quiz-options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .quiz-options li {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .quiz-options li:hover {
+      background-color: #e6f3ff;
+      border-color: #0055a2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    /* Estilos para la sección final */
+    .final-section {
+      background-color: #f0f8ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .download-button:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-button i {
+      margin-right: 0.5rem;
+    }
+
+    /* Estilos para las estrategias de accountability */
+    .accountability-strategies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .strategy-card {
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .strategy-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .strategy-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #0055a2;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px}) {
+      .quiz-container {
+        padding: 1rem;
+      }
+
+      .quiz-question {
+        padding: 1rem;
+      }
+
+      .final-section {
+        padding: 1.5rem;
+      }
+
+      .download-button {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+    }

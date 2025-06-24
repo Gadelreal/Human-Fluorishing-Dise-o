@@ -4,122 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Human Flourishing - Chapter 2</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <!-- VideoJS CSS -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Estilos adicionales para VideoJS */
-    .video-js .vjs-control-bar {
-      background-color: rgba(0, 85, 162, 0.8);
-    }
-
-    /* Estilos para pasos numerados */
-    .activity-step {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 6px;
-      border-left: 4px solid #0055a2;
-    }
-
-    .activity-step:last-child {
-      margin-bottom: 0;
-    }
-
-    .step-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: #0055a2;
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-right: 1rem;
-      flex-shrink: 0;
-    }
-
-    .step-content {
-      flex: 1;
-    }
-
-    .step-content h4 {
-      color: #0055a2;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      margin-top: 0;
-    }
-
-    .step-content p {
-      margin-bottom: 0;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      .activity-step {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .step-number {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-    }
-
-    /* Estilos para las tarjetas de beneficios */
-    .benefits-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .benefit-card {
-      background-color: white;
-      border-radius: 8px;
-      padding: 1.5rem;
-      border: 1px solid #e0e0e0;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      border-color: #0055a2;
-    }
-
-    .benefit-content h4 {
-      color: #0055a2;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-top: 0;
-    }
-
-    .benefit-content p {
-      margin: 0;
-      line-height: 1.6;
-      color: #333;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .benefits-cards {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -236,6 +125,7 @@
       preload="auto" 
       data-video-id="w2v01"
       data-logo="assets/images/logo-ie-small.png"
+      poster="assets/images/human-flourishing-poster.jpg"
     >
       <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v01-what-are-emotions/mp4/w2v01-what-are-emotions_1080p.mp4" type="video/mp4">
       <p class="vjs-no-js">
@@ -325,34 +215,34 @@
 shown that this exercise has robust effects when it comes to boosting happiness and 
 well-being. Here's how you can do it:</p>
 
-            <div class="framework-activity">
-              <div class="activity-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
+            <div class="timeline-activity">
+              <div class="timeline-step">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
                   <h4>Take your journal or a notebook</h4>
                   <p>Prepare your writing materials to capture your reflections.</p>
                 </div>
               </div>
               
-              <div class="activity-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
+              <div class="timeline-step">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
                   <h4>Write down three things that went well today</h4>
                   <p>These can be big achievements or small pleasures. For example, "I had a great conversation with a friend," "I enjoyed a delicious meal," or "I completed a challenging task at work."</p>
                 </div>
               </div>
               
-              <div class="activity-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
+              <div class="timeline-step">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
                   <h4>Reflect on why each event went well</h4>
                   <p>Consider what caused these positive events and what they mean to you. This helps deepen your appreciation and understanding of the good things in your life.</p>
                 </div>
               </div>
               
-              <div class="activity-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
+              <div class="timeline-step">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
                   <h4>Consistency is key</h4>
                   <p>Do this exercise daily for at least a week, but aim for longer to see more significant benefits.</p>
                 </div>
@@ -360,28 +250,37 @@ well-being. Here's how you can do it:</p>
             </div>
 
             <h3>Benefits:</h3>
-            <div class="benefits-cards">
-              <div class="benefit-card">
-                <div class="benefit-content">
-                  <h4>Counteracts Negativity Bias</h4>
-                  <p>This practice helps balance the natural tendency to focus on negative experiences by actively shifting our focus to positive events.</p>
-                </div>
-              </div>
-              
-              <div class="benefit-card">
-                <div class="benefit-content">
-                  <h4>Increases Gratitude</h4>
-                  <p>Regularly acknowledging good things – big or small – fosters a sense of appreciation that enhances well-being.</p>
-                </div>
-              </div>
-              
-              <div class="benefit-card">
-                <div class="benefit-content">
-                  <h4>Fosters Greater Self-Compassion</h4>
-                  <p>Reflecting on what went well can foster a kinder, more compassionate attitude towards yourself, reducing self-criticism.</p>
-                </div>
-              </div>
-            </div>
+<div class="learning-objectives-grid">
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-balance-scale"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Counteracts Negativity Bias</h4>
+      <p>This practice helps balance the natural tendency to focus on negative experiences by actively shifting our focus to positive events.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Increases Gratitude</h4>
+      <p>Regularly acknowledging good things – big or small – fosters a sense of appreciation that enhances well-being.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-hands-helping"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Fosters Greater Self-Compassion</h4>
+      <p>Reflecting on what went well can foster a kinder, more compassionate attitude towards yourself, reducing self-criticism.</p>
+    </div>
+  </div>
+</div>
       </section>
       
       <!-- 7. Fondo blanco -->
@@ -396,6 +295,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w6v05"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v05-the-broaden-and-build-theory/mp4/w6v05-the-broaden-and-build-theory_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -425,6 +325,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w2v02"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v02-metacognition-and-increasing-awareness/mp4/w2v02-metacognition-and-increasing-awareness_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -445,68 +346,69 @@ well-being. Here's how you can do it:</p>
       <!-- 9. Fondo blanco -->
       <section class="lesson-section no-borders">
         <h2>Activity: Practicing Metacognition</h2>
-            <p>Now it's time to practice some ways to elevate your metacognition. Choose at least two 
-            of these practices and try them out!</p>
-            
-            <div class="metacognition-exercise">
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice1" class="metacognition-checkbox">
-                <label for="practice1">
-                  <strong>Journaling:</strong> Writing down your thoughts, feelings, and experiences helps 
-                  increase self-awareness and provides insights into your thinking patterns.
-                </label>
-              </div>
-              
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice2" class="metacognition-checkbox">
-                <label for="practice2">
-                  <strong>Mindfulness:</strong> Focusing your awareness on the present moment can reduce 
-                  stress and improve cognitive clarity by preventing your mind from wandering.
-                </label>
-              </div>
-              
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice3" class="metacognition-checkbox">
-                <label for="practice3">
-                  <strong>Take time to pause:</strong> Deliberately pausing before reacting allows you to 
-                  consider your thoughts and responses, leading to more thoughtful decision-
-                  making.
-                </label>
-              </div>
-              
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice4" class="metacognition-checkbox">
-                <label for="practice4">
-                  <strong>Stand up and move around:</strong> Physical movement can boost boost brain function and 
-                  creativity, helping you think more clearly and effectively.
-                </label>
-              </div>
-              
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice5" class="metacognition-checkbox">
-                <label for="practice5">
-                  <strong>Appreciate nature:</strong> Spending time in nature, or even just looking through a 
-                  window to appreciate the natural world, can reduce stress and enhance your 
-                  mood, providing a fresh perspective and mental clarity.
-                </label>
-              </div>
-              
-              <div class="checkbox-container">
-                <input type="checkbox" id="practice6" class="metacognition-checkbox">
-                <label for="practice6">
-                  <strong>Connect with another human being:</strong> Engaging in meaningful conversations 
-                  can provide new insights and help you reflect on your own thoughts and 
-                  feelings.
-                </label>
-              </div>
-              
-              <div class="validation-message" id="metacognition-validation">
-                Please select at least 2 practices to try.
-              </div>
-              
-              <button id="save-metacognition" class="save-button">Confirm Selection</button>
-              <span class="save-feedback" id="feedback-metacognition"></span>
+        <p>Now it's time to practice some ways to elevate your metacognition. Choose at least two of these practices and try them out!</p>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-pen"></i>
             </div>
+            <div class="objective-content">
+              <h4>Journaling</h4>
+              <p>Writing down your thoughts, feelings, and experiences helps increase self-awareness and provides insights into your thinking patterns.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Mindfulness</h4>
+              <p>Focusing your awareness on the present moment can reduce stress and improve cognitive clarity by preventing your mind from wandering.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-pause"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Take time to pause</h4>
+              <p>Deliberately pausing before reacting allows you to consider your thoughts and responses, leading to more thoughtful decision-making.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-walking"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Stand up and move around</h4>
+              <p>Physical movement can boost brain function and creativity, helping you think more clearly and effectively.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-tree"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Appreciate nature</h4>
+              <p>Spending time in nature, or even just looking through a window to appreciate the natural world, can reduce stress and enhance your mood, providing a fresh perspective and mental clarity.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Connect with another human being</h4>
+              <p>Engaging in meaningful conversations can provide new insights and help you reflect on your own thoughts and feelings.</p>
+            </div>
+          </div>
+        </div>
       </section>
       
       <!-- 10. Fondo gris -->
@@ -521,6 +423,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w2v03"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul/mp4/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -557,6 +460,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w6v06"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v06-an-integrated-approach-to-learning/mp4/w6v06-an-integrated-approach-to-learning_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
@@ -579,6 +483,7 @@ well-being. Here's how you can do it:</p>
                 preload="auto" 
                 data-video-id="w7v02"
                 data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
               >
                 <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v02-deepening-awareness-of-motions-and-thoughts/mp4/w7v02-deepening-awareness-of-motions-and-thoughts_1080p.mp4" type="video/mp4">
                 <p class="vjs-no-js">
