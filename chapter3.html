@@ -158,9 +158,6 @@
   
   <div class="learning-objective-card">
     <div class="objective-icon" aria-hidden="true">
-      <span class="objective-number">2</span>
-    </div>
-    <div class="objective-content">
       <h4>Personal Pride</h4>
       <p><strong>When have you felt the proudest of yourself? What were you doing?</strong></p>
     </div>
@@ -297,23 +294,40 @@ framework for personal development and goal setting.</p>
       View image description
     </button>
   </div>
-</div>
-
-<!-- Modal para la descripción de la imagen -->
-<div id="ikigai-modal" class="image-modal" role="dialog" aria-labelledby="ikigai-modal-title" aria-hidden="true">
-  <div class="modal-overlay" aria-hidden="true"></div>
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="ikigai-modal-title">Ikigai Diagram Description</h3>
-      <button id="ikigai-modal-close" class="modal-close-button" aria-label="Close description dialog">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
+  
+  <!-- Descripción que se muestra/oculta -->
+  <div id="ikigai-description" class="image-description-content" style="display: none;">
+    <div class="description-box">
+      <h4>Ikigai Diagram Description</h4>
       <p>This infographic visualizes the Japanese concept of "Ikigai," which translates to "a reason for being." It uses a Venn diagram to illustrate how Ikigai is found at the intersection of four fundamental elements: what you love, what you are good at, what the world needs, and what you can be paid for. The overlapping areas represent passion, mission, profession, and vocation. Achieving a balance among these aspects leads to finding one's Ikigai, a state of fulfillment and purpose.</p>
     </div>
   </div>
 </div>
+
+<script>
+// Script para mostrar/ocultar la descripción de imagen
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('ikigai-description-btn');
+  const description = document.getElementById('ikigai-description');
+  let isVisible = false;
+  
+  button.addEventListener('click', function() {
+    if (isVisible) {
+      // Ocultar descripción
+      description.style.display = 'none';
+      button.textContent = 'View image description';
+      button.setAttribute('aria-label', 'View detailed description of Ikigai diagram');
+      isVisible = false;
+    } else {
+      // Mostrar descripción
+      description.style.display = 'block';
+      button.textContent = 'Close image description';
+      button.setAttribute('aria-label', 'Close detailed description of Ikigai diagram');
+      isVisible = true;
+    }
+  });
+});
+</script>
 </section>
       
       <!-- 5. Fondo blanco -->
@@ -487,63 +501,5 @@ framework for personal development and goal setting.</p>
   <script src="js/key-points.js"></script>
   <script src="js/reflections.js"></script>
   <script src="js/main.js"></script>
-  <script>
-// Script para la modal de descripción de imagen
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('ikigai-modal');
-  const openBtn = document.getElementById('ikigai-description-btn');
-  const closeBtn = document.getElementById('ikigai-modal-close');
-  const overlay = modal.querySelector('.modal-overlay');
-  
-  // Función para abrir la modal
-  function openModal() {
-    modal.style.display = 'flex';
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    closeBtn.focus();
-  }
-  
-  // Función para cerrar la modal
-  function closeModal() {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    openBtn.focus();
-  }
-  
-  // Event listeners
-  openBtn.addEventListener('click', openModal);
-  closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
-  
-  // Cerrar con tecla Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-      closeModal();
-    }
-  });
-  
-  // Trap focus dentro de la modal
-  modal.addEventListener('keydown', function(e) {
-    if (e.key === 'Tab') {
-      const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-      
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
-        }
-      }
-    }
-  });
-});
-</script>
 </body>
 </html>
