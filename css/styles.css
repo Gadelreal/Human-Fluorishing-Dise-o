@@ -3474,6 +3474,24 @@ main {
 
 /* === FIN part8.css === */
 
+/* Estilos para números en lugar de iconos en las cards de actividades */
+.objective-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
+.learning-objective-card .objective-number {
+  pointer-events: none;
+  cursor: default;
+}
+
 /* Refuerzo: nunca mostrar outline ni box-shadow en body o html al recibir focus */
 body:focus,
 html:focus,
@@ -3998,6 +4016,24 @@ html:focus,
         padding: 1rem;
       }
     }
+
+/* Estilos para números en lugar de iconos en las cards de actividades */
+.objective-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
+.learning-objective-card .objective-number {
+  pointer-events: none;
+  cursor: default;
+}
 
 /* === Chapter 4 === */
 
