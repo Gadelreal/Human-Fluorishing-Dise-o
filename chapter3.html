@@ -291,11 +291,29 @@ framework for personal development and goal setting.</p>
   and daily behaviors for greater fulfillment.</p>
   
   <div class="ikigai-container">
-    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ikigai_2-WxEH9gI1pbDREjZfAcRdp2ezT1l9jE.png" alt="Ikigai diagram showing the intersection of what you love, what you're good at, what the world needs, and what you can be paid for" style="width: 100%; max-width: 600px; height: auto;">
-    <p style="margin-top: 1rem; font-style: italic; color: #666; text-align: center;">
-      Ikigai Diagram: The intersection of what you love, what you're good at, what the world needs, and what you can be paid for.
-    </p>
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ikigai_2-WxEH9gI1pbDREjZfAcRdp2ezT1l9jE.png" alt="Ikigai diagram showing the intersection of what you love, what you're good at, what the world needs, and what you can be paid for">
+  <div style="margin-top: 1rem; text-align: center;">
+    <button id="ikigai-description-btn" class="image-description-button" aria-label="View detailed description of Ikigai diagram">
+      View image description
+    </button>
   </div>
+</div>
+
+<!-- Modal para la descripción de la imagen -->
+<div id="ikigai-modal" class="image-modal" role="dialog" aria-labelledby="ikigai-modal-title" aria-hidden="true">
+  <div class="modal-overlay" aria-hidden="true"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="ikigai-modal-title">Ikigai Diagram Description</h3>
+      <button id="ikigai-modal-close" class="modal-close-button" aria-label="Close description dialog">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>This infographic visualizes the Japanese concept of "Ikigai," which translates to "a reason for being." It uses a Venn diagram to illustrate how Ikigai is found at the intersection of four fundamental elements: what you love, what you are good at, what the world needs, and what you can be paid for. The overlapping areas represent passion, mission, profession, and vocation. Achieving a balance among these aspects leads to finding one's Ikigai, a state of fulfillment and purpose.</p>
+    </div>
+  </div>
+</div>
 </section>
       
       <!-- 5. Fondo blanco -->
@@ -469,5 +487,63 @@ framework for personal development and goal setting.</p>
   <script src="js/key-points.js"></script>
   <script src="js/reflections.js"></script>
   <script src="js/main.js"></script>
+  <script>
+// Script para la modal de descripción de imagen
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('ikigai-modal');
+  const openBtn = document.getElementById('ikigai-description-btn');
+  const closeBtn = document.getElementById('ikigai-modal-close');
+  const overlay = modal.querySelector('.modal-overlay');
+  
+  // Función para abrir la modal
+  function openModal() {
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  
+  // Función para cerrar la modal
+  function closeModal() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    openBtn.focus();
+  }
+  
+  // Event listeners
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+  
+  // Cerrar con tecla Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+      closeModal();
+    }
+  });
+  
+  // Trap focus dentro de la modal
+  modal.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+      const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>
