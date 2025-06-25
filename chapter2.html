@@ -1,182 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 2</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 0.5em 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            display: block;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        main {
-            padding: 1em;
-            margin: 1em;
-            background-color: #fff;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            display: none;
-            cursor: pointer;
-            padding: 1em;
-            background-color: #333;
-            color: #fff;
-            text-align: left;
-        }
-
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-            margin: 5px 0;
-            display: block;
-        }
-
-        .hamburger-nav {
-            display: none;
-            background-color: #444;
-            color: #fff;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            text-align: center; /* Center the content */
-        }
-
-        .hamburger-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .hamburger-nav li {
-            padding: 0.5em 0;
-        }
-
-        .hamburger-nav a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            padding: 0.5em 1em;
-        }
-
-        .hamburger-nav a:hover {
-            background-color: #555;
-        }
-
-        /* Media Query for Mobile Devices */
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block;
-            }
-
-            .hamburger-nav {
-                display: none; /* Initially hidden */
-            }
-
-            .hamburger-nav.active {
-                display: block; /* Show when active */
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Flourishing - Chapter 2</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-    <header>
-        <h1>Chapter 2: Responsive Design</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hamburger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank">
+          <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
+        </a>
+      </div>
+      <h2 class="header-title">Human Flourishing</h2>
     </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">0. Introduction</a></li>
+    <li><a href="chapter1.html">1. Being Human</a></li>
+    <li><a href="chapter2.html" class="active">2. Cultivating Awareness</a></li>
+    <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
+    <li><a href="chapter4.html">4. Building Resilience</a></li>
+    <li><a href="chapter5.html">5. Ownership and Practice</a></li>
+    <li class="language-selector-menu">
+  <span class="menu-separator"></span>
+  <a href="chapter2.html" class="active">English</a> | <a href="capitulo2.html">Español</a>
+</li>
+  </ul>
+</nav>
+</header>
 
-    <nav id="main-nav" class="hamburger-nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
+      <h1 class="hero-title">LESSON 2: Cultivating Awareness: Emotions and Cognition</h1>
+    </div>
+  </div>
+</section>
 
-    <main>
-        <h2>Introduction to Responsive Design</h2>
-        <p>This chapter covers the basics of responsive design, including media queries and flexible layouts.</p>
-    </main>
+  <main>
+    <div class="content-aligned-container">
+      
+      
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Lesson 2 Learning Objectives</h2>
+        
+        <div class="learning-objectives-grid-2x2">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Emotion Connection</h4>
+              <p>Understand the connection of emotion with values, thinking, and behavior</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Positive Emotions</h4>
+              <p>Appreciate the utility of positive emotions for survival and how this shapes our perspective</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Metacognition</h4>
+              <p>Understand metacognition and how to build deeper awareness</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Body, Mind & Soul</h4>
+              <p>Leverage the integration of body, mind, and soul to support our awareness, emotions, and cognition</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+  <h2>What Are Emotions? What is Emotional Granularity?</h2>
+  
+  <div class="responsive-video">
+    <video 
+      id="emotions-video" 
+      class="video-js vjs-ie-skin vjs-big-play-centered" 
+      controls 
+      preload="auto" 
+      data-video-id="w2v01"
+      data-logo="assets/images/logo-ie-small.png"
+      poster="assets/images/what-are-emotions-poster.png"
+    >
+      <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v01-what-are-emotions/mp4/w2v01-what-are-emotions_1080p.mp4" type="video/mp4">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+  </div>
+  
+  <div class="key-point">
+    <h3>Key Point</h3>
+    <p>Emotional granularity emphasizes the importance of recognizing the nuanced 
+    differences between various emotions. This elevated awareness of the range of 
+    emotions we experience can help us better interpret our emotional responses and 
+    shape our behaviors in a more productive manner.</p>
+  </div>
+</section>
+      
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Readings</h2>
+        <p>Please complete the following readings:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>The Wheel of Emotional Granularity</h3>
+              <p>Explore the nuanced differences between various emotions and learn how emotional granularity can help you better interpret your emotional responses and shape behaviors more productively.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.restoringhoperca.com/the-feelings-wheel" target="_blank" class="reading-link" aria-label="Read about The Wheel of Emotional Granularity (opens in new tab)">
+                  Read Article
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>The Role of Emotional Granularity in Emotional Regulation</h3>
+              <p>Discover how emotional granularity plays a crucial role in emotional regulation, mental disorders, and overall well-being through this comprehensive research article.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.1080713/full" target="_blank" class="reading-link" aria-label="Read research article on emotional granularity (opens in new tab)">
+                  Read Article
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 4. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>Activity: Reflecting on Emotional Granularity</h2>
+        <p>Can you identify a situation where you felt an emotion from the outermost circle of the 
+        wheel of emotional granularity? We encourage you to take your journal or a notebook 
+        and describe that situation and how you felt.</p>
+      </section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>The Emotion Pills We Are All Unknowingly Taking</h2>
+        <p>Lee Newman, Dean of IE Business School, shares some insights on emotions in the 
+        video below:</p>
+        
+        <div class="responsive-video">
+          <iframe 
+            width="100%" 
+            height="315" 
+            src="https://www.youtube.com/embed/H8UUWbQEH_E" 
+            title="The Emotion Pills We Are All Unknowingly Taking - Lee Newman" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            style="aspect-ratio: 16/9; width: 100%; height: auto;">
+          </iframe>
+        </div>
+        
+      
+      </section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>Activity: What Went Well?</h2>
+        <p>This is a simple yet powerful exercise rooted in positive psychology. Studies have 
+shown that this exercise has robust effects when it comes to boosting happiness and 
+well-being. Here's how you can do it:</p>
 
-    <footer>
-        <p>&copy; 2023 Responsive Design Course</p>
-    </footer>
+            <div class="timeline-activity">
+              <div class="timeline-step">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                  <h4>Take your journal or a notebook</h4>
+                  <p>Prepare your writing materials to capture your reflections.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-step">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                  <h4>Write down three things that went well today</h4>
+                  <p>These can be big achievements or small pleasures. For example, "I had a great conversation with a friend," "I enjoyed a delicious meal," or "I completed a challenging task at work."</p>
+                </div>
+              </div>
+              
+              <div class="timeline-step">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
+                  <h4>Reflect on why each event went well</h4>
+                  <p>Consider what caused these positive events and what they mean to you. This helps deepen your appreciation and understanding of the good things in your life.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-step">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
+                  <h4>Consistency is key</h4>
+                  <p>Do this exercise daily for at least a week, but aim for longer to see more significant benefits.</p>
+                </div>
+              </div>
+            </div>
 
-    <script>
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const hamburgerNav = document.querySelector('.hamburger-nav');
+            <h3>Benefits:</h3>
+<div class="learning-objectives-grid">
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-balance-scale"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Counteracts Negativity Bias</h4>
+      <p>This practice helps balance the natural tendency to focus on negative experiences by actively shifting our focus to positive events.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Increases Gratitude</h4>
+      <p>Regularly acknowledging good things – big or small – fosters a sense of appreciation that enhances well-being.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-hands-helping"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Fosters Greater Self-Compassion</h4>
+      <p>Reflecting on what went well can foster a kinder, more compassionate attitude towards yourself, reducing self-criticism.</p>
+    </div>
+  </div>
+</div>
+      </section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>The Broaden and Build Theory</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="broaden-build-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w6v05"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/broaden-build-theory-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v05-the-broaden-and-build-theory/mp4/w6v05-the-broaden-and-build-theory_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+            
+            <div class="key-point">
+              <h3>Key Point</h3>
+              <p>The Broaden and Build Theory, developed by Barbara Fredrickson, suggests that 
+              positive emotions broaden our awareness and visual field. As a result, we develop a 
+              greater appreciation of and ability to engage with the world around us.</p>
+            </div>
+      </section>
+      
+      <!-- 8. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>Metacognition and Increasing Awareness</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="metacognition-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w2v02"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/metacognition-awareness-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v02-metacognition-and-increasing-awareness/mp4/w2v02-metacognition-and-increasing-awareness_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+            
+            <div class="key-point">
+              <h3>Key Point</h3>
+              <p>Metacognition is the concept of thinking about our thinking. Metacognition gives us 
+              a greater awareness of our thinking and learning so that we can be more proactive in 
+              our decision-making and work to avoid detrimental biases.</p>
+            </div>
+      </section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Activity: Practicing Metacognition</h2>
+        <p>Now it's time to practice some ways to elevate your metacognition. Choose at least two of these practices and try them out!</p>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-pen"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Journaling</h4>
+              <p>Writing down your thoughts, feelings, and experiences helps increase self-awareness and provides insights into your thinking patterns.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Mindfulness</h4>
+              <p>Focusing your awareness on the present moment can reduce stress and improve cognitive clarity by preventing your mind from wandering.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-pause"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Take time to pause</h4>
+              <p>Deliberately pausing before reacting allows you to consider your thoughts and responses, leading to more thoughtful decision-making.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-walking"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Stand up and move around</h4>
+              <p>Physical movement can boost brain function and creativity, helping you think more clearly and effectively.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-tree"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Appreciate nature</h4>
+              <p>Spending time in nature, or even just looking through a window to appreciate the natural world, can reduce stress and enhance your mood, providing a fresh perspective and mental clarity.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Connect with another human being</h4>
+              <p>Engaging in meaningful conversations can provide new insights and help you reflect on your own thoughts and feelings.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 10. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>Awareness, Emotions, and Cognition Across Body, Mind, and Soul</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="awareness-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w2v03"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/awareness-emotions-cognition-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul/mp4/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+      </section>
+      
+      <!-- 11. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Activity: Leveraging Body, Mind, and Soul</h2>
+            <p>We can leverage the integration of body, mind, and soul to support our awareness, 
+            emotions, and cognition. Specifically, we can leverage aspects of the body, mind, and 
+            soul so that they enhance each other. For example, if we're feeling mentally sluggish at 
+            work, we can activate the body by going for a walk. By energizing the body through 
+            physical activity, we can energize the mind. Similarly, if we're feeling physically tired, 
+            we can tap into the soul by connecting with others. By energizing the soul with human 
+            connection, we can energize the body.</p>
+            <p>Given these examples, what practices can you cultivate to better leverage the body, 
+            mind, and soul connection to support you in your flourishing?</p>
+      </section>
+      
+      <!-- 12. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>An Integrated Approach to Learning</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="integrated-learning-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w6v06"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/integrated-approach-learning-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v06-an-integrated-approach-to-learning/mp4/w6v06-an-integrated-approach-to-learning_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+      </section>
+      
+      <!-- 13. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Closing Meditation: Lesson 2</h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="meditation-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w7v02"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v02-deepening-awareness-of-motions-and-thoughts/mp4/w7v02-deepening-awareness-of-motions-and-thoughts_1080p.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+      </section>
+      
+      <div class="navigation-buttons">
+        <a href="chapter1.html" class="nav-button prev"><span class="arrow-left">←</span>Previous</a>
+        <a href="chapter3.html" class="nav-button next">Next<span class="arrow-right">→</span></a>
+      </div>
+    </div>
+  </main>
 
-        hamburgerMenu.addEventListener('click', () => {
-            hamburgerNav.classList.toggle('active');
-        });
-    </script>
+  <footer role="contentinfo">
+  <div class="footer-content">
+    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+  </div>
+</footer>
 
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
+  <script src="js/metacognition.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

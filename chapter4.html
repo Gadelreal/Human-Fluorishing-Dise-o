@@ -1,192 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 4</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 0.5em 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            display: block;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        main {
-            padding: 1em;
-        }
-
-        section {
-            margin-bottom: 1em;
-            background-color: #fff;
-            padding: 1em;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            display: none;
-            cursor: pointer;
-            position: absolute;
-            top: 1em;
-            right: 1em;
-            z-index: 2; /* Ensure it's above the nav */
-        }
-
-        .bar {
-            width: 30px;
-            height: 3px;
-            background-color: #fff;
-            margin: 6px 0;
-            transition: 0.4s;
-        }
-
-        .hamburger-nav {
-            display: none; /* Initially hidden */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1;
-            padding-top: 5em;
-            text-align: center;
-        }
-
-        .hamburger-nav ul {
-            flex-direction: column;
-        }
-
-        .hamburger-nav a {
-            padding: 1em;
-            font-size: 1.2em;
-        }
-
-        /* Active class for hamburger menu */
-        .hamburger-menu.active .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-6px, 6px);
-        }
-
-        .hamburger-menu.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-6px, -6px);
-        }
-
-        .hamburger-nav.active {
-            display: block;
-        }
-
-        /* Media Query for smaller screens */
-        @media (max-width: 768px) {
-            nav {
-                display: none; /* Hide the regular nav */
-            }
-
-            .hamburger-menu {
-                display: block; /* Show the hamburger menu */
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Flourishing - Chapter 4</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Chapter 4: Responsive Design</h1>
-    </header>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hamburger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
+          <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
+        </a>
+      </div>
+      <h2 class="header-title">Human Flourishing</h2>
     </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">0. Introduction</a></li>
+      <li><a href="chapter1.html">1. Being Human</a></li>
+      <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
+      <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
+      <li><a href="chapter4.html" class="active" aria-current="page">4. Building Resilience</a></li>
+      <li><a href="chapter5.html">5. Ownership and Practice</a></li>
+      <li class="language-selector-menu">
+        <span class="menu-separator"></span>
+        <span id="language-label" class="sr-only">Select language:</span>
+        <a href="chapter4.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo4.html" aria-labelledby="language-label">Español</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-    <nav id="main-nav" class="hamburger-nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
+      <h1 class="hero-title">LESSON 4: Building Resilience</h1>
+    </div>
+  </div>
+</section>
 
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>This chapter covers the basics of responsive design. We'll explore how to create websites that adapt to different screen sizes and devices.</p>
-        </section>
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
+      
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Lesson 4 Learning Objectives</h2>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Define Resilience</h4>
+              <p>Define resilience and its relevance for flourishing</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Character Strengths</h4>
+              <p>Identify your own character strengths to leverage your abilities to navigate challenges, maintain a positive outlook, and recover more quickly from setbacks</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Overcome Procrastination</h4>
+              <p>Understand the source of procrastination and strategies for how to overcome it</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>How Can We Define Resilience?</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="resilience-definition-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/how-can-we-define-resilience-poster.png"
+            data-video-id="w4v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="How Can We Define Resilience? video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v01-how-can-we-define-resilience/mp4/w4v01-how-can-we-define-resilience_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/how-can-we-define-resilience.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about defining resilience">
+          <h3>Key Point</h3>
+          <p>We can consider an "evolved" definition of resilience to be the capacity to recognize 
+          what is needed and respond in the most appropriate way, considering the learning that 
+          comes with the experience. In this sense, resilience is not about enduring pressure at 
+          all costs, but about maintaining balance and recognizing when to take breaks or adapt 
+          approaches.</p>
+        </div>
+      </section>
+      
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Reading</h2>
+        <p>Please complete the reading below:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Embracing Resilience: Developing a Growth Mindset</h3>
+              <p>Explore how developing a growth mindset can enhance your resilience and ability to navigate challenges. Learn practical strategies for building mental flexibility and adaptability in the face of adversity.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ie.edu/center-for-health-and-well-being/blog/embracing-resilience-developing-a-growth-mindset/" target="_blank" class="reading-link" aria-label="Read article: Embracing Resilience: Developing a Growth Mindset (opens in new tab)">
+                  Read Article
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 4. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>What Are Character Strengths and How Do They Support Resilience?</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="character-strengths-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/character-strengths-resilience-poster.png"
+            data-video-id="w4v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="What Are Character Strengths and How Do They Support Resilience? video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience/mp4/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/character-strengths-and-resilience.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about character strengths">
+          <h3>Key Point</h3>
+          <p>Our character strengths are natural tendencies that we have that support our vitality. 
+          The VIA Institute on Character provides us with 24 research-backed character 
+          strengths, grouped into 6 "virtues." We can leverage these strengths to build our 
+          resilience in times of adversity.</p>
+        </div>
+      </section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Activity: Identifying Your Character Strengths and Those of Others</h2>
+        
+        <div class="character-strengths-activity">
+          <div class="activity-part">
+            <h3>Part 1: Character Strengths</h3>
+            <p><strong>Complete the VIA Character Strengths survey</strong></p>
+            
+            <div class="survey-links">
+              <a href="https://www.viacharacter.org/account/register" target="_blank" class="survey-link" aria-label="Complete VIA Character Strengths Survey (opens in new tab)">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                Complete VIA Character Strengths Survey
+              </a>
+            </div>
+            
+            <p><strong>For further info about your strengths, see this page:</strong></p>
+            
+            <div class="survey-links">
+              <a href="https://www.viacharacter.org/character-strengths" target="_blank" class="survey-link" aria-label="Learn more about Character Strengths (opens in new tab)">
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                Learn More About Character Strengths
+              </a>
+            </div>
+          </div>
+          
+          <div class="activity-part">
+            <h3>Part 2: Strength Spotting</h3>
+            <p>When considering the 24 character strengths, think of one person that reminds you of 
+            any of those strengths. Write examples of how you can see that strength in action in 
+            that person. <strong>Why does it matter to you? How do you benefit?</strong></p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>Overcoming Procrastination</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="procrastination-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/overcoming-procrastination-poster.png"
+            data-video-id="w4v03"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Overcoming Procrastination video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-overcoming-prorastination/mp4/w4v03-overcoming-prorastination_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/overcoming-procrastination.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about procrastination">
+          <h3>Key Point</h3>
+          <p>Procrastination can't simply be brushed off as laziness: it's rooted in a feeling of 
+          discomfort with a task, often due to a feeling that we lack the capacity to complete that 
+          task. We can overcome procrastination by leveraging our strengths as a way to 
+          energize us as well as by chunking the task into smaller, more manageable parts.</p>
+        </div>
+      </section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Reading</h2>
+        <p>Complete the following reading:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>What You Need to Know About Willpower: The Psychological Science of Self-Control</h3>
+              <p>Discover the psychological foundations of willpower and self-control. Learn evidence-based strategies for strengthening your ability to resist temptation and maintain focus on your goals.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.apa.org/topics/personality/willpower" target="_blank" class="reading-link" aria-label="Read APA article on Willpower (opens in new tab)">
+                  Read Article
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 8. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2>Closing Meditation: Lesson 4</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="closing-meditation-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/human-flourishing-poster.jpg"
+            data-video-id="w7v04"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Cultivating Resilience from Within meditation video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-cultivating-resilience-from-within/mp4/w7v04-cultivating-resilience-from-within_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/cultivating-resilience-from-within.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about resilience meditation">
+          <h3>Key Point</h3>
+          <p>This guided meditation helps us cultivate inner resilience and strength. Through mindful reflection, we can develop the capacity to navigate challenges with greater balance and wisdom, drawing on our inner resources for support.</p>
+        </div>
+      </section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2>Optional Reading</h2>
+        <p>Please complete the following readings if you're interested in learning more about these topics!</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Positive Affect and the Complex Dynamics of Human Flourishing</h3>
+              <p>Explore the intricate relationship between positive emotions and human flourishing. This research article examines how positive affect contributes to the complex dynamics of well-being and personal growth.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3126111/#S4title" target="_blank" class="reading-link" aria-label="Read research article on Positive Affect and Human Flourishing (opens in new tab)">
+                  Read Article
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Emotional Intelligence and Leadership: What's the Connection?</h3>
+              <p>Discover the vital connection between emotional intelligence and effective leadership. Learn how developing emotional awareness and regulation skills can enhance your ability to lead and inspire others.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ie.edu/center-for-health-and-well-being/blog/emotional-intelligence-and-leadership-whats-the-connection/" target="_blank" class="reading-link" aria-label="Read article on Emotional Intelligence and Leadership (opens in new tab)">
+                  Read Article
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
+        <a href="chapter3.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
+        <a href="chapter5.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </main>
 
-        <section>
-            <h2>Media Queries</h2>
-            <p>Media queries are a key component of responsive design. They allow you to apply different styles based on the characteristics of the device, such as screen width, height, and orientation.</p>
-        </section>
-    </main>
+  <footer role="contentinfo">
+  <div class="footer-content">
+    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+  </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2023 Responsive Design Course</p>
-    </footer>
-
-    <script>
-        const hamburgerMenu = document.querySelector(".hamburger-menu");
-        const hamburgerNav = document.querySelector(".hamburger-nav");
-
-        hamburgerMenu.addEventListener("click", () => {
-            hamburgerMenu.classList.toggle("active");
-            hamburgerNav.classList.toggle("active");
-        });
-    </script>
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
