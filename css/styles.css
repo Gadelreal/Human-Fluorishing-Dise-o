@@ -3947,6 +3947,24 @@ html:focus,
       border: none;
     }
 
+    .ikigai-container img {
+      width: 80% !important;
+      max-width: none !important;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .ikigai-container img {
+        width: 90% !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ikigai-container img {
+        width: 95% !important;
+      }
+    }
+
     @media (max-width: 768px) {
       .values-list {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
