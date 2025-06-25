@@ -3942,9 +3942,9 @@ html:focus,
       text-align: center;
       margin: 2rem 0;
       padding: 2rem;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
     }
 
     @media (max-width: 768px) {
@@ -4274,3 +4274,13 @@ html:focus,
         margin: 0.5rem 0;
       }
     }
+
+/* Estilos para el diagrama de Ikigai */
+.ikigai-container {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
