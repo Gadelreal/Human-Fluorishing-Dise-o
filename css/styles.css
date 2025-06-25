@@ -3430,6 +3430,14 @@ main {
   cursor: default; /* Cursor por defecto */
 }
 
+/* Estilos específicos para las cards del Appreciative Inquiry Framework */
+.framework-activity .learning-objective-card {
+  background-color: white !important;
+  border-radius: 0 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+}
+
 /* Eliminar cualquier estado de focus, active o click */
 .learning-objective-card:focus,
 .learning-objective-card:active,
