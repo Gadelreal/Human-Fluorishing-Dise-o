@@ -3455,8 +3455,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;  /* Cambiado de 50px a 40px */
+  height: 40px; /* Cambiado de 50px a 40px */
   background-color: rgba(0, 0, 102, 0.1);
   border-radius: 50%;
   margin-right: 1rem;
@@ -3476,8 +3476,8 @@ main {
 
 /* Estilos para números en lugar de iconos en las cards de actividades */
 .objective-number {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.2rem; /* Cambiado de 1.5rem a 1.2rem */
+  font-weight: 600;   /* Cambiado de bold a 600 */
   color: #000066;
   display: flex;
   align-items: center;
@@ -3906,6 +3906,10 @@ html:focus,
       .timeline-step {
         padding-left: 1rem;
       }
+      
+      .timeline-content {
+        padding: 1rem;
+      }
     }
 
 
@@ -4019,8 +4023,8 @@ html:focus,
 
 /* Estilos para números en lugar de iconos en las cards de actividades */
 .objective-number {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #000066;
   display: flex;
   align-items: center;
