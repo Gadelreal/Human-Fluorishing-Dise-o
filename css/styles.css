@@ -4057,15 +4057,17 @@ html:focus,
 /* === Chapter 4 === */
 
 
-    /* Estilos para la actividad de fortalezas de carácter */
-    .character-strengths-activity {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      max-width: 69% !important;
-    }
+/* Estilos para la actividad de fortalezas de carácter */
+.character-strengths-activity {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
     .activity-part {
       margin-bottom: 2rem;
