@@ -3474,6 +3474,11 @@ main {
 
 /* === FIN part8.css === */
 
+/* Remove bold styling from activity cards text */
+.learning-objective-card .objective-content p {
+  font-weight: 400 !important; /* Remove bold, use normal weight */
+}
+
 /* Estilos para números en lugar de iconos en las cards de actividades */
 .objective-number {
   font-size: 1.2rem; /* Cambiado de 1.5rem a 1.2rem */
