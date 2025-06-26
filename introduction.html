@@ -15,7 +15,7 @@
       padding: 10px 0;
       margin-bottom: 15px;
       border-bottom: 1px solid #eee;
-      text-align: center;
+      text-align: left; /* Cambiado de center a left */
       position: sticky; /* Para que se mantenga visible al hacer scroll en el modal */
       top: 0;
       background-color: white; /* Fondo para que no se transparente el contenido detrás */
@@ -24,7 +24,7 @@
     .glossary-az-nav a {
       margin: 0 5px;
       text-decoration: none;
-      color: #005A9E; /* Azul IE */
+      color: var(--primary-color); /* Cambiado de #005A9E a var(--primary-color) para usar el azul del curso */
       font-weight: bold;
       padding: 5px;
     }
