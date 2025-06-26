@@ -725,135 +725,6 @@ ol {
     width: calc(100% - 2rem) !important;
   }
 }
-
-/* Estilos específicos para el quiz final - sin afectar el diseño general */
-.quiz-container {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 0;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.quiz-question {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 0;
-  position: relative;
-}
-
-.quiz-question h4 {
-  color: #000066;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-top: 0;
-}
-
-.quiz-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.quiz-option {
-  display: flex;
-  align-items: flex-start;
-  padding: 1rem;
-  background-color: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  border-radius: 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.quiz-option:hover {
-  background-color: #e6f3ff;
-  border-color: #000066;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.option-letter {
-  font-weight: 600;
-  color: #000066;
-  margin-right: 0.75rem;
-  flex-shrink: 0;
-  min-width: 20px;
-}
-
-.option-text {
-  flex: 1;
-  line-height: 1.5;
-}
-
-/* Estados del quiz - respuestas correctas e incorrectas */
-.quiz-option.correct {
-  background-color: #d4edda !important;
-  border-color: #c3e6cb !important;
-  color: #155724 !important;
-}
-
-.quiz-option.incorrect {
-  background-color: #f8d7da !important;
-  border-color: #f5c6cb !important;
-  color: #721c24 !important;
-}
-
-.quiz-option.disabled {
-  pointer-events: none;
-  opacity: 0.7;
-}
-
-/* Resultados del quiz */
-.quiz-results {
-  background-color: #e8f5e8;
-  border: 2px solid #4caf50;
-  border-radius: 0;
-  padding: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.quiz-results h3 {
-  color: #2e7d32;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
-.quiz-results p {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.score-breakdown {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #4caf50;
-}
-
-/* Ajustes responsivos para el quiz */
-@media (max-width: 768px) {
-  .quiz-container {
-    padding: 1rem;
-  }
-
-  .quiz-question {
-    padding: 1rem;
-  }
-
-  .quiz-option {
-    padding: 0.75rem;
-  }
-
-  .option-text {
-    font-size: 0.95rem;
-  }
-}
 /* === FIN part3.css === */
 
 /* === INICIO part4.css === */
@@ -2937,19 +2808,12 @@ body h2:first-of-type,
   margin: 0 !important;
   text-align: left !important;
   line-height: 1.2 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  max-width: 600px; /* Limit width for better readability */
 }
 
 /* Responsive adjustments for hero title */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 400px;
-  }
-
   .hero-title {
-    font-size: 36px !important;
-    max-width: 100%;
+    font-size: 40px !important;
   }
 
   .hero-content {
@@ -2958,422 +2822,106 @@ body h2:first-of-type,
 }
 
 @media (max-width: 480px) {
-  .hero-section {
-    height: 300px;
-  }
-
   .hero-title {
-    font-size: 28px !important;
+    font-size: 32px !important;
   }
 }
 
-/* Estilos para el contenedor del título del hero con icono */
-.hero-title-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  max-width: 700px;
+/* También actualizar el estilo para el copyright */
+.white-footer .copyright {
+  text-align: left;
+  color: #000; /* Cambiar a negro */
 }
 
-.hero-icon {
-  width: 80px;
-  height: 80px;
-  flex-shrink: 0;
-  margin-top: 0.5rem; /* Alinear ligeramente con el texto */
-}
-
-/* Ajustes responsivos para el contenedor del título con icono */
-@media (max-width: 768px) {
-  .hero-title-container {
-    gap: 1rem;
-    max-width: 100%;
-  }
-
-  .hero-icon {
-    width: 60px;
-    height: 60px;
-    margin-top: 0.3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title-container {
-    gap: 0.8rem;
-  }
-
-  .hero-icon {
-    width: 50px;
-    height: 50px;
-    margin-top: 0.2rem;
-  }
-}
-
-/* Estilos para la grilla de objetivos de aprendizaje 2x2 */
-.learning-objectives-grid-2x2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.learning-objective-card {
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 0;
-  padding: 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: none;
-}
-
-.learning-objective-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-color: #d0d0d0;
-}
-
-.objective-icon {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  background-color: var(--primary-color);
+.copyright {
+  font-size: 0.9rem;
   color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
 }
 
-.objective-content h4 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #000;
-}
-
-.objective-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
-}
-
-/* Ajustes responsivos para la grilla 2x2 */
-@media (max-width: 768px) {
-  .learning-objectives-grid-2x2 {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .learning-objective-card {
-    padding: 1.2rem;
-  }
-
-  .objective-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
-}
-
-/* Estilos para la grilla de objetivos de aprendizaje estándar (1 columna) */
-.learning-objectives-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-/* Estilos para números en lugar de iconos */
-.objective-number {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* Estilos para instrucciones en negrita */
-.instruction {
-  font-weight: 600 !important;
-  color: #000 !important;
-}
-
-/* Estilos para la sección final */
-.final-section {
-  text-align: center;
-  background-color: #e8f4fd;
-  border: 1px solid #b3d9f7;
-  border-radius: 0;
-  padding: 3rem 2rem;
-  margin: 2rem 0;
-}
-
-.final-section h2 {
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  margin-top: 0;
-}
-
-.final-section p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.download-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.download-button:hover {
-  background-color: var(--primary-color-dark);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.download-button i {
-  font-size: 1.2rem;
-}
-
-/* Ajustes responsivos para la sección final */
-@media (max-width: 768px) {
-  .final-section {
-    padding: 2rem 1rem;
-  }
-
-  .final-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .download-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
+/* Utilidades */
+.hidden {
+  display: none;
 }
 /* === FIN part7.css === */
 
 /* === INICIO part8.css === */
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  /* Mostrar el menú móvil */
-  .mobile-menu-toggle {
-    display: block;
-  }
-
-  /* Ocultar la navegación principal en móviles */
-  .main-nav {
-    display: none;
-  }
-
-  /* Ajustar el header para móviles */
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  /* Ajustar el contenido principal */
-  main {
-    padding: 1rem;
-  }
-
-  .content-container {
-    padding: 1rem;
-  }
-
-  /* Ajustar títulos para móviles */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  /* Ajustar botones de navegación */
-  .navigation-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav-button {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Ajustar objetivos de aprendizaje */
-  .learning-objectives {
-    padding: 1.5rem;
-  }
-
-  /* Ajustar tarjetas de lectura */
-  .reading-cards {
-    grid-template-columns: 1fr;
-  }
-
-  /* Ajustar ejercicios de reflexión */
-  .reflection-textarea {
-    min-height: 100px;
-  }
-
-  /* Ajustar quiz */
-  .quiz-container {
-    padding: 1.5rem;
-  }
-
-  .quiz-question {
-    padding: 1rem;
-  }
-
-  /* Ajustar encuesta */
-  .survey-container {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Ajustes adicionales para pantallas muy pequeñas */
-  header {
-    padding: 0.5rem;
-  }
-
-  main {
-    padding: 0.5rem;
-  }
-
-  .content-container {
-    padding: 0.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  .nav-button {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .learning-objectives {
-    padding: 1rem;
-  }
-
-  .quiz-container,
-  .survey-container {
-    padding: 1rem;
-  }
-
-  .quiz-question {
-    padding: 0.8rem;
-  }
-
-  .quiz-options label {
-    padding: 0.6rem;
-  }
-
-  .survey-option {
-    padding: 0.6rem;
-  }
-}
-
-/* Estilos para el año actual en el footer */
-#current-year {
-  font-weight: normal;
-}
-
-/* Estilos para el menú hamburguesa */
-.hamburger-icon {
-  width: 24px;
-  height: 18px;
+/* Estilos para el menú hamburguesa en todos los dispositivos */
+.always-visible {
+  display: block !important;
   position: relative;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
 
-.hamburger-icon span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: var(--primary-color);
-  border-radius: 1px;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-/* Animación del menú hamburguesa cuando está activo */
-.hamburger-icon.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.hamburger-icon.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.hamburger-icon.active span:nth-child(4) {
-  opacity: 0;
-}
-
-/* Estilos para la navegación hamburguesa */
+/* Modificar los estilos del menú hamburguesa desplegable */
 .hamburger-nav {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
   right: 0;
+  width: 33.33%;
+  min-width: 250px;
+  max-width: 400px;
   background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  padding: 0;
+  border: 1px solid #eee;
+  border-top: none;
+  transform-origin: top right;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  border-radius: 0 0 0 8px;
 }
 
 .hamburger-nav.active {
   display: block;
-  animation: slideDown 0.3s ease-out;
+  transform: scaleY(1);
+  opacity: 1;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Asegurar que el menú se posicione correctamente en la página de introducción */
+.header-full-bottom .hamburger-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  width: 33.33%;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+/* Ajustes responsivos para el menú hamburguesa */
+@media (max-width: 768px) {
+  .hamburger-nav,
+  .header-full-bottom .hamburger-nav {
+    width: 50%;
+    right: 0;
   }
 }
 
+@media (max-width: 480px) {
+  .hamburger-nav,
+  .header-full-bottom .hamburger-nav {
+    width: 80%;
+    right: 0;
+  }
+}
+
+/* Mejorar el estilo de la lista de navegación */
 .hamburger-nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .hamburger-nav li {
-  margin: 0;
+  width: 100%;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -3381,477 +2929,1455 @@ body h2:first-of-type,
   border-bottom: none;
 }
 
+/* Mejorar la visibilidad del menú de navegación */
 .hamburger-nav a {
-  display: block;
   padding: 1rem 1.5rem;
-  color: var(--link-color);
+  display: block;
   text-decoration: none;
-  transition: all 0.2s ease;
-  font-weight: 500;
+  color: var(--text-color-dark);
 }
 
 .hamburger-nav a:hover,
-.hamburger-nav a.active {
-  background-color: var(--secondary-color);
-  color: var(--link-hover-color);
-  padding-left: 2rem;
+.hamburger-nav a:focus {
+  background-color: #f0f0f0;
+  text-decoration: underline;
 }
 
 .hamburger-nav a.active {
-  font-weight: 600;
+  font-weight: bold;
+  color: var(--primary-color);
   border-left: 3px solid var(--primary-color);
 }
 
-/* Estilos para el separador del menú */
-.menu-separator {
-  display: block;
-  height: 1px;
-  background-color: #e0e0e0;
-  margin: 0.5rem 0;
+/* Animación para el botón hamburguesa */
+.mobile-menu-toggle.active .hamburger-icon span:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
 }
 
-/* Estilos para el selector de idioma en el menú */
-.language-selector-menu {
-  padding: 1rem 1.5rem;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e0e0e0;
+.mobile-menu-toggle.active .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
 }
 
-.language-selector-menu a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0;
-  margin: 0 0.25rem;
+.mobile-menu-toggle.active .hamburger-icon span:nth-child(3) {
+  opacity: 0;
+  transform: translateX(20px);
 }
 
-.language-selector-menu a:hover {
-  color: var(--link-hover-color);
-  background-color: transparent;
-  padding-left: 0;
+.mobile-menu-toggle.active .hamburger-icon span:nth-child(4) {
+  top: 8px;
+  transform: rotate(-45deg);
 }
 
-.language-selector-menu a.active {
-  font-weight: 600;
-  border-left: none;
+.hamburger-icon span {
+  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
 }
 
-/* Mostrar el menú hamburguesa solo en dispositivos móviles */
-@media (min-width: 769px) {
-  .mobile-menu-toggle {
-    display: none !important;
-  }
-
-  .hamburger-nav {
-    display: none !important;
-  }
-
-  .main-nav {
-    display: flex !important;
-  }
-}
-
-/* Asegurar que el botón hamburguesa sea visible en móviles */
-@media (max-width: 768px) {
-  .mobile-menu-toggle.always-visible {
-    display: block !important;
-  }
-
-  .main-nav:not(.hamburger-nav) {
-    display: none !important;
-  }
-}
-
-/* Ajustar el header para acomodar el menú hamburguesa */
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: relative;
-}
-
-.header-controls {
-  display: flex;
-  align-items: center;
-}
-
-/* Asegurar que el contenido del header esté correctamente alineado */
-@media (max-width: 768px) {
-  .header-content {
-    flex-wrap: nowrap;
-  }
-
-  .header-left {
-    flex: 1;
-    min-width: 0; /* Permitir que se contraiga */
-  }
-
-  .header-controls {
-    flex-shrink: 0;
-  }
-
-  .header-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-/* Ajustes para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .header-left {
-    gap: 1rem;
-  }
-
-  .header-left::after {
-    left: calc(50px + 0.5rem);
-  }
-
-  .header-title {
-    font-size: 11px !important;
-  }
-}
-
-/* Estilos para asegurar que el menú hamburguesa funcione correctamente */
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 102, 0.1);
-  border-radius: 4px;
-}
-
-.mobile-menu-toggle:focus {
-  outline: 2px solid var(--focus-outline-color);
-  outline-offset: 2px;
-}
-
-/* Asegurar que el overlay del menú cubra toda la pantalla en móviles */
-@media (max-width: 768px) {
-  .hamburger-nav.active {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    max-height: calc(100vh - 100%);
-    overflow-y: auto;
-  }
-}
-
-/* Estilos para mejorar la accesibilidad del menú */
-.hamburger-nav a:focus {
-  background-color: var(--secondary-color);
-  outline: 2px solid var(--focus-outline-color);
-  outline-offset: -2px;
-}
-
-/* Asegurar que el menú se cierre al hacer clic fuera */
+/* Añadir un overlay para cerrar el menú al hacer clic fuera */
 .menu-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .menu-overlay.active {
   display: block;
-}
-
-/* Ajustar z-index del menú hamburguesa */
-.hamburger-nav {
-  z-index: 1001;
-}
-
-/* Estilos para el botón de cerrar menú (si se necesita) */
-.close-menu {
-  display: none;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .close-menu {
-    display: block;
-  }
-}
-
-/* Asegurar que el contenido no se desplace cuando el menú está abierto */
-body.menu-open {
-  overflow: hidden;
-}
-
-/* Estilos adicionales para mejorar la experiencia del usuario */
-.hamburger-nav li:hover {
-  background-color: rgba(0, 0, 102, 0.05);
-}
-
-.hamburger-nav a:active {
-  background-color: rgba(0, 0, 102, 0.1);
-}
-
-/* Animación suave para el menú */
-.hamburger-nav {
-  transition: all 0.3s ease;
-}
-
-.hamburger-nav:not(.active) {
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Estilos para el indicador de página activa en el menú */
-.hamburger-nav a[aria-current="page"] {
-  background-color: rgba(0, 0, 102, 0.1);
-  font-weight: 600;
-  border-left: 3px solid var(--primary-color);
-}
-
-/* Asegurar que el texto del menú sea legible */
-.hamburger-nav {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Mejorar el contraste del menú */
-.hamburger-nav {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-}
-
-/* Estilos para el estado de carga del menú */
-.hamburger-nav.loading {
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-/* Estilos para errores en el menú */
-.hamburger-nav.error {
-  background-color: #fff5f5;
-  border-color: #fed7d7;
-}
-
-/* Asegurar que el menú sea accesible por teclado */
-.hamburger-nav a:focus-visible {
-  outline: 2px solid var(--focus-outline-color);
-  outline-offset: -2px;
-}
-
-/* Estilos para el estado deshabilitado del menú */
-.hamburger-nav a.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: not-allowed;
-}
-
-/* Estilos para el contador de notificaciones (si se necesita) */
-.menu-badge {
-  background-color: #ff4444;
-  color: white;
-  border-radius: 50%;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.7rem;
-  margin-left: 0.5rem;
-}
-
-/* Estilos para iconos en el menú (si se añaden) */
-.hamburger-nav .menu-icon {
-  margin-right: 0.75rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  display: inline-block;
-}
-
-/* Asegurar que el menú funcione bien con lectores de pantalla */
-.hamburger-nav[aria-hidden="true"] {
-  display: none;
-}
-
-.hamburger-nav[aria-hidden="false"] {
-  display: block;
-}
-
-/* Estilos para el estado de transición del menú */
-.hamburger-nav.transitioning {
-  pointer-events: none;
-}
-
-/* Mejorar la performance del menú */
-.hamburger-nav {
-  will-change: transform, opacity;
-}
-
-/* Estilos para el backdrop del menú */
-.menu-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.menu-backdrop.active {
   opacity: 1;
-  visibility: visible;
 }
 
-/* Asegurar que el menú se vea bien en modo oscuro (si se implementa) */
-@media (prefers-color-scheme: dark) {
-  .hamburger-nav {
-    background-color: #1a1a1a;
-    border-color: #333;
-    color: #fff;
-  }
-
-  .hamburger-nav a {
-    color: #fff;
-  }
-
-  .hamburger-nav a:hover {
-    background-color: #333;
-  }
-}
-
-/* Estilos para animaciones reducidas (accesibilidad) */
-@media (prefers-reduced-motion: reduce) {
-  .hamburger-nav,
-  .hamburger-icon span,
-  .menu-backdrop {
-    transition: none;
-  }
-
-  .hamburger-nav.active {
-    animation: none;
-  }
-}
-
-/* Estilos finales para asegurar compatibilidad */
-.hamburger-nav * {
-  box-sizing: border-box;
-}
-
-/* Limpiar estilos heredados */
-.hamburger-nav ul,
-.hamburger-nav li,
-.hamburger-nav a {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
-  text-decoration: none;
-  list-style: none;
-}
-
-/* Restablecer estilos específicos del menú */
-.hamburger-nav a {
-  display: block;
-  padding: 1rem 1.5rem;
-  color: var(--link-color);
-  transition: all 0.2s ease;
-  font-weight: 500;
-}
-
-/* Asegurar que el menú tenga el z-index correcto */
-.hamburger-nav {
-  position: absolute;
-  z-index: 1000;
-}
-
-/* Estilos para el contenedor del header */
-.header-content {
-  position: relative;
-  z-index: 1001;
-}
-
-/* Asegurar que el botón del menú esté siempre visible */
+/* Ajustar el estilo del botón de hamburguesa */
 .mobile-menu-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Asegurar que los elementos interactivos tengan estados de foco visibles */
+.mobile-menu-toggle:focus {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+}
+
+/* Corregir el posicionamiento de las líneas del menú hamburguesa */
+.hamburger-icon {
+  display: block;
   position: relative;
-  z-index: 1002;
-}
-/* === FIN part8.css === */
-
-/* Estilos para eliminar bordes redondeados de todos los elementos */
-.no-borders,
-.no-borders * {
-  border-radius: 0 !important;
-}
-
-/* Aplicar a elementos específicos que podrían tener bordes redondeados */
-.lesson-section,
-.lesson-section *,
-.key-point,
-.key-point *,
-.reading-card,
-.reading-card *,
-.quiz-container,
-.quiz-container *,
-.quiz-question,
-.quiz-question *,
-.quiz-option,
-.quiz-option *,
-.video-container,
-.video-container *,
-.responsive-video,
-.responsive-video *,
-.learning-objectives,
-.learning-objectives *,
-.reflection-exercise,
-.reflection-exercise *,
-.metacognition-exercise,
-.metacognition-exercise *,
-.survey-container,
-.survey-container *,
-.final-section,
-.final-section *,
-.learning-objective-card,
-.learning-objective-card * {
-  border-radius: 0 !important;
-}
-
-/* Asegurar que los videos también no tengan bordes redondeados */
-video,
-.video-js,
-iframe {
-  border-radius: 0 !important;
-}
-
-/* Aplicar también a elementos de formulario */
-input,
-textarea,
-button,
-select {
-  border-radius: 0 !important;
-}
-
-/* Excepciones para elementos que necesitan mantener bordes redondeados */
-.objective-icon {
-  border-radius: 50% !important; /* Mantener círculos para iconos */
+  width: 24px;
+  height: 18px;
 }
 
 .hamburger-icon span {
-  border-radius: 1px !important; /* Mantener bordes mínimos para las líneas del hamburger */
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #000; /* Cambiado de var(--primary-color) a negro */
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-icon span:nth-child(2),
+.hamburger-icon span:nth-child(3) {
+  top: 8px;
+}
+
+.hamburger-icon span:nth-child(4) {
+  top: 16px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo-container {
+    max-width: 80px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    width: 100%;
+  }
+
+  .main-nav.active {
+    display: block;
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.8rem;
+    border-radius: 4px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-button {
+    text-align: center;
+  }
+
+  .cover-content h1 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .content-container {
+    padding: 1rem;
+  }
+
+  .cover-content {
+    padding: 2rem 1rem;
+  }
+
+  .cover-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .lesson-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .key-point {
+    padding: 1rem 1rem 1rem 3rem;
+  }
+
+  .key-point::before {
+    left: 0.7rem;
+    top: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .reflection-question {
+    padding: 1rem;
+  }
+
+  .reflection-textarea {
+    min-height: 100px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .save-feedback {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Mejoras de tipografía */
+p,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-bottom: 1rem !important;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000;
+}
+
+.cover-text h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.key-point p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.author,
+.duration,
+.code {
+  font-weight: 300;
+}
+
+/* Ajustar el peso de la fuente para los botones */
+.start-button,
+.nav-button,
+.save-button {
+  font-weight: 600;
+}
+
+/* Añadir la clase plain-title para el título sin efectos y con menor peso */
+.plain-title {
+  font-weight: 400 !important; /* Reducir el peso de la fuente */
+  letter-spacing: normal !important;
+  text-shadow: none !important;
+}
+
+.arrow-icon {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Ajustes responsivos para la cabecera a ancho completo */
+@media (max-width: 768px) {
+  .full-width {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .smaller-logo {
+    max-width: 40px;
+  }
+}
+
+/* Alineación del header con el contenedor principal */
+.content-aligned {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+/* Ajustar el padding del contenedor principal para que coincida con el header */
+main {
+  flex: 1;
+  padding: 2rem 0;
+  padding-top: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegurar que el logo esté alineado con el contenido */
+.content-aligned .header-left {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Asegurar que el menú hamburguesa esté alineado con el contenido */
+.content-aligned .mobile-menu-toggle {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* Ajustar el espaciado en dispositivos móviles */
+@media (max-width: 768px) {
+  .content-aligned {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Estilo especial para la cabecera de la página de introducción */
+.header-full-bottom {
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+  height: 120px; /* Altura fija para la cabecera */
+}
+
+/* Mantener el contenido alineado dentro de la cabecera */
+.header-full-bottom .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 100%; /* Asegurar que el contenido ocupe toda la altura */
+  position: relative; /* Para posicionamiento de elementos absolutos */
+}
+
+/* Modificar los estilos para el contenedor de controles del header */
+.header-controls {
+  display: flex;
+  flex-direction: row; /* Asegurar que los elementos estén en fila */
+  align-items: center;
+  justify-content: flex-end; /* Alinear a la derecha */
+  margin-left: auto;
+  position: relative; /* Asegurar posicionamiento correcto */
+}
+
+/* Ajustar el botón de menú hamburguesa */
+.mobile-menu-toggle.always-visible {
+  position: static; /* Evitar posicionamiento absoluto */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+/* Ajustar el menú de navegación para la cabecera con altura fija */
+.header-full-bottom .hamburger-nav {
+  top: 120px; /* Alinear con la nueva altura de la cabecera */
+  right: 2rem; /* Alinear con el padding del contenedor */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .header-full-bottom {
+    height: 100px; /* Reducir altura en tablets */
+  }
+
+  .header-full-bottom .hamburger-nav {
+    top: 100px; /* Ajustar posición del menú en tablets */
+    right: 1rem;
+  }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-full-bottom {
+    height: 80px; /* Reducir altura en móviles */
+  }
+
+  .header-full-bottom .hamburger-nav {
+    top: 80px; /* Ajustar posición del menú en móviles */
+    right: 1rem;
+  }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Eliminar bordes de las secciones */
+.no-borders {
+  border-bottom: none !important;
+}
+
+/* Estilos para los objetivos de aprendizaje - Grid original (3 columnas) */
+.learning-objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilos para los objetivos de aprendizaje - Grid 2x2 (solo para Chapter 2) */
+.learning-objectives-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments for learning objectives */
+@media (max-width: 768px) {
+  .learning-objectives-grid,
+  .learning-objectives-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.learning-objective-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 1.5rem;
+  border-left: 4px solid #000066;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #000066;
+  pointer-events: none; /* Eliminar completamente la interacción */
+  cursor: default; /* Cursor por defecto */
+}
+
+/* Estilos específicos para las cards del Appreciative Inquiry Framework */
+.framework-activity .learning-objective-card {
+  background-color: white !important;
+  border-radius: 0 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+}
+
+/* Eliminar cualquier estado de focus, active o click */
+.learning-objective-card:focus,
+.learning-objective-card:active,
+.learning-objective-card:hover {
+  outline: none !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Asegurar que los elementos internos tampoco sean interactivos */
+.learning-objective-card *:focus,
+.learning-objective-card *:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar completamente la regla :hover */
+
+.objective-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;  /* Cambiado de 50px a 40px */
+  height: 40px; /* Cambiado de 50px a 40px */
+  background-color: rgba(0, 0, 102, 0.1);
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.objective-icon i {
+  font-size: 1.5rem;
+  color: #000066;
+}
+
+.objective-content {
+  flex: 1;
+}
+
+/* === FIN part8.css === */
+
+/* Remove bold styling from activity cards text */
+.learning-objective-card .objective-content p {
+  font-weight: 400 !important; /* Remove bold, use normal weight */
+}
+
+/* Estilos para números en lugar de iconos en las cards de actividades */
+.objective-number {
+  font-size: 1.2rem; /* Cambiado de 1.5rem a 1.2rem */
+  font-weight: 600;   /* Cambiado de bold a 600 */
+  color: #000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
+.learning-objective-card .objective-number {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Refuerzo: nunca mostrar outline ni box-shadow en body o html al recibir focus */
+body:focus,
+html:focus,
+#main-content:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+/* === Introduction === */
+
+
+ /* Estilos para la sección final */
+    .final-section {
+      background-color: #f0f8ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .download-button:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-button i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .final-section {
+        padding: 1.5rem;
+      }
+
+      .download-button {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+    }
+
+    .survey-section {
+      text-align: left;
+    }
+
+    .survey-button-container {
+      margin-top: 32px;
+      text-align: left;
+    }
+
+    .survey-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000066;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .survey-button:hover {
+      background-color: #000044;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+
+    .survey-button i {
+      margin-right: 0.5rem;
+    }
+
+    .hero-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .hero-icon {
+      object-fit: contain;
+    }
+
+    .hero-content {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title-container {
+        gap: 0.5rem;
+      }
+    }
+
+    /* Aumentar espaciado entre párrafos */
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .lesson-section p {
+      margin-bottom: 1.5rem;
+    }
+
+    .key-point p {
+      margin-bottom: 1.5rem;
+    }
+
+    .reading-card-content p {
+      margin-bottom: 1rem;
+    }
+
+    .survey-section p {
+      margin-bottom: 1.5rem;
+    }
+
+
+
+/* === Chapter 1 === */
+
+    /* Estilos adicionales para VideoJS */
+    .video-js .vjs-control-bar {
+      background-color: rgba(0, 85, 162, 0.8);
+    }
+    
+    /* Estilo para el enlace de saltar al contenido */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0055a2;
+      color: white;
+      padding: 8px;
+      z-index: 9999;
+      transition: top 0.3s;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+.hero-fingerprints {
+  max-width: 300px;
+  height: auto;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-fingerprints {
+    max-width: 200px;
+  }
+}
+
+/* === Chapter 2 === */
+
+    /* Estilos para pasos numerados */
+    .activity-step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 6px;
+      border-left: 4px solid #0055a2;
+    }
+
+    .activity-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #0055a2;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h4 {
+      color: #0055a2;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .activity-step {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Estilos para las tarjetas de beneficios */
+    .benefits-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .benefit-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-color: #0055a2;
+    }
+
+    .benefit-content h4 {
+      color: #0055a2;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    .benefit-content p {
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .benefits-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Estilos para el timeline vertical */
+    .timeline-activity {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline-activity::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #000066;
+      z-index: 1;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-number {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #000066;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
+    }
+
+    .timeline-content {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid white;
+      z-index: 3;
+    }
+
+    .timeline-content h4 {
+      color: #000066;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Ajustes responsivos para el timeline */
+    @media (max-width: 768px) {
+      .timeline-activity {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-activity::before {
+        left: 15px;
+      }
+
+      .timeline-number {
+        left: -1.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+
+      .timeline-step {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-content {
+        padding: 1rem;
+      }
+
+      .timeline-content::before {
+        left: -6px;
+        top: 15px;
+        border-right-width: 6px;
+        border-top-width: 6px;
+        border-bottom-width: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .timeline-activity {
+        padding-left: 1rem;
+      }
+
+      .timeline-activity::before {
+        left: 10px;
+      }
+
+      .timeline-number {
+        left: -1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      .timeline-step {
+        padding-left: 1rem;
+      }
+      
+      .timeline-content {
+        padding: 1rem;
+      }
+    }
+
+
+/* === Chapter 3 === */
+
+/* Estilos para la lista de valores */
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.values-list li {
+  list-style: none;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: none;
+}
+
+    /* Estilos para el diagrama de Ikigai */
+    .ikigai-container {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+    }
+
+    .ikigai-container img {
+      width: 80% !important;
+      max-width: none !important;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .ikigai-container img {
+        width: 90% !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ikigai-container img {
+        width: 95% !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .values-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+    }
+
+    /* Estilos para el grid de preguntas de reflexión */
+    .reflection-questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      margin-top: 2rem !important;
+      margin-bottom: 2rem !important;
+    }
+
+    .reflection-question-card {
+      background-color: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .reflection-question-card:hover {
+      border-color: #0055a2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 85, 162, 0.15);
+    }
+
+    .question-number {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background-color: #0055a2;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .question-text {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .reflection-questions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .reflection-question-card {
+        padding: 1rem;
+      }
+    }
+
+/* Estilos para números en lugar de iconos en las cards de actividades */
+.objective-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
+.learning-objective-card .objective-number {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* === Chapter 4 === */
+
+
+/* Estilos para la actividad de fortalezas de carácter */
+.character-strengths-activity {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+    .activity-part {
+      margin-bottom: 2rem;
+    }
+
+    .activity-part:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-part h3 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .survey-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .survey-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      max-width: fit-content;
+    }
+
+    .survey-link:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .survey-link i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .survey-links {
+        align-items: stretch;
+      }
+
+      .survey-link {
+        max-width: 100%;
+        justify-content: center;
+      }
+    }
+
+
+/* === Chapter 5 === */
+    /* Estilos para las actividades estructuradas */
+    .framework-activity {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .activity-step {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 6px;
+      border-left: 4px solid #0055a2;
+    }
+
+    .activity-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-step h4 {
+      color: #0055a2;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .activity-step p {
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-step .instruction {
+      font-style: italic;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    /* Estilos para el quiz */
+    .quiz-container {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-question {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .quiz-question h4 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .quiz-options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .quiz-options li {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .quiz-options li:hover {
+      background-color: #e6f3ff;
+      border-color: #0055a2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    /* Estilos para la sección final */
+    .final-section {
+      background-color: #f0f8ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .download-button:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-button i {
+      margin-right: 0.5rem;
+    }
+
+    /* Estilos para las estrategias de accountability */
+    .accountability-strategies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .strategy-card {
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .strategy-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .strategy-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #0055a2;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px}) {
+      .quiz-container {
+        padding: 1rem;
+      }
+
+      .quiz-question {
+        padding: 1rem;
+      }
+
+      .final-section {
+        padding: 1.5rem;
+      }
+
+      .download-button {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+    }
+
+/* Estilos para el diagrama de Ikigai */
+.ikigai-container {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+/* Estilos para el botón de descripción de imagen */
+.image-description-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.image-description-button:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-description-button:focus {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* Estilos para la descripción de imagen */
+.image-description-content {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.description-box {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-box h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.description-box p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Ajustes responsivos para la descripción */
+@media (max-width: 768px) {
+  .description-box {
+    padding: 1rem;
+  }
+  
+  .description-box h4 {
+    font-size: 1.1rem;
+  }
 }
