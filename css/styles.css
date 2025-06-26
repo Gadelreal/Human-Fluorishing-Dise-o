@@ -3430,14 +3430,6 @@ main {
   cursor: default; /* Cursor por defecto */
 }
 
-/* Estilos específicos para las cards del Appreciative Inquiry Framework */
-.framework-activity .learning-objective-card {
-  background-color: white !important;
-  border-radius: 0 !important;
-  border: 1px solid #e0e0e0 !important;
-  border-left: 4px solid #000066 !important;
-}
-
 /* Eliminar cualquier estado de focus, active o click */
 .learning-objective-card:focus,
 .learning-objective-card:active,
@@ -3463,8 +3455,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;  /* Cambiado de 50px a 40px */
-  height: 40px; /* Cambiado de 50px a 40px */
+  width: 50px;
+  height: 50px;
   background-color: rgba(0, 0, 102, 0.1);
   border-radius: 50%;
   margin-right: 1rem;
@@ -3481,29 +3473,6 @@ main {
 }
 
 /* === FIN part8.css === */
-
-/* Remove bold styling from activity cards text */
-.learning-objective-card .objective-content p {
-  font-weight: 400 !important; /* Remove bold, use normal weight */
-}
-
-/* Estilos para números en lugar de iconos en las cards de actividades */
-.objective-number {
-  font-size: 1.2rem; /* Cambiado de 1.5rem a 1.2rem */
-  font-weight: 600;   /* Cambiado de bold a 600 */
-  color: #000066;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
-.learning-objective-card .objective-number {
-  pointer-events: none;
-  cursor: default;
-}
 
 /* Refuerzo: nunca mostrar outline ni box-shadow en body o html al recibir focus */
 body:focus,
@@ -3857,38 +3826,31 @@ html:focus,
       margin-bottom: 0.8rem;
       font-weight: 600;
       margin-top: 0;
-      font-size: 1.1rem;
     }
 
     .timeline-content p {
-      margin-bottom: 0;
+      margin: 0;
       line-height: 1.6;
-      color: #333;
     }
 
-    /* Ajustes responsivos para el timeline */
     @media (max-width: 768px) {
       .timeline-activity {
-        padding-left: 1.5rem;
+        padding-left: 1rem;
       }
 
       .timeline-activity::before {
         left: 15px;
       }
 
-      .timeline-number {
-        left: -1.5rem;
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-      }
-
       .timeline-step {
         padding-left: 1.5rem;
       }
 
-      .timeline-content {
-        padding: 1rem;
+      .timeline-number {
+        left: -1.5rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
       }
 
       .timeline-content::before {
@@ -3900,484 +3862,175 @@ html:focus,
       }
     }
 
-    @media (max-width: 480px) {
-      .timeline-activity {
-        padding-left: 1rem;
-      }
-
-      .timeline-activity::before {
-        left: 10px;
-      }
-
-      .timeline-number {
-        left: -1rem;
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-      }
-
-      .timeline-step {
-        padding-left: 1rem;
-      }
-      
-      .timeline-content {
-        padding: 1rem;
-      }
-    }
-
-
-/* === Chapter 3 === */
-
-/* Estilos para la lista de valores */
-.values-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.5rem;
-  margin: 1.5rem 0;
-  padding: 1.5rem;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.values-list li {
-  list-style: none;
-  padding: 0.5rem;
-  background-color: white;
-  border-radius: 0;
-  border: 1px solid #ddd;
-  text-align: center;
-  transition: none;
-}
-
-    /* Estilos para el diagrama de Ikigai */
-    .ikigai-container {
+    /* Estilos para el módulo de bienvenida */
+    .welcome-module {
       text-align: center;
-      margin: 2rem 0;
-      padding: 2rem;
-      background-color: transparent;
-      border-radius: 0;
-      border: none;
     }
 
-    .ikigai-container img {
-      width: 80% !important;
-      max-width: none !important;
-      height: auto;
+    .welcome-module h2 {
+      text-align: center;
     }
 
-    @media (max-width: 768px) {
-      .ikigai-container img {
-        width: 90% !important;
-      }
+    .welcome-module .responsive-video {
+      margin: 2rem auto;
+      max-width: 800px;
     }
 
-    @media (max-width: 480px) {
-      .ikigai-container img {
-        width: 95% !important;
-      }
+    /* Estilos para el selector de idioma en el menú */
+    .language-selector-menu {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 1rem;
+      margin-top: 1rem;
     }
 
-    @media (max-width: 768px) {
-      .values-list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      }
-
-    }
-
-    /* Estilos para el grid de preguntas de reflexión */
-    .reflection-questions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-      margin-top: 2rem !important;
-      margin-bottom: 2rem !important;
-    }
-
-    .reflection-question-card {
-      background-color: white;
-      border: 2px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .reflection-question-card:hover {
-      border-color: #0055a2;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 85, 162, 0.15);
-    }
-
-    .question-number {
-      position: absolute;
-      top: -12px;
-      left: 20px;
-      background-color: #0055a2;
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .question-text {
-      margin-top: 0.5rem;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .reflection-questions-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      
-      .reflection-question-card {
-        padding: 1rem;
-      }
-    }
-
-/* Estilos para números en lugar de iconos en las cards de actividades */
-.objective-number {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #000066;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
-.learning-objective-card .objective-number {
-  pointer-events: none;
-  cursor: default;
-}
-
-/* === Chapter 4 === */
-
-
-/* Estilos para la actividad de fortalezas de carácter */
-.character-strengths-activity {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-    .activity-part {
-      margin-bottom: 2rem;
-    }
-
-    .activity-part:last-child {
-      margin-bottom: 0;
-    }
-
-    .activity-part h3 {
-      color: #0055a2;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .survey-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    .menu-separator {
+      display: block;
+      height: 1px;
+      background-color: #f0f0f0;
       margin: 1rem 0;
     }
 
-    .survey-link {
-      display: inline-flex;
+    .language-selector-menu a {
+      color: #666;
+      font-size: 0.9rem;
+      padding: 0.5rem 1.5rem;
+    }
+
+    .language-selector-menu a.active {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    /* Estilos para el modal del glosario */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 0;
+      border: none;
+      width: 90%;
+      max-width: 800px;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding: 0.75rem 1.5rem;
-      background-color: #0055a2;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      background-color: #f8f9fa;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      color: #000066;
+      font-size: 1.5rem;
       font-weight: 600;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #666;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
       transition: all 0.3s ease;
-      max-width: fit-content;
     }
 
-    .survey-link:hover {
-      background-color: #003d73;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    .modal-close:hover {
+      background-color: #e0e0e0;
+      color: #000;
     }
 
-    .survey-link i {
-      margin-right: 0.5rem;
+    .modal-body {
+      padding: 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .glossary-terms {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .glossary-term {
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-left: 4px solid #000066;
+      border-radius: 0 4px 4px 0;
+      line-height: 1.6;
+    }
+
+    .glossary-term strong {
+      color: #000066;
+      font-weight: 600;
     }
 
     @media (max-width: 768px) {
-      .survey-links {
-        align-items: stretch;
+      .modal-content {
+        width: 95%;
+        margin: 2% auto;
+        max-height: 90vh;
       }
 
-      .survey-link {
-        max-width: 100%;
-        justify-content: center;
-      }
-    }
-
-
-/* === Chapter 5 === */
-    /* Estilos para las actividades estructuradas */
-    .framework-activity {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .activity-step {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 6px;
-      border-left: 4px solid #0055a2;
-    }
-
-    .activity-step:last-child {
-      margin-bottom: 0;
-    }
-
-    .activity-step h4 {
-      color: #0055a2;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .activity-step p {
-      margin-bottom: 0.5rem;
-    }
-
-    .activity-step .instruction {
-      font-style: italic;
-      color: #666;
-      margin-top: 0.5rem;
-    }
-
-    /* Estilos para el quiz */
-    .quiz-container {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem 0;
-    }
-
-    .quiz-question {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background-color: white;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-
-    .quiz-question h4 {
-      color: #0055a2;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .quiz-options {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .quiz-options li {
-      margin-bottom: 0.5rem;
-      padding: 0.5rem;
-      background-color: #f8f8f8;
-      border-radius: 4px;
-      border: 1px solid #e0e0e0;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .quiz-options li:hover {
-      background-color: #e6f3ff;
-      border-color: #0055a2;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    /* Estilos para la sección final */
-    .final-section {
-      background-color: #f0f8ff;
-      border: 2px solid #0055a2;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .download-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0055a2;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin: 1rem;
-    }
-
-    .download-button:hover {
-      background-color: #003d73;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .download-button i {
-      margin-right: 0.5rem;
-    }
-
-    /* Estilos para las estrategias de accountability */
-    .accountability-strategies {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .strategy-card {
-      background-color: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .strategy-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .strategy-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: #0055a2;
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 768px}) {
-      .quiz-container {
-        padding: 1rem;
+      .modal-header {
+        padding: 1rem 1.5rem;
       }
 
-      .quiz-question {
-        padding: 1rem;
+      .modal-header h2 {
+        font-size: 1.3rem;
       }
 
-      .final-section {
+      .modal-body {
         padding: 1.5rem;
       }
 
-      .download-button {
-        width: 100%;
-        justify-content: center;
-        margin: 0.5rem 0;
+      .glossary-term {
+        padding: 0.8rem;
       }
     }
 
-/* Estilos para el diagrama de Ikigai */
-.ikigai-container {
-  text-align: center;
-  margin: 2rem 0;
-  padding: 2rem;
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-}
+    @media (max-width: 480px) {
+      .modal-content {
+        width: 98%;
+        margin: 1% auto;
+        max-height: 95vh;
+      }
 
-/* Estilos para el botón de descripción de imagen */
-.image-description-button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-}
+      .modal-header {
+        padding: 0.8rem 1rem;
+      }
 
-.image-description-button:hover {
-  background-color: var(--primary-color-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+      .modal-header h2 {
+        font-size: 1.2rem;
+      }
 
-.image-description-button:focus {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-  outline-offset: 2px;
-}
-
-/* Estilos para la descripción de imagen */
-.image-description-content {
-  margin-top: 1.5rem;
-  text-align: left;
-}
-
-.description-box {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.description-box h4 {
-  color: var(--primary-color);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.description-box p {
-  margin: 0;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Ajustes responsivos para la descripción */
-@media (max-width: 768px) {
-  .description-box {
-    padding: 1rem;
-  }
-  
-  .description-box h4 {
-    font-size: 1.1rem;
-  }
-}
+      .modal-body {
+        padding: 1rem;
+      }
+    }
