@@ -1,4 +1,3 @@
-/* === INICIO part1.css === */
 /* Importar Open Sans de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
@@ -725,6 +724,155 @@ ol {
     width: calc(100% - 2rem) !important;
   }
 }
+
+/* Estilos para el quiz final */
+.final-quiz-container {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.final-quiz-container .quiz-question {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.final-quiz-container .quiz-question h4 {
+  color: #000066;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.quiz-option:hover {
+  background-color: #e6f3ff;
+  border-color: #000066;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-letter {
+  font-weight: 600;
+  color: #000066;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+.option-text {
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* Estados del quiz */
+.quiz-option.correct {
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+  color: #155724 !important;
+}
+
+.quiz-option.incorrect {
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+  color: #721c24 !important;
+}
+
+.quiz-option.selected {
+  border-width: 2px;
+}
+
+/* Feedback del quiz */
+.quiz-feedback {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.quiz-feedback.correct {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.quiz-feedback.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* Resultados del quiz */
+.quiz-results {
+  background-color: #e8f5e8;
+  border: 2px solid #4caf50;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.quiz-results h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.quiz-results p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.score-breakdown {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #4caf50;
+}
+
+/* Ajustes responsivos para el quiz */
+@media (max-width: 768px) {
+  .final-quiz-container {
+    padding: 1rem;
+  }
+
+  .final-quiz-container .quiz-question {
+    padding: 1rem;
+  }
+
+  .quiz-option {
+    padding: 0.75rem;
+  }
+
+  .option-text {
+    font-size: 0.95rem;
+  }
+}
 /* === FIN part3.css === */
 
 /* === INICIO part4.css === */
@@ -1228,9 +1376,7 @@ iframe[src*="vimeo"] {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
-/* === FIN part4.css === */
 
-/* === INICIO part5.css === */
 /* Enlaces */
 /* Asegurar que los enlaces tengan un subrayado visible */
 a {
@@ -1823,9 +1969,7 @@ a:hover {
     font-size: 0.75rem;
   }
 }
-/* === FIN part5.css === */
 
-/* === INICIO part6.css === */
 /* Estilos para la portada con fondo azul completo (mantener para compatibilidad) */
 .full-blue-cover {
   background-color: #000066;
@@ -2209,9 +2353,7 @@ a:hover {
     flex: 1 1 100%;
   }
 }
-/* === FIN part6.css === */
 
-/* === INICIO part7.css === */
 /* Estilos para objetivos de aprendizaje */
 .learning-objectives {
   background-color: #f9f9f9;
@@ -2653,1592 +2795,664 @@ footer {
   position: relative;
 }
 
-/* Aplicar los mismos estilos a survey-background y survey-content */
-.survey-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
-  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
-  box-sizing: border-box;
-}
-
-.survey-content {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Asegurar que el body no tenga overflow horizontal */
-body {
-  overflow-x: hidden;
-}
-
-/* Ajustes responsivos para las secciones con fondo */
+/* Ajustes responsivos para fondos de módulos */
 @media (max-width: 768px) {
-  .module-background,
-  .survey-background {
+  .module-background {
     padding: 2rem 0;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 4rem; /* Reducir en tablets */
+    margin-bottom: 4rem; /* Reducir en tablets */
   }
 
-  .module-content,
-  .survey-content {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .module-background,
-  .survey-background {
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-
-/* Eliminar las clases que ya no se usan */
-.full-width-bg,
-.survey-container {
-  display: none;
-}
-
-/* Estilos para el contenido del módulo */
-.module-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-/* Asegurar que videos y key points tengan el mismo ancho en módulos grises */
-.module-content .responsive-video,
-.module-content .video-container,
-.module-content .youtube-container,
-.module-content .key-point {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
-/* Ajustes responsivos para el contenido del módulo */
-@media (max-width: 768px) {
   .module-content {
     padding: 0 1rem;
   }
 }
 
-/* Estilos para títulos h2 en el body - Open Sans Light 32px con separación de 48px */
-body h2 {
-  font-family: "Rubik", sans-serif !important;
-  font-weight: 300 !important; /* Light */
-  font-size: 32px !important;
-  margin-top: 48px !important; /* Separación vertical de 48px */
-  margin-bottom: 24px !important; /* Separación inferior estándar */
-  color: #000 !important;
-  line-height: 1.3 !important;
-}
-
-/* Asegurar que el primer h2 no tenga margen superior excesivo */
-body h2:first-of-type,
-.content-container h2:first-child,
-.content-aligned-container h2:first-child {
-  margin-top: 24px !important;
-}
-
-/* Ajustes responsivos para h2 */
-@media (max-width: 768px) {
-  body h2 {
-    font-size: 28px !important;
-    margin-top: 36px !important;
-    margin-bottom: 20px !important;
-  }
-}
-
 @media (max-width: 480px) {
-  body h2 {
-    font-size: 24px !important;
-    margin-top: 32px !important;
-    margin-bottom: 18px !important;
+  .module-background {
+    padding: 1.5rem 0;
+    margin-top: 3rem; /* Reducir en móviles */
+    margin-bottom: 3rem; /* Reducir en móviles */
   }
 }
 
-/* Hero Section Styles */
-.hero-section {
-  width: 100%;
-  height: 600px;
-  background-image: url("../assets/images/hero-background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0.5rem;
+/* Estilos para la sección final */
+.final-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 0;
+  margin: 3rem 0;
 }
 
-/* Add styles for hero content alignment and typography */
+.final-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.final-section p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  color: var(--primary-color);
+}
+
+/* Estilos responsivos para la sección final */
+@media (max-width: 768px) {
+  .final-section {
+    padding: 2rem 1rem;
+  }
+
+  .final-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .final-section p {
+    font-size: 1rem;
+  }
+
+  .download-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger-icon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animación del menú hamburguesa cuando está activo */
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(4) {
+  opacity: 0;
+}
+
+/* Navegación hamburguesa */
+.hamburger-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-top: 1px solid #eee;
+}
+
+.hamburger-nav.active {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hamburger-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-nav li {
+  margin: 0;
+}
+
+.hamburger-nav a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.hamburger-nav a:hover,
+.hamburger-nav a.active {
+  background-color: var(--secondary-color);
+  color: var(--link-hover-color);
+  padding-left: 2rem;
+}
+
+.hamburger-nav a.active {
+  font-weight: bold;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Separador del menú */
+.menu-separator {
+  display: block;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0.5rem 1.5rem;
+}
+
+/* Selector de idioma en el menú */
+.language-selector-menu {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  background-color: #f9f9f9;
+}
+
+.language-selector-menu a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-bottom: none;
+  display: inline;
+}
+
+.language-selector-menu a:hover {
+  background-color: transparent;
+  color: var(--link-hover-color);
+  padding-left: 0.5rem;
+}
+
+.language-selector-menu a.active {
+  font-weight: bold;
+  border-left: none;
+}
+
+/* Mostrar el botón hamburguesa en dispositivos móviles */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger-nav {
+    display: none;
+  }
+
+  .hamburger-nav.active {
+    display: block;
+  }
+
+  /* Ajustar el header para móviles */
+  header {
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-left {
+    flex: 1;
+  }
+
+  .header-controls {
+    flex: 0 0 auto;
+  }
+}
+
+/* Asegurar que el botón hamburguesa sea siempre visible */
+.mobile-menu-toggle.always-visible {
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-toggle.always-visible {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+  }
+}
+
+/* Estilos para la clase sr-only (screen reader only) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Estilos para la sección hero */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.3;
+}
+
 .hero-content {
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
-  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-icon {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0;
 }
 
 .hero-title {
-  font-family: "Rubik", Arial, sans-serif !important;
-  font-weight: 300 !important; /* Light */
-  font-size: 48px !important;
-  color: white !important;
-  margin: 0 !important;
-  text-align: left !important;
-  line-height: 1.2 !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
 }
 
-/* Responsive adjustments for hero title */
+/* Estilos responsivos para la sección hero */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 40px !important;
+  .hero-section {
+    padding: 2rem 0;
   }
 
   .hero-content {
     padding: 0 1rem;
   }
-}
 
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 32px !important;
-  }
-}
-
-/* También actualizar el estilo para el copyright */
-.white-footer .copyright {
-  text-align: left;
-  color: #000; /* Cambiar a negro */
-}
-
-.copyright {
-  font-size: 0.9rem;
-  color: white;
-}
-
-/* Utilidades */
-.hidden {
-  display: none;
-}
-/* === FIN part7.css === */
-
-/* === INICIO part8.css === */
-/* Estilos para el menú hamburguesa en todos los dispositivos */
-.always-visible {
-  display: block !important;
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 100;
-}
-
-/* Modificar los estilos del menú hamburguesa desplegable */
-.hamburger-nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  padding: 0;
-  border: 1px solid #eee;
-  border-top: none;
-  transform-origin: top right;
-  transform: scaleY(0);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  border-radius: 0 0 0 8px;
-}
-
-.hamburger-nav.active {
-  display: block;
-  transform: scaleY(1);
-  opacity: 1;
-}
-
-/* Asegurar que el menú se posicione correctamente en la página de introducción */
-.header-full-bottom .hamburger-nav {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: auto;
-  width: 33.33%;
-  min-width: 250px;
-  max-width: 400px;
-}
-
-/* Ajustes responsivos para el menú hamburguesa */
-@media (max-width: 768px) {
-  .hamburger-nav,
-  .header-full-bottom .hamburger-nav {
-    width: 50%;
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hamburger-nav,
-  .header-full-bottom .hamburger-nav {
-    width: 80%;
-    right: 0;
-  }
-}
-
-/* Mejorar el estilo de la lista de navegación */
-.hamburger-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.hamburger-nav li {
-  width: 100%;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.hamburger-nav li:last-child {
-  border-bottom: none;
-}
-
-/* Mejorar la visibilidad del menú de navegación */
-.hamburger-nav a {
-  padding: 1rem 1.5rem;
-  display: block;
-  text-decoration: none;
-  color: var(--text-color-dark);
-}
-
-.hamburger-nav a:hover,
-.hamburger-nav a:focus {
-  background-color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.hamburger-nav a.active {
-  font-weight: bold;
-  color: var(--primary-color);
-  border-left: 3px solid var(--primary-color);
-}
-
-/* Animación para el botón hamburguesa */
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(1) {
-  top: 8px;
-  transform: rotate(45deg);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-  transform: translateX(-20px);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(3) {
-  opacity: 0;
-  transform: translateX(20px);
-}
-
-.mobile-menu-toggle.active .hamburger-icon span:nth-child(4) {
-  top: 8px;
-  transform: rotate(-45deg);
-}
-
-.hamburger-icon span {
-  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
-}
-
-/* Añadir un overlay para cerrar el menú al hacer clic fuera */
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.menu-overlay.active {
-  display: block;
-  opacity: 1;
-}
-
-/* Ajustar el estilo del botón de hamburguesa */
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Asegurar que los elementos interactivos tengan estados de foco visibles */
-.mobile-menu-toggle:focus {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-}
-
-/* Corregir el posicionamiento de las líneas del menú hamburguesa */
-.hamburger-icon {
-  display: block;
-  position: relative;
-  width: 24px;
-  height: 18px;
-}
-
-.hamburger-icon span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #000; /* Cambiado de var(--primary-color) a negro */
-  border-radius: 3px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-}
-
-.hamburger-icon span:nth-child(1) {
-  top: 0px;
-}
-
-.hamburger-icon span:nth-child(2),
-.hamburger-icon span:nth-child(3) {
-  top: 8px;
-}
-
-.hamburger-icon span:nth-child(4) {
-  top: 16px;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo-container {
-    max-width: 80px;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem;
-    border-top: 1px solid #eee;
-    width: 100%;
-  }
-
-  .main-nav.active {
-    display: block;
-    animation: slideDown 0.3s ease-out forwards;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    display: block;
-    padding: 0.8rem;
-    border-radius: 4px;
-  }
-
-  .navigation-buttons {
+  .hero-title-container {
     flex-direction: column;
     gap: 1rem;
   }
 
-  .nav-button {
+  .hero-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
     text-align: center;
   }
-
-  .cover-content h1 {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
-  main {
-    padding: 1rem;
-  }
-
-  .content-container {
-    padding: 1rem;
-  }
-
-  .cover-content {
-    padding: 2rem 1rem;
-  }
-
-  .cover-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .lesson-section {
-    margin-bottom: 1.5rem;
-  }
-
-  .key-point {
-    padding: 1rem 1rem 1rem 3rem;
-  }
-
-  .key-point::before {
-    left: 0.7rem;
-    top: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .reflection-question {
-    padding: 1rem;
-  }
-
-  .reflection-textarea {
-    min-height: 100px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .save-feedback {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-}
-
-/* Mejoras de tipografía */
-p,
-li,
-a,
-button,
-input,
-textarea {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
-}
-
-p {
-  margin-bottom: 1rem !important;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #000;
-}
-
-.cover-text h1 {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #000;
-}
-
-.key-point p {
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.author,
-.duration,
-.code {
-  font-weight: 300;
-}
-
-/* Ajustar el peso de la fuente para los botones */
-.start-button,
-.nav-button,
-.save-button {
-  font-weight: 600;
-}
-
-/* Añadir la clase plain-title para el título sin efectos y con menor peso */
-.plain-title {
-  font-weight: 400 !important; /* Reducir el peso de la fuente */
-  letter-spacing: normal !important;
-  text-shadow: none !important;
-}
-
-.arrow-icon {
-  display: inline-block;
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.start-button:hover .arrow-icon {
-  transform: translateX(4px);
-}
-
-/* Ajustes responsivos para la cabecera a ancho completo */
-@media (max-width: 768px) {
-  .full-width {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .smaller-logo {
-    max-width: 40px;
-  }
-}
-
-/* Alineación del header con el contenedor principal */
-.content-aligned {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  box-sizing: border-box;
-}
-
-/* Ajustar el padding del contenedor principal para que coincida con el header */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  padding-top: 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Asegurar que el logo esté alineado con el contenido */
-.content-aligned .header-left {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Asegurar que el menú hamburguesa esté alineado con el contenido */
-.content-aligned .mobile-menu-toggle {
-  margin-right: 0;
-  padding-right: 0;
-}
-
-/* Ajustar el espaciado en dispositivos móviles */
-@media (max-width: 768px) {
-  .content-aligned {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  main {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* Estilo especial para la cabecera de la página de introducción */
-.header-full-bottom {
-  max-width: 100%;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  padding-left: 0;
-  padding-right: 0;
-  height: 120px; /* Altura fija para la cabecera */
-}
-
-/* Mantener el contenido alineado dentro de la cabecera */
-.header-full-bottom .header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 100%; /* Asegurar que el contenido ocupe toda la altura */
-  position: relative; /* Para posicionamiento de elementos absolutos */
-}
-
-/* Modificar los estilos para el contenedor de controles del header */
-.header-controls {
-  display: flex;
-  flex-direction: row; /* Asegurar que los elementos estén en fila */
-  align-items: center;
-  justify-content: flex-end; /* Alinear a la derecha */
-  margin-left: auto;
-  position: relative; /* Asegurar posicionamiento correcto */
-}
-
-/* Ajustar el botón de menú hamburguesa */
-.mobile-menu-toggle.always-visible {
-  position: static; /* Evitar posicionamiento absoluto */
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-}
-
-/* Ajustar el menú de navegación para la cabecera con altura fija */
-.header-full-bottom .hamburger-nav {
-  top: 120px; /* Alinear con la nueva altura de la cabecera */
-  right: 2rem; /* Alinear con el padding del contenedor */
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .header-full-bottom {
-    height: 100px; /* Reducir altura en tablets */
-  }
-
-  .header-full-bottom .hamburger-nav {
-    top: 100px; /* Ajustar posición del menú en tablets */
-    right: 1rem;
-  }
-
-  .header-full-bottom .header-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .header-full-bottom {
-    height: 80px; /* Reducir altura en móviles */
+  .hero-section {
+    padding: 1.5rem 0;
   }
 
-  .header-full-bottom .hamburger-nav {
-    top: 80px; /* Ajustar posición del menú en móviles */
-    right: 1rem;
+  .hero-title {
+    font-size: 1.5rem;
   }
 
-  .header-full-bottom .header-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .hero-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
-/* Eliminar bordes de las secciones */
-.no-borders {
-  border-bottom: none !important;
-}
-
-/* Estilos para los objetivos de aprendizaje - Grid original (3 columnas) */
+/* Estilos para las tarjetas de objetivos de aprendizaje */
 .learning-objectives-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 2rem 0;
 }
 
-/* Estilos para los objetivos de aprendizaje - Grid 2x2 (solo para Chapter 2) */
 .learning-objectives-grid-2x2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-/* Responsive adjustments for learning objectives */
-@media (max-width: 768px) {
-  .learning-objectives-grid,
-  .learning-objectives-grid-2x2 {
-    grid-template-columns: 1fr;
-  }
+  margin: 2rem 0;
 }
 
 .learning-objective-card {
-  display: flex;
-  background-color: #ffffff;
-  border-radius: 0;
-  box-shadow: none;
-  overflow: hidden;
-  padding: 1.5rem;
-  border-left: 4px solid #000066;
+  background-color: white;
   border: 1px solid #e0e0e0;
-  border-left: 4px solid #000066;
-  pointer-events: none; /* Eliminar completamente la interacción */
-  cursor: default; /* Cursor por defecto */
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-/* Eliminar cualquier estado de focus, active o click */
-.learning-objective-card:focus,
-.learning-objective-card:active,
 .learning-objective-card:hover {
-  outline: none !important;
-  border: 1px solid #e0e0e0 !important;
-  border-left: 4px solid #000066 !important;
-  box-shadow: none !important;
-  transform: none !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
 }
-
-/* Asegurar que los elementos internos tampoco sean interactivos */
-.learning-objective-card *:focus,
-.learning-objective-card *:active {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Eliminar completamente la regla :hover */
 
 .objective-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 102, 0.1);
-  border-radius: 50%;
-  margin-right: 1rem;
-  flex-shrink: 0;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
 }
 
-.objective-icon i {
+.objective-number {
   font-size: 1.5rem;
-  color: #000066;
+  font-weight: bold;
 }
 
 .objective-content {
   flex: 1;
 }
 
-/* === FIN part8.css === */
-
-/* Refuerzo: nunca mostrar outline ni box-shadow en body o html al recibir focus */
-body:focus,
-html:focus,
-#main-content:focus {
-  outline: none !important;
-  box-shadow: none !important;
+.objective-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-
-/* === Introduction === */
-
-
- /* Estilos para la sección final */
-    .final-section {
-      background-color: #f0f8ff;
-      border: 2px solid #0055a2;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .download-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0055a2;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin: 1rem;
-    }
-
-    .download-button:hover {
-      background-color: #003d73;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .download-button i {
-      margin-right: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .final-section {
-        padding: 1.5rem;
-      }
-
-      .download-button {
-        width: 100%;
-        justify-content: center;
-        margin: 0.5rem 0;
-      }
-    }
-
-    .survey-section {
-      text-align: left;
-    }
-
-    .survey-button-container {
-      margin-top: 32px;
-      text-align: left;
-    }
-
-    .survey-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #000066;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-    }
-
-    .survey-button:hover {
-      background-color: #000044;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      text-decoration: none;
-    }
-
-    .survey-button i {
-      margin-right: 0.5rem;
-    }
-
-    .hero-title-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .hero-icon {
-      object-fit: contain;
-    }
-
-    .hero-content {
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    @media (max-width: 768px) {
-      .hero-title-container {
-        gap: 0.5rem;
-      }
-    }
-
-    /* Aumentar espaciado entre párrafos */
-    p {
-      margin-bottom: 1.5rem;
-    }
-
-    .lesson-section p {
-      margin-bottom: 1.5rem;
-    }
-
-    .key-point p {
-      margin-bottom: 1.5rem;
-    }
-
-    .reading-card-content p {
-      margin-bottom: 1rem;
-    }
-
-    .survey-section p {
-      margin-bottom: 1.5rem;
-    }
-
-
-
-/* === Chapter 1 === */
-
-    /* Estilos adicionales para VideoJS */
-    .video-js .vjs-control-bar {
-      background-color: rgba(0, 85, 162, 0.8);
-    }
-    
-    /* Estilo para el enlace de saltar al contenido */
-    .skip-to-content {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #0055a2;
-      color: white;
-      padding: 8px;
-      z-index: 9999;
-      transition: top 0.3s;
-    }
-    
-    .skip-to-content:focus {
-      top: 0;
-    }
-
-.hero-fingerprints {
-  max-width: 300px;
-  height: auto;
-  align-self: flex-start;
-  margin-bottom: 0.5rem;
+.objective-content p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
+.objective-content .instruction {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* Estilos responsivos para las tarjetas de objetivos */
 @media (max-width: 768px) {
-  .hero-fingerprints {
-    max-width: 200px;
+  .learning-objectives-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .learning-objectives-grid-2x2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .learning-objective-card {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .objective-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .objective-content h4 {
+    font-size: 1rem;
+  }
+
+  .objective-content p {
+    font-size: 0.9rem;
   }
 }
 
-/* === Chapter 2 === */
-
-    /* Estilos para pasos numerados */
-    .activity-step {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 6px;
-      border-left: 4px solid #0055a2;
-    }
-
-    .activity-step:last-child {
-      margin-bottom: 0;
-    }
-
-    .step-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: #0055a2;
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-right: 1rem;
-      flex-shrink: 0;
-    }
-
-    .step-content {
-      flex: 1;
-    }
-
-    .step-content h4 {
-      color: #0055a2;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      margin-top: 0;
-    }
-
-    .step-content p {
-      margin-bottom: 0;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      .activity-step {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .step-number {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-    }
-
-    /* Estilos para las tarjetas de beneficios */
-    .benefits-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .benefit-card {
-      background-color: white;
-      border-radius: 8px;
-      padding: 1.5rem;
-      border: 1px solid #e0e0e0;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      border-color: #0055a2;
-    }
-
-    .benefit-content h4 {
-      color: #0055a2;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-top: 0;
-    }
-
-    .benefit-content p {
-      margin: 0;
-      line-height: 1.6;
-      color: #333;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .benefits-cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Estilos para el timeline vertical */
-    .timeline-activity {
-      position: relative;
-      padding-left: 2rem;
-    }
-
-    .timeline-activity::before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background-color: #000066;
-      z-index: 1;
-    }
-
-    .timeline-step {
-      position: relative;
-      margin-bottom: 2rem;
-      padding-left: 2rem;
-    }
-
-    .timeline-step:last-child {
-      margin-bottom: 0;
-    }
-
-    .timeline-number {
-      position: absolute;
-      left: -2rem;
-      top: 0;
-      width: 40px;
-      height: 40px;
-      background-color: #000066;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.1rem;
-      z-index: 2;
-      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
-    }
-
-    .timeline-content {
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      position: relative;
-    }
-
-    .timeline-content::before {
-      content: '';
-      position: absolute;
-      left: -8px;
-      top: 20px;
-      width: 0;
-      height: 0;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-right: 8px solid white;
-      z-index: 3;
-    }
-
-    .timeline-content h4 {
-      color: #000066;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-      margin-top: 0;
-      font-size: 1.1rem;
-    }
-
-    .timeline-content p {
-      margin-bottom: 0;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    /* Ajustes responsivos para el timeline */
-    @media (max-width: 768px) {
-      .timeline-activity {
-        padding-left: 1.5rem;
-      }
-
-      .timeline-activity::before {
-        left: 15px;
-      }
-
-      .timeline-number {
-        left: -1.5rem;
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-      }
-
-      .timeline-step {
-        padding-left: 1.5rem;
-      }
-
-      .timeline-content {
-        padding: 1rem;
-      }
-
-      .timeline-content::before {
-        left: -6px;
-        top: 15px;
-        border-right-width: 6px;
-        border-top-width: 6px;
-        border-bottom-width: 6px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .timeline-activity {
-        padding-left: 1rem;
-      }
-
-      .timeline-activity::before {
-        left: 10px;
-      }
-
-      .timeline-number {
-        left: -1rem;
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-      }
-
-      .timeline-step {
-        padding-left: 1rem;
-      }
-    }
-
-
-/* === Chapter 3 === */
-
-    /* Estilos para la lista de valores */
-    .values-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 0.5rem;
-      margin: 1.5rem 0 ;
-      padding: 1.5rem !important;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
-      max-width: 69% !important;
-    }
-
-    .values-list li {
-      list-style: none;
-      padding: 0.5rem;
-      background-color: white;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .values-list li:hover {
-      background-color: #e6f3ff;
-      border-color: #0055a2;
-      transform: translateY(-2px);
-    }
-
-    /* Estilos para el diagrama de Ikigai */
-    .ikigai-container {
-      text-align: center;
-      margin: 2rem 0;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
-    }
-
-    @media (max-width: 768px) {
-      .values-list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      }
-
-    }
-
-    /* Estilos para el grid de preguntas de reflexión */
-    .reflection-questions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-      margin-top: 2rem !important;
-      margin-bottom: 2rem !important;
-    }
-
-    .reflection-question-card {
-      background-color: white;
-      border: 2px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .reflection-question-card:hover {
-      border-color: #0055a2;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 85, 162, 0.15);
-    }
-
-    .question-number {
-      position: absolute;
-      top: -12px;
-      left: 20px;
-      background-color: #0055a2;
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .question-text {
-      margin-top: 0.5rem;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .reflection-questions-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      
-      .reflection-question-card {
-        padding: 1rem;
-      }
-    }
-
-/* === Chapter 4 === */
-
-
-    /* Estilos para la actividad de fortalezas de carácter */
-    .character-strengths-activity {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      max-width: 69% !important;
-    }
-
-    .activity-part {
-      margin-bottom: 2rem;
-    }
-
-    .activity-part:last-child {
-      margin-bottom: 0;
-    }
-
-    .activity-part h3 {
-      color: #0055a2;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .survey-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-
-    .survey-link {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.75rem 1.5rem;
-      background-color: #0055a2;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      max-width: fit-content;
-    }
-
-    .survey-link:hover {
-      background-color: #003d73;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .survey-link i {
-      margin-right: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .survey-links {
-        align-items: stretch;
-      }
-
-      .survey-link {
-        max-width: 100%;
-        justify-content: center;
-      }
-    }
-
-
-/* === Chapter 5 === */
-    /* Estilos para las actividades estructuradas */
-    .framework-activity {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .activity-step {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 6px;
-      border-left: 4px solid #0055a2;
-    }
-
-    .activity-step:last-child {
-      margin-bottom: 0;
-    }
-
-    .activity-step h4 {
-      color: #0055a2;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .activity-step p {
-      margin-bottom: 0.5rem;
-    }
-
-    .activity-step .instruction {
-      font-style: italic;
-      color: #666;
-      margin-top: 0.5rem;
-    }
-
-    /* Estilos para el quiz */
-    .quiz-container {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem 0;
-    }
-
-    .quiz-question {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background-color: white;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-
-    .quiz-question h4 {
-      color: #0055a2;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .quiz-options {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .quiz-options li {
-      margin-bottom: 0.5rem;
-      padding: 0.5rem;
-      background-color: #f8f8f8;
-      border-radius: 4px;
-      border: 1px solid #e0e0e0;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .quiz-options li:hover {
-      background-color: #e6f3ff;
-      border-color: #0055a2;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    /* Estilos para la sección final */
-    .final-section {
-      background-color: #f0f8ff;
-      border: 2px solid #0055a2;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .download-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0055a2;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin: 1rem;
-    }
-
-    .download-button:hover {
-      background-color: #003d73;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .download-button i {
-      margin-right: 0.5rem;
-    }
-
-    /* Estilos para las estrategias de accountability */
-    .accountability-strategies {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .strategy-card {
-      background-color: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .strategy-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .strategy-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: #0055a2;
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 768px}) {
-      .quiz-container {
-        padding: 1rem;
-      }
-
-      .quiz-question {
-        padding: 1rem;
-      }
-
-      .final-section {
-        padding: 1.5rem;
-      }
-
-      .download-button {
-        width: 100%;
-        justify-content: center;
-        margin: 0.5rem 0;
-      }
-    }
+@media (max-width: 480px) {
+  .learning-objective-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .objective-icon {
+    align-self: center;
+  }
+}
+
+/* Estilos para eliminar bordes redondeados */
+.no-borders,
+.no-borders * {
+  border-radius: 0 !important;
+}
+
+/* Asegurar que las secciones de lección no tengan bordes redondeados */
+.lesson-section,
+.lesson-section *,
+.module-background,
+.module-background *,
+.survey-background,
+.survey-background * {
+  border-radius: 0 !important;
+}
+
+/* Estilos específicos para eliminar bordes redondeados de elementos comunes */
+.reading-card,
+.reflection-question,
+.quiz-container,
+.quiz-question,
+.survey-container,
+.survey-option,
+.metacognition-exercise,
+.learning-objectives,
+.key-point,
+.video-container,
+.responsive-video,
+.final-section {
+  border-radius: 0 !important;
+}
+
+/* Asegurar que los botones mantengan bordes ligeramente redondeados para usabilidad */
+button,
+.button,
+.nav-button,
+.start-button,
+.save-button,
+.quiz-submit,
+.survey-submit,
+.download-button,
+.take-survey-button {
+  border-radius: 4px !important;
+}
+
+/* Mantener bordes redondeados mínimos para inputs por usabilidad */
+input,
+textarea,
+select {
+  border-radius: 4px !important;
+}
+
+/* Estilos para el año actual en el footer */
+#current-year {
+  font-weight: normal;
+}
+
+/* Asegurar que el contenido del footer esté alineado correctamente */
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Ajustes responsivos adicionales */
+@media (max-width: 1200px) {
+  .content-aligned-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-aligned-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-aligned-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .hero-section {
+    padding: 1.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Asegurar que todos los elementos mantengan la consistencia visual */
+* {
+  box-sizing: border-box;
+}
+
+/* Mejorar la legibilidad del texto */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Asegurar que los enlaces sean accesibles */
+a:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* Mejorar la accesibilidad de los botones */
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* Estilos para mejorar la experiencia en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .learning-objective-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .reading-card:hover {
+    transform: none;
+  }
+
+  .nav-button:hover {
+    transform: none;
+  }
+}
+
+/* Asegurar que el contenido sea legible en todos los tamaños de pantalla */
+@media (max-width: 320px) {
+  .content-aligned-container {
+    padding: 1rem 0.25rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .learning-objective-card {
+    padding: 0.75rem;
+  }
+}
