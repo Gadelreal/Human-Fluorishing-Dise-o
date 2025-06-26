@@ -9,6 +9,62 @@
 <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 <!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style the glossary terms and definitions */
+.glossary-term {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.glossary-definition {
+  margin-bottom: 10px;
+}
+</style>
 
 </head>
 <body>
@@ -388,10 +444,328 @@
   </div>
 </footer>
 
+<!-- The Modal -->
+<div id="glossaryModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Glossary</h2>
+    <div class="glossary-term">
+      Acceptance and Commitment Therapy (ACT)
+    </div>
+    <div class="glossary-definition">
+      A mindfulness-based behavioral therapy that encourages individuals to accept their thoughts and feelings rather than fighting them, and to commit to actions that align with their values.
+    </div>
+    <div class="glossary-term">
+      Appreciative Inquiry
+    </div>
+    <div class="glossary-definition">
+      A strengths-based approach to organizational change that focuses on identifying what is working well, and building on those strengths to create a positive vision for the future.
+    </div>
+    <div class="glossary-term">
+      Authenticity
+    </div>
+    <div class="glossary-definition">
+      The quality of being genuine and true to oneself, aligning one's actions with one's beliefs and values.
+    </div>
+    <div class="glossary-term">
+      Autonomy
+    </div>
+    <div class="glossary-definition">
+      The capacity to make one's own choices and decisions, and to act independently.
+    </div>
+    <div class="glossary-term">
+      Behavioral Activation
+    </div>
+    <div class="glossary-definition">
+      A therapy technique used to treat depression, which involves increasing engagement in activities that are enjoyable or meaningful, in order to improve mood and reduce symptoms of depression.
+    </div>
+    <div class="glossary-term">
+      Cognitive Restructuring
+    </div>
+    <div class="glossary-definition">
+      A therapeutic technique used to identify and change negative or distorted thinking patterns.
+    </div>
+    <div class="glossary-term">
+      Compassion
+    </div>
+    <div class="glossary-definition">
+      A feeling of empathy and concern for others, often accompanied by a desire to alleviate their suffering.
+    </div>
+    <div class="glossary-term">
+      Confirmation Bias
+    </div>
+    <div class="glossary-definition">
+      The tendency to seek out and interpret information that confirms one's existing beliefs, while ignoring or downplaying information that contradicts them.
+    </div>
+    <div class="glossary-term">
+      Conscientiousness
+    </div>
+    <div class="glossary-definition">
+      A personality trait characterized by being organized, responsible, and diligent.
+    </div>
+    <div class="glossary-term">
+      Constructive Criticism
+    </div>
+    <div class="glossary-definition">
+      Feedback that is intended to help someone improve, by pointing out areas for improvement and offering suggestions for how to do so.
+    </div>
+    <div class="glossary-term">
+      Core Values
+    </div>
+    <div class="glossary-definition">
+      Fundamental beliefs or principles that guide one's behavior and decision-making.
+    </div>
+    <div class="glossary-term">
+      Critical Thinking
+    </div>
+    <div class="glossary-definition">
+      The ability to analyze information objectively and make reasoned judgments.
+    </div>
+    <div class="glossary-term">
+      Cultural Humility
+    </div>
+    <div class="glossary-definition">
+      An approach to interacting with people from different cultures that emphasizes respect, openness, and a willingness to learn.
+    </div>
+    <div class="glossary-term">
+      Deliberate Practice
+    </div>
+    <div class="glossary-definition">
+      A structured approach to skill development that involves setting specific goals, seeking feedback, and focusing on areas for improvement.
+    </div>
+    <div class="glossary-term">
+      Digital Detox
+    </div>
+    <div class="glossary-definition">
+      A period of time during which a person abstains from using digital devices such as smartphones, computers, and social media.
+    </div>
+    <div class="glossary-term">
+      Digital Well-being
+    </div>
+    <div class="glossary-definition">
+      The impact of technologies and digital services on people’s physical, psychological, and social well-being.
+    </div>
+    <div class="glossary-term">
+      Empathy
+    </div>
+    <div class="glossary-definition">
+      The ability to understand and share the feelings of another person.
+    </div>
+    <div class="glossary-term">
+      Emotional Intelligence
+    </div>
+    <div class="glossary-definition">
+      The ability to understand and manage one's own emotions, as well as the emotions of others.
+    </div>
+    <div class="glossary-term">
+      Ethical Frameworks
+    </div>
+    <div class="glossary-definition">
+      Sets of principles or guidelines that help individuals make decisions based on moral values and duties.
+    </div>
+    <div class="glossary-term">
+      Executive Function
+    </div>
+    <div class="glossary-definition">
+      A set of cognitive processes that are responsible for planning, organizing, and regulating behavior.
+    </div>
+    <div class="glossary-term">
+      External Motivation
+    </div>
+    <div class="glossary-definition">
+      Motivation that comes from outside oneself, such as rewards or punishments.
+    </div>
+    <div class="glossary-term">
+      Fixed Mindset
+    </div>
+    <div class="glossary-definition">
+      The belief that one's abilities and intelligence are fixed traits that cannot be changed.
+    </div>
+    <div class="glossary-term">
+      Flow State
+    </div>
+    <div class="glossary-definition">
+      A state of deep immersion and enjoyment in an activity, characterized by a sense of focus, control, and loss of self-consciousness.
+    </div>
+    <div class="glossary-term">
+      Gratitude
+    </div>
+    <div class="glossary-definition">
+      A feeling of thankfulness and appreciation for the good things in one's life.
+    </div>
+    <div class="glossary-term">
+      Growth Mindset
+    </div>
+    <div class="glossary-definition">
+      The belief that one's abilities and intelligence can be developed through effort and learning.
+    </div>
+    <div class="glossary-term">
+      Hedonic Adaptation
+    </div>
+    <div class="glossary-definition">
+      The tendency for people to return to a relatively stable level of happiness despite major positive or negative events or life changes.
+    </div>
+    <div class="glossary-term">
+      Human Flourishing
+    </div>
+    <div class="glossary-definition">
+      A state of optimal well-being, characterized by positive emotions, engagement, relationships, meaning, and accomplishment.
+    </div>
+    <div class="glossary-term">
+      Imposter Syndrome
+    </div>
+    <div class="glossary-definition">
+      The feeling of being a fraud or phony, despite evidence of one's competence and accomplishments.
+    </div>
+    <div class="glossary-term">
+      Information Overload
+    </div>
+    <div class="glossary-definition">
+      The state of being overwhelmed by the amount of information one is exposed to.
+    </div>
+    <div class="glossary-term">
+      Interoception
+    </div>
+    <div class="glossary-definition">
+      The ability to perceive and understand the internal state of one's body.
+    </div>
+    <div class="glossary-term">
+      Internal Motivation
+    </div>
+    <div class="glossary-definition">
+      Motivation that comes from within oneself, such as a sense of purpose or enjoyment.
+    </div>
+    <div class="glossary-term">
+      Intrinsic Motivation
+    </div>
+    <div class="glossary-definition">
+      Engaging in an activity for the inherent satisfaction and enjoyment it provides.
+    </div>
+    <div class="glossary-term">
+      Learned Helplessness
+    </div>
+    <div class="glossary-definition">
+      A state of hopelessness and resignation that results from repeated exposure to uncontrollable negative events.
+    </div>
+    <div class="glossary-term">
+      Mindfulness
+    </div>
+    <div class="glossary-definition">
+      A mental state achieved by focusing one's awareness on the present moment, while calmly acknowledging and accepting one's feelings, thoughts, and bodily sensations.
+    </div>
+    <div class="glossary-term">
+      Moral Courage
+    </div>
+    <div class="glossary-definition">
+      The willingness to stand up for one's beliefs, even in the face of opposition or adversity.
+    </div>
+    <div class="glossary-term">
+      Neuroplasticity
+    </div>
+    <div class="glossary-definition">
+      The brain's ability to reorganize itself by forming new neural connections throughout life.
+    </div>
+    <div class="glossary-term">
+      Optimism Bias
+    </div>
+    <div class="glossary-definition">
+      The tendency to overestimate the likelihood of positive events and underestimate the likelihood of negative events.
+    </div>
+    <div class="glossary-term">
+      PERMA Model
+    </div>
+    <div class="glossary-definition">
+      A framework for understanding and promoting well-being, based on five key elements: positive emotion, engagement, relationships, meaning, and accomplishment.
+    </div>
+    <div class="glossary-term">
+      Prosocial Behavior
+    </div>
+    <div class="glossary-definition">
+      Voluntary behavior intended to benefit others.
+    </div>
+    <div class="glossary-term">
+      Resilience
+    </div>
+    <div class="glossary-definition">
+      The ability to bounce back from adversity and cope with stress.
+    </div>
+    <div class="glossary-term">
+      Self-compassion
+    </div>
+    <div class="glossary-definition">
+      Treating oneself with kindness, care, and understanding, especially in the face of failure or suffering.
+    </div>
+    <div class="glossary-term">
+      Self-efficacy
+    </div>
+    <div class="glossary-definition">
+      The belief in one's ability to succeed in specific situations or accomplish a task.
+    </div>
+    <div class="glossary-term">
+      Self-regulation
+    </div>
+    <div class="glossary-definition">
+      The ability to control one's emotions, thoughts, and behaviors.
+    </div>
+    <div class="glossary-term">
+      Social Support
+    </div>
+    <div class="glossary-definition">
+      The perception and actuality that one is cared for, has assistance available from other people, and most popularly, that one is part of a supportive social network.
+    </div>
+    <div class="glossary-term">
+      Stoicism
+    </div>
+    <div class="glossary-definition">
+      An ancient Greek philosophy that emphasizes self-control, reason, and acceptance of fate.
+    </div>
+    <div class="glossary-term">
+      Values Clarification
+    </div>
+    <div class="glossary-definition">
+      The process of identifying and prioritizing one's core values.
+    </div>
+    <div class="glossary-term">
+      Willpower
+    </div>
+    <div class="glossary-definition">
+      The ability to resist short-term temptations in order to achieve long-term goals.
+    </div>
+  </div>
+</div>
+
 <!-- VideoJS -->
 <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 <script src="js/videojs-ie.min.js"></script>
 <script src="js/videojs-quality-selector.js"></script>
 <script src="js/scripts.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById("glossaryModal");
+
+// Get the link that opens the modal
+var link = document.getElementById("glossary-menu-link");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the link, open the modal
+link.onclick = function(event) {
+  event.preventDefault(); // Prevent the default action
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

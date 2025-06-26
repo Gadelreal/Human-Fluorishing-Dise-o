@@ -9,6 +9,62 @@
 <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 <!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  position: relative;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the glossary terms */
+.glossary-term {
+  font-weight: bold;
+  color: #000066; /* Dark blue, IE University color */
+}
+
+.glossary-definition {
+  margin-bottom: 10px;
+}
+</style>
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -440,11 +496,64 @@ and daily behaviors for greater fulfillment.</p>
 </div>
 </footer>
 
+<!-- Modal -->
+<div id="glossaryModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Glossary</h2>
+    <div class="glossary-term">Awareness</div>
+    <div class="glossary-definition">Conscious knowledge or perception of a situation or fact.</div>
+
+    <div class="glossary-term">Digital Well-being</div>
+    <div class="glossary-definition">The impact of technology and digital services on people’s mental, physical, and social-emotional health.</div>
+
+    <div class="glossary-term">Human Flourishing</div>
+    <div class="glossary-definition">An effort to achieve self-actualization and fulfillment within the context of a larger community of individuals, each with the right to pursue his or her own such efforts.</div>
+
+    <div class="glossary-term">Mindfulness</div>
+    <div class="glossary-definition">A mental state achieved by focusing one's awareness on the present moment, while calmly acknowledging and accepting one's feelings, thoughts, and bodily sensations, used as a therapeutic technique.</div>
+
+    <div class="glossary-term">Reflection</div>
+    <div class="glossary-definition">Serious thought or consideration.</div>
+
+    <div class="glossary-term">Resilience</div>
+    <div class="glossary-definition">The capacity to recover quickly from difficulties; toughness.</div>
+  </div>
+</div>
+
 <!-- VideoJS JavaScript -->
 <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 <script src="js/video-player.js"></script>
 <script src="js/key-points.js"></script>
 <script src="js/reflections.js"></script>
 <script src="js/main.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById("glossaryModal");
+
+// Get the link that opens the modal
+var link = document.getElementById("glossary-menu-link");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the link, open the modal
+link.onclick = function(event) {
+  event.preventDefault(); // Prevent the default action
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

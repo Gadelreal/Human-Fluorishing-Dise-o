@@ -9,6 +9,58 @@
 <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 <!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  position: relative;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the glossary terms */
+.glossary-term {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.glossary-definition {
+  margin-bottom: 15px;
+}
+</style>
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -356,11 +408,89 @@
 </div>
 </footer>
 
+<!-- The Modal -->
+<div id="glossaryModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Glossary</h2>
+    <div class="glossary-term">
+      Well-being
+    </div>
+    <div class="glossary-definition">
+      The state of being comfortable, healthy, or happy.
+    </div>
+    <div class="glossary-term">
+      Digital well-being
+    </div>
+    <div class="glossary-definition">
+      Refers to the impact of technology and digital services on our mental, physical, and emotional health. It involves using technology in a way that supports and enhances overall well-being, rather than detracting from it.
+    </div>
+    <div class="glossary-term">
+      Mindfulness
+    </div>
+    <div class="glossary-definition">
+      Paying attention to the present moment without judgment.
+    </div>
+    <div class="glossary-term">
+      Autonomy
+    </div>
+    <div class="glossary-definition">
+      The capacity to make an informed, uncoerced decision.
+    </div>
+    <div class="glossary-term">
+      Motivation
+    </div>
+    <div class="glossary-definition">
+      The reason or reasons one has for acting or behaving in a particular way.
+    </div>
+    <div class="glossary-term">
+      Resilience
+    </div>
+    <div class="glossary-definition">
+      The capacity to recover quickly from difficulties; toughness.
+    </div>
+    <div class="glossary-term">
+      Ownership
+    </div>
+    <div class="glossary-definition">
+      The state or fact of possessing something. In the context of this course, it refers to taking responsibility for one's own well-being.
+    </div>
+  </div>
+</div>
+
 <!-- VideoJS JavaScript -->
 <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 <script src="js/video-player.js"></script>
 <script src="js/key-points.js"></script>
 <script src="js/reflections.js"></script>
 <script src="js/main.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById("glossaryModal");
+
+// Get the link that opens the modal
+var link = document.getElementById("glossary-menu-link");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the link, open the modal
+link.onclick = function(event) {
+  event.preventDefault(); // Prevent the default action
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

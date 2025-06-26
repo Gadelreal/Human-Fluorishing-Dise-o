@@ -9,6 +9,151 @@
 <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 <!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  padding: 20px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* A-Z Navigation Styles */
+.glossary-az-nav {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  text-align: left;
+}
+
+.glossary-az-nav a {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 8px 12px;
+  color: var(--primary-color);
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.glossary-az-nav a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Glossary Content Styles */
+.glossary-section {
+  margin-bottom: 30px;
+}
+
+.glossary-section h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.glossary-term {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 4px 4px 0;
+}
+
+.glossary-term strong {
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    max-height: 85vh;
+  }
+  
+  .modal-header {
+    padding: 15px 20px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .glossary-az-nav a {
+    margin: 0 4px 4px 0;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+</style>
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -419,5 +564,329 @@
 <script src="js/key-points.js"></script>
 <script src="js/reflections.js"></script>
 <script src="js/main.js"></script>
+<!-- Glossary Modal -->
+<div id="glossaryModal" class="modal" role="dialog" aria-labelledby="glossaryModalTitle" aria-hidden="true">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="glossaryModalTitle">Glossary of Digital Well-being Concepts</h2>
+      <button class="modal-close" aria-label="Close glossary">&times;</button>
+    </div>
+    <div class="modal-body">
+      <!-- A-Z Navigation -->
+      <nav class="glossary-az-nav" aria-label="Glossary alphabetical navigation">
+        <a href="#glossary-section-a">A</a>
+        <a href="#glossary-section-b">B</a>
+        <a href="#glossary-section-c">C</a>
+        <a href="#glossary-section-d">D</a>
+        <a href="#glossary-section-e">E</a>
+        <a href="#glossary-section-f">F</a>
+        <a href="#glossary-section-g">G</a>
+        <a href="#glossary-section-h">H</a>
+        <a href="#glossary-section-i">I</a>
+        <a href="#glossary-section-j">J</a>
+        <a href="#glossary-section-k">K</a>
+        <a href="#glossary-section-l">L</a>
+        <a href="#glossary-section-m">M</a>
+        <a href="#glossary-section-n">N</a>
+        <a href="#glossary-section-o">O</a>
+        <a href="#glossary-section-p">P</a>
+        <a href="#glossary-section-q">Q</a>
+        <a href="#glossary-section-r">R</a>
+        <a href="#glossary-section-s">S</a>
+        <a href="#glossary-section-t">T</a>
+        <a href="#glossary-section-u">U</a>
+        <a href="#glossary-section-v">V</a>
+        <a href="#glossary-section-w">W</a>
+        <a href="#glossary-section-x">X</a>
+        <a href="#glossary-section-y">Y</a>
+        <a href="#glossary-section-z">Z</a>
+      </nav>
+
+      <!-- Glossary Content -->
+      <div class="glossary-content">
+        <!-- Section A -->
+        <div class="glossary-section" id="glossary-section-a">
+          <h3>A</h3>
+          <div class="glossary-term">
+            <strong>Autonomy:</strong> The feeling of having control and choice over one's actions and decisions, which is essential for intrinsic motivation and well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Awareness:</strong> The conscious knowledge and understanding of one's thoughts, emotions, and behaviors in the present moment.
+          </div>
+        </div>
+
+        <!-- Section B -->
+        <div class="glossary-section" id="glossary-section-b">
+          <h3>B</h3>
+          <div class="glossary-term">
+            <strong>Broaden and Build Theory:</strong> Barbara Fredrickson's theory that positive emotions broaden our awareness and build our psychological resources over time.
+          </div>
+        </div>
+
+        <!-- Section C -->
+        <div class="glossary-section" id="glossary-section-c">
+          <h3>C</h3>
+          <div class="glossary-term">
+            <strong>Character Strengths:</strong> Positive traits and qualities that are part of our core identity and contribute to our well-being and effectiveness.
+          </div>
+          <div class="glossary-term">
+            <strong>Competence:</strong> The feeling of being effective and capable of achieving desired outcomes, one of the three basic psychological needs in Self-Determination Theory.
+          </div>
+        </div>
+
+        <!-- Section D -->
+        <div class="glossary-section" id="glossary-section-d">
+          <h3>D</h3>
+          <div class="glossary-term">
+            <strong>Digital Well-being:</strong> The pursuit of an intentional and healthy relationship with technology that allows one to maintain a balanced, mindful, and purposeful life.
+          </div>
+        </div>
+
+        <!-- Section E -->
+        <div class="glossary-section" id="glossary-section-e">
+          <h3>E</h3>
+          <div class="glossary-term">
+            <strong>Emotional Granularity:</strong> The ability to distinguish between different emotions and identify specific feelings rather than general emotional states.
+          </div>
+          <div class="glossary-term">
+            <strong>Extrinsic Motivation:</strong> Motivation driven by external factors such as rewards, recognition, or avoiding punishment.
+          </div>
+        </div>
+
+        <!-- Section F -->
+        <div class="glossary-section" id="glossary-section-f">
+          <h3>F</h3>
+          <div class="glossary-term">
+            <strong>Flourishing:</strong> A state of optimal human functioning characterized by positive emotions, engagement, relationships, meaning, and accomplishment.
+          </div>
+        </div>
+
+        <!-- Section G -->
+        <div class="glossary-section" id="glossary-section-g">
+          <h3>G</h3>
+          <div class="glossary-term">
+            <strong>Growth Mindset:</strong> The belief that abilities and intelligence can be developed through dedication, hard work, and learning from failure.
+          </div>
+        </div>
+
+        <!-- Section H -->
+        <div class="glossary-section" id="glossary-section-h">
+          <h3>H</h3>
+          <div class="glossary-term">
+            <strong>Human Flourishing:</strong> The comprehensive well-being that encompasses physical, mental, emotional, and spiritual dimensions of human experience.
+          </div>
+        </div>
+
+        <!-- Section I -->
+        <div class="glossary-section" id="glossary-section-i">
+          <h3>I</h3>
+          <div class="glossary-term">
+            <strong>Ikigai:</strong> A Japanese concept meaning "reason for being" - the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.
+          </div>
+          <div class="glossary-term">
+            <strong>Intrinsic Motivation:</strong> Motivation that comes from within, driven by personal satisfaction, interest, and the inherent enjoyment of an activity.
+          </div>
+        </div>
+
+        <!-- Section J -->
+        <div class="glossary-section" id="glossary-section-j">
+          <h3>J</h3>
+          <!-- No terms starting with J currently -->
+        </div>
+
+        <!-- Section K -->
+        <div class="glossary-section" id="glossary-section-k">
+          <h3>K</h3>
+          <!-- No terms starting with K currently -->
+        </div>
+
+        <!-- Section L -->
+        <div class="glossary-section" id="glossary-section-l">
+          <h3>L</h3>
+          <!-- No terms starting with L currently -->
+        </div>
+
+        <!-- Section M -->
+        <div class="glossary-section" id="glossary-section-m">
+          <h3>M</h3>
+          <div class="glossary-term">
+            <strong>Metacognition:</strong> The awareness and understanding of one's own thought processes; "thinking about thinking."
+          </div>
+          <div class="glossary-term">
+            <strong>Mindfulness:</strong> The practice of purposeful, non-judgmental awareness of the present moment.
+          </div>
+        </div>
+
+        <!-- Section N -->
+        <div class="glossary-section" id="glossary-section-n">
+          <h3>N</h3>
+          <!-- No terms starting with N currently -->
+        </div>
+
+        <!-- Section O -->
+        <div class="glossary-section" id="glossary-section-o">
+          <h3>O</h3>
+          <!-- No terms starting with O currently -->
+        </div>
+
+        <!-- Section P -->
+        <div class="glossary-section" id="glossary-section-p">
+          <h3>P</h3>
+          <div class="glossary-term">
+            <strong>PERMA:</strong> Martin Seligman's model of well-being consisting of Positive emotions, Engagement, Relationships, Meaning, and Accomplishment.
+          </div>
+          <div class="glossary-term">
+            <strong>Positive Psychology:</strong> The scientific study of what makes life worth living, focusing on strengths, virtues, and factors that contribute to human flourishing.
+          </div>
+          <div class="glossary-term">
+            <strong>Procrastination:</strong> The act of delaying or postponing tasks, often due to discomfort or perceived lack of capacity to complete them.
+          </div>
+        </div>
+
+        <!-- Section Q -->
+        <div class="glossary-section" id="glossary-section-q">
+          <h3>Q</h3>
+          <!-- No terms starting with Q currently -->
+        </div>
+
+        <!-- Section R -->
+        <div class="glossary-section" id="glossary-section-r">
+          <h3>R</h3>
+          <div class="glossary-term">
+            <strong>Relatedness:</strong> The need to feel connected to others and experience a sense of belonging, one of the three basic psychological needs in Self-Determination Theory.
+          </div>
+          <div class="glossary-term">
+            <strong>Resilience:</strong> The capacity to recognize what is needed and respond appropriately, learning from experiences while maintaining balance.
+          </div>
+        </div>
+
+        <!-- Section S -->
+        <div class="glossary-section" id="glossary-section-s">
+          <h3>S</h3>
+          <div class="glossary-term">
+            <strong>Self-Determination Theory:</strong> A theory of motivation that identifies three basic psychological needs: autonomy, competence, and relatedness.
+          </div>
+          <div class="glossary-term">
+            <strong>Social Connection:</strong> The relationships and bonds we form with others, essential for human well-being and flourishing.
+          </div>
+        </div>
+
+        <!-- Section T -->
+        <div class="glossary-section" id="glossary-section-t">
+          <h3>T</h3>
+          <!-- No terms starting with T currently -->
+        </div>
+
+        <!-- Section U -->
+        <div class="glossary-section" id="glossary-section-u">
+          <h3>U</h3>
+          <!-- No terms starting with U currently -->
+        </div>
+
+        <!-- Section V -->
+        <div class="glossary-section" id="glossary-section-v">
+          <h3>V</h3>
+          <div class="glossary-term">
+            <strong>Values:</strong> Core beliefs and principles that guide our decisions and behaviors, fundamental to living with purpose and meaning.
+          </div>
+          <div class="glossary-term">
+            <strong>VIA Character Strengths:</strong> A classification system of 24 character strengths organized under six virtues, developed by the VIA Institute on Character.
+          </div>
+        </div>
+
+        <!-- Section W -->
+        <div class="glossary-section" id="glossary-section-w">
+          <h3>W</h3>
+          <div class="glossary-term">
+            <strong>Well-being:</strong> A state of flourishing that includes positive emotions, life satisfaction, and optimal psychological and physical functioning.
+          </div>
+        </div>
+
+        <!-- Section X -->
+        <div class="glossary-section" id="glossary-section-x">
+          <h3>X</h3>
+          <!-- No terms starting with X currently -->
+        </div>
+
+        <!-- Section Y -->
+        <div class="glossary-section" id="glossary-section-y">
+          <h3>Y</h3>
+          <!-- No terms starting with Y currently -->
+        </div>
+
+        <!-- Section Z -->
+        <div class="glossary-section" id="glossary-section-z">
+          <h3>Z</h3>
+          <!-- No terms starting with Z currently -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Glossary Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const glossaryModal = document.getElementById('glossaryModal');
+  const glossaryMenuLink = document.getElementById('glossary-menu-link');
+  const modalClose = document.querySelector('.modal-close');
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  // Open modal when glossary link is clicked
+  if (glossaryMenuLink) {
+    glossaryMenuLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (glossaryModal) {
+        glossaryModal.style.display = 'block';
+        glossaryModal.setAttribute('aria-hidden', 'false');
+        
+        // Close mobile menu if open
+        if (mainNav && mainNav.classList.contains('active')) {
+          mainNav.classList.remove('active');
+          if (mobileMenuToggle) {
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+        
+        // Focus on modal for accessibility
+        setTimeout(() => {
+          const modalTitle = document.getElementById('glossaryModalTitle');
+          if (modalTitle) {
+            modalTitle.focus();
+          }
+        }, 100);
+      }
+    });
+  }
+
+  // Close modal when close button is clicked
+  if (modalClose) {
+    modalClose.addEventListener('click', function() {
+      if (glossaryModal) {
+        glossaryModal.style.display = 'none';
+        glossaryModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  // Close modal when clicking outside of it
+  if (glossaryModal) {
+    glossaryModal.addEventListener('click', function(e) {
+      if (e.target === glossaryModal) {
+        glossaryModal.style.display = 'none';
+        glossaryModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && glossaryModal && glossaryModal.style.display === 'block') {
+      glossaryModal.style.display = 'none';
+      glossaryModal.setAttribute('aria-hidden', 'true');
+    }
+  });
+});
+</script>
 </body>
 </html>
