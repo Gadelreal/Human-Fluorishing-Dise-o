@@ -10,62 +10,49 @@
 <!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/* Estilos para la navegación A-Z del glosario y las secciones */
+.glossary-az-nav {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
 }
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-height: 80%;
-  overflow-y: auto;
-  position: relative;
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
+.glossary-az-nav a {
+  margin: 0 5px;
   text-decoration: none;
-  cursor: pointer;
-}
-
-/* Style the glossary terms and definitions */
-.glossary-term {
+  color: var(--primary-color);
   font-weight: bold;
-  margin-top: 10px;
+  padding: 5px;
 }
-
-.glossary-definition {
-  margin-bottom: 10px;
+.glossary-az-nav a:hover,
+.glossary-az-nav a:focus {
+  text-decoration: underline;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.glossary-section {
+  /* No se necesita margin-top aquí si el H3 lo maneja */
+}
+.glossary-letter-header {
+  font-size: 1.6em;
+  color: #333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+.glossary-section:first-child .glossary-letter-header {
+    margin-top: 0; /* El primer header no necesita tanto espacio arriba */
+}
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.glossary-term {
+  margin-bottom: 10px; /* Espacio entre términos */
+  line-height: 1.6;
 }
 </style>
-
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -116,38 +103,38 @@
 <div class="hero-content">
   <div class="hero-title-container">
     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-    <h1 class="hero-title">LESSON 5: Human Flourishing: Ownership and Practice</h1>
+    <h1 class="hero-title">LESSON 5: Ownership and Practice</h1>
   </div>
 </div>
 </section>
 
 <main id="main-content" tabindex="-1">
   <div class="content-aligned-container">
-    
+    <h1>LESSON 5: Ownership and Practice</h1>
     <div class="title-separator blue" aria-hidden="true"></div>
     
     <!-- 1. Fondo blanco -->
     <section class="lesson-section no-borders">
       <h2>Lesson 5 Learning Objectives</h2>
       
-      <div class="learning-objectives-grid-2x2">
+      <div class="learning-objectives-grid">
         <div class="learning-objective-card">
           <div class="objective-icon" aria-hidden="true">
-            <i class="fas fa-user-check"></i>
+            <i class="fas fa-hands"></i>
           </div>
           <div class="objective-content">
-            <h4>Accountability</h4>
-            <p>Consider how to hold oneself accountable for the learning, commitment, and growth of the flourishing journey</p>
+            <h4>Taking Ownership</h4>
+            <p>Understand what it means to take ownership of your flourishing</p>
           </div>
         </div>
         
         <div class="learning-objective-card">
           <div class="objective-icon" aria-hidden="true">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-cogs"></i>
           </div>
           <div class="objective-content">
-            <h4>Appreciative Inquiry</h4>
-            <p>Apply the Appreciative Inquiry Framework to evaluate how to take ownership of your practices to cultivate flourishing</p>
+            <h4>Habit Formation</h4>
+            <p>Analyze the science of habit formation and how to create sustainable positive changes</p>
           </div>
         </div>
         
@@ -156,18 +143,8 @@
             <i class="fas fa-chart-line"></i>
           </div>
           <div class="objective-content">
-            <h4>PERMA Model</h4>
-            <p>Use the PERMA model when considering how to promote your own flourishing</p>
-          </div>
-        </div>
-        
-        <div class="learning-objective-card">
-          <div class="objective-icon" aria-hidden="true">
-            <i class="fas fa-clipboard-list"></i>
-          </div>
-          <div class="objective-content">
-            <h4>Personal Plan</h4>
-            <p>Create your own plan that you can implement for long-term flourishing</p>
+            <h4>Personal Action Plan</h4>
+            <p>Create a personalized action plan for implementing flourishing practices in your daily life</p>
           </div>
         </div>
       </div>
@@ -175,597 +152,554 @@
     
     <!-- 2. Fondo gris -->
     <section class="lesson-section no-borders">
-      <h2>The Appreciative Inquiry Framework</h2>
+      <h2>Taking Ownership of Your Flourishing</h2>
       
       <div class="responsive-video">
         <video 
-          id="appreciative-inquiry-video" 
+          id="ownership-video" 
           class="video-js vjs-ie-skin vjs-big-play-centered" 
           controls 
           preload="auto" 
           data-video-id="w5v01"
           data-logo="assets/images/logo-ie-small.png"
-          aria-label="The Appreciative Inquiry Framework video"
+          aria-label="Taking Ownership of Your Flourishing video"
         >
-          <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v01-the-appreciative-inquiry-framework/mp4/w5v01-the-appreciative-inquiry-framework_1080p.mp4" type="video/mp4">
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v01-taking-ownership-of-your-flourishing/mp4/w5v01-taking-ownership-of-your-flourishing_1080p.mp4" type="video/mp4">
           <p class="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to a
             web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
           </p>
-          <track kind="captions" src="captions/appreciative-inquiry-framework.vtt" srclang="en" label="English" default>
+          <track kind="captions" src="captions/taking-ownership-of-your-flourishing.vtt" srclang="en" label="English" default>
         </video>
       </div>
       
-      <div class="key-point" role="note" aria-label="Key point about Appreciative Inquiry Framework">
+      <div class="key-point" role="note" aria-label="Key point about taking ownership">
         <h3>Key Point</h3>
-        <p>The Appreciative Inquiry Framework is made up of four elements: <strong>Discover, 
-        Dream, Design, and Destiny</strong>. The Discover phase allows for an appreciation and 
-        understanding of self; the Dream phase allows us to create a vision for the future; the 
-        Design phase allows us to put our practices into place; and the Destiny phases allows 
-        us to exert ownership in our practice.</p>
+        <p>Taking ownership of your flourishing means recognizing that you have the power and 
+        responsibility to actively shape your well-being. It involves moving from a passive 
+        mindset to an active one, where you consciously choose practices and behaviors that 
+        support your growth and happiness. This ownership is empowering because it puts you 
+        in the driver's seat of your own life.</p>
       </div>
     </section>
     
     <!-- 3. Fondo blanco -->
     <section class="lesson-section no-borders">
-      <h2>Reading</h2>
-      <p>Complete the following reading:</p>
+      <h2>The Science of Habit Formation</h2>
       
-      <div class="reading-cards">
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>What is Appreciative Inquiry (AI)?</h3>
-            <p>Explore the foundational principles and methodology of Appreciative Inquiry. Learn how this positive approach to organizational and personal development can transform how we approach change and growth.</p>
-            <div class="reading-card-footer">
-              <a href="https://centerforappreciativeinquiry.net/resources/what-is-appreciative-inquiry-ai/" target="_blank" class="reading-link" aria-label="Read about Appreciative Inquiry (opens in new tab)">
-                Read Article
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="responsive-video">
+        <video 
+          id="habit-formation-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          data-video-id="w5v02"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="The Science of Habit Formation video"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v02-the-science-of-habit-formation/mp4/w5v02-the-science-of-habit-formation_1080p.mp4" type="video/mp4">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+          <track kind="captions" src="captions/science-of-habit-formation.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+      
+      <div class="key-point" role="note" aria-label="Key point about habit formation">
+        <h3>Key Point</h3>
+        <p>Habit formation follows a neurological loop consisting of three parts: cue, routine, 
+        and reward. Understanding this loop is crucial for creating positive habits and breaking 
+        negative ones. The key to successful habit change is to identify the cue and reward, 
+        then consciously change the routine while keeping the same cue and reward structure.</p>
       </div>
     </section>
     
     <!-- 4. Fondo gris -->
     <section class="lesson-section no-borders">
-      <h2>Activity: Applying the Appreciative Inquiry Framework</h2>
-      <p>Let's further apply the Appreciative Inquiry Framework to our own lives.</p>
-      <p><strong>Grab your journal or a notebook and go through these four quick steps — one for 
-      each stage of the AI cycle:</strong></p>
+      <h2>Reading</h2>
+      <p>Please complete the reading below to deepen your understanding of habit formation:</p>
       
-      <div class="framework-activity">
-        <div class="activity-step">
-          <h4>Discover:</h4>
-          <p>Think of a recent moment when you felt proud, energized, or truly at your best.</p>
-          <p class="instruction"><strong>Write down:</strong> What were you doing? What strengths were you using?</p>
-        </div>
-        
-        <div class="activity-step">
-          <h4>Dream:</h4>
-          <p>Now imagine a future where you live and work like that more often.</p>
-          <p class="instruction"><strong>Write down:</strong> What would your ideal day look like if that "best self" showed up regularly?</p>
-        </div>
-        
-        <div class="activity-step">
-          <h4>Design:</h4>
-          <p>What small habit or change could you introduce to move toward that dream?</p>
-          <p class="instruction"><strong>Write down:</strong> One action you can take this week.</p>
-        </div>
-        
-        <div class="activity-step">
-          <h4>Destiny:</h4>
-          <p>What's one way you'll keep this momentum going?</p>
-          <p class="instruction"><strong>Write down:</strong> How will you remind yourself to keep growing in that direction? (e.g., a sticky note, a calendar reminder, a mantra)</p>
+      <div class="reading-cards">
+        <div class="reading-card">
+          <div class="reading-card-content">
+            <h3>The Power of Habit: Why We Do What We Do in Life and Business</h3>
+            <p>Explore the science behind habit formation and learn practical strategies for creating positive changes in your personal and professional life. This foundational reading will help you understand how to build lasting habits that support your flourishing.</p>
+            <div class="reading-card-footer">
+              <a href="https://charlesduhigg.com/the-power-of-habit/" target="_blank" class="reading-link" aria-label="Read about The Power of Habit (opens in new tab)">
+                Read More
+                <span class="reading-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     
     <!-- 5. Fondo blanco -->
     <section class="lesson-section no-borders">
-      <h2>The PERMA Model</h2>
+      <h2>Activity: Creating Your Personal Flourishing Plan</h2>
+      <p>Now it's time to put everything you've learned into practice. Use the following framework 
+      to create your personalized action plan for flourishing:</p>
       
-      <div class="responsive-video">
-        <video 
-          id="perma-model-video" 
-          class="video-js vjs-ie-skin vjs-big-play-centered" 
-          controls 
-          preload="auto" 
-          data-video-id="w5v02"
-          data-logo="assets/images/logo-ie-small.png"
-          aria-label="The PERMA Model video"
-        >
-          <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v02-the-perma-model/mp4/w5v02-the-perma-model_1080p.mp4" type="video/mp4">
-          <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-          <track kind="captions" src="captions/perma-model.vtt" srclang="en" label="English" default>
-        </video>
-      </div>
-      
-      <div class="key-point" role="note" aria-label="Key point about PERMA Model">
-        <h3>Key Point</h3>
-        <p>The PERMA Theory of Well-Being, created by Dr. Martin Seligman, defines key 
-        elements that enable flourishing: <strong>Positive emotion, Engagement, Relationships, 
-        Meaning, and Accomplishment</strong>. By building strategies that allow us to promote PERMA 
-        in our daily lives, we can take further ownership over our flourishing.</p>
+      <div class="flourishing-plan-container">
+        <div class="plan-section">
+          <h3>1. Reflect on Your Journey</h3>
+          <div class="reflection-questions-grid">
+            <div class="reflection-question-card">
+              <div class="question-number">A</div>
+              <div class="question-text">
+                <strong>What are the most important insights you've gained from this course?</strong>
+              </div>
+            </div>
+            
+            <div class="reflection-question-card">
+              <div class="question-number">B</div>
+              <div class="question-text">
+                <strong>Which concepts resonated most strongly with you and why?</strong>
+              </div>
+            </div>
+            
+            <div class="reflection-question-card">
+              <div class="question-number">C</div>
+              <div class="question-text">
+                <strong>What areas of your life do you most want to focus on for flourishing?</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plan-section">
+          <h3>2. Identify Your Foundation</h3>
+          <div class="foundation-grid">
+            <div class="foundation-card">
+              <h4>Core Values</h4>
+              <p>List your top 5 core values from Lesson 3:</p>
+              <ul class="values-checklist">
+                <li>1. _________________</li>
+                <li>2. _________________</li>
+                <li>3. _________________</li>
+                <li>4. _________________</li>
+                <li>5. _________________</li>
+              </ul>
+            </div>
+            
+            <div class="foundation-card">
+              <h4>Character Strengths</h4>
+              <p>List your top 5 character strengths from Lesson 4:</p>
+              <ul class="values-checklist">
+                <li>1. _________________</li>
+                <li>2. _________________</li>
+                <li>3. _________________</li>
+                <li>4. _________________</li>
+                <li>5. _________________</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plan-section">
+          <h3>3. Set Your Flourishing Goals</h3>
+          <p>Using the SMART framework (Specific, Measurable, Achievable, Relevant, Time-bound), 
+          set 3 goals that align with your values and support your flourishing:</p>
+          
+          <div class="goals-grid">
+            <div class="goal-card">
+              <h4>Goal 1: Being Human & Social Connection</h4>
+              <textarea placeholder="Write your SMART goal related to human connection and social relationships..." rows="4"></textarea>
+            </div>
+            
+            <div class="goal-card">
+              <h4>Goal 2: Awareness & Emotional Intelligence</h4>
+              <textarea placeholder="Write your SMART goal related to cultivating awareness and emotional intelligence..." rows="4"></textarea>
+            </div>
+            
+            <div class="goal-card">
+              <h4>Goal 3: Resilience & Character Strengths</h4>
+              <textarea placeholder="Write your SMART goal related to building resilience and leveraging your strengths..." rows="4"></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plan-section">
+          <h3>4. Design Your Daily Practices</h3>
+          <p>Choose specific daily practices that will support your goals. Consider the habit loop: 
+          cue, routine, reward.</p>
+          
+          <div class="practices-grid">
+            <div class="practice-card">
+              <h4>Morning Practice</h4>
+              <p><strong>Cue:</strong> <input type="text" placeholder="What will trigger this habit?"></p>
+              <p><strong>Routine:</strong> <input type="text" placeholder="What will you do?"></p>
+              <p><strong>Reward:</strong> <input type="text" placeholder="What reward will you give yourself?"></p>
+            </div>
+            
+            <div class="practice-card">
+              <h4>Midday Practice</h4>
+              <p><strong>Cue:</strong> <input type="text" placeholder="What will trigger this habit?"></p>
+              <p><strong>Routine:</strong> <input type="text" placeholder="What will you do?"></p>
+              <p><strong>Reward:</strong> <input type="text" placeholder="What reward will you give yourself?"></p>
+            </div>
+            
+            <div class="practice-card">
+              <h4>Evening Practice</h4>
+              <p><strong>Cue:</strong> <input type="text" placeholder="What will trigger this habit?"></p>
+              <p><strong>Routine:</strong> <input type="text" placeholder="What will you do?"></p>
+              <p><strong>Reward:</strong> <input type="text" placeholder="What reward will you give yourself?"></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plan-section">
+          <h3>5. Plan for Obstacles</h3>
+          <div class="obstacles-grid">
+            <div class="obstacle-card">
+              <h4>Potential Obstacles</h4>
+              <p>What challenges might prevent you from following through?</p>
+              <textarea placeholder="List potential obstacles..." rows="3"></textarea>
+            </div>
+            
+            <div class="obstacle-card">
+              <h4>Solutions & Strategies</h4>
+              <p>How will you overcome these challenges?</p>
+              <textarea placeholder="List your strategies..." rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plan-section">
+          <h3>6. Accountability & Support</h3>
+          <div class="accountability-grid">
+            <div class="accountability-card">
+              <h4>Accountability Partner</h4>
+              <p>Who will support you in this journey?</p>
+              <input type="text" placeholder="Name of your accountability partner">
+            </div>
+            
+            <div class="accountability-card">
+              <h4>Check-in Schedule</h4>
+              <p>How often will you review your progress?</p>
+              <input type="text" placeholder="e.g., Weekly, Monthly">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
     <!-- 6. Fondo gris -->
     <section class="lesson-section no-borders">
-      <h2>Optional Reading</h2>
-      <p>Explore the following reading if you're interested in learning more about PERMA!</p>
+      <h2>Closing Meditation: Lesson 5</h2>
       
-      <div class="reading-cards">
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>PERMA Theory of Well-Being and PERMA Workshops</h3>
-            <p>Dive deeper into Martin Seligman's PERMA theory and discover how these five elements can be cultivated through structured workshops and practical applications in daily life.</p>
-            <div class="reading-card-footer">
-              <a href="https://ppc.sas.upenn.edu/learn-more/perma-theory-well-being-and-perma-workshops" target="_blank" class="reading-link" aria-label="Read about PERMA Theory (opens in new tab)">
-                Read Article
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="responsive-video">
+        <video 
+          id="closing-meditation-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          data-video-id="w7v05"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="Committing to Your Path of Flourishing meditation video"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v05-committing-to-your-path-of-flourishing/mp4/w7v05-committing-to-your-path-of-flourishing_1080p.mp4" type="video/mp4">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+          <track kind="captions" src="captions/committing-to-your-path-of-flourishing.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+      
+      <div class="key-point" role="note" aria-label="Key point about meditation practice">
+        <h3>Key Point</h3>
+        <p>This final meditation helps you commit to your path of flourishing and integrate all 
+        the insights you've gained throughout this course. Use this time to set your intention 
+        for continued growth and well-being.</p>
       </div>
     </section>
     
     <!-- 7. Fondo blanco -->
     <section class="lesson-section no-borders">
-      <h2>Activity: Applying the PERMA Model</h2>
-      <p>Let's work to further integrate PERMA in our daily lives.</p>
-      <p><strong>Take your journal or notebook and go through the following questions around each of 
-      the elements of the PERMA framework.</strong></p>
-      
-      <div class="framework-activity">
-        <div class="activity-step">
-          <h4>Positive Emotions:</h4>
-          <p><strong>Can you describe the best thing that happened to you yesterday?</strong></p>
+      <h2>Congratulations!</h2>
+      <div class="completion-message">
+        <div class="completion-icon">
+          <i class="fas fa-trophy" aria-hidden="true"></i>
         </div>
-        
-        <div class="activity-step">
-          <h4>Engagement:</h4>
-          <p><strong>Can you share a strength that characterizes you and how you use it in your life?</strong></p>
-        </div>
-        
-        <div class="activity-step">
-          <h4>Relationships:</h4>
-          <p><strong>Can you name one person that makes your life better?</strong></p>
-        </div>
-        
-        <div class="activity-step">
-          <h4>Meaning:</h4>
-          <p><strong>Can you name a cause that inspires you?</strong></p>
-        </div>
-        
-        <div class="activity-step">
-          <h4>Accomplishment:</h4>
-          <p><strong>Can you describe one thing that took you out of your comfort zone but you did anyway?</strong></p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- 8. Fondo gris -->
-    <section class="lesson-section no-borders">
-      <h2>Activity: Establishing Accountability</h2>
-      <p>Read the following article from Harvard Business Review and consider how you can 
-      create a plan for holding yourself accountable for your flourishing using the <strong>3 strategies 
-      suggested:</strong></p>
-      
-      <div class="accountability-strategies">
-        <div class="strategy-card">
-          <div class="strategy-number">1</div>
-          <h4>Enlist an accountability partner</h4>
-        </div>
-        <div class="strategy-card">
-          <div class="strategy-number">2</div>
-          <h4>Share your goals publicly</h4>
-        </div>
-        <div class="strategy-card">
-          <div class="strategy-number">3</div>
-          <h4>Change your environment</h4>
-        </div>
-      </div>
-      
-      <div class="reading-cards">
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>3 Strategies for Holding Yourself Accountable</h3>
-            <p>Discover evidence-based strategies from Harvard Business Review for creating effective accountability systems. Learn how to build sustainable habits and maintain commitment to your personal growth goals.</p>
-            <div class="reading-card-footer">
-              <a href="https://hbr.org/2022/02/3-strategies-for-holding-yourself-accountable" target="_blank" class="reading-link" aria-label="Read HBR article on accountability strategies (opens in new tab)">
-                Read Article
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
+        <div class="completion-content">
+          <h3>You've Completed the Human Flourishing Course!</h3>
+          <p>You've taken an important step in your journey toward greater well-being and flourishing. 
+          Remember that this is just the beginning – the real work happens as you implement these 
+          practices in your daily life.</p>
+          
+          <div class="next-steps">
+            <h4>Your Next Steps:</h4>
+            <ul>
+              <li>Review your Personal Flourishing Plan regularly</li>
+              <li>Start with small, consistent daily practices</li>
+              <li>Connect with your accountability partner</li>
+              <li>Be patient and compassionate with yourself</li>
+              <li>Celebrate your progress along the way</li>
+            </ul>
           </div>
+          
+          <p><strong>Remember:</strong> Flourishing is not a destination but a continuous journey 
+          of growth, learning, and becoming the best version of yourself.</p>
         </div>
       </div>
     </section>
     
-    <!-- 9. Fondo blanco -->
-    <section class="lesson-section no-borders">
-      <h2>Lesson 5 Quiz</h2>
-      <p>Test your knowledge by completing the following quiz!</p>
-      
-      <div class="quiz-container">
-        <div class="quiz-question">
-          <h4>Question 1: What are the four elements of the Appreciative Inquiry Framework?</h4>
-          <ul class="quiz-options">
-            <li>A) Discover, Dream, Design, Destiny</li>
-            <li>B) Plan, Do, Check, Act</li>
-            <li>C) Sense, Feel, Think, Act</li>
-            <li>D) Identify, Ideate, Prototype, Test</li>
-          </ul>
-        </div>
-        
-        <div class="quiz-question">
-          <h4>Question 2: Which of the following is NOT a component of the PERMA model?</h4>
-          <ul class="quiz-options">
-            <li>A) Positive Emotion</li>
-            <li>B) Engagement</li>
-            <li>C) Relationships</li>
-            <li>D) Wealth</li>
-          </ul>
-        </div>
-        
-        <div class="quiz-question">
-          <h4>Question 3: According to the Harvard Business Review, what is one strategy for holding yourself accountable?</h4>
-          <ul class="quiz-options">
-            <li>A) Keep your goals a secret</li>
-            <li>B) Enlist an accountability partner</li>
-            <li>C) Avoid setting deadlines</li>
-            <li>D) Focus only on long-term goals</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <!-- 10. Fondo azul -->
-    <section class="lesson-section no-borders">
-      <div class="final-section">
-        <h2>Congratulations!</h2>
-        <p>You've completed Lesson 5 on Ownership and Practice. Now you can download the chapter summary and continue on your journey to Human Flourishing!</p>
-        <a href="#" class="download-button">
-          <i class="fas fa-download"></i> Download Chapter Summary
-        </a>
-      </div>
-    </section>
+    <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
+      <a href="chapter4.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
+      <a href="index.html" class="nav-button next">Back to Home<span class="arrow-right" aria-hidden="true">→</span></a>
+    </div>
   </div>
 </main>
 
 <footer role="contentinfo">
-  <div class="footer-content">
-    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-  </div>
+<div class="footer-content">
+  <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+</div>
 </footer>
 
-<!-- The Modal -->
-<div id="glossaryModal" class="modal">
+<!-- Glossary Modal -->
+<div id="glossary-modal" class="modal" role="dialog" aria-labelledby="glossary-modal-title" aria-hidden="true">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Glossary</h2>
-    <div class="glossary-term">
-      Acceptance and Commitment Therapy (ACT)
-    </div>
-    <div class="glossary-definition">
-      A mindfulness-based behavioral therapy that encourages individuals to accept their thoughts and feelings rather than fighting them, and to commit to actions that align with their values.
-    </div>
-    <div class="glossary-term">
-      Appreciative Inquiry
-    </div>
-    <div class="glossary-definition">
-      A strengths-based approach to organizational change that focuses on identifying what is working well, and building on those strengths to create a positive vision for the future.
-    </div>
-    <div class="glossary-term">
-      Authenticity
-    </div>
-    <div class="glossary-definition">
-      The quality of being genuine and true to oneself, aligning one's actions with one's beliefs and values.
-    </div>
-    <div class="glossary-term">
-      Autonomy
-    </div>
-    <div class="glossary-definition">
-      The capacity to make one's own choices and decisions, and to act independently.
-    </div>
-    <div class="glossary-term">
-      Behavioral Activation
-    </div>
-    <div class="glossary-definition">
-      A therapy technique used to treat depression, which involves increasing engagement in activities that are enjoyable or meaningful, in order to improve mood and reduce symptoms of depression.
-    </div>
-    <div class="glossary-term">
-      Cognitive Restructuring
-    </div>
-    <div class="glossary-definition">
-      A therapeutic technique used to identify and change negative or distorted thinking patterns.
-    </div>
-    <div class="glossary-term">
-      Compassion
-    </div>
-    <div class="glossary-definition">
-      A feeling of empathy and concern for others, often accompanied by a desire to alleviate their suffering.
-    </div>
-    <div class="glossary-term">
-      Confirmation Bias
-    </div>
-    <div class="glossary-definition">
-      The tendency to seek out and interpret information that confirms one's existing beliefs, while ignoring or downplaying information that contradicts them.
-    </div>
-    <div class="glossary-term">
-      Conscientiousness
-    </div>
-    <div class="glossary-definition">
-      A personality trait characterized by being organized, responsible, and diligent.
-    </div>
-    <div class="glossary-term">
-      Constructive Criticism
-    </div>
-    <div class="glossary-definition">
-      Feedback that is intended to help someone improve, by pointing out areas for improvement and offering suggestions for how to do so.
-    </div>
-    <div class="glossary-term">
-      Core Values
-    </div>
-    <div class="glossary-definition">
-      Fundamental beliefs or principles that guide one's behavior and decision-making.
-    </div>
-    <div class="glossary-term">
-      Critical Thinking
-    </div>
-    <div class="glossary-definition">
-      The ability to analyze information objectively and make reasoned judgments.
-    </div>
-    <div class="glossary-term">
-      Cultural Humility
-    </div>
-    <div class="glossary-definition">
-      An approach to interacting with people from different cultures that emphasizes respect, openness, and a willingness to learn.
-    </div>
-    <div class="glossary-term">
-      Deliberate Practice
-    </div>
-    <div class="glossary-definition">
-      A structured approach to skill development that involves setting specific goals, seeking feedback, and focusing on areas for improvement.
-    </div>
-    <div class="glossary-term">
-      Digital Detox
-    </div>
-    <div class="glossary-definition">
-      A period of time during which a person abstains from using digital devices such as smartphones, computers, and social media.
-    </div>
-    <div class="glossary-term">
-      Digital Well-being
-    </div>
-    <div class="glossary-definition">
-      The impact of technologies and digital services on people’s physical, psychological, and social well-being.
-    </div>
-    <div class="glossary-term">
-      Empathy
-    </div>
-    <div class="glossary-definition">
-      The ability to understand and share the feelings of another person.
-    </div>
-    <div class="glossary-term">
-      Emotional Intelligence
-    </div>
-    <div class="glossary-definition">
-      The ability to understand and manage one's own emotions, as well as the emotions of others.
-    </div>
-    <div class="glossary-term">
-      Ethical Frameworks
-    </div>
-    <div class="glossary-definition">
-      Sets of principles or guidelines that help individuals make decisions based on moral values and duties.
-    </div>
-    <div class="glossary-term">
-      Executive Function
-    </div>
-    <div class="glossary-definition">
-      A set of cognitive processes that are responsible for planning, organizing, and regulating behavior.
-    </div>
-    <div class="glossary-term">
-      External Motivation
-    </div>
-    <div class="glossary-definition">
-      Motivation that comes from outside oneself, such as rewards or punishments.
-    </div>
-    <div class="glossary-term">
-      Fixed Mindset
-    </div>
-    <div class="glossary-definition">
-      The belief that one's abilities and intelligence are fixed traits that cannot be changed.
-    </div>
-    <div class="glossary-term">
-      Flow State
-    </div>
-    <div class="glossary-definition">
-      A state of deep immersion and enjoyment in an activity, characterized by a sense of focus, control, and loss of self-consciousness.
-    </div>
-    <div class="glossary-term">
-      Gratitude
-    </div>
-    <div class="glossary-definition">
-      A feeling of thankfulness and appreciation for the good things in one's life.
-    </div>
-    <div class="glossary-term">
-      Growth Mindset
-    </div>
-    <div class="glossary-definition">
-      The belief that one's abilities and intelligence can be developed through effort and learning.
-    </div>
-    <div class="glossary-term">
-      Hedonic Adaptation
-    </div>
-    <div class="glossary-definition">
-      The tendency for people to return to a relatively stable level of happiness despite major positive or negative events or life changes.
-    </div>
-    <div class="glossary-term">
-      Human Flourishing
-    </div>
-    <div class="glossary-definition">
-      A state of optimal well-being, characterized by positive emotions, engagement, relationships, meaning, and accomplishment.
-    </div>
-    <div class="glossary-term">
-      Imposter Syndrome
-    </div>
-    <div class="glossary-definition">
-      The feeling of being a fraud or phony, despite evidence of one's competence and accomplishments.
-    </div>
-    <div class="glossary-term">
-      Information Overload
-    </div>
-    <div class="glossary-definition">
-      The state of being overwhelmed by the amount of information one is exposed to.
-    </div>
-    <div class="glossary-term">
-      Interoception
-    </div>
-    <div class="glossary-definition">
-      The ability to perceive and understand the internal state of one's body.
-    </div>
-    <div class="glossary-term">
-      Internal Motivation
-    </div>
-    <div class="glossary-definition">
-      Motivation that comes from within oneself, such as a sense of purpose or enjoyment.
-    </div>
-    <div class="glossary-term">
-      Intrinsic Motivation
-    </div>
-    <div class="glossary-definition">
-      Engaging in an activity for the inherent satisfaction and enjoyment it provides.
-    </div>
-    <div class="glossary-term">
-      Learned Helplessness
-    </div>
-    <div class="glossary-definition">
-      A state of hopelessness and resignation that results from repeated exposure to uncontrollable negative events.
-    </div>
-    <div class="glossary-term">
-      Mindfulness
-    </div>
-    <div class="glossary-definition">
-      A mental state achieved by focusing one's awareness on the present moment, while calmly acknowledging and accepting one's feelings, thoughts, and bodily sensations.
-    </div>
-    <div class="glossary-term">
-      Moral Courage
-    </div>
-    <div class="glossary-definition">
-      The willingness to stand up for one's beliefs, even in the face of opposition or adversity.
-    </div>
-    <div class="glossary-term">
-      Neuroplasticity
-    </div>
-    <div class="glossary-definition">
-      The brain's ability to reorganize itself by forming new neural connections throughout life.
-    </div>
-    <div class="glossary-term">
-      Optimism Bias
-    </div>
-    <div class="glossary-definition">
-      The tendency to overestimate the likelihood of positive events and underestimate the likelihood of negative events.
-    </div>
-    <div class="glossary-term">
-      PERMA Model
-    </div>
-    <div class="glossary-definition">
-      A framework for understanding and promoting well-being, based on five key elements: positive emotion, engagement, relationships, meaning, and accomplishment.
-    </div>
-    <div class="glossary-term">
-      Prosocial Behavior
-    </div>
-    <div class="glossary-definition">
-      Voluntary behavior intended to benefit others.
-    </div>
-    <div class="glossary-term">
-      Resilience
-    </div>
-    <div class="glossary-definition">
-      The ability to bounce back from adversity and cope with stress.
-    </div>
-    <div class="glossary-term">
-      Self-compassion
-    </div>
-    <div class="glossary-definition">
-      Treating oneself with kindness, care, and understanding, especially in the face of failure or suffering.
-    </div>
-    <div class="glossary-term">
-      Self-efficacy
-    </div>
-    <div class="glossary-definition">
-      The belief in one's ability to succeed in specific situations or accomplish a task.
-    </div>
-    <div class="glossary-term">
-      Self-regulation
-    </div>
-    <div class="glossary-definition">
-      The ability to control one's emotions, thoughts, and behaviors.
-    </div>
-    <div class="glossary-term">
-      Social Support
-    </div>
-    <div class="glossary-definition">
-      The perception and actuality that one is cared for, has assistance available from other people, and most popularly, that one is part of a supportive social network.
-    </div>
-    <div class="glossary-term">
-      Stoicism
-    </div>
-    <div class="glossary-definition">
-      An ancient Greek philosophy that emphasizes self-control, reason, and acceptance of fate.
-    </div>
-    <div class="glossary-term">
-      Values Clarification
-    </div>
-    <div class="glossary-definition">
-      The process of identifying and prioritizing one's core values.
-    </div>
-    <div class="glossary-term">
-      Willpower
-    </div>
-    <div class="glossary-definition">
-      The ability to resist short-term temptations in order to achieve long-term goals.
+    <div class="modal-header">
+      <h2 id="glossary-modal-title">Glossary of Digital Well-being Concepts</h2>
+      <button class="modal-close" aria-label="Close glossary">&times;</button>
+    </div>
+    <div class="modal-body">
+      <nav class="glossary-az-nav" aria-label="Glossary A-Z Navigation">
+        <a href="#glossary-section-a">A</a>
+        <a href="#glossary-section-b">B</a>
+        <a href="#glossary-section-c">C</a>
+        <a href="#glossary-section-d">D</a>
+        <a href="#glossary-section-e">E</a>
+        <a href="#glossary-section-f">F</a>
+        <a href="#glossary-section-h">H</a>
+        <a href="#glossary-section-m">M</a>
+        <a href="#glossary-section-n">N</a>
+        <a href="#glossary-section-p">P</a>
+        <a href="#glossary-section-r">R</a>
+        <a href="#glossary-section-s">S</a>
+        <a href="#glossary-section-t">T</a>
+        <a href="#glossary-section-w">W</a>
+      </nav>
+      <div class="glossary-terms">
+        <div id="glossary-section-a" class="glossary-section">
+          <h3 class="glossary-letter-header">A</h3>
+          <div class="glossary-term">
+            <strong>Accountability Buddy</strong> – A supportive partner who helps track progress and encourages consistency in digital well-being goals.
+          </div>
+          <div class="glossary-term">
+            <strong>Attention Management</strong> – The practice of consciously directing focus in a digital environment to enhance productivity and cognitive health.
+          </div>
+          <div class="glossary-term">
+            <strong>Autonomy (Self-Determination Theory)</strong> – The ability to make choices about digital engagement that align with personal values and goals.
+          </div>
+        </div>
+        <div id="glossary-section-b" class="glossary-section">
+          <h3 class="glossary-letter-header">B</h3>
+          <div class="glossary-term">
+            <strong>Brain Cognition</strong> – The way the brain processes information, impacted by digital habits such as screen time and multitasking.
+          </div>
+          <div class="glossary-term">
+            <strong>Behavioral Science</strong> – The study of how people form digital habits and how technology influences decision-making.
+          </div>
+        </div>
+        <div id="glossary-section-c" class="glossary-section">
+          <h3 class="glossary-letter-header">C</h3>
+          <div class="glossary-term">
+            <strong>Character Strengths</strong> – Personal strengths (e.g., curiosity, self-regulation) that can be leveraged to cultivate healthy digital habits.
+          </div>
+          <div class="glossary-term">
+            <strong>Cognitive Load</strong> – The mental effort required to process information, which can be impacted by excessive screen time or multitasking.
+          </div>
+          <div class="glossary-term">
+            <strong>Core Values</strong> – Fundamental beliefs that guide digital habits and decision-making.
+          </div>
+        </div>
+        <div id="glossary-section-d" class="glossary-section">
+          <h3 class="glossary-letter-header">D</h3>
+          <div class="glossary-term">
+            <strong>Digital Detox</strong> – A period of time spent without digital devices to reset habits and improve well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Flourishing</strong> – Thriving in a digital environment by balancing technology use with personal and professional well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Goals</strong> – Personalized objectives for improving one's digital habits, often using the SMART (Specific, Measurable, Achievable, Relevant, Time-bound) framework.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Habit Audit</strong> – A self-assessment to track technology use and identify areas for improvement.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Minimalism</strong> – A philosophy advocating for intentional and purposeful use of technology to enhance well-being.
+          </div>
+        </div>
+        <div id="glossary-section-e" class="glossary-section">
+          <h3 class="glossary-letter-header">E</h3>
+          <div class="glossary-term">
+            <strong>Empathy and Technology</strong> – The relationship between digital interactions and emotional intelligence, including how technology can impact social connections.
+          </div>
+          <div class="glossary-term">
+            <strong>Energy Management</strong> – Strategies to prevent digital fatigue and optimize energy levels in a tech-heavy world.
+          </div>
+        </div>
+        <div id="glossary-section-f" class="glossary-section">
+          <h3 class="glossary-letter-header">F</h3>
+          <div class="glossary-term">
+            <strong>Focus & Productivity</strong> – The ability to maintain attention and effectiveness in work and life, often challenged by digital distractions.
+          </div>
+          <div class="glossary-term">
+            <strong>Flourishing (Well-being Theory)</strong> – The state of thriving in multiple aspects of life, including physical, mental, emotional, and digital well-being.
+          </div>
+        </div>
+        <div id="glossary-section-h" class="glossary-section">
+          <h3 class="glossary-letter-header">H</h3>
+          <div class="glossary-term">
+            <strong>Habit Loop</strong> – A framework for understanding habit formation, consisting of cue, routine, and reward, applicable to digital behaviors.
+          </div>
+        </div>
+        <div id="glossary-section-m" class="glossary-section">
+          <h3 class="glossary-letter-header">M</h3>
+          <div class="glossary-term">
+            <strong>Mindfulness in Technology Use</strong> – Practicing present-moment awareness to create intentional and balanced digital interactions.
+          </div>
+          <div class="glossary-term">
+            <strong>Motivation (Self-Determination Theory)</strong> – Internal and external factors that influence engagement with technology, including autonomy, competence, and relatedness.
+          </div>
+        </div>
+        <div id="glossary-section-n" class="glossary-section">
+          <h3 class="glossary-letter-header">N</h3>
+          <div class="glossary-term">
+            <strong>Notification Management</strong> – Strategies to reduce interruptions and increase focus, such as disabling non-essential alerts.
+          </div>
+        </div>
+        <div id="glossary-section-p" class="glossary-section">
+          <h3 class="glossary-letter-header">P</h3>
+          <div class="glossary-term">
+            <strong>Prefrontal Cortex</strong> – The part of the brain responsible for decision-making and impulse control, which is affected by digital engagement.
+          </div>
+          <div class="glossary-term">
+            <strong>Psychological Safety and Technology</strong> – The impact of digital environments on emotional well-being and security.
+          </div>
+        </div>
+        <div id="glossary-section-r" class="glossary-section">
+          <h3 class="glossary-letter-header">R</h3>
+          <div class="glossary-term">
+            <strong>Reflection Practice</strong> – Periodic self-check-ins to assess digital habits and their alignment with personal values.
+          </div>
+        </div>
+        <div id="glossary-section-s" class="glossary-section">
+          <h3 class="glossary-letter-header">S</h3>
+          <div class="glossary-term">
+            <strong>Screen Time Awareness</strong> – Conscious tracking of time spent on digital devices to maintain a balanced lifestyle.
+          </div>
+          <div class="glossary-term">
+            <strong>Self-Regulation</strong> – The ability to control impulses and make mindful choices in digital interactions.
+          </div>
+          <div class="glossary-term">
+            <strong>Social Media Hygiene</strong> – Practices for maintaining a healthy relationship with social platforms, including curating content and setting boundaries.
+          </div>
+        </div>
+        <div id="glossary-section-t" class="glossary-section">
+          <h3 class="glossary-letter-header">T</h3>
+          <div class="glossary-term">
+            <strong>Tech-Life Balance</strong> – The intentional effort to harmonize technology use with overall well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Triggers in Digital Use</strong> – Environmental or psychological cues that prompt certain digital habits, such as checking the phone out of boredom.
+          </div>
+          <div class="glossary-term">
+            <strong>Two-Edge Effect of Technology</strong> – The concept that digital tools can both enhance and hinder well-being, depending on usage patterns.
+          </div>
+        </div>
+        <div id="glossary-section-w" class="glossary-section">
+          <h3 class="glossary-letter-header">W</h3>
+          <div class="glossary-term">
+            <strong>Willpower and Digital Use</strong> – The ability to resist distractions and build positive technology habits.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- VideoJS -->
+<!-- VideoJS JavaScript -->
 <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-<script src="js/videojs-ie.min.js"></script>
-<script src="js/videojs-quality-selector.js"></script>
-<script src="js/scripts.js"></script>
+<script src="js/video-player.js"></script>
+<script src="js/key-points.js"></script>
+<script src="js/reflections.js"></script>
+<script src="js/main.js"></script>
 <script>
-// Get the modal
-var modal = document.getElementById("glossaryModal");
+// Glossary Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('glossary-modal');
+  const openBtn = document.getElementById('open-glossary');
+  const menuLink = document.getElementById('glossary-menu-link');
+  const closeBtn = modal.querySelector('.modal-close');
 
-// Get the link that opens the modal
-var link = document.getElementById("glossary-menu-link");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the link, open the modal
-link.onclick = function(event) {
-  event.preventDefault(); // Prevent the default action
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  function openModal() {
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const firstFocusableElement = modal.querySelector('.modal-close, .glossary-az-nav a');
+    if (firstFocusableElement) {
+        firstFocusableElement.focus();
+    }
   }
-}
+
+  function closeModal() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = 'auto';
+    if (document.activeElement === closeBtn || modal.contains(document.activeElement)) {
+        if (openBtn && openBtn === document.lastActiveElement) openBtn.focus();
+        else if (menuLink && menuLink === document.lastActiveElement) menuLink.focus();
+    }
+    document.lastActiveElement = null;
+  }
+  
+  document.lastActiveElement = null;
+
+  if (openBtn) {
+    openBtn.addEventListener('click', function() {
+        document.lastActiveElement = this;
+        openModal();
+    });
+  }
+  
+  if (menuLink) {
+    menuLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.lastActiveElement = this;
+      openModal();
+      const mainNav = document.getElementById('main-nav');
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      if (mainNav && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+});
 </script>
 </body>
 </html>

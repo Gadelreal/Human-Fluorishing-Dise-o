@@ -10,55 +10,47 @@
 <!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  position: relative;
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Style for the glossary terms */
-.glossary-term {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.glossary-definition {
+/* Estilos para la navegación A-Z del glosario y las secciones */
+.glossary-az-nav {
+  padding: 10px 0;
   margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.glossary-az-nav a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 5px;
+}
+.glossary-az-nav a:hover,
+.glossary-az-nav a:focus {
+  text-decoration: underline;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.glossary-section {
+  /* No se necesita margin-top aquí si el H3 lo maneja */
+}
+.glossary-letter-header {
+  font-size: 1.6em;
+  color: #333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+.glossary-section:first-child .glossary-letter-header {
+    margin-top: 0; /* El primer header no necesita tanto espacio arriba */
+}
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.glossary-term {
+  margin-bottom: 10px; /* Espacio entre términos */
+  line-height: 1.6;
 }
 </style>
 </head>
@@ -237,51 +229,71 @@
       
       <div class="key-point" role="note" aria-label="Key point about character strengths">
         <h3>Key Point</h3>
-        <p>Our character strengths are natural tendencies that we have that support our vitality. 
-        The VIA Institute on Character provides us with 24 research-backed character 
-        strengths, grouped into 6 "virtues." We can leverage these strengths to build our 
-        resilience in times of adversity.</p>
+        <p>Character strengths are positive traits that reflect our core identity and values. 
+        When we identify and leverage our character strengths, we can better navigate 
+        challenges, maintain a positive outlook, and recover more quickly from setbacks. 
+        Understanding our strengths helps us build resilience by providing a foundation of 
+        confidence and capability.</p>
       </div>
     </section>
     
     <!-- 5. Fondo blanco -->
     <section class="lesson-section no-borders">
-      <h2>Activity: Identifying Your Character Strengths and Those of Others</h2>
+      <h2>Activity: Identifying Your Character Strengths</h2>
+      <p>Take the VIA Character Strengths Survey to identify your top character strengths. 
+      This scientifically validated assessment will help you understand your unique 
+      combination of strengths and how you can leverage them for greater resilience and 
+      well-being.</p>
       
-      <div class="character-strengths-activity">
-        <div class="activity-part">
-          <h3>Part 1: Character Strengths</h3>
-          <p><strong>Complete the VIA Character Strengths survey</strong></p>
-          
-          <div class="survey-links">
-            <a href="https://www.viacharacter.org/account/register" target="_blank" class="survey-link" aria-label="Complete VIA Character Strengths Survey (opens in new tab)">
-              <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-              Complete VIA Character Strengths Survey
-            </a>
-          </div>
-          
-          <p><strong>For further info about your strengths, see this page:</strong></p>
-          
-          <div class="survey-links">
-            <a href="https://www.viacharacter.org/character-strengths" target="_blank" class="survey-link" aria-label="Learn more about Character Strengths (opens in new tab)">
-              <i class="fas fa-info-circle" aria-hidden="true"></i>
-              Learn More About Character Strengths
+      <div class="activity-card">
+        <div class="activity-content">
+          <h3>VIA Character Strengths Survey</h3>
+          <p>The VIA Survey is a scientifically validated assessment that identifies your top character strengths. It takes about 10-15 minutes to complete and provides personalized insights into your unique strengths profile.</p>
+          <div class="activity-footer">
+            <a href="https://www.viacharacter.org/survey/account/register" target="_blank" class="activity-link" aria-label="Take the VIA Character Strengths Survey (opens in new tab)">
+              Take the Survey
+              <span class="activity-arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
+      </div>
+      
+      <p><strong>After completing the survey, reflect on the following questions:</strong></p>
+      
+      <div class="reflection-questions-grid">
+        <div class="reflection-question-card">
+          <div class="question-number">1</div>
+          <div class="question-text">
+            <strong>What are your top 5 character strengths according to the survey?</strong>
+          </div>
+        </div>
         
-        <div class="activity-part">
-          <h3>Part 2: Strength Spotting</h3>
-          <p>When considering the 24 character strengths, think of one person that reminds you of 
-          any of those strengths. Write examples of how you can see that strength in action in 
-          that person. <strong>Why does it matter to you? How do you benefit?</strong></p>
+        <div class="reflection-question-card">
+          <div class="question-number">2</div>
+          <div class="question-text">
+            <strong>Do these results align with how you see yourself? What surprises you?</strong>
+          </div>
+        </div>
+        
+        <div class="reflection-question-card">
+          <div class="question-number">3</div>
+          <div class="question-text">
+            <strong>How can you leverage these strengths to build greater resilience in your daily life?</strong>
+          </div>
+        </div>
+        
+        <div class="reflection-question-card">
+          <div class="question-number">4</div>
+          <div class="question-text">
+            <strong>Think of a recent challenge you faced. How did you use (or could you have used) your character strengths to navigate it?</strong>
+          </div>
         </div>
       </div>
     </section>
     
     <!-- 6. Fondo gris -->
     <section class="lesson-section no-borders">
-      <h2>Overcoming Procrastination</h2>
+      <h2>Understanding Procrastination</h2>
       
       <div class="responsive-video">
         <video 
@@ -291,38 +303,38 @@
           preload="auto" 
           data-video-id="w4v03"
           data-logo="assets/images/logo-ie-small.png"
-          aria-label="Overcoming Procrastination video"
+          aria-label="Understanding Procrastination video"
         >
-          <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-overcoming-prorastination/mp4/w4v03-overcoming-prorastination_1080p.mp4" type="video/mp4">
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-understanding-procrastination/mp4/w4v03-understanding-procrastination_1080p.mp4" type="video/mp4">
           <p class="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to a
             web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
           </p>
-          <track kind="captions" src="captions/overcoming-procrastination.vtt" srclang="en" label="English" default>
+          <track kind="captions" src="captions/understanding-procrastination.vtt" srclang="en" label="English" default>
         </video>
       </div>
       
       <div class="key-point" role="note" aria-label="Key point about procrastination">
         <h3>Key Point</h3>
-        <p>Procrastination can't simply be brushed off as laziness: it's rooted in a feeling of 
-        discomfort with a task, often due to a feeling that we lack the capacity to complete that 
-        task. We can overcome procrastination by leveraging our strengths as a way to 
-        energize us as well as by chunking the task into smaller, more manageable parts.</p>
+        <p>Procrastination is often rooted in emotional regulation rather than time management. 
+        It typically stems from negative emotions like fear, anxiety, or overwhelm associated 
+        with a task. Understanding the emotional drivers behind procrastination is the first 
+        step toward developing effective strategies to overcome it.</p>
       </div>
     </section>
     
     <!-- 7. Fondo blanco -->
     <section class="lesson-section no-borders">
       <h2>Reading</h2>
-      <p>Complete the following reading:</p>
+      <p>Please complete the reading below:</p>
       
       <div class="reading-cards">
         <div class="reading-card">
           <div class="reading-card-content">
-            <h3>What You Need to Know About Willpower: The Psychological Science of Self-Control</h3>
-            <p>Discover the psychological foundations of willpower and self-control. Learn evidence-based strategies for strengthening your ability to resist temptation and maintain focus on your goals.</p>
+            <h3>The Science of Procrastination and How to Manage It</h3>
+            <p>Dive deep into the psychological mechanisms behind procrastination and discover evidence-based strategies for overcoming this common challenge. Learn practical techniques to improve your productivity and well-being.</p>
             <div class="reading-card-footer">
-              <a href="https://www.apa.org/topics/personality/willpower" target="_blank" class="reading-link" aria-label="Read APA article on Willpower (opens in new tab)">
+              <a href="https://www.apa.org/science/about/psa/2010/04/procrastination" target="_blank" class="reading-link" aria-label="Read article: The Science of Procrastination and How to Manage It (opens in new tab)">
                 Read Article
                 <span class="reading-arrow" aria-hidden="true">→</span>
               </a>
@@ -334,6 +346,55 @@
     
     <!-- 8. Fondo gris -->
     <section class="lesson-section no-borders">
+      <h2>Activity: Overcoming Procrastination</h2>
+      <p>Based on what you've learned about procrastination, let's develop personalized 
+      strategies to overcome it. Complete the following reflection exercise:</p>
+      
+      <div class="reflection-questions-grid">
+        <div class="reflection-question-card">
+          <div class="question-number">1</div>
+          <div class="question-text">
+            <strong>Identify a task or project you've been procrastinating on. What emotions do you associate with this task?</strong>
+          </div>
+        </div>
+        
+        <div class="reflection-question-card">
+          <div class="question-number">2</div>
+          <div class="question-text">
+            <strong>What specific fears or concerns might be driving your procrastination?</strong>
+          </div>
+        </div>
+        
+        <div class="reflection-question-card">
+          <div class="question-number">3</div>
+          <div class="question-text">
+            <strong>How can you break this task into smaller, more manageable steps?</strong>
+          </div>
+        </div>
+        
+        <div class="reflection-question-card">
+          <div class="question-number">4</div>
+          <div class="question-text">
+            <strong>Which of your character strengths can you leverage to approach this task differently?</strong>
+          </div>
+        </div>
+        
+        <div class="reflection-question-card">
+          <div class="question-number">5</div>
+          <div class="question-text">
+            <strong>What would be one small action you could take today to move forward with this task?</strong>
+          </div>
+        </div>
+      </div>
+      
+      <div class="activity-tip">
+        <h3>Pro Tip</h3>
+        <p>Remember that overcoming procrastination is about emotional regulation, not just time management. Be compassionate with yourself as you work through these challenges, and celebrate small wins along the way.</p>
+      </div>
+    </section>
+    
+    <!-- 9. Fondo blanco -->
+    <section class="lesson-section no-borders">
       <h2>Closing Meditation: Lesson 4</h2>
       
       <div class="responsive-video">
@@ -344,54 +405,20 @@
           preload="auto" 
           data-video-id="w7v04"
           data-logo="assets/images/logo-ie-small.png"
-          aria-label="Cultivating Resilience from Within meditation video"
+          aria-label="Building Inner Strength and Resilience meditation video"
         >
-          <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-cultivating-resilience-from-within/mp4/w7v04-cultivating-resilience-from-within_1080p.mp4" type="video/mp4">
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-building-inner-strength-and-resilience/mp4/w7v04-building-inner-strength-and-resilience_1080p.mp4" type="video/mp4">
           <p class="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to a
             web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
           </p>
-          <track kind="captions" src="captions/cultivating-resilience-from-within.vtt" srclang="en" label="English" default>
+          <track kind="captions" src="captions/building-inner-strength-and-resilience.vtt" srclang="en" label="English" default>
         </video>
       </div>
       
-      <div class="key-point" role="note" aria-label="Key point about resilience meditation">
+      <div class="key-point" role="note" aria-label="Key point about meditation practice">
         <h3>Key Point</h3>
-        <p>This guided meditation helps us cultivate inner resilience and strength. Through mindful reflection, we can develop the capacity to navigate challenges with greater balance and wisdom, drawing on our inner resources for support.</p>
-      </div>
-    </section>
-    
-    <!-- 9. Fondo blanco -->
-    <section class="lesson-section no-borders">
-      <h2>Optional Reading</h2>
-      <p>Please complete the following readings if you're interested in learning more about these topics!</p>
-      
-      <div class="reading-cards">
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>Positive Affect and the Complex Dynamics of Human Flourishing</h3>
-            <p>Explore the intricate relationship between positive emotions and human flourishing. This research article examines how positive affect contributes to the complex dynamics of well-being and personal growth.</p>
-            <div class="reading-card-footer">
-              <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3126111/#S4title" target="_blank" class="reading-link" aria-label="Read research article on Positive Affect and Human Flourishing (opens in new tab)">
-                Read Article
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="reading-card">
-          <div class="reading-card-content">
-            <h3>Emotional Intelligence and Leadership: What's the Connection?</h3>
-            <p>Discover the vital connection between emotional intelligence and effective leadership. Learn how developing emotional awareness and regulation skills can enhance your ability to lead and inspire others.</p>
-            <div class="reading-card-footer">
-              <a href="https://www.ie.edu/center-for-health-and-well-being/blog/emotional-intelligence-and-leadership-whats-the-connection/" target="_blank" class="reading-link" aria-label="Read article on Emotional Intelligence and Leadership (opens in new tab)">
-                Read Article
-                <span class="reading-arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <p>This guided meditation helps us connect with our inner strength and build resilience from within. Regular meditation practice can enhance our ability to navigate challenges with greater calm and clarity.</p>
       </div>
     </section>
     
@@ -408,52 +435,167 @@
 </div>
 </footer>
 
-<!-- The Modal -->
-<div id="glossaryModal" class="modal">
+<!-- Glossary Modal -->
+<div id="glossary-modal" class="modal" role="dialog" aria-labelledby="glossary-modal-title" aria-hidden="true">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Glossary</h2>
-    <div class="glossary-term">
-      Well-being
+    <div class="modal-header">
+      <h2 id="glossary-modal-title">Glossary of Digital Well-being Concepts</h2>
+      <button class="modal-close" aria-label="Close glossary">&times;</button>
     </div>
-    <div class="glossary-definition">
-      The state of being comfortable, healthy, or happy.
-    </div>
-    <div class="glossary-term">
-      Digital well-being
-    </div>
-    <div class="glossary-definition">
-      Refers to the impact of technology and digital services on our mental, physical, and emotional health. It involves using technology in a way that supports and enhances overall well-being, rather than detracting from it.
-    </div>
-    <div class="glossary-term">
-      Mindfulness
-    </div>
-    <div class="glossary-definition">
-      Paying attention to the present moment without judgment.
-    </div>
-    <div class="glossary-term">
-      Autonomy
-    </div>
-    <div class="glossary-definition">
-      The capacity to make an informed, uncoerced decision.
-    </div>
-    <div class="glossary-term">
-      Motivation
-    </div>
-    <div class="glossary-definition">
-      The reason or reasons one has for acting or behaving in a particular way.
-    </div>
-    <div class="glossary-term">
-      Resilience
-    </div>
-    <div class="glossary-definition">
-      The capacity to recover quickly from difficulties; toughness.
-    </div>
-    <div class="glossary-term">
-      Ownership
-    </div>
-    <div class="glossary-definition">
-      The state or fact of possessing something. In the context of this course, it refers to taking responsibility for one's own well-being.
+    <div class="modal-body">
+      <nav class="glossary-az-nav" aria-label="Glossary A-Z Navigation">
+        <a href="#glossary-section-a">A</a>
+        <a href="#glossary-section-b">B</a>
+        <a href="#glossary-section-c">C</a>
+        <a href="#glossary-section-d">D</a>
+        <a href="#glossary-section-e">E</a>
+        <a href="#glossary-section-f">F</a>
+        <a href="#glossary-section-h">H</a>
+        <a href="#glossary-section-m">M</a>
+        <a href="#glossary-section-n">N</a>
+        <a href="#glossary-section-p">P</a>
+        <a href="#glossary-section-r">R</a>
+        <a href="#glossary-section-s">S</a>
+        <a href="#glossary-section-t">T</a>
+        <a href="#glossary-section-w">W</a>
+      </nav>
+      <div class="glossary-terms">
+        <div id="glossary-section-a" class="glossary-section">
+          <h3 class="glossary-letter-header">A</h3>
+          <div class="glossary-term">
+            <strong>Accountability Buddy</strong> – A supportive partner who helps track progress and encourages consistency in digital well-being goals.
+          </div>
+          <div class="glossary-term">
+            <strong>Attention Management</strong> – The practice of consciously directing focus in a digital environment to enhance productivity and cognitive health.
+          </div>
+          <div class="glossary-term">
+            <strong>Autonomy (Self-Determination Theory)</strong> – The ability to make choices about digital engagement that align with personal values and goals.
+          </div>
+        </div>
+        <div id="glossary-section-b" class="glossary-section">
+          <h3 class="glossary-letter-header">B</h3>
+          <div class="glossary-term">
+            <strong>Brain Cognition</strong> – The way the brain processes information, impacted by digital habits such as screen time and multitasking.
+          </div>
+          <div class="glossary-term">
+            <strong>Behavioral Science</strong> – The study of how people form digital habits and how technology influences decision-making.
+          </div>
+        </div>
+        <div id="glossary-section-c" class="glossary-section">
+          <h3 class="glossary-letter-header">C</h3>
+          <div class="glossary-term">
+            <strong>Character Strengths</strong> – Personal strengths (e.g., curiosity, self-regulation) that can be leveraged to cultivate healthy digital habits.
+          </div>
+          <div class="glossary-term">
+            <strong>Cognitive Load</strong> – The mental effort required to process information, which can be impacted by excessive screen time or multitasking.
+          </div>
+          <div class="glossary-term">
+            <strong>Core Values</strong> – Fundamental beliefs that guide digital habits and decision-making.
+          </div>
+        </div>
+        <div id="glossary-section-d" class="glossary-section">
+          <h3 class="glossary-letter-header">D</h3>
+          <div class="glossary-term">
+            <strong>Digital Detox</strong> – A period of time spent without digital devices to reset habits and improve well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Flourishing</strong> – Thriving in a digital environment by balancing technology use with personal and professional well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Goals</strong> – Personalized objectives for improving one's digital habits, often using the SMART (Specific, Measurable, Achievable, Relevant, Time-bound) framework.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Habit Audit</strong> – A self-assessment to track technology use and identify areas for improvement.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Minimalism</strong> – A philosophy advocating for intentional and purposeful use of technology to enhance well-being.
+          </div>
+        </div>
+        <div id="glossary-section-e" class="glossary-section">
+          <h3 class="glossary-letter-header">E</h3>
+          <div class="glossary-term">
+            <strong>Empathy and Technology</strong> – The relationship between digital interactions and emotional intelligence, including how technology can impact social connections.
+          </div>
+          <div class="glossary-term">
+            <strong>Energy Management</strong> – Strategies to prevent digital fatigue and optimize energy levels in a tech-heavy world.
+          </div>
+        </div>
+        <div id="glossary-section-f" class="glossary-section">
+          <h3 class="glossary-letter-header">F</h3>
+          <div class="glossary-term">
+            <strong>Focus & Productivity</strong> – The ability to maintain attention and effectiveness in work and life, often challenged by digital distractions.
+          </div>
+          <div class="glossary-term">
+            <strong>Flourishing (Well-being Theory)</strong> – The state of thriving in multiple aspects of life, including physical, mental, emotional, and digital well-being.
+          </div>
+        </div>
+        <div id="glossary-section-h" class="glossary-section">
+          <h3 class="glossary-letter-header">H</h3>
+          <div class="glossary-term">
+            <strong>Habit Loop</strong> – A framework for understanding habit formation, consisting of cue, routine, and reward, applicable to digital behaviors.
+          </div>
+        </div>
+        <div id="glossary-section-m" class="glossary-section">
+          <h3 class="glossary-letter-header">M</h3>
+          <div class="glossary-term">
+            <strong>Mindfulness in Technology Use</strong> – Practicing present-moment awareness to create intentional and balanced digital interactions.
+          </div>
+          <div class="glossary-term">
+            <strong>Motivation (Self-Determination Theory)</strong> – Internal and external factors that influence engagement with technology, including autonomy, competence, and relatedness.
+          </div>
+        </div>
+        <div id="glossary-section-n" class="glossary-section">
+          <h3 class="glossary-letter-header">N</h3>
+          <div class="glossary-term">
+            <strong>Notification Management</strong> – Strategies to reduce interruptions and increase focus, such as disabling non-essential alerts.
+          </div>
+        </div>
+        <div id="glossary-section-p" class="glossary-section">
+          <h3 class="glossary-letter-header">P</h3>
+          <div class="glossary-term">
+            <strong>Prefrontal Cortex</strong> – The part of the brain responsible for decision-making and impulse control, which is affected by digital engagement.
+          </div>
+          <div class="glossary-term">
+            <strong>Psychological Safety and Technology</strong> – The impact of digital environments on emotional well-being and security.
+          </div>
+        </div>
+        <div id="glossary-section-r" class="glossary-section">
+          <h3 class="glossary-letter-header">R</h3>
+          <div class="glossary-term">
+            <strong>Reflection Practice</strong> – Periodic self-check-ins to assess digital habits and their alignment with personal values.
+          </div>
+        </div>
+        <div id="glossary-section-s" class="glossary-section">
+          <h3 class="glossary-letter-header">S</h3>
+          <div class="glossary-term">
+            <strong>Screen Time Awareness</strong> – Conscious tracking of time spent on digital devices to maintain a balanced lifestyle.
+          </div>
+          <div class="glossary-term">
+            <strong>Self-Regulation</strong> – The ability to control impulses and make mindful choices in digital interactions.
+          </div>
+          <div class="glossary-term">
+            <strong>Social Media Hygiene</strong> – Practices for maintaining a healthy relationship with social platforms, including curating content and setting boundaries.
+          </div>
+        </div>
+        <div id="glossary-section-t" class="glossary-section">
+          <h3 class="glossary-letter-header">T</h3>
+          <div class="glossary-term">
+            <strong>Tech-Life Balance</strong> – The intentional effort to harmonize technology use with overall well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Triggers in Digital Use</strong> – Environmental or psychological cues that prompt certain digital habits, such as checking the phone out of boredom.
+          </div>
+          <div class="glossary-term">
+            <strong>Two-Edge Effect of Technology</strong> – The concept that digital tools can both enhance and hinder well-being, depending on usage patterns.
+          </div>
+        </div>
+        <div id="glossary-section-w" class="glossary-section">
+          <h3 class="glossary-letter-header">W</h3>
+          <div class="glossary-term">
+            <strong>Willpower and Digital Use</strong> – The ability to resist distractions and build positive technology habits.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -465,32 +607,74 @@
 <script src="js/reflections.js"></script>
 <script src="js/main.js"></script>
 <script>
-// Get the modal
-var modal = document.getElementById("glossaryModal");
+// Glossary Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('glossary-modal');
+  const openBtn = document.getElementById('open-glossary');
+  const menuLink = document.getElementById('glossary-menu-link');
+  const closeBtn = modal.querySelector('.modal-close');
 
-// Get the link that opens the modal
-var link = document.getElementById("glossary-menu-link");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the link, open the modal
-link.onclick = function(event) {
-  event.preventDefault(); // Prevent the default action
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  function openModal() {
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const firstFocusableElement = modal.querySelector('.modal-close, .glossary-az-nav a');
+    if (firstFocusableElement) {
+        firstFocusableElement.focus();
+    }
   }
-}
+
+  function closeModal() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = 'auto';
+    if (document.activeElement === closeBtn || modal.contains(document.activeElement)) {
+        if (openBtn && openBtn === document.lastActiveElement) openBtn.focus();
+        else if (menuLink && menuLink === document.lastActiveElement) menuLink.focus();
+    }
+    document.lastActiveElement = null;
+  }
+  
+  document.lastActiveElement = null;
+
+  if (openBtn) {
+    openBtn.addEventListener('click', function() {
+        document.lastActiveElement = this;
+        openModal();
+    });
+  }
+  
+  if (menuLink) {
+    menuLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.lastActiveElement = this;
+      openModal();
+      const mainNav = document.getElementById('main-nav');
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      if (mainNav && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+});
 </script>
 </body>
 </html>
