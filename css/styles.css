@@ -3489,8 +3489,8 @@ main {
 
 /* Estilos para números en lugar de iconos en las cards de actividades */
 .objective-number {
-  font-size: 1.2rem; /* Cambiado de 1.5rem a 1.2rem */
-  font-weight: 600;   /* Cambiado de bold a 600 */
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #000066;
   display: flex;
   align-items: center;
@@ -3724,7 +3724,7 @@ html:focus,
     .step-content p {
       margin-bottom: 0;
       line-height: 1.6;
-    }
+      }
 
     @media (max-width: 768px) {
       .activity-step {
@@ -4308,7 +4308,7 @@ html:focus,
 
     .survey-button-container {
       margin-top: 32px;
-      text-align: center;
+      text-align: left; /* Changed from center to left */
     }
 
     .survey-button {
@@ -4350,7 +4350,7 @@ html:focus,
     /* Estilos para el contenedor de botones centrados */
     .survey-button-container {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* Changed from center to flex-start */
       align-items: center;
       margin-top: 32px;
     }
