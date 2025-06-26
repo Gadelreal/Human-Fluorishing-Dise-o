@@ -3130,23 +3130,1234 @@ body h2:first-of-type,
     font-size: 1.4rem;
   }
 
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .content-container {
+    padding: 1rem;
+  }
+
+  .cover-content {
+    padding: 2rem 1rem;
+  }
+
   .cover-content h1 {
-    font-size: 2rem;
-  }
-
-  h1 {
     font-size: 1.8rem;
   }
 
-  h2 {
-    font-size: 1.4rem;
- h1 {
-    font-size: 2rem;
+  .lesson-section {
+    margin-bottom: 1.5rem;
   }
 
-  h1 {
-    font-size: 1.8rem;
+  .key-point {
+    padding: 1rem 1rem 1rem 3rem;
   }
 
-  h2 {
-    font-size: 1.4rem;
+  .key-point::before {
+    left: 0.7rem;
+    top: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .reflection-question {
+    padding: 1rem;
+  }
+
+  .reflection-textarea {
+    min-height: 100px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .save-feedback {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Mejoras de tipografía */
+p,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-bottom: 1rem !important;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000;
+}
+
+.cover-text h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.key-point p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.author,
+.duration,
+.code {
+  font-weight: 300;
+}
+
+/* Ajustar el peso de la fuente para los botones */
+.start-button,
+.nav-button,
+.save-button {
+  font-weight: 600;
+}
+
+/* Añadir la clase plain-title para el título sin efectos y con menor peso */
+.plain-title {
+  font-weight: 400 !important; /* Reducir el peso de la fuente */
+  letter-spacing: normal !important;
+  text-shadow: none !important;
+}
+
+.arrow-icon {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Ajustes responsivos para la cabecera a ancho completo */
+@media (max-width: 768px) {
+  .full-width {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .smaller-logo {
+    max-width: 40px;
+  }
+}
+
+/* Alineación del header con el contenedor principal */
+.content-aligned {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+/* Ajustar el padding del contenedor principal para que coincida con el header */
+main {
+  flex: 1;
+  padding: 2rem 0;
+  padding-top: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegurar que el logo esté alineado con el contenido */
+.content-aligned .header-left {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Asegurar que el menú hamburguesa esté alineado con el contenido */
+.content-aligned .mobile-menu-toggle {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* Ajustar el espaciado en dispositivos móviles */
+@media (max-width: 768px) {
+  .content-aligned {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Estilo especial para la cabecera de la página de introducción */
+.header-full-bottom {
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+  height: 120px; /* Altura fija para la cabecera */
+}
+
+/* Mantener el contenido alineado dentro de la cabecera */
+.header-full-bottom .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 100%; /* Asegurar que el contenido ocupe toda la altura */
+  position: relative; /* Para posicionamiento de elementos absolutos */
+}
+
+/* Modificar los estilos para el contenedor de controles del header */
+.header-controls {
+  display: flex;
+  flex-direction: row; /* Asegurar que los elementos estén en fila */
+  align-items: center;
+  justify-content: flex-end; /* Alinear a la derecha */
+  margin-left: auto;
+  position: relative; /* Asegurar posicionamiento correcto */
+}
+
+/* Ajustar el botón de menú hamburguesa */
+.mobile-menu-toggle.always-visible {
+  position: static; /* Evitar posicionamiento absoluto */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+/* Ajustar el menú de navegación para la cabecera con altura fija */
+.header-full-bottom .hamburger-nav {
+  top: 120px; /* Alinear con la nueva altura de la cabecera */
+  right: 2rem; /* Alinear con el padding del contenedor */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .header-full-bottom {
+    height: 100px; /* Mantener altura original en tablets */
+  }
+
+  .header-full-bottom .hamburger-nav {
+    top: 100px; /* Ajustar posición del menú en tablets */
+    right: 1rem;
+  }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-full-bottom {
+    height: 80px; /* Mantener altura original en móviles */
+  }
+
+  .header-full-bottom .hamburger-nav {
+    top: 80px; /* Ajustar posición del menú en móviles */
+    right: 1rem;
+  }
+
+  .header-full-bottom .header-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Eliminar bordes de las secciones */
+.no-borders {
+  border-bottom: none !important;
+}
+
+/* Estilos para los objetivos de aprendizaje - Grid original (3 columnas) */
+.learning-objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilos para los objetivos de aprendizaje - Grid 2x2 (solo para Chapter 2) */
+.learning-objectives-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments for learning objectives */
+@media (max-width: 768px) {
+  .learning-objectives-grid,
+  .learning-objectives-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.learning-objective-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 1.5rem;
+  border-left: 4px solid #000066;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #000066;
+  pointer-events: none; /* Eliminar completamente la interacción */
+  cursor: default; /* Cursor por defecto */
+}
+
+/* Estilos específicos para las cards del Appreciative Inquiry Framework */
+.framework-activity .learning-objective-card {
+  background-color: white !important;
+  border-radius: 0 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+}
+
+/* Eliminar cualquier estado de focus, active o click */
+.learning-objective-card:focus,
+.learning-objective-card:active,
+.learning-objective-card:hover {
+  outline: none !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #000066 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Asegurar que los elementos internos tampoco sean interactivos */
+.learning-objective-card *:focus,
+.learning-objective-card *:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Eliminar completamente la regla :hover */
+
+.objective-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;  /* Cambiado de 50px a 40px */
+  height: 40px; /* Cambiado de 50px a 40px */
+  background-color: rgba(0, 0, 102, 0.1);
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.objective-icon i {
+  font-size: 1.5rem;
+  color: #000066;
+}
+
+.objective-content {
+  flex: 1;
+}
+
+/* === FIN part8.css === */
+
+/* Remove bold styling from activity cards text */
+.learning-objective-card .objective-content p {
+  font-weight: 400 !important; /* Remove bold, use normal weight */
+}
+
+/* Estilos para números en lugar de iconos en las cards de actividades */
+.objective-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
+.learning-objective-card .objective-number {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Refuerzo: nunca mostrar outline ni box-shadow en body o html al recibir focus */
+body:focus,
+html:focus,
+#main-content:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+/* === Introduction === */
+
+
+ /* Estilos para la sección final */
+    .final-section {
+      background-color: #f0f8ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .download-button:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-button i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .final-section {
+        padding: 1.5rem;
+      }
+
+      .download-button {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+    }
+
+    .survey-section {
+      text-align: left;
+    }
+
+    .survey-button-container {
+      margin-top: 32px;
+      text-align: left;
+    }
+
+    .survey-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000066;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .survey-button:hover {
+      background-color: #000044;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+
+    .survey-button i {
+      margin-right: 0.5rem;
+    }
+
+    .hero-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .hero-icon {
+      object-fit: contain;
+    }
+
+    .hero-content {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title-container {
+        gap: 0.5rem;
+      }
+    }
+
+    /* Aumentar espaciado entre párrafos */
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .lesson-section p {
+      margin-bottom: 1.5rem;
+    }
+
+    .key-point p {
+      margin-bottom: 1.5rem;
+    }
+
+    .reading-card-content p {
+      margin-bottom: 1rem;
+    }
+
+    .survey-section p {
+      margin-bottom: 1.5rem;
+    }
+
+
+
+/* === Chapter 1 === */
+
+    /* Estilos adicionales para VideoJS */
+    .video-js .vjs-control-bar {
+      background-color: rgba(0, 85, 162, 0.8);
+    }
+    
+    /* Estilo para el enlace de saltar al contenido */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0055a2;
+      color: white;
+      padding: 8px;
+      z-index: 9999;
+      transition: top 0.3s;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+.hero-fingerprints {
+  max-width: 300px;
+  height: auto;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-fingerprints {
+    max-width: 200px;
+  }
+}
+
+/* === Chapter 2 === */
+
+    /* Estilos para pasos numerados */
+    .activity-step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 6px;
+      border-left: 4px solid #0055a2;
+    }
+
+    .activity-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #0055a2;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h4 {
+      color: #0055a2;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+      }
+
+    @media (max-width: 768px) {
+      .activity-step {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Estilos para las tarjetas de beneficios */
+    .benefits-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .benefit-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-color: #0055a2;
+    }
+
+    .benefit-content h4 {
+      color: #0055a2;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    .benefit-content p {
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .benefits-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Estilos para el timeline vertical */
+    .timeline-activity {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline-activity::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #000066;
+      z-index: 1;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-number {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #000066;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
+    }
+
+    .timeline-content {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid white;
+      z-index: 3;
+    }
+
+    .timeline-content h4 {
+      color: #000066;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Ajustes responsivos para el timeline */
+    @media (max-width: 768px) {
+      .timeline-activity {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-activity::before {
+        left: 15px;
+      }
+
+      .timeline-number {
+        left: -1.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+
+      .timeline-step {
+        padding-left: 1.5rem;
+      }
+
+      .timeline-content {
+        padding: 1rem;
+      }
+
+      .timeline-content::before {
+        left: -6px;
+        top: 15px;
+        border-right-width: 6px;
+        border-top-width: 6px;
+        border-bottom-width: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .timeline-activity {
+        padding-left: 1rem;
+      }
+
+      .timeline-activity::before {
+        left: 10px;
+      }
+
+      .timeline-number {
+        left: -1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      .timeline-step {
+        padding-left: 1rem;
+      }
+      
+      .timeline-content {
+        padding: 1rem;
+      }
+    }
+
+
+/* === Chapter 3 === */
+
+/* Estilos para la lista de valores */
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.values-list li {
+  list-style: none;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: none;
+}
+
+    /* Estilos para el diagrama de Ikigai */
+    .ikigai-container {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+    }
+
+    .ikigai-container img {
+      width: 80% !important;
+      max-width: none !important;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .ikigai-container img {
+        width: 90% !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ikigai-container img {
+        width: 95% !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .values-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+    }
+
+    /* Estilos para el grid de preguntas de reflexión */
+    .reflection-questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      margin-top: 2rem !important;
+      margin-bottom: 2rem !important;
+    }
+
+    .reflection-question-card {
+      background-color: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .reflection-question-card:hover {
+      border-color: #0055a2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 85, 162, 0.15);
+    }
+
+    .question-number {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background-color: #0055a2;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .question-text {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .reflection-questions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .reflection-question-card {
+        padding: 1rem;
+      }
+    }
+
+/* Estilos para números en lugar de iconos en las cards de actividades */
+.objective-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
+.learning-objective-card .objective-number {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* === Chapter 4 === */
+
+
+/* Estilos para la actividad de fortalezas de carácter */
+.character-strengths-activity {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+    .activity-part {
+      margin-bottom: 2rem;
+    }
+
+    .activity-part:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-part h3 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .survey-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .survey-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background-color: #0055a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      max-width: fit-content;
+    }
+
+    .survey-link:hover {
+      background-color: #003d73;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .survey-link i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .survey-links {
+        align-items: stretch;
+      }
+
+      .survey-link {
+        max-width: 100%;
+        justify-content: center;
+      }
+    }
+
+
+/* === Chapter 5 === */
+    /* Estilos para las actividades estructuradas */
+    .framework-activity {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .activity-step {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 6px;
+      border-left: 4px solid #0055a2;
+    }
+
+    .activity-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-step h4 {
+      color: #0055a2;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .activity-step p {
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* Estilos para el quiz interactivo */
+    .interactive-quiz {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-question {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-question:last-child {
+      margin-bottom: 0;
+    }
+
+    .quiz-question h4 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .quiz-options {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quiz-options li {
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-options label {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .quiz-options label:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quiz-options input[type="radio"] {
+      margin-right: 0.5rem;
+      margin-top: 0.2rem;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .quiz-feedback {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+      display: none;
+    }
+
+    .quiz-feedback.correct {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .quiz-feedback.incorrect {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .quiz-score {
+      background-color: #e7f3ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
+      display: none;
+    }
+
+    .quiz-score h3 {
+      color: #0055a2;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    .score-display {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0055a2;
+      margin: 1rem 0;
+    }
+
+    .quiz-submit {
+      background-color: #0055a2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .quiz-submit:hover {
+      background-color: #003d73;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .quiz-submit:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Estilos para la sección final */
+    .final-section {
+      background-color: #f0f8ff;
+      border: 2px solid #0055a2;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .survey-button-container {
+      margin-top: 32px;
+      text-align: left; /* Changed from center to left */
+    }
+
+    .survey-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000066;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .survey-button:hover {
+      background-color: #000044;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .survey-button i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .final-section {
+        padding: 1.5rem;
+      }
+
+      .survey-button {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+    }
+
+    /* Estilos para el contenedor de botones centrados */
+    .survey-button-container {
+      display: flex;
+      justify-content: flex-start; /* Changed from center to flex-start */
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .survey-button-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
