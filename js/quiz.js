@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
       options.forEach((option, optionIndex) => {
         const optionLetter = String.fromCharCode(65 + optionIndex) // A, B, C, D
 
-        // Añadir atributos de accesibilidad
+        // Añadir atributos de accesibilidad SOLO a las opciones
         option.setAttribute("role", "button")
         option.setAttribute("tabindex", "0")
         option.setAttribute("aria-label", `Option ${optionLetter}: ${option.textContent}`)
         option.setAttribute("data-question", questionNumber)
         option.setAttribute("data-answer", optionLetter)
 
-        // Event listeners para click y teclado
+        // Event listeners para click y teclado SOLO en las opciones
         option.addEventListener("click", () => handleAnswerSelection(questionNumber, optionLetter, option))
         option.addEventListener("keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {

@@ -4176,6 +4176,7 @@ html:focus,
   background-color: white;
   border-radius: 0;
   border: 1px solid #ddd;
+  /* Remover cursor pointer del contenedor de pregunta */
 }
 
 .quiz-question h3 {
@@ -4196,7 +4197,7 @@ html:focus,
   border: 2px solid #e0e0e0;
   border-radius: 8px;
   transition: all 0.3s ease;
-  cursor: pointer;
+  cursor: pointer; /* Solo las opciones tienen cursor pointer */
   padding: 1rem;
   position: relative;
   overflow: hidden;
@@ -4236,6 +4237,7 @@ html:focus,
   background-color: #d4edda;
   border-color: #28a745;
   color: #155724;
+  cursor: default; /* Cambiar cursor cuando está seleccionada */
 }
 
 .quiz-options li.selected::before {
@@ -4247,6 +4249,7 @@ html:focus,
   background-color: #f8d7da;
   border-color: #dc3545;
   color: #721c24;
+  cursor: default; /* Cambiar cursor cuando está incorrecta */
 }
 
 .quiz-options li.incorrect::before {
@@ -4258,6 +4261,7 @@ html:focus,
   background-color: #d1ecf1;
   border-color: #17a2b8;
   color: #0c5460;
+  cursor: default; /* Cambiar cursor cuando es la respuesta correcta */
 }
 
 .quiz-options li.correct-answer::before {
@@ -4265,7 +4269,7 @@ html:focus,
   transform: scaleY(1);
 }
 
-/* Añadir un efecto de brillo sutil */
+/* Añadir un efecto de brillo sutil solo en las opciones */
 .quiz-options li::after {
   content: "";
   position: absolute;
@@ -4288,9 +4292,13 @@ html:focus,
   letter-spacing: 0.02em;
 }
 
-/* Efecto focus para accesibilidad */
+/* Efecto focus para accesibilidad solo en las opciones */
 .quiz-options li:focus {
   outline: 3px solid #0055a2;
   outline-offset: 2px;
 }
-\`\`\`
+
+/* Remover efectos hover del contenedor de pregunta */
+.quiz-question:hover {
+  /* Sin efectos hover */
+}
