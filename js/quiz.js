@@ -31,27 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const userAnswers = {}
   let quizCompleted = false
 
-  // Handler for the Chapter 1 Well-being Quiz
-  const wellbeingQuizForm = document.getElementById('wellbeing-quiz');
-  if (wellbeingQuizForm) {
-    const feedbackElement = document.getElementById('wellbeing-quiz-feedback');
-    const submitButton = wellbeingQuizForm.querySelector('.quiz-submit-btn');
-
-    wellbeingQuizForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      
-      // As per instructions, just show the feedback regardless of the answer.
-      if (feedbackElement) {
-        feedbackElement.style.display = 'block';
-        // Optionally, disable the button to prevent re-submission
-        if(submitButton) {
-          submitButton.disabled = true;
-          submitButton.textContent = 'Submitted';
-        }
-      }
-    });
-  }
-
   // Inicializar el quiz
   initializeQuiz()
 
@@ -65,14 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
       options.forEach((option, optionIndex) => {
         const optionLetter = String.fromCharCode(65 + optionIndex) // A, B, C, D
 
-        // Añadir atributos de accesibilidad
+        // Añadir atributos de accesibilidad SOLO a las opciones
         option.setAttribute("role", "button")
         option.setAttribute("tabindex", "0")
         option.setAttribute("aria-label", `Option ${optionLetter}: ${option.textContent}`)
         option.setAttribute("data-question", questionNumber)
         option.setAttribute("data-answer", optionLetter)
 
-        // Event listeners para click y teclado
+        // Event listeners para click y teclado SOLO en las opciones
         option.addEventListener("click", () => handleAnswerSelection(questionNumber, optionLetter, option))
         option.addEventListener("keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
