@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Human Flourishing - Chapter 4</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- VideoJS CSS -->
-  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Flourishing - Chapter 4</title>
+<link rel="stylesheet" href="./css/styles.css">
+<!-- VideoJS CSS -->
+<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+<!-- Font Awesome para iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Estilos para la navegación A-Z del glosario y las secciones */
+.glossary-az-nav {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.glossary-az-nav a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 5px;
+}
+.glossary-az-nav a:hover,
+.glossary-az-nav a:focus {
+  text-decoration: underline;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.glossary-section {
+  /* No se necesita margin-top aquí si el H3 lo maneja */
+}
+.glossary-letter-header {
+  font-size: 1.6em;
+  color: #333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+.glossary-section:first-child .glossary-letter-header {
+    margin-top: 0; /* El primer header no necesita tanto espacio arriba */
+}
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.glossary-term {
+  margin-bottom: 10px; /* Espacio entre términos */
+  line-height: 1.6;
+}
+</style>
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -16,343 +60,667 @@
 
 <!-- Modificar la estructura del header para alinear elementos en una línea -->
 <header class="full-width header-full-bottom" role="banner">
-  <div class="header-content">
-    <div class="header-left">
-      <div class="logo-container tiny-logo">
-        <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
-          <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-        </a>
-      </div>
-      <h2 class="header-title">Human Flourishing</h2>
+<div class="header-content">
+  <div class="header-left">
+    <div class="logo-container tiny-logo">
+      <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
+        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
+      </a>
     </div>
-    <div class="header-controls">
-      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-        <div class="hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </button>
-    </div>
+    <h2 class="header-title">Digital Well-Being</h2>
   </div>
-  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="introduction.html">0. Introduction</a></li>
-      <li><a href="chapter1.html">1. Being Human</a></li>
-      <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
-      <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
-      <li><a href="chapter4.html" class="active" aria-current="page">4. Building Resilience</a></li>
-      <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-    </ul>
-  </nav>
+  <div class="header-controls">
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </div>
+</div>
+<nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">0. Introduction</a></li>
+    <li><a href="chapter1.html">1. Digital Well-Being as a Key</a></li>
+    <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
+    <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
+    <li><a href="chapter4.html" class="active" aria-current="page">4. Building Resilience</a></li>
+    <li><a href="chapter5.html">5. Ownership and Practice</a></li>
+    <li><a href="#" id="glossary-menu-link"><i class="fas fa-book" style="color: #000066; margin-right: 0.5rem;" aria-hidden="true"></i>Glossary</a></li>
+    <li class="language-selector-menu">
+<span class="menu-separator"></span>
+<span id="language-label" class="sr-only">Select language:</span>
+<a href="chapter4.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo4.html" aria-labelledby="language-label">Español</a>
+</li>
+  </ul>
+</nav>
 </header>
 
 <section class="hero-section">
-  <div class="hero-content">
-    <div class="hero-title-container">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-      <h1 class="hero-title">LESSON 4: Building Resilience</h1>
-    </div>
+<div class="hero-content">
+  <div class="hero-title-container">
+    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
+    <h1 class="hero-title">LESSON 4: Building Resilience</h1>
   </div>
+</div>
 </section>
 
-  <main id="main-content" tabindex="-1">
-    <div class="content-aligned-container">
+<main id="main-content" tabindex="-1">
+  <div class="content-aligned-container">
+    <h1>LESSON 4: Building Resilience</h1>
+    <div class="title-separator blue" aria-hidden="true"></div>
+    
+    <!-- 1. Fondo blanco -->
+    <section class="lesson-section no-borders">
+      <h2>Lesson 4 Learning Objectives</h2>
       
-      <!-- 1. Fondo blanco -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Lesson 4 Learning Objectives</strong></h2>
-        
-        <div class="learning-objectives-grid">
-          <div class="learning-objective-card">
-            <div class="objective-icon" aria-hidden="true">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <div class="objective-content">
-              <h4>Define Resilience</h4>
-              <p>Define resilience and its relevance for flourishing</p>
-            </div>
+      <div class="learning-objectives-grid">
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-shield-alt"></i>
           </div>
-          
-          <div class="learning-objective-card">
-            <div class="objective-icon" aria-hidden="true">
-              <i class="fas fa-star"></i>
-            </div>
-            <div class="objective-content">
-              <h4>Character Strengths</h4>
-              <p>Identify your own character strengths to leverage your abilities to navigate challenges, maintain a positive outlook, and recover more quickly from setbacks</p>
-            </div>
-          </div>
-          
-          <div class="learning-objective-card">
-            <div class="objective-icon" aria-hidden="true">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="objective-content">
-              <h4>Overcome Procrastination</h4>
-              <p>Understand the source of procrastination and strategies for how to overcome it</p>
-            </div>
+          <div class="objective-content">
+            <h4>Understanding Resilience</h4>
+            <p>Understand what resilience is and how it can be cultivated</p>
           </div>
         </div>
-      </section>
-      
-      <!-- 2. Fondo gris -->
-      <section class="lesson-section no-borders">
-        <h2><strong>How Can We Define Resilience?</strong></h2>
         
-        <div class="responsive-video">
-          <video 
-            id="resilience-definition-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/how-can-we-define-resilience-poster.png"
-            data-video-id="w4v01"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="How Can We Define Resilience? video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v01-how-can-we-define-resilience/mp4/w4v01-how-can-we-define-resilience_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/how-can-we-define-resilience.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about defining resilience">
-          <h3>Key Point</h3>
-          <p>We can consider an <strong>"evolved"</strong> definition of resilience to be the capacity to recognize 
-          what is needed and respond in the most appropriate way, considering the learning that 
-          comes with the experience. In this sense, resilience is not about enduring pressure at 
-          all costs, but about maintaining balance and recognizing when to take breaks or adapt 
-          approaches.</p>
-        </div>
-      </section>
-      
-      <!-- 3. Fondo blanco -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Reading</strong></h2>
-        <p>Please complete the reading below:</p>
-        
-        <div class="reading-cards">
-          <div class="reading-card">
-            <div class="reading-card-content">
-              <h3>Embracing Resilience: Developing a Growth Mindset</h3>
-              <p>Explore how developing a growth mindset can enhance your resilience and ability to navigate challenges. Learn practical strategies for building mental flexibility and adaptability in the face of adversity.</p>
-              <div class="reading-card-footer">
-                <a href="https://www.ie.edu/center-for-health-and-well-being/blog/embracing-resilience-developing-a-growth-mindset/" target="_blank" class="reading-link" aria-label="Read article: Embracing Resilience: Developing a Growth Mindset (opens in new tab)">
-                  Read Article
-                  <span class="reading-arrow" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="objective-content">
+            <h4>Neuroplasticity</h4>
+            <p>Appreciate the concept of neuroplasticity and how it relates to resilience</p>
           </div>
         </div>
-      </section>
-      
-      <!-- 4. Fondo gris -->
-      <section class="lesson-section no-borders">
-        <h2><strong>What Are Character Strengths and How Do They Support Resilience?</strong></h2>
         
-        <div class="responsive-video">
-          <video 
-            id="character-strengths-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/character-strengths-resilience-poster.png"
-            data-video-id="w4v02"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="What Are Character Strengths and How Do They Support Resilience? video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience/mp4/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/character-strengths-and-resilience.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about character strengths">
-          <h3>Key Point</h3>
-          <p>Our <strong>character strengths</strong> are natural tendencies that we have that support our vitality. 
-          The VIA Institute on Character provides us with <strong>24 research-backed character 
-          strengths</strong>, grouped into <strong>6 "virtues."</strong> We can leverage these strengths to build our 
-          resilience in times of adversity.</p>
-        </div>
-      </section>
-      
-      <!-- 5. Fondo blanco -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Activity: Identifying Your Character Strengths and Those of Others</strong></h2>
-        
-        <div class="character-strengths-activity">
-          <div class="activity-part">
-            <h3><strong>Part 1: Character Strengths</strong></h3>
-            <p><strong>Complete the VIA Character Strengths survey</strong></p>
-            
-            <div class="survey-links">
-              <a href="https://www.viacharacter.org/account/register" target="_blank" class="survey-link" aria-label="Complete VIA Character Strengths Survey (opens in new tab)">
-                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                Complete VIA Character Strengths Survey
-              </a>
-            </div>
-            
-            <p><strong>For further info about your strengths, see this page:</strong></p>
-            
-            <div class="survey-links">
-              <a href="https://www.viacharacter.org/character-strengths" target="_blank" class="survey-link" aria-label="Learn more about Character Strengths (opens in new tab)">
-                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                Learn More About Character Strengths
-              </a>
-            </div>
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-tools"></i>
           </div>
-          
-          <div class="activity-part">
-            <h3><strong>Part 2: Strength Spotting</strong></h3>
-            <p>When considering the 24 character strengths, think of one person that reminds you of 
-            any of those strengths. Write examples of how you can see that strength in action in 
-            that person. <strong>Why does it matter to you? How do you benefit?</strong></p>
+          <div class="objective-content">
+            <h4>Practical Strategies</h4>
+            <p>Develop practical strategies for building resilience in daily life</p>
           </div>
         </div>
-      </section>
-      
-      <!-- 6. Fondo gris -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Overcoming Procrastination</strong></h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="procrastination-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/overcoming-procrastination-poster.png"
-            data-video-id="w4v03"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="Overcoming Procrastination video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-overcoming-prorastination/mp4/w4v03-overcoming-prorastination_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/overcoming-procrastination.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-        <div class="key-point" role="note" aria-label="Key point about procrastination">
-          <h3>Key Point</h3>
-          <p><strong>Procrastination</strong> can't simply be brushed off as <strong>laziness</strong>: it's rooted in a feeling of 
-          discomfort with a task, often due to a feeling that we lack the capacity to complete that 
-          task. We can overcome procrastination by <strong>leveraging our strengths</strong> as a way to 
-          energize us as well as by chunking the task into smaller, more manageable parts.</p>
-        </div>
-      </section>
-      
-      <!-- 7. Fondo blanco -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Reading</strong></h2>
-        <p>Complete the following reading:</p>
-        
-        <div class="reading-cards">
-          <div class="reading-card">
-            <div class="reading-card-content">
-              <h3>What You Need to Know About Willpower: The Psychological Science of Self-Control</h3>
-              <p>Discover the psychological foundations of willpower and self-control. Learn evidence-based strategies for strengthening your ability to resist temptation and maintain focus on your goals.</p>
-              <div class="reading-card-footer">
-                <a href="https://www.apa.org/topics/personality/willpower" target="_blank" class="reading-link" aria-label="Read APA article on Willpower (opens in new tab)">
-                  Read Article
-                  <span class="reading-arrow" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
+      </div>
+    </section>
+    
+    <!-- 2. Fondo gris -->
+    <section class="lesson-section no-borders">
+<h2>What Is Resilience?</h2>
+
+<div class="responsive-video">
+  <video 
+    id="resilience-video" 
+    class="video-js vjs-ie-skin vjs-big-play-centered" 
+    controls 
+    preload="auto" 
+    data-video-id="w4v01"
+    data-logo="assets/images/logo-ie-small.png"
+    aria-label="What Is Resilience? video"
+  >
+    <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v01-what-is-resilience/mp4/w4v01-what-is-resilience_1080p.mp4" type="video/mp4">
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+    <track kind="captions" src="captions/what-is-resilience.vtt" srclang="en" label="English" default>
+  </video>
+</div>
+
+<div class="key-point" role="note" aria-label="Key point about resilience">
+  <h3>Key Point</h3>
+  <p>Resilience is the ability to bounce back from adversity, adapt to challenges, and 
+  grow stronger through difficult experiences. It's not about avoiding stress or hardship, 
+  but rather developing the skills and mindset to navigate them effectively.</p>
+</div>
+</section>
+    
+    <!-- 3. Fondo blanco -->
+    <section class="lesson-section no-borders">
+
+  
+    <h2>Reading</h2>
+    <p>Please complete the following reading:</p>
+    
+    <div class="reading-cards">
+      <div class="reading-card">
+        <div class="reading-card-content">
+          <h3>Building Resilience</h3>
+          <p>Explore evidence-based strategies for developing resilience and learn how to strengthen your ability to cope with life's challenges and bounce back from setbacks.</p>
+          <div class="reading-card-footer">
+            <a href="https://www.apa.org/topics/resilience" target="_blank" class="reading-link" aria-label="Read APA article on Building Resilience (opens in new tab)">
+              Read Article
+              <span class="reading-arrow" aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
-      </section>
-      
-      <!-- 8. Fondo gris -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Closing Meditation: Lesson 4</strong></h2>
-        
-        <div class="responsive-video">
-          <video 
-            id="closing-meditation-video" 
-            class="video-js vjs-ie-skin vjs-big-play-centered" 
-            controls 
-            preload="auto" 
-            poster="assets/images/human-flourishing-poster.jpg"
-            data-video-id="w7v04"
-            data-logo="assets/images/logo-ie-small.png"
-            aria-label="Cultivating Resilience from Within meditation video"
-          >
-            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-cultivating-resilience-from-within/mp4/w7v04-cultivating-resilience-from-within_1080p.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-            <track kind="captions" src="captions/cultivating-resilience-from-within.vtt" srclang="en" label="English" default>
-          </video>
-        </div>
-        
-      </section>
-      
-      <!-- 9. Fondo blanco -->
-      <section class="lesson-section no-borders">
-        <h2><strong>Optional Reading</strong></h2>
-        <p>Please complete the following readings if you're interested in learning more about these topics!</p>
-        
-        <div class="reading-cards">
-          <div class="reading-card">
-            <div class="reading-card-content">
-              <h3>Positive Affect and the Complex Dynamics of Human Flourishing</h3>
-              <p>Explore the intricate relationship between positive emotions and human flourishing. This research article examines how positive affect contributes to the complex dynamics of well-being and personal growth.</p>
-              <div class="reading-card-footer">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3126111/#S4title" target="_blank" class="reading-link" aria-label="Read research article on Positive Affect and Human Flourishing (opens in new tab)">
-                  Read Article
-                  <span class="reading-arrow" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="reading-card">
-            <div class="reading-card-content">
-              <h3>Emotional Intelligence and Leadership: What's the Connection?</h3>
-              <p>Discover the vital connection between emotional intelligence and effective leadership. Learn how developing emotional awareness and regulation skills can enhance your ability to lead and inspire others.</p>
-              <div class="reading-card-footer">
-                <a href="https://www.ie.edu/center-for-health-and-well-being/blog/emotional-intelligence-and-leadership-whats-the-connection/" target="_blank" class="reading-link" aria-label="Read article on Emotional Intelligence and Leadership (opens in new tab)">
-                  Read Article
-                  <span class="reading-arrow" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
-        <a href="chapter3.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
-        <a href="chapter5.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
       </div>
     </div>
-  </main>
+  
 
-  <footer role="contentinfo">
-  <div class="footer-content">
-    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+</section>
+    
+    <!-- 4. Fondo gris -->
+    <section class="lesson-section no-borders">
+<h2>Activity: Reflecting on Your Resilience</h2>
+<p>Take some time to reflect on your own experiences with resilience. Consider the 
+following questions and write down your thoughts in your journal or notebook:</p>
+
+<div class="reflection-questions-grid">
+  <div class="reflection-question-card">
+    <div class="question-number">1</div>
+    <div class="question-text">
+      <strong>Think of a time when you faced a significant challenge or setback. How did you respond?</strong>
+    </div>
   </div>
+  
+  <div class="reflection-question-card">
+    <div class="question-number">2</div>
+    <div class="question-text">
+      <strong>What strategies or resources helped you get through that difficult time?</strong>
+    </div>
+  </div>
+  
+  <div class="reflection-question-card">
+    <div class="question-number">3</div>
+    <div class="question-text">
+      <strong>What did you learn about yourself from that experience?</strong>
+    </div>
+  </div>
+  
+  <div class="reflection-question-card">
+    <div class="question-number">4</div>
+    <div class="question-text">
+      <strong>How has that experience shaped how you approach challenges today?</strong>
+    </div>
+  </div>
+  
+  <div class="reflection-question-card">
+    <div class="question-number">5</div>
+    <div class="question-text">
+      <strong>What are some areas where you'd like to build more resilience?</strong>
+    </div>
+  </div>
+</div>
+</section>
+    
+    <!-- 5. Fondo blanco -->
+    <section class="lesson-section no-borders">
+
+  
+    <h2>Neuroplasticity and Resilience</h2>
+    
+    <div class="responsive-video">
+      <video 
+        id="neuroplasticity-video" 
+        class="video-js vjs-ie-skin vjs-big-play-centered" 
+        controls 
+        preload="auto" 
+        data-video-id="w4v02"
+        data-logo="assets/images/logo-ie-small.png"
+        aria-label="Neuroplasticity and Resilience video"
+      >
+        <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v02-neuroplasticity-and-resilience/mp4/w4v02-neuroplasticity-and-resilience_1080p.mp4" type="video/mp4">
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+        <track kind="captions" src="captions/neuroplasticity-and-resilience.vtt" srclang="en" label="English" default>
+      </video>
+    </div>
+    
+    <div class="key-point" role="note" aria-label="Key point about neuroplasticity">
+      <h3>Key Point</h3>
+      <p>Neuroplasticity is the brain's ability to reorganize and form new neural connections 
+      throughout life. This means that resilience can be developed and strengthened through 
+      practice, just like building a muscle. Our brains can literally rewire themselves to 
+      become more resilient.</p>
+    </div>
+  
+
+</section>
+    
+    <!-- 6. Fondo gris -->
+    <section class="lesson-section no-borders">
+      <h2>Strategies for Building Resilience</h2>
+      
+      <div class="responsive-video">
+        <video 
+          id="strategies-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          data-video-id="w4v03"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="Strategies for Building Resilience video"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-strategies-for-building-resilience/mp4/w4v03-strategies-for-building-resilience_1080p.mp4" type="video/mp4">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+          <track kind="captions" src="captions/strategies-for-building-resilience.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+    </section>
+    
+    <!-- 7. Fondo blanco -->
+    <section class="lesson-section no-borders">
+
+  
+    <h2>Activity: Building Your Resilience Toolkit</h2>
+    <p>Based on what you've learned about resilience, create your personal resilience toolkit. 
+    Choose at least 3-5 strategies from the list below that resonate with you and commit to 
+    practicing them regularly:</p>
+    
+    <div class="learning-objectives-grid">
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Build Strong Relationships</h4>
+          <p>Cultivate supportive connections with family, friends, and community members who can provide emotional support during difficult times.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-eye"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Practice Perspective-Taking</h4>
+          <p>Try to see challenges from different angles and look for opportunities for growth and learning in difficult situations.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Develop Self-Compassion</h4>
+          <p>Treat yourself with kindness and understanding during tough times, rather than being overly critical or harsh.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Set Realistic Goals</h4>
+          <p>Break down large challenges into smaller, manageable steps and celebrate progress along the way.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-running"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Take Care of Your Physical Health</h4>
+          <p>Maintain regular exercise, healthy eating habits, and adequate sleep to support your mental resilience.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Practice Mindfulness</h4>
+          <p>Develop present-moment awareness through meditation, deep breathing, or other mindfulness practices.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Embrace Learning</h4>
+          <p>View challenges as opportunities to develop new skills and gain valuable experience.</p>
+        </div>
+      </div>
+      
+      <div class="learning-objective-card">
+        <div class="objective-icon" aria-hidden="true">
+          <i class="fas fa-hands-helping"></i>
+        </div>
+        <div class="objective-content">
+          <h4>Help Others</h4>
+          <p>Engage in acts of service or volunteer work, which can provide perspective and build a sense of purpose.</p>
+        </div>
+      </div>
+    </div>
+    
+    <p><strong>Reflection Questions:</strong></p>
+    <ul>
+      <li>Which strategies do you already use naturally?</li>
+      <li>Which ones would you like to develop further?</li>
+      <li>How can you incorporate these practices into your daily routine?</li>
+      <li>Who in your life can support you in building resilience?</li>
+    </ul>
+  
+
+</section>
+    
+    <!-- 8. Fondo gris -->
+    <section class="lesson-section no-borders">
+      <h2>Reading</h2>
+      <p>Please complete the following reading:</p>
+      
+      <div class="reading-cards">
+        <div class="reading-card">
+          <div class="reading-card-content">
+            <h3>The Science of Resilience: Why Some Children Can Thrive Despite Adversity</h3>
+            <p>Discover the latest research on resilience and learn about the factors that help some individuals not just survive but thrive in the face of significant challenges and adversity.</p>
+            <div class="reading-card-footer">
+              <a href="https://www.scientificamerican.com/article/the-science-of-resilience/" target="_blank" class="reading-link" aria-label="Read Scientific American article on resilience (opens in new tab)">
+                Read Article
+                <span class="reading-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 9. Fondo blanco -->
+    <section class="lesson-section no-borders">
+
+  
+    <h2>Closing Meditation: Lesson 4</h2>
+    
+    <div class="responsive-video">
+      <video 
+        id="closing-meditation-video" 
+        class="video-js vjs-ie-skin vjs-big-play-centered" 
+        controls 
+        preload="auto" 
+        data-video-id="w7v04"
+        data-logo="assets/images/logo-ie-small.png"
+        aria-label="Building Inner Strength meditation video"
+      >
+        <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-building-inner-strength/mp4/w7v04-building-inner-strength_1080p.mp4" type="video/mp4">
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+        <track kind="captions" src="captions/building-inner-strength.vtt" srclang="en" label="English" default>
+      </video>
+    </div>
+    
+    <div class="key-point" role="note" aria-label="Key point about meditation for resilience">
+      <h3>Key Point</h3>
+      <p>This guided meditation helps us connect with our inner strength and resilience. 
+      Regular meditation practice can help build the mental and emotional resources we need 
+      to navigate life's challenges with greater ease and confidence.</p>
+    </div>
+  
+
+</section>
+    
+    <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
+      <a href="chapter3.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
+      <a href="chapter5.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</main>
+
+<footer role="contentinfo">
+<div class="footer-content">
+  <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+</div>
 </footer>
 
-  <!-- VideoJS JavaScript -->
-  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-  <script src="js/video-player.js"></script>
-  <script src="js/key-points.js"></script>
-  <script src="js/reflections.js"></script>
-  <script src="js/main.js"></script>
+<!-- Glossary Modal -->
+<div id="glossary-modal" class="modal" role="dialog" aria-labelledby="glossary-modal-title" aria-hidden="true">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="glossary-modal-title">Glossary of Digital Well-being Concepts</h2>
+      <button class="modal-close" aria-label="Close glossary">&times;</button>
+    </div>
+    <div class="modal-body">
+      <nav class="glossary-az-nav" aria-label="Glossary A-Z Navigation">
+        <a href="#glossary-section-a">A</a>
+        <a href="#glossary-section-b">B</a>
+        <a href="#glossary-section-c">C</a>
+        <a href="#glossary-section-d">D</a>
+        <a href="#glossary-section-e">E</a>
+        <a href="#glossary-section-f">F</a>
+        <a href="#glossary-section-h">H</a>
+        <a href="#glossary-section-m">M</a>
+        <a href="#glossary-section-n">N</a>
+        <a href="#glossary-section-p">P</a>
+        <a href="#glossary-section-r">R</a>
+        <a href="#glossary-section-s">S</a>
+        <a href="#glossary-section-t">T</a>
+        <a href="#glossary-section-w">W</a>
+      </nav>
+      <div class="glossary-terms">
+        <div id="glossary-section-a" class="glossary-section">
+          <h3 class="glossary-letter-header">A</h3>
+          <div class="glossary-term">
+            <strong>Accountability Buddy</strong> – A supportive partner who helps track progress and encourages consistency in digital well-being goals.
+          </div>
+          <div class="glossary-term">
+            <strong>Attention Management</strong> – The practice of consciously directing focus in a digital environment to enhance productivity and cognitive health.
+          </div>
+          <div class="glossary-term">
+            <strong>Autonomy (Self-Determination Theory)</strong> – The ability to make choices about digital engagement that align with personal values and goals.
+          </div>
+        </div>
+        <div id="glossary-section-b" class="glossary-section">
+          <h3 class="glossary-letter-header">B</h3>
+          <div class="glossary-term">
+            <strong>Brain Cognition</strong> – The way the brain processes information, impacted by digital habits such as screen time and multitasking.
+          </div>
+          <div class="glossary-term">
+            <strong>Behavioral Science</strong> – The study of how people form digital habits and how technology influences decision-making.
+          </div>
+        </div>
+        <div id="glossary-section-c" class="glossary-section">
+          <h3 class="glossary-letter-header">C</h3>
+          <div class="glossary-term">
+            <strong>Character Strengths</strong> – Personal strengths (e.g., curiosity, self-regulation) that can be leveraged to cultivate healthy digital habits.
+          </div>
+          <div class="glossary-term">
+            <strong>Cognitive Load</strong> – The mental effort required to process information, which can be impacted by excessive screen time or multitasking.
+          </div>
+          <div class="glossary-term">
+            <strong>Core Values</strong> – Fundamental beliefs that guide digital habits and decision-making.
+          </div>
+        </div>
+        <div id="glossary-section-d" class="glossary-section">
+          <h3 class="glossary-letter-header">D</h3>
+          <div class="glossary-term">
+            <strong>Digital Detox</strong> – A period of time spent without digital devices to reset habits and improve well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Flourishing</strong> – Thriving in a digital environment by balancing technology use with personal and professional well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Goals</strong> – Personalized objectives for improving one's digital habits, often using the SMART (Specific, Measurable, Achievable, Relevant, Time-bound) framework.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Habit Audit</strong> – A self-assessment to track technology use and identify areas for improvement.
+          </div>
+          <div class="glossary-term">
+            <strong>Digital Minimalism</strong> – A philosophy advocating for intentional and purposeful use of technology to enhance well-being.
+          </div>
+        </div>
+        <div id="glossary-section-e" class="glossary-section">
+          <h3 class="glossary-letter-header">E</h3>
+          <div class="glossary-term">
+            <strong>Empathy and Technology</strong> – The relationship between digital interactions and emotional intelligence, including how technology can impact social connections.
+          </div>
+          <div class="glossary-term">
+            <strong>Energy Management</strong> – Strategies to prevent digital fatigue and optimize energy levels in a tech-heavy world.
+          </div>
+        </div>
+        <div id="glossary-section-f" class="glossary-section">
+          <h3 class="glossary-letter-header">F</h3>
+          <div class="glossary-term">
+            <strong>Focus & Productivity</strong> – The ability to maintain attention and effectiveness in work and life, often challenged by digital distractions.
+          </div>
+          <div class="glossary-term">
+            <strong>Flourishing (Well-being Theory)</strong> – The state of thriving in multiple aspects of life, including physical, mental, emotional, and digital well-being.
+          </div>
+        </div>
+        <div id="glossary-section-h" class="glossary-section">
+          <h3 class="glossary-letter-header">H</h3>
+          <div class="glossary-term">
+            <strong>Habit Loop</strong> – A framework for understanding habit formation, consisting of cue, routine, and reward, applicable to digital behaviors.
+          </div>
+        </div>
+        <div id="glossary-section-m" class="glossary-section">
+          <h3 class="glossary-letter-header">M</h3>
+          <div class="glossary-term">
+            <strong>Mindfulness in Technology Use</strong> – Practicing present-moment awareness to create intentional and balanced digital interactions.
+          </div>
+          <div class="glossary-term">
+            <strong>Motivation (Self-Determination Theory)</strong> – Internal and external factors that influence engagement with technology, including autonomy, competence, and relatedness.
+          </div>
+        </div>
+        <div id="glossary-section-n" class="glossary-section">
+          <h3 class="glossary-letter-header">N</h3>
+          <div class="glossary-term">
+            <strong>Notification Management</strong> – Strategies to reduce interruptions and increase focus, such as disabling non-essential alerts.
+          </div>
+        </div>
+        <div id="glossary-section-p" class="glossary-section">
+          <h3 class="glossary-letter-header">P</h3>
+          <div class="glossary-term">
+            <strong>Prefrontal Cortex</strong> – The part of the brain responsible for decision-making and impulse control, which is affected by digital engagement.
+          </div>
+          <div class="glossary-term">
+            <strong>Psychological Safety and Technology</strong> – The impact of digital environments on emotional well-being and security.
+          </div>
+        </div>
+        <div id="glossary-section-r" class="glossary-section">
+          <h3 class="glossary-letter-header">R</h3>
+          <div class="glossary-term">
+            <strong>Reflection Practice</strong> – Periodic self-check-ins to assess digital habits and their alignment with personal values.
+          </div>
+        </div>
+        <div id="glossary-section-s" class="glossary-section">
+          <h3 class="glossary-letter-header">S</h3>
+          <div class="glossary-term">
+            <strong>Screen Time Awareness</strong> – Conscious tracking of time spent on digital devices to maintain a balanced lifestyle.
+          </div>
+          <div class="glossary-term">
+            <strong>Self-Regulation</strong> – The ability to control impulses and make mindful choices in digital interactions.
+          </div>
+          <div class="glossary-term">
+            <strong>Social Media Hygiene</strong> – Practices for maintaining a healthy relationship with social platforms, including curating content and setting boundaries.
+          </div>
+        </div>
+        <div id="glossary-section-t" class="glossary-section">
+          <h3 class="glossary-letter-header">T</h3>
+          <div class="glossary-term">
+            <strong>Tech-Life Balance</strong> – The intentional effort to harmonize technology use with overall well-being.
+          </div>
+          <div class="glossary-term">
+            <strong>Triggers in Digital Use</strong> – Environmental or psychological cues that prompt certain digital habits, such as checking the phone out of boredom.
+          </div>
+          <div class="glossary-term">
+            <strong>Two-Edge Effect of Technology</strong> – The concept that digital tools can both enhance and hinder well-being, depending on usage patterns.
+          </div>
+        </div>
+        <div id="glossary-section-w" class="glossary-section">
+          <h3 class="glossary-letter-header">W</h3>
+          <div class="glossary-term">
+            <strong>Willpower and Digital Use</strong> – The ability to resist distractions and build positive technology habits.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VideoJS JavaScript -->
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script src="js/video-player.js"></script>
+<script src="js/key-points.js"></script>
+<script src="js/reflections.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Glossary Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('glossary-modal');
+  const openBtn = document.getElementById('open-glossary');
+  const menuLink = document.getElementById('glossary-menu-link');
+  const closeBtn = modal.querySelector('.modal-close');
+
+  function openModal() {
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const firstFocusableElement = modal.querySelector('.modal-close, .glossary-az-nav a');
+    if (firstFocusableElement) {
+        firstFocusableElement.focus();
+    }
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = 'auto';
+    if (document.activeElement === closeBtn || modal.contains(document.activeElement)) {
+        if (openBtn && openBtn === document.lastActiveElement) openBtn.focus();
+        else if (menuLink && menuLink === document.lastActiveElement) menuLink.focus();
+    }
+    document.lastActiveElement = null;
+  }
+  
+  document.lastActiveElement = null;
+
+  if (openBtn) {
+    openBtn.addEventListener('click', function() {
+        document.lastActiveElement = this;
+        openModal();
+    });
+  }
+  
+  if (menuLink) {
+    menuLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.lastActiveElement = this;
+      openModal();
+      const mainNav = document.getElementById('main-nav');
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      if (mainNav && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+});
+</script>
 </body>
 </html>
