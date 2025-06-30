@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Apply saved answers to the UI
         Object.keys(parsedAnswers).forEach((questionNumber) => {
           const selectedAnswer = parsedAnswers[questionNumber]
-          const questionElement = document.querySelector(`.quiz-question:nth-child(${questionNumber})`)
+          // Usar un selector más específico basado en el número de pregunta
+          const questionElement = getQuestionElementByNumber(questionNumber)
           if (questionElement) {
             const options = questionElement.querySelectorAll(".quiz-options li")
             const selectedOption = Array.from(options).find(
@@ -58,6 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("Error loading saved quiz answers:", e)
       }
     }
+  }
+
+  // Función helper para obtener el elemento de pregunta por número
+  function getQuestionElementByNumber(questionNumber) {
+    const allQuestions = document.querySelectorAll(".quiz-question")
+    return allQuestions[questionNumber - 1] // Array es 0-indexed, preguntas son 1-indexed
   }
 
   // Save quiz answers to localStorage
@@ -78,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     quizQuestions.forEach((question, index) => {
       const questionNumber = index + 1
       const options = question.querySelectorAll(".quiz-options li")
+
+      // Añadir atributo data-question-number al elemento de pregunta para facilitar la búsqueda
+      question.setAttribute("data-question-number", questionNumber)
 
       options.forEach((option, optionIndex) => {
         const optionLetter = String.fromCharCode(65 + optionIndex) // A, B, C, D
@@ -245,10 +255,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function addResetButton() {
-    const quizContainer = document.querySelector(".quiz-container")
+    // Buscar el contenedor del quiz o la sección que contiene las preguntas
+    const quizSection = document.querySelector(".lesson-section:has(.quiz-question)")
 
-    if (quizContainer) {
+    if (quizSection) {
+      // Verificar si ya existe un botón de reset
+      const existingResetButton = quizSection.querySelector(".quiz-reset-container")
+      if (existingResetButton) {
+        return // Ya existe, no crear otro
+      }
+
       const resetButtonContainer = document.createElement("div")
+      resetButtonContainer.className = "quiz-reset-container"
       resetButtonContainer.style.cssText = `
         text-align: center;
         margin-top: 2rem;
@@ -292,7 +310,14 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 
       resetButtonContainer.appendChild(resetButton)
-      quizContainer.appendChild(resetButtonContainer)
+
+      // Insertar el botón después de la última pregunta del quiz
+      const lastQuestion = quizSection.querySelector(".quiz-question:last-of-type")
+      if (lastQuestion) {
+        lastQuestion.parentNode.insertBefore(resetButtonContainer, lastQuestion.nextSibling)
+      } else {
+        quizSection.appendChild(resetButtonContainer)
+      }
     }
   }
 
@@ -339,9 +364,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Scroll al inicio del quiz
-    const quizContainer = document.querySelector(".quiz-container")
-    if (quizContainer) {
-      quizContainer.scrollIntoView({ behavior: "smooth", block: "start" })
+    const firstQuestion = document.querySelector(".quiz-question")
+    if (firstQuestion) {
+      firstQuestion.scrollIntoView({ behavior: "smooth", block: "start" })
     }
 
     // Anunciar el reset para lectores de pantalla
@@ -380,11 +405,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showQuizResults(correctCount, totalQuestions, percentage) {
-    const quizContainer = document.querySelector(".quiz-container")
+    // Buscar el contenedor del quiz
+    const quizSection = document.querySelector(".lesson-section:has(.quiz-question)")
 
-    if (quizContainer) {
+    if (quizSection) {
       // Eliminar resultados previos si existen
-      const existingResults = quizContainer.querySelector(".quiz-results")
+      const existingResults = quizSection.querySelector(".quiz-results")
       if (existingResults) {
         existingResults.remove()
       }
@@ -417,7 +443,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <p style="margin-bottom: 0;">${message}</p>
       `
 
-      quizContainer.appendChild(resultsElement)
+      // Insertar después del botón de reset o al final de la sección
+      const resetContainer = quizSection.querySelector(".quiz-reset-container")
+      if (resetContainer) {
+        resetContainer.parentNode.insertBefore(resultsElement, resetContainer.nextSibling)
+      } else {
+        quizSection.appendChild(resultsElement)
+      }
 
       // Scroll a los resultados
       resultsElement.scrollIntoView({ behavior: "smooth", block: "center" })
