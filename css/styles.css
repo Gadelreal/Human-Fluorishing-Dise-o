@@ -725,6 +725,13 @@ ol {
     width: calc(100% - 2rem) !important;
   }
 }
+
+/* Remove blue border when clicking on key points */
+.key-point:focus,
+.key-point:active {
+  outline: none !important;
+  border: 1px solid #e0e0e0 !important;
+}
 /* === FIN part3.css === */
 
 /* === INICIO part4.css === */
@@ -3110,6 +3117,18 @@ body h2:first-of-type,
   }
 
   .navigation-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-button {
+    text-align: center;
+  }
+
+  .cover-content h1 {
+    font-size: 2rem;
+  }
+
     flex-direction: column;
     gap: 1rem;
   }
