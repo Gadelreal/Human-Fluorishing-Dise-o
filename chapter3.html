@@ -1,58 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Human Flourishing - Chapter 3</title>
-<link rel="stylesheet" href="./css/styles.css">
-<!-- VideoJS CSS -->
-<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-<!-- Font Awesome para iconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-/* Estilos para la navegación A-Z del glosario y las secciones */
-.glossary-az-nav {
-  padding: 10px 0;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-}
-.glossary-az-nav a {
-  margin: 0 5px;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  padding: 5px;
-}
-.glossary-az-nav a:hover,
-.glossary-az-nav a:focus {
-  text-decoration: underline;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-}
-.glossary-section {
-  /* No se necesita margin-top aquí si el H3 lo maneja */
-}
-.glossary-letter-header {
-  font-size: 1.6em;
-  color: #333;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ccc;
-}
-.glossary-section:first-child .glossary-letter-header {
-    margin-top: 0; /* El primer header no necesita tanto espacio arriba */
-}
-.modal-body {
-  max-height: 70vh;
-  overflow-y: auto;
-}
-.glossary-term {
-  margin-bottom: 10px; /* Espacio entre términos */
-  line-height: 1.6;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Flourishing - Chapter 3</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -60,670 +16,482 @@
 
 <!-- Modificar la estructura del header para alinear elementos en una línea -->
 <header class="full-width header-full-bottom" role="banner">
-<div class="header-content">
-  <div class="header-left">
-    <div class="logo-container tiny-logo">
-      <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <h2 class="header-title">Digital Well-Being</h2>
-  </div>
-  <div class="header-controls">
-    <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-      <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
+          <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
+        </a>
       </div>
-    </button>
+      <h2 class="header-title">Human Flourishing</h2>
+    </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
   </div>
-</div>
-<nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="introduction.html">0. Introduction</a></li>
-    <li><a href="chapter1.html">1. Well-Being as a Key</a></li>
-    <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
-    <li><a href="chapter3.html" class="active" aria-current="page">3. Autonomy and Motivation</a></li>
-    <li><a href="chapter4.html">4. Building Resilience</a></li>
-    <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-    <li><a href="#" id="glossary-menu-link"><i class="fas fa-book" style="color: #000066; margin-right: 0.5rem;" aria-hidden="true"></i>Glossary</a></li>
-    <li class="language-selector-menu">
-<span class="menu-separator"></span>
-<span id="language-label" class="sr-only">Select language:</span>
-<a href="chapter3.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo3.html" aria-labelledby="language-label">Español</a>
-</li>
-  </ul>
-</nav>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">0. Introduction</a></li>
+      <li><a href="chapter1.html">1. Being Human</a></li>
+      <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
+      <li><a href="chapter3.html" class="active" aria-current="page">3. Autonomy and Motivation</a></li>
+      <li><a href="chapter4.html">4. Building Resilience</a></li>
+      <li><a href="chapter5.html">5. Ownership and Practice</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="hero-section">
-<div class="hero-content">
-  <div class="hero-title-container">
-    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
-    <h1 class="hero-title">LESSON 3: Autonomy and Motivation</h1>
-  </div>
-</div>
-</section>
-
-<main id="main-content" tabindex="-1">
-  <div class="content-aligned-container">
-    <h1>LESSON 3: Autonomy and Motivation</h1>
-    <div class="title-separator blue" aria-hidden="true"></div>
-    
-    <!-- 1. Fondo blanco -->
-    <section class="lesson-section no-borders">
-      <h2>Lesson 3 Learning Objectives</h2>
-      
-      <div class="learning-objectives-grid">
-        <div class="learning-objective-card">
-          <div class="objective-icon" aria-hidden="true">
-            <i class="fas fa-compass"></i>
-          </div>
-          <div class="objective-content">
-            <h4>Living with Purpose</h4>
-            <p>Cultivate practices for living with a sense of purpose</p>
-          </div>
-        </div>
-        
-        <div class="learning-objective-card">
-          <div class="objective-icon" aria-hidden="true">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="objective-content">
-            <h4>Elements of Motivation</h4>
-            <p>Analyze the elements that make up motivation</p>
-          </div>
-        </div>
-        
-        <div class="learning-objective-card">
-          <div class="objective-icon" aria-hidden="true">
-            <i class="fas fa-heart"></i>
-          </div>
-          <div class="objective-content">
-            <h4>Intrinsic vs Extrinsic</h4>
-            <p>Evaluate intrinsic motivation, how it is different from extrinsic motivation, and its connection to flourishing</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- 2. Fondo gris -->
-    <section class="lesson-section no-borders">
-<h2>Living with a Sense of Purpose</h2>
-
-<div class="responsive-video">
-  <video 
-    id="purpose-video" 
-    class="video-js vjs-ie-skin vjs-big-play-centered" 
-    controls 
-    preload="auto" 
-    data-video-id="w3v01"
-    data-logo="assets/images/logo-ie-small.png"
-    aria-label="Living with a Sense of Purpose video"
-  >
-    <source src="https://iep-media.ie.edu/olj/human-flourishing/w3v01-living-with-a-sense-of-purpose/mp4/w3v01-living-with-a-sense-of-purpose_1080p.mp4" type="video/mp4">
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-    <track kind="captions" src="captions/living-with-a-sense-of-purpose.vtt" srclang="en" label="English" default>
-  </video>
-</div>
-
-<div class="key-point" role="note" aria-label="Key point about living with purpose">
-  <h3>Key Point</h3>
-  <p>We can cultivate a sense of purpose by first recognizing that we are continuously 
-  learning and that the nature of purpose can evolve over time. As we consider our 
-  purpose, we should identify what is truly important to us so that we can prioritize it 
-  accordingly and, ultimately, tap into a better understanding of our values.</p>
-</div>
-</section>
-    
-    <!-- 3. Fondo blanco -->
-    <section class="lesson-section no-borders">
-
-  
-    <h2>Activity: Understanding Your Core Values</h2>
-    <p><strong>What are your core values?</strong></p>
-    <p>Take some time to answer the following questions. Write down your thoughts and 
-    feelings as you reflect on each one, you can use your journal, or a notebook:</p>
-    
-    <div class="reflection-questions-grid">
-      <div class="reflection-question-card">
-        <div class="question-number">1</div>
-        <div class="question-text">
-          <strong>What moments in your life have made you feel the most fulfilled and why?</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">2</div>
-        <div class="question-text">
-          <strong>When have you felt the proudest of yourself? What were you doing?</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">3</div>
-        <div class="question-text">
-          <strong>Think about a time when you felt deeply connected to others. What was happening?</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">4</div>
-        <div class="question-text">
-          <strong>What activities or experiences make you lose track of time because you enjoy them so much?</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">5</div>
-        <div class="question-text">
-          <strong>What are your non-negotiables?</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">6</div>
-        <div class="question-text">
-          <strong>When faced with a difficult decision, what principles guide you?</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">7</div>
-        <div class="question-text">
-          <strong>Write down people you admire around you and what you admire about them.</strong>
-        </div>
-      </div>
-      
-      <div class="reflection-question-card">
-        <div class="question-number">8</div>
-        <div class="question-text">
-          <strong>Write down your answers to these questions: What is really important in life? What is a good life? What is a successful life? Is living a good life the same as living a successful life? If not, where is the gap?</strong>
-        </div>
-      </div>
-    </div>
-    
-    <p>Taking into consideration your responses, review the following list of values. Circle or 
-    highlight the top 10 that are most important to you. Narrow it down to your top 5 core 
-    values. Reflect on why these 5 values are important to you and how they influence your 
-    decisions and actions.</p>
-    
-    <ul class="values-list">
-      <li>1. Achievement</li>
-      <li>2. Adventure</li>
-      <li>3. Autonomy</li>
-      <li>4. Balance</li>
-      <li>5. Beauty</li>
-      <li>6. Compassion</li>
-      <li>7. Creativity</li>
-      <li>8. Curiosity</li>
-      <li>9. Determination</li>
-      <li>10. Fairness</li>
-      <li>11. Family</li>
-      <li>12. Friendship</li>
-      <li>13. Growth</li>
-      <li>14. Happiness</li>
-      <li>15. Honesty</li>
-      <li>16. Humor</li>
-      <li>17. Integrity</li>
-      <li>18. Justice</li>
-      <li>19. Kindness</li>
-      <li>20. Knowledge</li>
-      <li>21. Leadership</li>
-      <li>22. Learning</li>
-      <li>23. Love</li>
-      <li>24. Loyalty</li>
-      <li>25. Openness</li>
-      <li>26. Optimism</li>
-      <li>27. Peace</li>
-      <li>28. Respect</li>
-      <li>29. Responsibility</li>
-      <li>30. Security</li>
-      <li>31. Service</li>
-      <li>32. Spirituality</li>
-      <li>33. Success</li>
-      <li>34. Trustworthiness</li>
-      <li>35. Wisdom</li>
-    </ul>
-  
-
-</section>
-    
-    <!-- 4. Fondo gris -->
-    <section class="lesson-section no-borders">
-<h2>Activity: Finding Your Ikigai</h2>
-<p><strong>"Ikigai"</strong> is a Japanese concept that means "a reason for being" or "a purpose in life." It 
-is a combination of four Japanese words: "iki" (life), "kai" (the realization of hopes and 
-expectations), "ga" (self), and "ai" (worth or value). This concept is often used as a 
-framework for personal development and goal setting.</p>
-
-<p>As seen in the diagram below, the concept of ikigai suggests that when you can find 
-the intersection between what you love, what you are good at, what the world needs, 
-and what you can be paid for, you will have found your "reason for being" or "purpose 
-in life."</p>
-
-<p>By tapping into what is really important in our lives, we can better align our priorities 
-and daily behaviors for greater fulfillment.</p>
-
-<div class="ikigai-container">
-  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ikigai-WEf3R0IdQc0dmjkYhSCbdGhKGuiVOC.png" alt="Ikigai diagram showing the intersection of what you love, what you're good at, what the world needs, and what you can be paid for" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
-  <p style="margin-top: 1rem; font-style: italic; color: #666; text-align: center;">
-    Ikigai Diagram: The intersection of what you love, what you're good at, what the world needs, and what you can be paid for.
-  </p>
-</div>
-</section>
-    
-    <!-- 5. Fondo blanco -->
-    <section class="lesson-section no-borders">
-
-  
-    <h2>The Self-Determination Theory</h2>
-    
-    <div class="responsive-video">
-      <video 
-        id="self-determination-video" 
-        class="video-js vjs-ie-skin vjs-big-play-centered" 
-        controls 
-        preload="auto" 
-        data-video-id="w6v04"
-        data-logo="assets/images/logo-ie-small.png"
-        aria-label="The Self-Determination Theory video"
-      >
-        <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v04-the-self-determination-theory/mp4/w6v04-the-self-determination-theory_1080p.mp4" type="video/mp4">
-        <p class="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to a
-          web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-        <track kind="captions" src="captions/self-determination-theory.vtt" srclang="en" label="English" default>
-      </video>
-    </div>
-    
-    <div class="key-point" role="note" aria-label="Key point about Self-Determination Theory">
-      <h3>Key Point</h3>
-      <p>The Self-Determination Theory is made of up three parts: autonomy, relatedness, 
-      and competence. Autonomy allows us to feel like we have ownership over our lives. 
-      Relatedness highlights our need for connection to our communities and the world 
-      around us. Competence refers to our ability to learn and succeed. All three of these 
-      elements are critical for our motivation.</p>
-    </div>
-  
-
-</section>
-    
-    <!-- 6. Fondo gris -->
-    <section class="lesson-section no-borders">
-<h2>Reading</h2>
-<p>Please complete the following reading:</p>
-
-<div class="reading-cards">
-  <div class="reading-card">
-    <div class="reading-card-content">
-      <h3>Productivity, Motivation, and Brilliance: Three Key Elements of Psychobusiness</h3>
-      <p>Explore the psychological foundations of business success and discover how productivity, motivation, and brilliance work together to create exceptional performance in professional environments.</p>
-      <div class="reading-card-footer">
-        <a href="https://www.ie.edu/insights/articles/productivity-motivation-and-brilliance-three-key-elements-of-psychobusiness/" target="_blank" class="reading-link" aria-label="Read article: Productivity, Motivation, and Brilliance (opens in new tab)">
-          Read Article
-          <span class="reading-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
+      <h1 class="hero-title">LESSON 3: Autonomy and Motivation</h1>
     </div>
   </div>
-</div>
 </section>
-    
-    <!-- 7. Fondo blanco -->
-    <section class="lesson-section no-borders">
 
-  
-    <h2>Extrinsic Motivation vs. Intrinsic Motivation</h2>
-    
-    <div class="responsive-video">
-      <video 
-        id="motivation-types-video" 
-        class="video-js vjs-ie-skin vjs-big-play-centered" 
-        controls 
-        preload="auto" 
-        data-video-id="w3v02"
-        data-logo="assets/images/logo-ie-small.png"
-        aria-label="Extrinsic Motivation vs. Intrinsic Motivation video"
-      >
-        <source src="https://iep-media.ie.edu/olj/human-flourishing/w3v02-extrinsic-motivation-vs-intrinsic-motivation/mp4/w3v02-extrinsic-motivation-vs-intrinsic-motivation_1080p.mp4" type="video/mp4">
-        <p class="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to a
-          web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-        <track kind="captions" src="captions/extrinsic-vs-intrinsic-motivation.vtt" srclang="en" label="English" default>
-      </video>
-    </div>
-    
-    <div class="key-point" role="note" aria-label="Key point about motivation types">
-      <h3>Key Point</h3>
-      <p>Extrinsic motivation is driven by external factors like societal expectations and 
-      validation from others, which can erode a sense of meaning over time since the driving 
-      force behind our motivation does not come from within ourselves. In contrast, intrinsic 
-      motivation, which comes from within and is more aligned with our personal values, is 
-      associated with a greater sense of purpose and lasting satisfaction.</p>
-    </div>
-  
-
-</section>
-    
-    <!-- 8. Fondo gris -->
-    <section class="lesson-section no-borders">
-      <div class="module-background">
-        <div class="module-content">
-          <h2>Reading</h2>
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
+      
+      
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Lesson 3 Learning Objectives</strong></h2>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-compass"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Living with Purpose</h4>
+              <p>Cultivate practices for living with a sense of purpose</p>
+            </div>
+          </div>
           
-          <div class="reading-cards">
-            <div class="reading-card">
-              <div class="reading-card-content">
-                <h3>How to Increase Intrinsic Motivation (According to Science)</h3>
-                <p>Discover evidence-based strategies for enhancing your intrinsic motivation. Learn practical techniques backed by scientific research to cultivate lasting motivation that comes from within.</p>
-                <div class="reading-card-footer">
-                  <a href="https://positivepsychology.com/increase-intrinsic-motivation/" target="_blank" class="reading-link" aria-label="Read article: How to Increase Intrinsic Motivation (opens in new tab)">
-                    Read Article
-                    <span class="reading-arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Elements of Motivation</h4>
+              <p>Analyze the elements that make up motivation</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Intrinsic vs Extrinsic</h4>
+              <p>Evaluate intrinsic motivation, how it is different from extrinsic motivation, and its connection to flourishing</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- 9. Fondo blanco -->
-    <section class="lesson-section no-borders">
-
+      </section>
+      
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+  <h2><strong>Living with a Sense of Purpose</strong></h2>
   
-    <h2>Closing Meditation: Lesson 3</h2>
-    
-    <div class="responsive-video">
-      <video 
-        id="closing-meditation-video" 
-        class="video-js vjs-ie-skin vjs-big-play-centered" 
-        controls 
-        preload="auto" 
-        data-video-id="w7v03"
-        data-logo="assets/images/logo-ie-small.png"
-        aria-label="Connecting with Your Inner Motivation meditation video"
-      >
-        <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v03-connecting-with-your-inner-motivation/mp4/w7v03-connecting-with-your-inner-motivation_1080p.mp4" type="video/mp4">
-        <p class="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to a
-          web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-        <track kind="captions" src="captions/connecting-with-your-inner-motivation.vtt" srclang="en" label="English" default>
-      </video>
-    </div>
-    
-    <div class="key-point" role="note" aria-label="Key point about meditation practice">
-      <h3>Key Point</h3>
-      <p>This guided meditation helps us connect with our inner sources of motivation and purpose. Taking time for reflection allows us to align our actions with our deepest values and cultivate sustainable motivation from within.</p>
-    </div>
+  <div class="responsive-video">
+    <video 
+      id="purpose-video" 
+      class="video-js vjs-ie-skin vjs-big-play-centered" 
+      controls 
+      preload="auto" 
+      poster="assets/images/living-with-sense-of-purpose-poster.png"
+      data-video-id="w3v01"
+      data-logo="assets/images/logo-ie-small.png"
+      aria-label="Living with a Sense of Purpose video"
+    >
+      <source src="https://iep-media.ie.edu/olj/human-flourishing/w3v01-living-with-a-sense-of-purpose/mp4/w3v01-living-with-a-sense-of-purpose_1080p.mp4" type="video/mp4">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+      <track kind="captions" src="captions/living-with-a-sense-of-purpose.vtt" srclang="en" label="English" default>
+    </video>
+  </div>
   
-
+  <div class="key-point" role="note" aria-label="Key point about living with purpose">
+    <h3>Key Point</h3>
+    <p>We can cultivate a sense of <strong>purpose</strong> by first recognizing that we are 
+    <strong>continuously learning</strong> and that the nature of purpose can evolve over time. As we consider our 
+    purpose, we should identify what is truly important to us so that we can <strong>prioritize</strong> it 
+    accordingly and, ultimately, tap into a better understanding of our <strong>values</strong>.</p>
+  </div>
 </section>
+      
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
     
-    <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
-      <a href="chapter2.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
-      <a href="chapter4.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
+      <h2><strong>Activity: Understanding Your Core Values</strong></h2>
+      <p><strong>What are your core values?</strong></p>
+      <p>Take some time to answer the following questions. Write down your thoughts and 
+      feelings as you reflect on each one, you can use your journal, or a notebook:</p>
+      
+      <div class="learning-objectives-grid">
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">1</span>
+    </div>
+    <div class="objective-content">
+      <h4>Life Fulfillment</h4>
+      <p>What moments in your life have made you feel the most fulfilled and why?</p>
     </div>
   </div>
-</main>
-
-<footer role="contentinfo">
-<div class="footer-content">
-  <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-</div>
-</footer>
-
-<!-- Glossary Modal -->
-<div id="glossary-modal" class="modal" role="dialog" aria-labelledby="glossary-modal-title" aria-hidden="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2 id="glossary-modal-title">Glossary of Digital Well-being Concepts</h2>
-      <button class="modal-close" aria-label="Close glossary">&times;</button>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">2</span>
     </div>
-    <div class="modal-body">
-      <nav class="glossary-az-nav" aria-label="Glossary A-Z Navigation">
-        <a href="#glossary-section-a">A</a>
-        <a href="#glossary-section-b">B</a>
-        <a href="#glossary-section-c">C</a>
-        <a href="#glossary-section-d">D</a>
-        <a href="#glossary-section-e">E</a>
-        <a href="#glossary-section-f">F</a>
-        <a href="#glossary-section-h">H</a>
-        <a href="#glossary-section-m">M</a>
-        <a href="#glossary-section-n">N</a>
-        <a href="#glossary-section-p">P</a>
-        <a href="#glossary-section-r">R</a>
-        <a href="#glossary-section-s">S</a>
-        <a href="#glossary-section-t">T</a>
-        <a href="#glossary-section-w">W</a>
-      </nav>
-      <div class="glossary-terms">
-        <div id="glossary-section-a" class="glossary-section">
-          <h3 class="glossary-letter-header">A</h3>
-          <div class="glossary-term">
-            <strong>Accountability Buddy</strong> – A supportive partner who helps track progress and encourages consistency in digital well-being goals.
-          </div>
-          <div class="glossary-term">
-            <strong>Attention Management</strong> – The practice of consciously directing focus in a digital environment to enhance productivity and cognitive health.
-          </div>
-          <div class="glossary-term">
-            <strong>Autonomy (Self-Determination Theory)</strong> – The ability to make choices about digital engagement that align with personal values and goals.
-          </div>
-        </div>
-        <div id="glossary-section-b" class="glossary-section">
-          <h3 class="glossary-letter-header">B</h3>
-          <div class="glossary-term">
-            <strong>Brain Cognition</strong> – The way the brain processes information, impacted by digital habits such as screen time and multitasking.
-          </div>
-          <div class="glossary-term">
-            <strong>Behavioral Science</strong> – The study of how people form digital habits and how technology influences decision-making.
-          </div>
-        </div>
-        <div id="glossary-section-c" class="glossary-section">
-          <h3 class="glossary-letter-header">C</h3>
-          <div class="glossary-term">
-            <strong>Character Strengths</strong> – Personal strengths (e.g., curiosity, self-regulation) that can be leveraged to cultivate healthy digital habits.
-          </div>
-          <div class="glossary-term">
-            <strong>Cognitive Load</strong> – The mental effort required to process information, which can be impacted by excessive screen time or multitasking.
-          </div>
-          <div class="glossary-term">
-            <strong>Core Values</strong> – Fundamental beliefs that guide digital habits and decision-making.
-          </div>
-        </div>
-        <div id="glossary-section-d" class="glossary-section">
-          <h3 class="glossary-letter-header">D</h3>
-          <div class="glossary-term">
-            <strong>Digital Detox</strong> – A period of time spent without digital devices to reset habits and improve well-being.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Flourishing</strong> – Thriving in a digital environment by balancing technology use with personal and professional well-being.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Goals</strong> – Personalized objectives for improving one's digital habits, often using the SMART (Specific, Measurable, Achievable, Relevant, Time-bound) framework.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Habit Audit</strong> – A self-assessment to track technology use and identify areas for improvement.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Minimalism</strong> – A philosophy advocating for intentional and purposeful use of technology to enhance well-being.
-          </div>
-        </div>
-        <div id="glossary-section-e" class="glossary-section">
-          <h3 class="glossary-letter-header">E</h3>
-          <div class="glossary-term">
-            <strong>Empathy and Technology</strong> – The relationship between digital interactions and emotional intelligence, including how technology can impact social connections.
-          </div>
-          <div class="glossary-term">
-            <strong>Energy Management</strong> – Strategies to prevent digital fatigue and optimize energy levels in a tech-heavy world.
-          </div>
-        </div>
-        <div id="glossary-section-f" class="glossary-section">
-          <h3 class="glossary-letter-header">F</h3>
-          <div class="glossary-term">
-            <strong>Focus & Productivity</strong> – The ability to maintain attention and effectiveness in work and life, often challenged by digital distractions.
-          </div>
-          <div class="glossary-term">
-            <strong>Flourishing (Well-being Theory)</strong> – The state of thriving in multiple aspects of life, including physical, mental, emotional, and digital well-being.
-          </div>
-        </div>
-        <div id="glossary-section-h" class="glossary-section">
-          <h3 class="glossary-letter-header">H</h3>
-          <div class="glossary-term">
-            <strong>Habit Loop</strong> – A framework for understanding habit formation, consisting of cue, routine, and reward, applicable to digital behaviors.
-          </div>
-        </div>
-        <div id="glossary-section-m" class="glossary-section">
-          <h3 class="glossary-letter-header">M</h3>
-          <div class="glossary-term">
-            <strong>Mindfulness in Technology Use</strong> – Practicing present-moment awareness to create intentional and balanced digital interactions.
-          </div>
-          <div class="glossary-term">
-            <strong>Motivation (Self-Determination Theory)</strong> – Internal and external factors that influence engagement with technology, including autonomy, competence, and relatedness.
-          </div>
-        </div>
-        <div id="glossary-section-n" class="glossary-section">
-          <h3 class="glossary-letter-header">N</h3>
-          <div class="glossary-term">
-            <strong>Notification Management</strong> – Strategies to reduce interruptions and increase focus, such as disabling non-essential alerts.
-          </div>
-        </div>
-        <div id="glossary-section-p" class="glossary-section">
-          <h3 class="glossary-letter-header">P</h3>
-          <div class="glossary-term">
-            <strong>Prefrontal Cortex</strong> – The part of the brain responsible for decision-making and impulse control, which is affected by digital engagement.
-          </div>
-          <div class="glossary-term">
-            <strong>Psychological Safety and Technology</strong> – The impact of digital environments on emotional well-being and security.
-          </div>
-        </div>
-        <div id="glossary-section-r" class="glossary-section">
-          <h3 class="glossary-letter-header">R</h3>
-          <div class="glossary-term">
-            <strong>Reflection Practice</strong> – Periodic self-check-ins to assess digital habits and their alignment with personal values.
-          </div>
-        </div>
-        <div id="glossary-section-s" class="glossary-section">
-          <h3 class="glossary-letter-header">S</h3>
-          <div class="glossary-term">
-            <strong>Screen Time Awareness</strong> – Conscious tracking of time spent on digital devices to maintain a balanced lifestyle.
-          </div>
-          <div class="glossary-term">
-            <strong>Self-Regulation</strong> – The ability to control impulses and make mindful choices in digital interactions.
-          </div>
-          <div class="glossary-term">
-            <strong>Social Media Hygiene</strong> – Practices for maintaining a healthy relationship with social platforms, including curating content and setting boundaries.
-          </div>
-        </div>
-        <div id="glossary-section-t" class="glossary-section">
-          <h3 class="glossary-letter-header">T</h3>
-          <div class="glossary-term">
-            <strong>Tech-Life Balance</strong> – The intentional effort to harmonize technology use with overall well-being.
-          </div>
-          <div class="glossary-term">
-            <strong>Triggers in Digital Use</strong> – Environmental or psychological cues that prompt certain digital habits, such as checking the phone out of boredom.
-          </div>
-          <div class="glossary-term">
-            <strong>Two-Edge Effect of Technology</strong> – The concept that digital tools can both enhance and hinder well-being, depending on usage patterns.
-          </div>
-        </div>
-        <div id="glossary-section-w" class="glossary-section">
-          <h3 class="glossary-letter-header">W</h3>
-          <div class="glossary-term">
-            <strong>Willpower and Digital Use</strong> – The ability to resist distractions and build positive technology habits.
-          </div>
-        </div>
-      </div>
+    <div class="objective-content">
+      <h4>Personal Pride</h4>
+      <p>When have you felt the proudest of yourself? What were you doing?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">3</span>
+    </div>
+    <div class="objective-content">
+      <h4>Deep Connection</h4>
+      <p>Think about a time when you felt deeply connected to others. What was happening?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">4</span>
+    </div>
+    <div class="objective-content">
+      <h4>Flow Activities</h4>
+      <p>What activities or experiences make you lose track of time because you enjoy them so much?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">5</span>
+    </div>
+    <div class="objective-content">
+      <h4>Non-Negotiables</h4>
+      <p>What are your non-negotiables?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">6</span>
+    </div>
+    <div class="objective-content">
+      <h4>Guiding Principles</h4>
+      <p>When faced with a difficult decision, what principles guide you?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">7</span>
+    </div>
+    <div class="objective-content">
+      <h4>People You Admire</h4>
+      <p>Write down people you admire around you and what you admire about them.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">8</span>
+    </div>
+    <div class="objective-content">
+      <h4>Life Philosophy</h4>
+      <p>Write down your answers to these questions: What is really important in life? What is a good life? What is a successful life? Is living a good life the same as living a successful life? If not, where is the gap?</p>
     </div>
   </div>
 </div>
+      
+<div style="margin-top: 3rem;"></div>
+<p>Taking into consideration your responses, review the following list of values. Circle or 
+      highlight the top 10 that are most important to you. Narrow it down to your top 5 core 
+      values. Reflect on why these 5 values are important to you and how they influence your 
+      decisions and actions.</p>
+      
+      <ul class="values-list">
+        <li>1. Achievement</li>
+        <li>2. Adventure</li>
+        <li>3. Autonomy</li>
+        <li>4. Balance</li>
+        <li>5. Beauty</li>
+        <li>6. Compassion</li>
+        <li>7. Creativity</li>
+        <li>8. Curiosity</li>
+        <li>9. Determination</li>
+        <li>10. Fairness</li>
+        <li>11. Family</li>
+        <li>12. Friendship</li>
+        <li>13. Growth</li>
+        <li>14. Happiness</li>
+        <li>15. Honesty</li>
+        <li>16. Humor</li>
+        <li>17. Integrity</li>
+        <li>18. Justice</li>
+        <li>19. Kindness</li>
+        <li>20. Knowledge</li>
+        <li>21. Leadership</li>
+        <li>22. Learning</li>
+        <li>23. Love</li>
+        <li>24. Loyalty</li>
+        <li>25. Openness</li>
+        <li>26. Optimism</li>
+        <li>27. Peace</li>
+        <li>28. Respect</li>
+        <li>29. Responsibility</li>
+        <li>30. Security</li>
+        <li>31. Service</li>
+        <li>32. Spirituality</li>
+        <li>33. Success</li>
+        <li>34. Trustworthiness</li>
+        <li>35. Wisdom</li>
+      </ul>
+    
+<div style="margin-bottom: 3rem;"></div>
+</section>
+      
+      <!-- 4. Fondo gris -->
+<section class="lesson-section no-borders">
+  <h2><strong>Activity: Finding Your Ikigai</strong></h2>
+  <p><strong>"Ikigai"</strong> is a Japanese concept that means "a reason for being" or "a purpose in life." It 
+is a combination of four Japanese words: "iki" (life), "kai" (the realization of hopes and 
+expectations), "ga" (self), and "ai" (worth or value). This concept is often used as a 
+framework for personal development and goal setting.</p>
+  
+  <p>As seen in the diagram below, the concept of ikigai suggests that when you can find 
+  the intersection between what you love, what you are good at, what the world needs, 
+  and what you can be paid for, you will have found your "reason for being" or "purpose 
+  in life."</p>
+  
+  <p>By tapping into what is really important in our lives, we can better align our priorities 
+  and daily behaviors for greater fulfillment.</p>
+  
+  <div class="ikigai-container">
+<img src="assets/images/ikigai-new.png" alt="Comprehensive Ikigai diagram showing the intersection of what you love, what you're good at, what the world needs, and what you can be paid for, with detailed descriptions of partial intersections">
+<div style="margin-top: 1rem; text-align: center;">
+  <button id="ikigai-description-btn" class="save-button" aria-label="View detailed description of Ikigai diagram">
+    View image description
+  </button>
+</div>
 
-<!-- VideoJS JavaScript -->
-<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-<script src="js/video-player.js"></script>
-<script src="js/key-points.js"></script>
-<script src="js/reflections.js"></script>
-<script src="js/main.js"></script>
+<!-- Descripción que se muestra/oculta -->
+<div id="ikigai-description" class="key-point" style="display: none; margin-top: 2rem; text-align: left;">
+  <h3>Ikigai Diagram Description</h3>
+  <p>This comprehensive infographic visualizes the Japanese concept of "Ikigai," which translates to "a reason for being." It uses a detailed Venn diagram with four overlapping circles representing: What you LOVE, What you are GOOD AT, What the world NEEDS, and What you can be PAID FOR. The intersections create PASSION (Love + Good At), MISSION (Love + Needs), PROFESSION (Good At + Paid For), and VOCATION (Needs + Paid For). The center where all four circles meet represents true Ikigai. The diagram also shows the challenges of partial fulfillment: "Satisfaction, but feeling of uselessness" when missing purpose and payment; "Delight and fullness, but no wealth" when missing skills and payment; "Comfortable, but feeling of emptiness" when missing love and purpose; and "Excitement and complacency, but sense of uncertainty" when missing love and skills.</p>
+</div>
+</div>
+
 <script>
-// Glossary Modal Functionality
+// Script para mostrar/ocultar la descripción de imagen
 document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('glossary-modal');
-  const openBtn = document.getElementById('open-glossary');
-  const menuLink = document.getElementById('glossary-menu-link');
-  const closeBtn = modal.querySelector('.modal-close');
-
-  function openModal() {
-    modal.style.display = 'block';
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    const firstFocusableElement = modal.querySelector('.modal-close, .glossary-az-nav a');
-    if (firstFocusableElement) {
-        firstFocusableElement.focus();
-    }
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = 'auto';
-    if (document.activeElement === closeBtn || modal.contains(document.activeElement)) {
-        if (openBtn && openBtn === document.lastActiveElement) openBtn.focus();
-        else if (menuLink && menuLink === document.lastActiveElement) menuLink.focus();
-    }
-    document.lastActiveElement = null;
-  }
+  const button = document.getElementById('ikigai-description-btn');
+  const description = document.getElementById('ikigai-description');
+  let isVisible = false;
   
-  document.lastActiveElement = null;
-
-  if (openBtn) {
-    openBtn.addEventListener('click', function() {
-        document.lastActiveElement = this;
-        openModal();
-    });
-  }
-  
-  if (menuLink) {
-    menuLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.lastActiveElement = this;
-      openModal();
-      const mainNav = document.getElementById('main-nav');
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      if (mainNav && mainNav.classList.contains('active')) {
-        mainNav.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-        mobileMenuToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-      closeModal();
+  button.addEventListener('click', function() {
+    if (isVisible) {
+      // Ocultar descripción
+      description.style.display = 'none';
+      button.textContent = 'View image description';
+      button.setAttribute('aria-label', 'View detailed description of Ikigai diagram');
+      isVisible = false;
+    } else {
+      // Mostrar descripción
+      description.style.display = 'block';
+      button.textContent = 'Close image description';
+      button.setAttribute('aria-label', 'Close detailed description of Ikigai diagram');
+      isVisible = true;
     }
   });
 });
 </script>
+</section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><strong>The Self-Determination Theory</strong></h2>
+      
+      <div class="responsive-video">
+        <video 
+          id="self-determination-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          poster="assets/images/self-determination-theory-poster.png"
+          data-video-id="w6v04"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="The Self-Determination Theory video"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v04-the-self-determination-theory/mp4/w6v04-the-self-determination-theory_1080p.mp4" type="video/mp4">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+          <track kind="captions" src="captions/self-determination-theory.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+      
+      <div class="key-point" role="note" aria-label="Key point about Self-Determination Theory">
+        <h3>Key Point</h3>
+        <p>The <strong>Self-Determination Theory</strong> is made of up three parts: <strong>autonomy, relatedness</strong>, 
+        and <strong>competence</strong>. Autonomy allows us to feel like we have ownership over our lives. 
+        Relatedness highlights our need for connection to our communities and the world 
+        around us. Competence refers to our ability to learn and succeed. All three of these 
+        elements are critical for our motivation.</p>
+      </div>
+    
+  
+</section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+  <h2><strong>Reading</strong></h2>
+  <p>Please complete the following reading:</p>
+  
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Productivity, Motivation, and Brilliance: Three Key Elements of Psychobusiness</h3>
+        <p>Explore the psychological foundations of business success and discover how productivity, motivation, and brilliance work together to create exceptional performance in professional environments.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/insights/articles/productivity-motivation-and-brilliance-three-key-elements-of-psychobusiness/" target="_blank" class="reading-link" aria-label="Read article: Productivity, Motivation, and Brilliance (opens in new tab)">
+            Read Article
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><strong>Extrinsic Motivation vs. Intrinsic Motivation</strong></h2>
+      
+      <div class="responsive-video">
+  <video 
+    id="motivation-types-video" 
+    class="video-js vjs-ie-skin vjs-big-play-centered" 
+    controls 
+    preload="auto" 
+    poster="assets/images/extrinsic-vs-intrinsic-motivation-poster.png"
+    data-video-id="w3v02"
+    data-logo="assets/images/logo-ie-small.png"
+    aria-label="Extrinsic Motivation vs. Intrinsic Motivation video"
+  >
+    <source src="https://iep-media.ie.edu/olj/human-flourishing/w3v02-extrinsic-motivation-vs-intrinsic-motivation/mp4/w3v02-extrinsic-vs-intrinsic-motivation_1080p.mp4" type="video/mp4">
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+    <track kind="captions" src="captions/extrinsic-vs-intrinsic-motivation.vtt" srclang="en" label="English" default>
+  </video>
+</div>
+      
+      <div class="key-point" role="note" aria-label="Key point about motivation types">
+        <h3>Key Point</h3>
+        <p><strong>Extrinsic motivation</strong> is driven by external factors like societal expectations and 
+        validation from others, which can erode a sense of meaning over time since the driving 
+        force behind our motivation does not come from within ourselves. In contrast, <strong>intrinsic motivation</strong>, which comes from within and is more aligned with our personal values, is 
+        associated with a greater sense of purpose and lasting satisfaction.</p>
+      </div>
+    
+  
+</section>
+      
+      <!-- 8. Fondo gris -->
+<section class="lesson-section no-borders">
+  <h2><strong>Reading</strong></h2>
+  <p>Please complete the following reading:</p>
+  
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>How to Increase Intrinsic Motivation (According to Science)</h3>
+        <p>Discover evidence-based strategies for enhancing your intrinsic motivation. Learn practical techniques backed by scientific research to cultivate lasting motivation that comes from within.</p>
+        <div class="reading-card-footer">
+          <a href="https://positivepsychology.com/increase-intrinsic-motivation/" target="_blank" class="reading-link" aria-label="Read article: How to Increase Intrinsic Motivation (opens in new tab)">
+            Read Article
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><strong>Closing Meditation: Lesson 3</strong></h2>
+      
+      <div class="responsive-video">
+        <video 
+          id="closing-meditation-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          poster="assets/images/human-flourishing-poster.jpg"
+          data-video-id="w7v03"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="Connecting with Your Inner Motivation meditation video"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v03-connecting-with-your-inner-motivation/mp4/w7v03-connecting-with-your-inner-motivation_1080p.mp4" type="video/mp4">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+          <track kind="captions" src="captions/connecting-with-your-inner-motivation.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+      
+    
+  
+</section>
+      
+      <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
+        <a href="chapter2.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
+        <a href="chapter4.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+  <div class="footer-content">
+    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

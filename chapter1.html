@@ -1,58 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Well-Being - Chapter 1</title>
-<link rel="stylesheet" href="./css/styles.css">
-<!-- VideoJS CSS -->
-<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-<!-- Font Awesome para iconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-/* Estilos para la navegación A-Z del glosario y las secciones */
-.glossary-az-nav {
-  padding: 10px 0;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-}
-.glossary-az-nav a {
-  margin: 0 5px;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  padding: 5px;
-}
-.glossary-az-nav a:hover,
-.glossary-az-nav a:focus {
-  text-decoration: underline;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-}
-.glossary-section {
-  /* No se necesita margin-top aquí si el H3 lo maneja */
-}
-.glossary-letter-header {
-  font-size: 1.6em;
-  color: #333;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ccc;
-}
-.glossary-section:first-child .glossary-letter-header {
-    margin-top: 0; /* El primer header no necesita tanto espacio arriba */
-}
-.modal-body {
-  max-height: 70vh;
-  overflow-y: auto;
-}
-.glossary-term {
-  margin-bottom: 10px; /* Espacio entre términos */
-  line-height: 1.6;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Flourishing - Chapter 1</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
@@ -60,411 +16,393 @@
 
 <!-- Modificar la estructura del header para alinear elementos en una línea -->
 <header class="full-width header-full-bottom" role="banner">
-<div class="header-content">
-  <div class="header-left">
-    <div class="logo-container tiny-logo">
-      <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <h2 class="header-title">Digital Well-Being</h2>
-  </div>
-  <div class="header-controls">
-    
-    <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-      <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="IE University website">
+          <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
+        </a>
       </div>
-    </button>
+      <h2 class="header-title">Human Flourishing</h2>
+    </div>
+    <div class="header-controls">
+      
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
   </div>
-</div>
-<nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="introduction.html">0. Introduction</a></li>
-    <li><a href="chapter1.html" class="active" aria-current="page">1. Well-Being as a Key</a></li>
-    <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
-    <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
-    <li><a href="chapter4.html">4. Building Resilience</a></li>
-    <li><a href="chapter5.html">5. Ownership and Practice</a></li>
-    <li><a href="#" id="glossary-menu-link"><i class="fas fa-book" style="color: #000066; margin-right: 0.5rem;" aria-hidden="true"></i>Glossary</a></li>
-    <li class="language-selector-menu">
-<span class="menu-separator"></span>
-<span id="language-label" class="sr-only">Select language:</span>
-<a href="chapter1.html" class="active" aria-current="page" aria-labelledby="language-label">English</a> | <a href="capitulo1.html" aria-labelledby="language-label">Español</a>
-</li>
-  </ul>
-</nav>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">0. Introduction</a></li>
+      <li><a href="chapter1.html" class="active" aria-current="page">1. Being Human</a></li>
+      <li><a href="chapter2.html">2. Cultivating Awareness</a></li>
+      <li><a href="chapter3.html">3. Autonomy and Motivation</a></li>
+      <li><a href="chapter4.html">4. Building Resilience</a></li>
+      <li><a href="chapter5.html">5. Ownership and Practice</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="hero-section">
-<div class="hero-content">
-  <div class="hero-title-container">
-    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Digital Well-Being Icon" class="hero-icon">
-    <h1 class="hero-title">LESSON 1: Digital Well-being as Key to Human Flourishing</h1>
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Human Flourishing Icon" class="hero-icon">
+      <h1 class="hero-title"><strong>LESSON 1: Being Human</strong></h1>
+    </div>
   </div>
-</div>
 </section>
 
-<main id="main-content" tabindex="-1">
-  <div class="content-aligned-container">
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
+      
+      <section class="lesson-section no-borders">
+  <h2><strong>Lesson 1 Learning Objectives</strong></h2>
+  
+  <div class="learning-objectives-grid">
+    <div class="learning-objective-card">
+      <div class="objective-icon" aria-hidden="true">
+        <i class="fas fa-brain"></i>
+      </div>
+      <div class="objective-content">
+        <h4>Human Complexity</h4>
+        <p>Appreciate the complexity of human beings and how our multifaceted nature influences our well-being</p>
+      </div>
+    </div>
     
-    <section class="lesson-section no-borders">
-<h2>Lesson 1 Learning Objectives</h2>
-<p>After this lesson, participants will be able to:</p>
-
-<div class="learning-objectives-grid-2x2">
-  <div class="learning-objective-card">
-    <div class="objective-icon" aria-hidden="true">
-      <i class="fas fa-lightbulb"></i>
+    <div class="learning-objective-card">
+      <div class="objective-icon" aria-hidden="true">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="objective-content">
+        <h4>Social Connection</h4>
+        <p>Understand the human need for social connection and its impact on our overall health and happiness</p>
+      </div>
     </div>
-    <div class="objective-content">
-      <h4>Define Digital Well-being</h4>
-      <p>Define digital well-being and explain its significance</p>
-    </div>
-  </div>
-  
-  <div class="learning-objective-card">
-    <div class="objective-icon" aria-hidden="true">
-      <i class="fas fa-brain"></i>
-    </div>
-    <div class="objective-content">
-      <h4>Holistic Understanding</h4>
-      <p>Develop a holistic understanding of how technology impacts the body, mind, and soul—considering the roles of awareness, science, and practice in the learning journey</p>
+    
+    <div class="learning-objective-card">
+      <div class="objective-icon" aria-hidden="true">
+        <i class="fas fa-balance-scale"></i>
+      </div>
+      <div class="objective-content">
+        <h4>Human Biases</h4>
+        <p>Evaluate the role and paradox of human biases and how they affect our perception and decision-making</p>
+      </div>
     </div>
   </div>
-  
-  <div class="learning-objective-card">
-    <div class="objective-icon" aria-hidden="true">
-      <i class="fas fa-bullseye"></i>
-    </div>
-    <div class="objective-content">
-      <h4>Personal Motivations</h4>
-      <p>Identify personal motivations and set intentions to actively cultivate digital well-being</p>
-    </div>
-  </div>
-  
-  <div class="learning-objective-card">
-    <div class="objective-icon" aria-hidden="true">
-      <i class="fas fa-compass"></i>
-    </div>
-    <div class="objective-content">
-      <h4>Purpose and Values</h4>
-      <p>Reflect on purpose and values, and recognize how digital behaviors can align with or detract from them</p>
-    </div>
-  </div>
-</div>
 </section>
-    
-    <section class="lesson-section no-borders">
-      <h2>The Wake-Up Call</h2>
       
-      <div class="responsive-video">
-        <video 
-          id="wake-up-call-video" 
-          class="video-js vjs-ie-skin vjs-big-play-centered" 
-          controls 
-          preload="auto" 
-          poster="assets/images/well-being-poster.png"
-          data-video-id="w01v00"
-          data-logo="assets/images/logo-ie-small.png"
-          aria-label="The Wake-Up Call video"
-        >
-          <source src="https://iep-media.ie.edu/olj/digital-wellbeing/w01v00-the-wake-up-call/mp4/w01v00-the-wake-up-call_1080p.mp4" type="video/mp4">
-          <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-          <track kind="captions" src="captions/the-wake-up-call.vtt" srclang="en" label="English" default>
-        </video>
-      </div>
-    </section>
-    
-    <section class="lesson-section no-borders">
-      <h2>What Is Digital Well-being and What Is Not?</h2>
+      <section class="lesson-section no-borders">
+        <h2>What Does It Mean to Be Human?</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="human-meaning-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/what-does-it-mean-to-be-human-poster.png"
+            data-video-id="w1v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="What Does It Mean to Be Human? video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v01-what-does-it-mean-to-be-human/mp4/w1v01-what-does-it-mean-to-be-human_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/what-does-it-mean-to-be-human.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about human survival instinct">
+          <h3>Key Point</h3>
+          <p>As humans, we are programmed for <strong>survival</strong>. This instinct is still relevant in our lives 
+          today, even if we do not often face life-threatening situations. As a result, our brains 
+          may interpret certain events, such as an email or an exam, as a <strong>threat</strong>, even though 
+          these things are not life-threatening. Recognizing these kinds of <strong>"primitive"</strong> responses 
+          as part of our human identity is a crucial step toward <strong>self-awareness</strong> and, ultimately, 
+          <strong>flourishing</strong>.</p>
+        </div>
+      </section>
       
-      <div class="responsive-video">
-        <video 
-          id="digital-wellbeing-video" 
-          class="video-js vjs-ie-skin vjs-big-play-centered" 
-          controls 
-          preload="auto" 
-          poster="assets/images/well-being-poster.png"
-          data-video-id="w01v01"
-          data-logo="assets/images/logo-ie-small.png"
-          aria-label="What Is Digital Well-being and What Is Not? video"
-        >
-          <source src="https://iep-media.ie.edu/olj/digital-wellbeing/w01v01-what-is-digital-wellbeing/mp4/w01v01-what-is-digital-wellbeing_1080p.mp4" type="video/mp4">
-          <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-          <track kind="captions" src="captions/what-is-digital-wellbeing.vtt" srclang="en" label="English" default>
-        </video>
-      </div>
+      <section class="lesson-section no-borders">
+        <h2>Being Human: The Interconnection of Body, Mind, and Soul</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="interconnection-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/being-human-interconnection-poster.png"
+            data-video-id="w1v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Being Human: The Interconnection of Body, Mind, and Soul video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v02-being-human-the-interconnection-of-body-mind-and-soul/mp4/w1v02-being-human-the-interconnection-of-body-mind-and-soul_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/interconnection-body-mind-soul.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about body, mind, and soul interconnection">
+          <h3>Key Point</h3>
+          <p>Understanding the <strong>interconnection of the body, mind, and soul</strong> is key to promoting 
+          well-being. For example, by understanding the relationship between the <strong>amygdala</strong> and 
+          the <strong>prefrontal cortex</strong> and how <strong>physical exercise</strong> can affect that relationship, we can 
+          take more informed actions to promote our overall health.</p>
+        </div>
+      </section>
       
-      <div class="key-point" role="note" aria-label="Key point about digital well-being">
-        <h3>Key Point</h3>
-        <p>Digital well-being is about building self-awareness and intentionally shaping habits around technology to support our emotional, mental, and physical health—based on our individual values and what helps us be our best.</p>
+      <section class="lesson-section no-borders">
+        <h2>The Importance of Human Social Connection</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="social-connection-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/human-social-connection-poster.png"
+            data-video-id="w1v03"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="The Importance of Human Social Connection video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v03-the-importance-of-human-social-connection/mp4/w1v03-the-importance-of-human-social-connection_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/importance-human-social-connection.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about social connection">
+          <h3>Key Point</h3>
+          <p>As humans, we are wired for <strong>social connection</strong>. Research shows that meaningful 
+          social connection contributes to our happiness. In contrast, feelings of <strong>loneliness</strong> can 
+          have a significant detrimental impact on our well-being.</p>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+  <h2><strong>Readings</strong></h2>
+  <p>Please complete the readings below to engage with the following activities:</p>
+  
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Why a strong social network improves performance, health, and well-being</h3>
+        <p>Explore how social connections can enhance various aspects of your life, from professional performance to personal health.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/center-for-health-and-well-being/blog/why-a-strong-social-network-improves-performance-health-and-well-being/" target="_blank" class="reading-link" aria-label="Read article: Why a strong social network improves performance, health, and well-being (opens in new tab)">
+            Read Article
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
     
-    <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
-      <a href="introduction.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
-      <a href="chapter2.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Your journey to self-discovery</h3>
+        <p>Learn about the process of self-discovery and how it can lead to greater personal fulfillment and understanding.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/center-for-health-and-well-being/blog/your-journey-to-self-discovery/" target="_blank" class="reading-link" aria-label="Read article: Your journey to self-discovery (opens in new tab)">
+            Read Article
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-</main>
+</section>
+      
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><strong>Activity: Reflecting on Your Social Connections</strong></h2>
+      <p>In light of what you've learned and read so far, please reflect on the following 
+      questions:</p>
+      
+      <div class="reflection-exercise">
+        <div class="reflection-question">
+          <h3 id="reflection1-label">How does your social network impact your performance, health, and well-being?</h3>
+          <textarea id="reflection1" class="reflection-textarea" placeholder="Write your reflection here..." aria-labelledby="reflection1-label"></textarea>
+          <div class="button-container">
+            <button class="save-button" data-reflection-id="reflection1" aria-label="Save reflection on social network impact">Save Reflection</button>
+            <span class="save-feedback" id="feedback-reflection1" aria-live="polite"></span>
+          </div>
+        </div>
+        
+        <div class="reflection-question">
+          <h3 id="reflection2-label">How does technology impact your social connections? Do you think technology can lead to distancing and loneliness, or does it enhance our relationships?</h3>
+          <textarea id="reflection2" class="reflection-textarea" placeholder="Write your reflection here..." aria-labelledby="reflection2-label"></textarea>
+          <div class="button-container">
+            <button class="save-button" data-reflection-id="reflection2" aria-label="Save reflection on technology impact">Save Reflection</button>
+            <span class="save-feedback" id="feedback-reflection2" aria-live="polite"></span>
+          </div>
+        </div>
+        
+        <div class="reflection-question">
+          <h3 id="reflection3-label">What methods mentioned in the article "Your Journey to Self-Discovery" resonate with you most as you embark on your path of self-discovery?</h3>
+          <textarea id="reflection3" class="reflection-textarea" placeholder="Write your reflection here..." aria-labelledby="reflection3-label"></textarea>
+          <div class="button-container">
+            <button class="save-button" data-reflection-id="reflection3" aria-label="Save reflection on self-discovery methods">Save Reflection</button>
+            <span class="save-feedback" id="feedback-reflection3" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+    
+  
+</section>
+      
+      <section class="lesson-section no-borders">
+        <h2>Human Biases</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="human-biases-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/human-biases-poster.png"
+            data-video-id="w1v04"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Human Biases video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v04-human-biases/mp4/w1v04-human-biases_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/human-biases.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Key point about human biases">
+          <h3>Key Point</h3>
+          <p>As humans, we all have <strong>biases</strong>. These biases are rooted in the need for 
+          <strong>survival</strong> and exist as a way for our brains to make <strong>quick, efficient decisions</strong>; however, they can 
+          also <strong>negatively</strong> affect our well-being. By understanding our biases and how they 
+          function, we can better cultivate practices that contribute to our flourishing.</p>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2>Leading Self for Greater Impact in What We Do</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="leading-self-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/leading-self-poster.png"
+            data-video-id="w6v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Leading Self for Greater Impact in What We Do video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v02-leading-self-for-greater-impact-in-what-we-do/mp4/w6v02-leading-self-for-greater-impact-in-what-we-do_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
+        </div>
+        
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2>Closing Meditation: Lesson 1</h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="closing-meditation-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/closing-meditation-poster.png"
+            data-video-id="w7v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Embracing the Fullness of Being Human meditation video"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v01-embracing-the-fullness-of-being-human/mp4/w7v01-embracing-the-fullness-of-being-human_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+            <track kind="captions" src="captions/embracing-fullness-being-human.vtt" srclang="en" label="English" default>
+          </video>
+        </div>
+        
+      </section>
+      
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><strong>Optional Reading</strong></h2>
+      <p>Please complete the following readings if they are of interest to you!</p>
+      
+      <div class="reading-cards">
+        <div class="reading-card">
+          <div class="reading-card-content">
+            <h3>Warmth and Competence Model</h3>
+            <p>Explore the psychological framework that explains how we perceive and judge others based on two primary dimensions: warmth (trustworthiness, friendliness) and competence (capability, effectiveness).</p>
+            <div class="reading-card-footer">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0065260107000020" target="_blank" class="reading-link" aria-label="Read article: Warmth and Competence Model (opens in new tab)">
+                Read Article
+                <span class="reading-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reading-card">
+          <div class="reading-card-content">
+            <h3>Human Connection in the Age of AI</h3>
+            <p>Discover how artificial intelligence is reshaping human relationships and what this means for maintaining meaningful connections in an increasingly digital world.</p>
+            <div class="reading-card-footer">
+              <a href="https://www.ie.edu/insights/articles/human-connection-in-the-age-of-ai/" target="_blank" class="reading-link" aria-label="Read article: Human Connection in the Age of AI (opens in new tab)">
+                Read Article
+                <span class="reading-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+</section>
+      
+      <div class="navigation-buttons" role="navigation" aria-label="Lesson navigation">
+        <a href="introduction.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Previous</a>
+        <a href="chapter2.html" class="nav-button next">Next<span class="arrow-right" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </main>
 
-<footer role="contentinfo">
-<div class="footer-content">
-  <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
-</div>
+  <footer role="contentinfo">
+  <div class="footer-content">
+    <p class="copyright">&copy; <span id="current-year"></span> IE University. All rights reserved.</p>
+  </div>
 </footer>
 
-<!-- Glossary Modal -->
-<div id="glossary-modal" class="modal" role="dialog" aria-labelledby="glossary-modal-title" aria-hidden="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2 id="glossary-modal-title">Glossary of Digital Well-being Concepts</h2>
-      <button class="modal-close" aria-label="Close glossary">&times;</button>
-    </div>
-    <div class="modal-body">
-      <nav class="glossary-az-nav" aria-label="Glossary A-Z Navigation">
-        <a href="#glossary-section-a">A</a>
-        <a href="#glossary-section-b">B</a>
-        <a href="#glossary-section-c">C</a>
-        <a href="#glossary-section-d">D</a>
-        <a href="#glossary-section-e">E</a>
-        <a href="#glossary-section-f">F</a>
-        <a href="#glossary-section-h">H</a>
-        <a href="#glossary-section-m">M</a>
-        <a href="#glossary-section-n">N</a>
-        <a href="#glossary-section-p">P</a>
-        <a href="#glossary-section-r">R</a>
-        <a href="#glossary-section-s">S</a>
-        <a href="#glossary-section-t">T</a>
-        <a href="#glossary-section-w">W</a>
-      </nav>
-      <div class="glossary-terms">
-        <div id="glossary-section-a" class="glossary-section">
-          <h3 class="glossary-letter-header">A</h3>
-          <div class="glossary-term">
-            <strong>Accountability Buddy</strong> – A supportive partner who helps track progress and encourages consistency in digital well-being goals.
-          </div>
-          <div class="glossary-term">
-            <strong>Attention Management</strong> – The practice of consciously directing focus in a digital environment to enhance productivity and cognitive health.
-          </div>
-          <div class="glossary-term">
-            <strong>Autonomy (Self-Determination Theory)</strong> – The ability to make choices about digital engagement that align with personal values and goals.
-          </div>
-        </div>
-        <div id="glossary-section-b" class="glossary-section">
-          <h3 class="glossary-letter-header">B</h3>
-          <div class="glossary-term">
-            <strong>Brain Cognition</strong> – The way the brain processes information, impacted by digital habits such as screen time and multitasking.
-          </div>
-          <div class="glossary-term">
-            <strong>Behavioral Science</strong> – The study of how people form digital habits and how technology influences decision-making.
-          </div>
-        </div>
-        <div id="glossary-section-c" class="glossary-section">
-          <h3 class="glossary-letter-header">C</h3>
-          <div class="glossary-term">
-            <strong>Character Strengths</strong> – Personal strengths (e.g., curiosity, self-regulation) that can be leveraged to cultivate healthy digital habits.
-          </div>
-          <div class="glossary-term">
-            <strong>Cognitive Load</strong> – The mental effort required to process information, which can be impacted by excessive screen time or multitasking.
-          </div>
-          <div class="glossary-term">
-            <strong>Core Values</strong> – Fundamental beliefs that guide digital habits and decision-making.
-          </div>
-        </div>
-        <div id="glossary-section-d" class="glossary-section">
-          <h3 class="glossary-letter-header">D</h3>
-          <div class="glossary-term">
-            <strong>Digital Detox</strong> – A period of time spent without digital devices to reset habits and improve well-being.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Flourishing</strong> – Thriving in a digital environment by balancing technology use with personal and professional well-being.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Goals</strong> – Personalized objectives for improving one's digital habits, often using the SMART (Specific, Measurable, Achievable, Relevant, Time-bound) framework.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Habit Audit</strong> – A self-assessment to track technology use and identify areas for improvement.
-          </div>
-          <div class="glossary-term">
-            <strong>Digital Minimalism</strong> – A philosophy advocating for intentional and purposeful use of technology to enhance well-being.
-          </div>
-        </div>
-        <div id="glossary-section-e" class="glossary-section">
-          <h3 class="glossary-letter-header">E</h3>
-          <div class="glossary-term">
-            <strong>Empathy and Technology</strong> – The relationship between digital interactions and emotional intelligence, including how technology can impact social connections.
-          </div>
-          <div class="glossary-term">
-            <strong>Energy Management</strong> – Strategies to prevent digital fatigue and optimize energy levels in a tech-heavy world.
-          </div>
-        </div>
-        <div id="glossary-section-f" class="glossary-section">
-          <h3 class="glossary-letter-header">F</h3>
-          <div class="glossary-term">
-            <strong>Focus & Productivity</strong> – The ability to maintain attention and effectiveness in work and life, often challenged by digital distractions.
-          </div>
-          <div class="glossary-term">
-            <strong>Flourishing (Well-being Theory)</strong> – The state of thriving in multiple aspects of life, including physical, mental, emotional, and digital well-being.
-          </div>
-        </div>
-        <div id="glossary-section-h" class="glossary-section">
-          <h3 class="glossary-letter-header">H</h3>
-          <div class="glossary-term">
-            <strong>Habit Loop</strong> – A framework for understanding habit formation, consisting of cue, routine, and reward, applicable to digital behaviors.
-          </div>
-        </div>
-        <div id="glossary-section-m" class="glossary-section">
-          <h3 class="glossary-letter-header">M</h3>
-          <div class="glossary-term">
-            <strong>Mindfulness in Technology Use</strong> – Practicing present-moment awareness to create intentional and balanced digital interactions.
-          </div>
-          <div class="glossary-term">
-            <strong>Motivation (Self-Determination Theory)</strong> – Internal and external factors that influence engagement with technology, including autonomy, competence, and relatedness.
-          </div>
-        </div>
-        <div id="glossary-section-n" class="glossary-section">
-          <h3 class="glossary-letter-header">N</h3>
-          <div class="glossary-term">
-            <strong>Notification Management</strong> – Strategies to reduce interruptions and increase focus, such as disabling non-essential alerts.
-          </div>
-        </div>
-        <div id="glossary-section-p" class="glossary-section">
-          <h3 class="glossary-letter-header">P</h3>
-          <div class="glossary-term">
-            <strong>Prefrontal Cortex</strong> – The part of the brain responsible for decision-making and impulse control, which is affected by digital engagement.
-          </div>
-          <div class="glossary-term">
-            <strong>Psychological Safety and Technology</strong> – The impact of digital environments on emotional well-being and security.
-          </div>
-        </div>
-        <div id="glossary-section-r" class="glossary-section">
-          <h3 class="glossary-letter-header">R</h3>
-          <div class="glossary-term">
-            <strong>Reflection Practice</strong> – Periodic self-check-ins to assess digital habits and their alignment with personal values.
-          </div>
-        </div>
-        <div id="glossary-section-s" class="glossary-section">
-          <h3 class="glossary-letter-header">S</h3>
-          <div class="glossary-term">
-            <strong>Screen Time Awareness</strong> – Conscious tracking of time spent on digital devices to maintain a balanced lifestyle.
-          </div>
-          <div class="glossary-term">
-            <strong>Self-Regulation</strong> – The ability to control impulses and make mindful choices in digital interactions.
-          </div>
-          <div class="glossary-term">
-            <strong>Social Media Hygiene</strong> – Practices for maintaining a healthy relationship with social platforms, including curating content and setting boundaries.
-          </div>
-        </div>
-        <div id="glossary-section-t" class="glossary-section">
-          <h3 class="glossary-letter-header">T</h3>
-          <div class="glossary-term">
-            <strong>Tech-Life Balance</strong> – The intentional effort to harmonize technology use with overall well-being.
-          </div>
-          <div class="glossary-term">
-            <strong>Triggers in Digital Use</strong> – Environmental or psychological cues that prompt certain digital habits, such as checking the phone out of boredom.
-          </div>
-          <div class="glossary-term">
-            <strong>Two-Edge Effect of Technology</strong> – The concept that digital tools can both enhance and hinder well-being, depending on usage patterns.
-          </div>
-        </div>
-        <div id="glossary-section-w" class="glossary-section">
-          <h3 class="glossary-letter-header">W</h3>
-          <div class="glossary-term">
-            <strong>Willpower and Digital Use</strong> – The ability to resist distractions and build positive technology habits.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- VideoJS JavaScript -->
-<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-<script src="js/video-player.js"></script>
-<script src="js/key-points.js"></script>
-<script src="js/reflections.js"></script>
-<script src="js/main.js"></script>
-<script>
-// Glossary Modal Functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('glossary-modal');
-  const openBtn = document.getElementById('open-glossary');
-  const menuLink = document.getElementById('glossary-menu-link');
-  const closeBtn = modal.querySelector('.modal-close');
-
-  function openModal() {
-    modal.style.display = 'block';
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    const firstFocusableElement = modal.querySelector('.modal-close, .glossary-az-nav a');
-    if (firstFocusableElement) {
-        firstFocusableElement.focus();
-    }
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = 'auto';
-    if (document.activeElement === closeBtn || modal.contains(document.activeElement)) {
-        if (openBtn && openBtn === document.lastActiveElement) openBtn.focus();
-        else if (menuLink && menuLink === document.lastActiveElement) menuLink.focus();
-    }
-    document.lastActiveElement = null;
-  }
-  
-  document.lastActiveElement = null;
-
-  if (openBtn) {
-    openBtn.addEventListener('click', function() {
-        document.lastActiveElement = this;
-        openModal();
-    });
-  }
-  
-  if (menuLink) {
-    menuLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.lastActiveElement = this;
-      openModal();
-      const mainNav = document.getElementById('main-nav');
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      if (mainNav && mainNav.classList.contains('active')) {
-        mainNav.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-        mobileMenuToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-      closeModal();
-    }
-  });
-});
-</script>
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
