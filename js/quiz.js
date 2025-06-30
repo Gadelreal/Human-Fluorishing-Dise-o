@@ -31,55 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const userAnswers = {}
   let quizCompleted = false
 
-  // Handler for the Chapter 1 Well-being Quiz
-  const wellbeingQuizForm = document.getElementById('wellbeing-quiz');
-  if (wellbeingQuizForm) {
-    const feedbackElement = document.getElementById('wellbeing-quiz-feedback');
-    const submitButton = wellbeingQuizForm.querySelector('.quiz-submit-btn');
-
-    wellbeingQuizForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      
-      // Get all checkboxes
-      const checkboxes = wellbeingQuizForm.querySelectorAll('input[type="checkbox"]');
-      
-      // Define correct answers (a, c, d, f are correct)
-      const correctAnswers = ['a', 'c', 'd', 'f'];
-      
-      // Check each option and provide visual feedback
-      checkboxes.forEach((checkbox) => {
-        const optionContainer = checkbox.closest('.quiz-option');
-        const optionValue = checkbox.value;
-        const isCorrect = correctAnswers.includes(optionValue);
-        const isChecked = checkbox.checked;
-        
-        // Remove any existing feedback classes
-        optionContainer.classList.remove('correct-answer', 'incorrect-answer', 'missed-answer');
-        
-        if (isChecked && isCorrect) {
-          // User selected correct answer
-          optionContainer.classList.add('correct-answer');
-        } else if (isChecked && !isCorrect) {
-          // User selected incorrect answer
-          optionContainer.classList.add('incorrect-answer');
-        } else if (!isChecked && isCorrect) {
-          // User missed a correct answer
-          optionContainer.classList.add('missed-answer');
-        }
-      });
-      
-      // Show the feedback
-      if (feedbackElement) {
-        feedbackElement.style.display = 'block';
-        // Optionally, disable the button to prevent re-submission
-        if(submitButton) {
-          submitButton.disabled = true;
-          submitButton.textContent = 'Submitted';
-        }
-      }
-    });
-  }
-
   // Inicializar el quiz
   initializeQuiz()
 
@@ -93,14 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
       options.forEach((option, optionIndex) => {
         const optionLetter = String.fromCharCode(65 + optionIndex) // A, B, C, D
 
-        // Añadir atributos de accesibilidad
+        // Añadir atributos de accesibilidad SOLO a las opciones
         option.setAttribute("role", "button")
         option.setAttribute("tabindex", "0")
         option.setAttribute("aria-label", `Option ${optionLetter}: ${option.textContent}`)
         option.setAttribute("data-question", questionNumber)
         option.setAttribute("data-answer", optionLetter)
 
-        // Event listeners para click y teclado
+        // Event listeners para click y teclado SOLO en las opciones
         option.addEventListener("click", () => handleAnswerSelection(questionNumber, optionLetter, option))
         option.addEventListener("keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
