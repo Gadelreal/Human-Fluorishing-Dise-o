@@ -29,36 +29,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const userAnswers = {}
+  let quizCompleted = false
+
   // Load saved answers from localStorage
   function loadSavedQuizAnswers() {
     const savedAnswers = localStorage.getItem("final_quiz_answers")
     if (savedAnswers) {
-      const parsedAnswers = JSON.parse(savedAnswers)
-      Object.assign(userAnswers, parsedAnswers)
+      try {
+        const parsedAnswers = JSON.parse(savedAnswers)
+        Object.assign(userAnswers, parsedAnswers)
 
-      // Apply saved answers to the UI
-      Object.keys(parsedAnswers).forEach((questionNumber) => {
-        const selectedAnswer = parsedAnswers[questionNumber]
-        const questionElement = document.querySelector(`.quiz-question:nth-child(${questionNumber})`)
-        if (questionElement) {
-          const options = questionElement.querySelectorAll(".quiz-options li")
-          const selectedOption = Array.from(options).find(
-            (option) => option.getAttribute("data-answer") === selectedAnswer,
-          )
-          if (selectedOption) {
-            // Simulate the answer selection to restore the visual state
-            handleAnswerSelection(Number.parseInt(questionNumber), selectedAnswer, selectedOption, true)
+        // Apply saved answers to the UI
+        Object.keys(parsedAnswers).forEach((questionNumber) => {
+          const selectedAnswer = parsedAnswers[questionNumber]
+          const questionElement = document.querySelector(`.quiz-question:nth-child(${questionNumber})`)
+          if (questionElement) {
+            const options = questionElement.querySelectorAll(".quiz-options li")
+            const selectedOption = Array.from(options).find(
+              (option) => option.getAttribute("data-answer") === selectedAnswer,
+            )
+            if (selectedOption) {
+              // Simulate the answer selection to restore the visual state
+              handleAnswerSelection(Number.parseInt(questionNumber), selectedAnswer, selectedOption, true)
+            }
           }
-        }
-      })
+        })
+      } catch (e) {
+        console.warn("Error loading saved quiz answers:", e)
+      }
     }
   }
 
   // Save quiz answers to localStorage
   function saveQuizAnswers() {
-    localStorage.setItem("final_quiz_answers", JSON.stringify(userAnswers))
+    try {
+      localStorage.setItem("final_quiz_answers", JSON.stringify(userAnswers))
+    } catch (e) {
+      console.warn("Error saving quiz answers:", e)
+    }
   }
-  let quizCompleted = false
 
   // Inicializar el quiz
   initializeQuiz()
@@ -124,35 +133,54 @@ document.addEventListener("DOMContentLoaded", () => {
     // Verificar si la respuesta es correcta
     const isCorrect = selectedAnswer === correctAnswers[questionNumber]
 
+    // Limpiar iconos previos si existen (para el caso de cargar respuestas guardadas)
+    allOptions.forEach((option) => {
+      const existingIcons = option.querySelectorAll("i.fas")
+      existingIcons.forEach((icon) => icon.remove())
+    })
+
     if (isCorrect) {
       // Respuesta correcta
       selectedElement.style.backgroundColor = "#d4edda"
       selectedElement.style.borderColor = "#c3e6cb"
       selectedElement.style.color = "#155724"
-      selectedElement.innerHTML +=
-        ' <i class="fas fa-check" style="color: #28a745; margin-left: 0.5rem;" aria-hidden="true"></i>'
 
-      // Añadir mensaje de feedback
-      const feedbackElement = document.createElement("div")
-      feedbackElement.className = "quiz-feedback correct"
-      feedbackElement.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> Correct! Excellent work.'
-      feedbackElement.style.cssText = `
-        margin-top: 0.5rem;
-        padding: 0.5rem;
-        background-color: #d4edda;
-        border: 1px solid #c3e6cb;
-        border-radius: 4px;
-        color: #155724;
-        font-weight: 500;
-      `
-      questionElement.appendChild(feedbackElement)
+      // Añadir icono de correcto
+      const checkIcon = document.createElement("i")
+      checkIcon.className = "fas fa-check"
+      checkIcon.style.cssText = "color: #28a745; margin-left: 0.5rem;"
+      checkIcon.setAttribute("aria-hidden", "true")
+      selectedElement.appendChild(checkIcon)
+
+      // Añadir mensaje de feedback solo si no existe ya
+      let feedbackElement = questionElement.querySelector(".quiz-feedback.correct")
+      if (!feedbackElement) {
+        feedbackElement = document.createElement("div")
+        feedbackElement.className = "quiz-feedback correct"
+        feedbackElement.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> Correct! Excellent work.'
+        feedbackElement.style.cssText = `
+          margin-top: 0.5rem;
+          padding: 0.5rem;
+          background-color: #d4edda;
+          border: 1px solid #c3e6cb;
+          border-radius: 4px;
+          color: #155724;
+          font-weight: 500;
+        `
+        questionElement.appendChild(feedbackElement)
+      }
     } else {
       // Respuesta incorrecta
       selectedElement.style.backgroundColor = "#f8d7da"
       selectedElement.style.borderColor = "#f5c6cb"
       selectedElement.style.color = "#721c24"
-      selectedElement.innerHTML +=
-        ' <i class="fas fa-times" style="color: #dc3545; margin-left: 0.5rem;" aria-hidden="true"></i>'
+
+      // Añadir icono de incorrecto
+      const timesIcon = document.createElement("i")
+      timesIcon.className = "fas fa-times"
+      timesIcon.style.cssText = "color: #dc3545; margin-left: 0.5rem;"
+      timesIcon.setAttribute("aria-hidden", "true")
+      selectedElement.appendChild(timesIcon)
 
       // Mostrar la respuesta correcta
       const correctOption = Array.from(allOptions).find(
@@ -163,27 +191,35 @@ document.addEventListener("DOMContentLoaded", () => {
         correctOption.style.backgroundColor = "#d1ecf1"
         correctOption.style.borderColor = "#bee5eb"
         correctOption.style.color = "#0c5460"
-        correctOption.innerHTML +=
-          ' <i class="fas fa-check" style="color: #17a2b8; margin-left: 0.5rem;" aria-hidden="true"></i>'
+
+        // Añadir icono de respuesta correcta
+        const correctCheckIcon = document.createElement("i")
+        correctCheckIcon.className = "fas fa-check"
+        correctCheckIcon.style.cssText = "color: #17a2b8; margin-left: 0.5rem;"
+        correctCheckIcon.setAttribute("aria-hidden", "true")
+        correctOption.appendChild(correctCheckIcon)
       }
 
-      // Añadir mensaje de feedback
-      const feedbackElement = document.createElement("div")
-      feedbackElement.className = "quiz-feedback incorrect"
-      feedbackElement.innerHTML = `
-  <i class="fas fa-times-circle" aria-hidden="true"></i> 
-  Incorrect. The correct answer is: ${correctAnswers[questionNumber]}
-`
-      feedbackElement.style.cssText = `
-        margin-top: 0.5rem;
-        padding: 0.5rem;
-        background-color: #f8d7da;
-        border: 1px solid #f5c6cb;
-        border-radius: 4px;
-        color: #721c24;
-        font-weight: 500;
-      `
-      questionElement.appendChild(feedbackElement)
+      // Añadir mensaje de feedback solo si no existe ya
+      let feedbackElement = questionElement.querySelector(".quiz-feedback.incorrect")
+      if (!feedbackElement) {
+        feedbackElement = document.createElement("div")
+        feedbackElement.className = "quiz-feedback incorrect"
+        feedbackElement.innerHTML = `
+          <i class="fas fa-times-circle" aria-hidden="true"></i> 
+          Incorrect. The correct answer is: ${correctAnswers[questionNumber]}
+        `
+        feedbackElement.style.cssText = `
+          margin-top: 0.5rem;
+          padding: 0.5rem;
+          background-color: #f8d7da;
+          border: 1px solid #f5c6cb;
+          border-radius: 4px;
+          color: #721c24;
+          font-weight: 500;
+        `
+        questionElement.appendChild(feedbackElement)
+      }
     }
 
     // Anunciar el resultado para lectores de pantalla (solo si no estamos cargando respuestas guardadas)
@@ -198,7 +234,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Eliminar el anuncio después de que se haya leído
       setTimeout(() => {
-        document.body.removeChild(announcement)
+        if (document.body.contains(announcement)) {
+          document.body.removeChild(announcement)
+        }
       }, 3000)
     }
 
@@ -262,8 +300,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Limpiar respuestas del usuario
     Object.keys(userAnswers).forEach((key) => delete userAnswers[key])
     quizCompleted = false
+
     // Clear saved answers from localStorage
-    localStorage.removeItem("final_quiz_answers")
+    try {
+      localStorage.removeItem("final_quiz_answers")
+    } catch (e) {
+      console.warn("Error clearing saved quiz answers:", e)
+    }
 
     // Resetear todas las preguntas
     const quizQuestions = document.querySelectorAll(".quiz-question")
@@ -289,6 +332,12 @@ document.addEventListener("DOMContentLoaded", () => {
       feedbackElements.forEach((feedback) => feedback.remove())
     })
 
+    // Eliminar resultados del quiz si existen
+    const existingResults = document.querySelector(".quiz-results")
+    if (existingResults) {
+      existingResults.remove()
+    }
+
     // Scroll al inicio del quiz
     const quizContainer = document.querySelector(".quiz-container")
     if (quizContainer) {
@@ -303,7 +352,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(announcement)
 
     setTimeout(() => {
-      document.body.removeChild(announcement)
+      if (document.body.contains(announcement)) {
+        document.body.removeChild(announcement)
+      }
     }, 3000)
   }
 
@@ -332,6 +383,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizContainer = document.querySelector(".quiz-container")
 
     if (quizContainer) {
+      // Eliminar resultados previos si existen
+      const existingResults = quizContainer.querySelector(".quiz-results")
+      if (existingResults) {
+        existingResults.remove()
+      }
+
       const resultsElement = document.createElement("div")
       resultsElement.className = "quiz-results"
       resultsElement.style.cssText = `
@@ -348,17 +405,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = percentage >= 70 ? "Excellent work!" : "Good attempt! Consider reviewing the course material."
 
       resultsElement.innerHTML = `
-  <h3 style="margin-top: 0; margin-bottom: 1rem;">
-    <i class="fas ${icon}" aria-hidden="true"></i> Quiz Results
-  </h3>
-  <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-    <strong>${correctCount} of ${totalQuestions} correct answers</strong>
-  </p>
-  <p style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem;">
-    Score: ${percentage}%
-  </p>
-  <p style="margin-bottom: 0;">${message}</p>
-`
+        <h3 style="margin-top: 0; margin-bottom: 1rem;">
+          <i class="fas ${icon}" aria-hidden="true"></i> Quiz Results
+        </h3>
+        <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
+          <strong>${correctCount} of ${totalQuestions} correct answers</strong>
+        </p>
+        <p style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem;">
+          Score: ${percentage}%
+        </p>
+        <p style="margin-bottom: 0;">${message}</p>
+      `
 
       quizContainer.appendChild(resultsElement)
 
@@ -373,7 +430,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.appendChild(announcement)
 
       setTimeout(() => {
-        document.body.removeChild(announcement)
+        if (document.body.contains(announcement)) {
+          document.body.removeChild(announcement)
+        }
       }, 5000)
     }
   }
