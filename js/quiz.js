@@ -277,19 +277,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const resetButton = document.createElement("button")
       resetButton.className = "save-button"
       resetButton.innerHTML = '<i class="fas fa-redo" aria-hidden="true"></i> Reset Quiz'
-      resetButton.style.cssText = `
-        background-color: #6c757d;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 4px;
-        color: white;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      `
 
       resetButton.addEventListener("click", resetQuiz)
       resetButton.addEventListener("keydown", (e) => {
@@ -297,16 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
           e.preventDefault()
           resetQuiz()
         }
-      })
-
-      resetButton.addEventListener("mouseenter", () => {
-        resetButton.style.backgroundColor = "#5a6268"
-        resetButton.style.transform = "translateY(-2px)"
-      })
-
-      resetButton.addEventListener("mouseleave", () => {
-        resetButton.style.backgroundColor = "#6c757d"
-        resetButton.style.transform = "translateY(0)"
       })
 
       resetButtonContainer.appendChild(resetButton)
