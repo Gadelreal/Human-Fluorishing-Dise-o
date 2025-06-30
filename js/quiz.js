@@ -29,6 +29,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const userAnswers = {}
+  // Load saved answers from localStorage
+  function loadSavedQuizAnswers() {
+    const savedAnswers = localStorage.getItem("final_quiz_answers")
+    if (savedAnswers) {
+      const parsedAnswers = JSON.parse(savedAnswers)
+      Object.assign(userAnswers, parsedAnswers)
+
+      // Apply saved answers to the UI
+      Object.keys(parsedAnswers).forEach((questionNumber) => {
+        const selectedAnswer = parsedAnswers[questionNumber]
+        const questionElement = document.querySelector(`.quiz-question:nth-child(${questionNumber})`)
+        if (questionElement) {
+          const options = questionElement.querySelectorAll(".quiz-options li")
+          const selectedOption = Array.from(options).find(
+            (option) => option.getAttribute("data-answer") === selectedAnswer,
+          )
+          if (selectedOption) {
+            // Simulate the answer selection to restore the visual state
+            handleAnswerSelection(Number.parseInt(questionNumber), selectedAnswer, selectedOption, true)
+          }
+        }
+      })
+    }
+  }
+
+  // Save quiz answers to localStorage
+  function saveQuizAnswers() {
+    localStorage.setItem("final_quiz_answers", JSON.stringify(userAnswers))
+  }
   let quizCompleted = false
 
   // Inicializar el quiz
@@ -64,16 +93,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Añadir botón de reset al final del quiz
     addResetButton()
+    // Load any previously saved answers
+    loadSavedQuizAnswers()
   }
 
-  function handleAnswerSelection(questionNumber, selectedAnswer, selectedElement) {
-    // Prevenir cambios si ya se respondió esta pregunta
-    if (userAnswers[questionNumber]) {
+  function handleAnswerSelection(questionNumber, selectedAnswer, selectedElement, isLoadingSaved = false) {
+    // Prevenir cambios si ya se respondió esta pregunta y no estamos cargando respuestas guardadas
+    if (userAnswers[questionNumber] && !isLoadingSaved) {
       return
     }
 
     // Guardar la respuesta del usuario
     userAnswers[questionNumber] = selectedAnswer
+
+    // Save to localStorage
+    if (!isLoadingSaved) {
+      saveQuizAnswers()
+    }
 
     // Obtener todas las opciones de esta pregunta
     const questionElement = selectedElement.closest(".quiz-question")
@@ -150,19 +186,21 @@ document.addEventListener("DOMContentLoaded", () => {
       questionElement.appendChild(feedbackElement)
     }
 
-    // Anunciar el resultado para lectores de pantalla
-    const announcement = document.createElement("div")
-    announcement.setAttribute("aria-live", "polite")
-    announcement.className = "sr-only"
-    announcement.textContent = isCorrect
-      ? "Correct answer"
-      : `Incorrect answer. The correct answer is ${correctAnswers[questionNumber]}`
-    document.body.appendChild(announcement)
+    // Anunciar el resultado para lectores de pantalla (solo si no estamos cargando respuestas guardadas)
+    if (!isLoadingSaved) {
+      const announcement = document.createElement("div")
+      announcement.setAttribute("aria-live", "polite")
+      announcement.className = "sr-only"
+      announcement.textContent = isCorrect
+        ? "Correct answer"
+        : `Incorrect answer. The correct answer is ${correctAnswers[questionNumber]}`
+      document.body.appendChild(announcement)
 
-    // Eliminar el anuncio después de que se haya leído
-    setTimeout(() => {
-      document.body.removeChild(announcement)
-    }, 3000)
+      // Eliminar el anuncio después de que se haya leído
+      setTimeout(() => {
+        document.body.removeChild(announcement)
+      }, 3000)
+    }
 
     // Verificar si el quiz está completo
     checkQuizCompletion()
@@ -224,6 +262,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Limpiar respuestas del usuario
     Object.keys(userAnswers).forEach((key) => delete userAnswers[key])
     quizCompleted = false
+    // Clear saved answers from localStorage
+    localStorage.removeItem("final_quiz_answers")
 
     // Resetear todas las preguntas
     const quizQuestions = document.querySelectorAll(".quiz-question")
