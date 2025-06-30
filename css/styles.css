@@ -4327,5 +4327,5 @@ html:focus,
 }
 
 
-.quiz-feedback.incorrect
+.quiz-feedback.incorrect, .quiz-feedback.correct
 {    margin-bottom: 1rem;}
