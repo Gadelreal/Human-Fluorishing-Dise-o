@@ -40,7 +40,35 @@ document.addEventListener("DOMContentLoaded", () => {
     wellbeingQuizForm.addEventListener('submit', (event) => {
       event.preventDefault();
       
-      // As per instructions, just show the feedback regardless of the answer.
+      // Get all checkboxes
+      const checkboxes = wellbeingQuizForm.querySelectorAll('input[type="checkbox"]');
+      
+      // Define correct answers (a, c, d, f are correct)
+      const correctAnswers = ['a', 'c', 'd', 'f'];
+      
+      // Check each option and provide visual feedback
+      checkboxes.forEach((checkbox) => {
+        const optionContainer = checkbox.closest('.quiz-option');
+        const optionValue = checkbox.value;
+        const isCorrect = correctAnswers.includes(optionValue);
+        const isChecked = checkbox.checked;
+        
+        // Remove any existing feedback classes
+        optionContainer.classList.remove('correct-answer', 'incorrect-answer', 'missed-answer');
+        
+        if (isChecked && isCorrect) {
+          // User selected correct answer
+          optionContainer.classList.add('correct-answer');
+        } else if (isChecked && !isCorrect) {
+          // User selected incorrect answer
+          optionContainer.classList.add('incorrect-answer');
+        } else if (!isChecked && isCorrect) {
+          // User missed a correct answer
+          optionContainer.classList.add('missed-answer');
+        }
+      });
+      
+      // Show the feedback
       if (feedbackElement) {
         feedbackElement.style.display = 'block';
         // Optionally, disable the button to prevent re-submission

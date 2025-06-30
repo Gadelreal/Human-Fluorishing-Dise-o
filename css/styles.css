@@ -4183,3 +4183,53 @@ html:focus,
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Estilos para feedback visual de respuestas */
+.quiz-activity-container .quiz-option.correct-answer {
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+  color: #155724 !important;
+}
+
+.quiz-activity-container .quiz-option.incorrect-answer {
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+  color: #721c24 !important;
+}
+
+.quiz-activity-container .quiz-option.missed-answer {
+  background-color: #fff3cd !important;
+  border-color: #ffeaa7 !important;
+  color: #856404 !important;
+}
+
+/* Añadir iconos para mayor claridad visual */
+.quiz-activity-container .quiz-option.correct-answer::after {
+  content: ' ✓';
+  color: #28a745;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.quiz-activity-container .quiz-option.incorrect-answer::after {
+  content: ' ✗';
+  color: #dc3545;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.quiz-activity-container .quiz-option.missed-answer::after {
+  content: ' (Correcta)';
+  color: #856404;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-left: 0.5rem;
+}
+
+/* Asegurar que el hover no interfiera después del submit */
+.quiz-activity-container .quiz-option.correct-answer:hover,
+.quiz-activity-container .quiz-option.incorrect-answer:hover,
+.quiz-activity-container .quiz-option.missed-answer:hover {
+  background-color: inherit !important;
+}
+\`\`\`
