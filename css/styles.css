@@ -866,15 +866,14 @@ ol {
 
 .reflection-question {
   background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
+  /* Se usa box-shadow para simular el borde y evitar que el reset global lo elimine
+     al hacer clic en elementos hijos como el textarea. */
+  box-shadow: 0 0 0 1px #e0e0e0;
   border-radius: 0;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.reflection-question:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  pointer-events: none; /* Deshabilita la interacción con el contenedor */
+  cursor: default;      /* Muestra el cursor por defecto */
 }
 
 .reflection-question h3 {
@@ -895,12 +894,12 @@ ol {
   resize: vertical;
   margin-bottom: 1rem;
   transition: border-color 0.3s;
+  pointer-events: auto; /* Rehabilita la interacción para el textarea */
 }
 
 .reflection-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(0, 0, 102, 0.2);
 }
 
 .button-container {
@@ -944,6 +943,7 @@ button,
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  pointer-events: auto; /* Rehabilita la interacción para el botón */
 }
 
 .save-button:hover {
@@ -4094,6 +4094,8 @@ html:focus,
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  pointer-events: none; /* Deshabilita los eventos de clic en el contenedor */
+  cursor: default;      /* Muestra el cursor por defecto */
 }
 
     .activity-part {
@@ -4128,6 +4130,7 @@ html:focus,
       font-weight: 600;
       transition: all 0.3s ease;
       max-width: fit-content;
+      pointer-events: auto; /* Rehabilita los eventos de clic para los enlaces */
     }
 
     .survey-link:hover {
@@ -4190,7 +4193,8 @@ html:focus,
     /* Estilos para el quiz interactivo */
 /* Estilos para el quiz interactivo mejorado */
 .quiz-question {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
   padding: 1.5rem;
   background-color: white;
   border-radius: 0;
@@ -4321,3 +4325,7 @@ html:focus,
 .quiz-question:hover {
   /* Sin efectos hover */
 }
+
+
+.quiz-feedback.incorrect
+{    margin-bottom: 1rem;}
