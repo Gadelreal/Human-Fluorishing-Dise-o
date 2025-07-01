@@ -2322,6 +2322,8 @@ a:hover {
   background-color: white;
   border-radius: 0;
   border: 1px solid #ddd;
+  pointer-events: none; /* Deshabilita los eventos de clic en el contenedor */
+  cursor: default;    
 }
 
 .quiz-question h3 {
@@ -2334,6 +2336,8 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+  pointer-events: auto; /* Rehabilita los eventos de clic para los enlaces */
+
 }
 
 .quiz-options li {
