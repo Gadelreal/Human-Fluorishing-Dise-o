@@ -3965,11 +3965,12 @@ html:focus,
 
 .values-list li {
   list-style: none;
-  padding: 0.5rem;
-  background-color: white;
+  padding: 1rem;
+  background-color: #000066;
+  color: white;
   border-radius: 0;
-  border: 1px solid #ddd;
-  text-align: center;
+  border: 1px solid #000066;
+  text-align: left;
   transition: none;
 }
 
