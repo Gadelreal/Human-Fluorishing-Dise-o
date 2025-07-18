@@ -1,21 +1,32 @@
 // js/video-player.js
 
-// No import needed as we're using the global videojs object.
+// Declare the videojs variable as a global object
+const videojs = window.videojs
 
 videojs.registerPlugin("examplePlugin", function (options) {
-  const player = this; // Capture the player instance
+  
 
-  player.on("play", () => {
+  this.on("play", () => {
     videojs.log("The video is playing!")
-  })
 
+    // Pause all other videos when this one starts playing
+    var allVideoElements = document.querySelectorAll("video.video-js")
+    allVideoElements.forEach((videoEl) => {
+      if (videoEl !== this.el() && videoEl.classList.contains("vjs-initialized")) {
+        var otherPlayer = videojs.getPlayer(videoEl)
+        if (otherPlayer && !otherPlayer.paused()) {
+          otherPlayer.pause()
+        }
+      }
+    })
+  })
 
   this.on("ended", () => {
     videojs.log("The video has ended!")
   })
 
   // Example of adding a control
-  var myButton = videojs.extend(videojs.getComponent("Button"), {
+  var MyButton = videojs.extend(videojs.getComponent("Button"), {
     constructor: function () {
       videojs.getComponent("Button").apply(this, arguments)
       this.addClass("vjs-my-custom-button")
@@ -26,11 +37,11 @@ videojs.registerPlugin("examplePlugin", function (options) {
     },
   })
 
-  videojs.registerComponent("MyButton", myButton)
-  
-  player.ready(function() {
-    player.controlBar.addChild("MyButton", {});
-  });
+  videojs.registerComponent("MyButton", MyButton)
+
+  this.ready(() => {
+    this.controlBar.addChild("MyButton", {})
+  })
 
   // Example of setting options
   options = videojs.mergeOptions(
@@ -47,15 +58,15 @@ videojs.registerPlugin("examplePlugin", function (options) {
 
 // Inicializar todos los videos con la clase .video-js
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   var videoElements = document.querySelectorAll("video.video-js")
-  videoElements.forEach(function (el) {
+  videoElements.forEach((el) => {
     // Solo inicializar si aún no está inicializado
     if (!el.classList.contains("vjs-initialized")) {
       videojs(el, {
         plugins: {
-          examplePlugin: {}
-        }
+          examplePlugin: {},
+        },
       })
       el.classList.add("vjs-initialized")
     }
