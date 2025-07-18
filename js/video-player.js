@@ -3,26 +3,36 @@
 // Declare the videojs variable as a global object
 const videojs = window.videojs
 
+// Array to store all video player instances
+const allVideoPlayers = []
+
 videojs.registerPlugin("examplePlugin", function (options) {
   
+
+  // Add this player to the global array
+  allVideoPlayers.push(this)
 
   this.on("play", () => {
     videojs.log("The video is playing!")
 
     // Pause all other videos when this one starts playing
-    var allVideoElements = document.querySelectorAll("video.video-js")
-    allVideoElements.forEach((videoEl) => {
-      if (videoEl !== this.el() && videoEl.classList.contains("vjs-initialized")) {
-        var otherPlayer = videojs.getPlayer(videoEl)
-        if (otherPlayer && !otherPlayer.paused()) {
-          otherPlayer.pause()
-        }
+    allVideoPlayers.forEach((otherPlayer) => {
+      if (otherPlayer !== this && !otherPlayer.paused()) {
+        otherPlayer.pause()
       }
     })
   })
 
   this.on("ended", () => {
     videojs.log("The video has ended!")
+  })
+
+  // Clean up when player is disposed
+  this.on("dispose", () => {
+    const index = allVideoPlayers.indexOf(this)
+    if (index > -1) {
+      allVideoPlayers.splice(index, 1)
+    }
   })
 
   // Example of adding a control
@@ -57,7 +67,6 @@ videojs.registerPlugin("examplePlugin", function (options) {
 })
 
 // Inicializar todos los videos con la clase .video-js
-
 document.addEventListener("DOMContentLoaded", () => {
   var videoElements = document.querySelectorAll("video.video-js")
   videoElements.forEach((el) => {
