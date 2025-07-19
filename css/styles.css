@@ -186,7 +186,7 @@ textarea:focus,
 }
 
 /* Eliminar cualquier borde en estados de click/active para elementos no interactivos */
-*:not(a):not(button):not(input):not(textarea):not([tabindex]):not([role="button"]):active {
+*:not(a):not(button):not(input):not(textarea):not([tabindex]):not([role="button"]):not(.reading-card):active {
   outline: none !important;
   border: none !important;
 }
@@ -754,7 +754,8 @@ ol {
   height: 100%;
   display: flex;
   flex-direction: column;
-  cursor: pointer; /* Añadir cursor pointer */
+  cursor: default; /* Cambiar a cursor por defecto */
+  pointer-events: none; /* Deshabilitar eventos de click en el contenedor */
 }
 
 /* Hacer toda la card clicable */
@@ -829,6 +830,7 @@ ol {
   align-items: center;
   justify-content: space-between;
   transition: color 0.2s ease;
+  pointer-events: auto; /* Rehabilitar eventos de click para los enlaces */
 }
 
 .reading-link:hover {
