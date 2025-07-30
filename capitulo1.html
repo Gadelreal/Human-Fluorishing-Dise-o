@@ -3,82 +3,365 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Online - Capítulo 1</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Florecimiento Humano - Capítulo 1</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="https://www.ie.edu" target="_blank">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Portada</a></li>
-        <li><a href="introduccion.html">Introducción</a></li>
-        <li><a href="capitulo1.html" class="active">Capítulo 1</a></li>
-        <li><a href="capitulo2.html">Capítulo 2</a></li>
-        <li><a href="capitulo3.html">Capítulo 3</a></li>
-        <li><a href="capitulo4.html">Capítulo 4</a></li>
-        <li><a href="capitulo5.html">Capítulo 5</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-  <main>
-    <div class="content-container">
-      <h1>Capítulo 1</h1>
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="Sitio web de IE University">
+          <img src="assets/images/logo-ie.svg" alt="Logo de IE University" class="logo" width="120">
+        </a>
+      </div>
+      <h2 class="header-title">Florecimiento Humano</h2>
+    </div>
+    <div class="header-controls">
       
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="portada.html">Portada</a></li>
+      <li><a href="introduccion.html">0. Introducción</a></li>
+      <li><a href="capitulo1.html" class="active" aria-current="page">1. Ser Humano</a></li>
+      <li><a href="capitulo2.html">2. Cultivando la Conciencia</a></li>
+      <li><a href="capitulo3.html">3. Autonomía y Motivación</a></li>
+      <li><a href="capitulo4.html">4. Construyendo Resiliencia</a></li>
+      <li><a href="capitulo5.html">5. Propiedad y Práctica</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Icono de Florecimiento Humano" class="hero-icon">
+      <h1 class="hero-title">LECCIÓN 1  |  Ser Humano</h1>
+    </div>
+  </div>
+</section>
+
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
       
+      <section class="lesson-section no-borders">
+  <h2><strong>Objetivos de Aprendizaje de la Lección 1</strong></h2>
+  
+  <div class="learning-objectives-grid">
+    <div class="learning-objective-card">
+      <div class="objective-icon" aria-hidden="true">
+        <i class="fas fa-brain"></i>
+      </div>
+      <div class="objective-content">
+        <h4>Complejidad Humana</h4>
+        <p>Apreciar la complejidad de los seres humanos y cómo nuestra naturaleza multifacética influye en nuestro bienestar</p>
+      </div>
+    </div>
+    
+    <div class="learning-objective-card">
+      <div class="objective-icon" aria-hidden="true">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="objective-content">
+        <h4>Conexión Social</h4>
+        <p>Comprender la necesidad humana de conexión social y su impacto en nuestra salud y felicidad general</p>
+      </div>
+    </div>
+    
+    <div class="learning-objective-card">
+      <div class="objective-icon" aria-hidden="true">
+        <i class="fas fa-balance-scale"></i>
+      </div>
+      <div class="objective-content">
+        <h4>Sesgos Humanos</h4>
+        <p>Evaluar el papel y la paradoja de los sesgos humanos y cómo afectan nuestra percepción y toma de decisiones</p>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <section class="lesson-section no-borders">
+        <h2><b>¿Qué Significa Ser Humano?</b></h2>
         
-          <div class="learning-objectives-grid">
-            <div class="learning-objective-card">
-              <div class="objective-icon">
-                <i class="fas fa-brain" aria-hidden="true"></i>
-              </div>
-              <div class="objective-content">
-                <h4>Complejidad Humana</h4>
-                <p>Apreciar la complejidad de los seres humanos y cómo nuestra naturaleza multifacética influye en nuestro bienestar</p>
-              </div>
-            </div>
-            
-            <div class="learning-objective-card">
-              <div class="objective-icon">
-                <i class="fas fa-users" aria-hidden="true"></i>
-              </div>
-              <div class="objective-content">
-                <h4>Conexión Social</h4>
-                <p>Comprender la necesidad humana de conexión social y su impacto en nuestra salud y felicidad general</p>
-              </div>
-            </div>
-            
-            <div class="learning-objective-card">
-              <div class="objective-icon">
-                <i class="fas fa-balance-scale" aria-hidden="true"></i>
-              </div>
-              <div class="objective-content">
-                <h4>Sesgos Humanos</h4>
-                <p>Evaluar el papel y la paradoja de los sesgos humanos y cómo afectan nuestra percepción y toma de decisiones</p>
+        <div class="responsive-video">
+          <video 
+            id="human-meaning-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/what-does-it-mean-to-be-human-poster.png"
+            data-video-id="w1v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video ¿Qué Significa Ser Humano?"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v01-what-does-it-mean-to-be-human/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor habilita JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre el instinto de supervivencia humano">
+          <h3>Punto Clave</h3>
+          <p>Como humanos, estamos programados para la <strong>supervivencia</strong>. Este instinto sigue siendo relevante en nuestras vidas hoy en día, aunque no nos enfrentemos a menudo a situaciones que pongan en peligro la vida. Como resultado, nuestros cerebros pueden interpretar ciertos eventos, como un correo electrónico o un examen, como una <strong>amenaza</strong>, aunque estas cosas no pongan en peligro la vida. Reconocer este tipo de respuestas <strong>"primitivas"</strong> como parte de nuestra identidad humana es un paso crucial hacia la <strong>autoconciencia</strong> y, en última instancia, hacia el <strong>florecimiento</strong>.</p>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2><b>Ser Humano: La Interconexión de Cuerpo, Mente y Alma</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="interconnection-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/being-human-interconnection-poster.png"
+            data-video-id="w1v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Ser Humano: La Interconexión de Cuerpo, Mente y Alma"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v02-being-human-the-interconnection-of-body-mind-and-soul/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor habilita JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre la interconexión de cuerpo, mente y alma">
+          <h3>Punto Clave</h3>
+          <p>Comprender la <strong>interconexión del cuerpo, la mente y el alma</strong> es clave para promover el bienestar. Por ejemplo, al comprender la relación entre la <strong>amígdala</strong> y la <strong>corteza prefrontal</strong> y cómo el <strong>ejercicio físico</strong> puede afectar esa relación, podemos tomar acciones más informadas para promover nuestra salud general.</p>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2><b>La Importancia de la Conexión Social Humana</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="social-connection-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/human-social-connection-poster.png"
+            data-video-id="w1v03"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video La Importancia de la Conexión Social Humana"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v03-the-importance-of-human-social-connection/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor habilita JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre la conexión social">
+          <h3>Punto Clave</h3>
+          <p>Como humanos, estamos diseñados para la <strong>conexión social</strong>. La investigación muestra que la conexión social significativa contribuye a nuestra felicidad. Por el contrario, los sentimientos de <strong>soledad</strong> pueden tener un impacto perjudicial significativo en nuestro bienestar.</p>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+  <h2><strong>Lecturas</strong></h2>
+  <p>Por favor, completa las siguientes lecturas para participar en las siguientes actividades:</p>
+  
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Por qué una red social sólida mejora el rendimiento, la salud y el bienestar</h3>
+        <p>Explora cómo las conexiones sociales pueden mejorar varios aspectos de tu vida, desde el rendimiento profesional hasta la salud personal.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/center-for-health-and-well-being/blog/why-a-strong-social-network-improves-performance-health-and-well-being/" target="_blank" class="reading-link" aria-label="Leer artículo: Por qué una red social sólida mejora el rendimiento, la salud y el bienestar (se abre en una nueva pestaña)">
+            Leer Artículo
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Tu viaje hacia el autodescubrimiento</h3>
+        <p>Aprende sobre el proceso de autodescubrimiento y cómo puede llevar a una mayor realización y comprensión personal.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/center-for-health-and-well-being/blog/your-journey-to-self-discovery/" target="_blank" class="reading-link" aria-label="Leer artículo: Tu viaje hacia el autodescubrimiento (se abre en una nueva pestaña)">
+            Leer Artículo
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <section class="lesson-section no-borders">
+        <h2><strong>Actividad: Reflexionando sobre Tus Conexiones Sociales</strong></h2>
+        <p>A la luz de lo que has aprendido y leído hasta ahora, por favor reflexiona sobre las siguientes preguntas. Te animamos a que anotes tus reflexiones en un diario o cuaderno.</p>
+        
+        <div class="reflection-exercise">
+          <div class="reflection-question">
+            <h3>¿Cómo impacta tu red social en tu rendimiento, salud y bienestar?</h3>
+          </div>
+          
+          <div class="reflection-question">
+            <h3>¿Cómo impacta la tecnología en tus conexiones sociales? ¿Crees que la tecnología puede llevar al distanciamiento y la soledad, o mejora nuestras relaciones?</h3>
+          </div>
+          
+          <div class="reflection-question">
+            <h3>¿Qué métodos mencionados en el artículo "Tu Viaje hacia el Autodescubrimiento" resuenan más contigo al embarcarte en tu camino de autodescubrimiento?</h3>
+          </div>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2><b>Sesgos Humanos</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="human-biases-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/human-biases-poster.png"
+            data-video-id="w1v04"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Sesgos Humanos"
+          >
+           <source src="https://iep-media.ie.edu/olj/human-flourishing/w1v04-human-biases/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor habilita JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre los sesgos humanos">
+          <h3>Punto Clave</h3>
+          <p>Como humanos, todos tenemos <strong>sesgos</strong>. Estos sesgos están arraigados en la necesidad de <strong>supervivencia</strong> y existen como una forma para que nuestros cerebros tomen <strong>decisiones rápidas y eficientes</strong>; sin embargo, también pueden afectar <strong>negativamente</strong> nuestro bienestar. Al comprender nuestros sesgos y cómo funcionan, podemos cultivar mejor las prácticas que contribuyen a nuestro florecimiento.</p>
+        </div>
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2><b>Liderarse a Uno Mismo para un Mayor Impacto en lo que Hacemos</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="leading-self-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/leading-self-poster.png"
+            data-video-id="w6v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Liderarse a Uno Mismo para un Mayor Impacto en lo que Hacemos"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v02-leading-self-for-greater-impact-in-what-we-do/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor habilita JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2><b>Meditación de Cierre: Lección 1</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="closing-meditation-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/closing-meditation-poster.png"
+            data-video-id="w7v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video de meditación Abrazando la Plenitud de Ser Humano"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v01-embracing-the-fullness-of-being-human/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor habilita JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+      </section>
+      
+      <section class="lesson-section no-borders">
+        <h2><strong>Lectura Opcional</strong></h2>
+        <p>¡Por favor, completa las siguientes lecturas si son de tu interés!</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Modelo de Calidez y Competencia</h3>
+              <p>Explora el marco psicológico que explica cómo percibimos y juzgamos a los demás basándonos en dos dimensiones principales: calidez (confiabilidad, amabilidad) y competencia (capacidad, eficacia).</p>
+              <div class="reading-card-footer">
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0065260107000020" target="_blank" class="reading-link" aria-label="Leer artículo: Modelo de Calidez y Competencia (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
           </div>
-        
+          
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Conexión Humana en la Era de la IA</h3>
+              <p>Descubre cómo la inteligencia artificial está remodelando las relaciones humanas y qué significa esto para mantener conexiones significativas en un mundo cada vez más digital.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ie.edu/insights/articles/human-connection-in-the-age-of-ai/" target="_blank" class="reading-link" aria-label="Leer artículo: Conexión Humana en la Era de la IA (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      
-      <div class="navigation-buttons">
-        <a href="introduction.html" class="nav-button prev"><span class="arrow-left">←</span>Previous</a>
-        <a href="capitulo2.html" class="nav-button next">Next<span class="arrow-right">→</span></a>
+      <div class="navigation-buttons" role="navigation" aria-label="Navegación de la lección">
+        <a href="introduccion.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Anterior</a>
+        <a href="capitulo2.html" class="nav-button next">Siguiente<span class="arrow-right" aria-hidden="true">→</span></a>
       </div>
     </div>
   </main>
 
-  <footer>>
+  <footer role="contentinfo">
+  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
-  </footer>
+  </div>
+</footer>
 
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

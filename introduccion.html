@@ -1,47 +1,426 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Online - Introducción</title>
-  <link rel="stylesheet" href="./css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florecimiento Humano - Introducción</title>
+<link rel="stylesheet" href="./css/styles.css">
+<!-- VideoJS CSS -->
+<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+<!-- Font Awesome para iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="https://www.ie.edu" target="_blank">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+
+<!-- Modificar la estructura del header para eliminar bordes laterales y extender el borde inferior -->
+<header class="full-width header-full-bottom" role="banner">
+<div class="header-content">
+  <div class="header-left">
+    <div class="logo-container tiny-logo">
+      <a href="https://www.ie.edu" target="_blank" aria-label="Sitio web de IE University">
+        <img src="assets/images/logo-ie.svg" alt="Logo de IE University" class="logo" width="120">
       </a>
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Portada</a></li>
-        <li><a href="introduccion.html" class="active">Introducción</a></li>
-        <li><a href="capitulo1.html">Capítulo 1</a></li>
-        <li><a href="capitulo2.html">Capítulo 2</a></li>
-        <li><a href="capitulo3.html">Capítulo 3</a></li>
-        <li><a href="capitulo4.html">Capítulo 4</a></li>
-        <li><a href="capitulo5.html">Capítulo 5</a></li>
-      </ul>
-    </nav>
-  </header>
+    <h2 class="header-title">Florecimiento Humano</h2>
+  </div>
+  <!-- Modificar la estructura de los controles del header para evitar superposición -->
+  <div class="header-controls">
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </div>
+</div>
+<!-- Asegurarse de que el menú tenga la clase correcta -->
+<nav class="main-nav hamburger-nav" id="main-nav" aria-label="Navegación principal">
+  <ul>
+    <li><a href="portada.html">Portada</a></li>
+    <li><a href="introduccion.html" class="active" aria-current="page">0. Introducción</a></li>
+    <li><a href="capitulo1.html">1. Ser Humano</a></li>
+    <li><a href="capitulo2.html">2. Cultivando la Conciencia</a></li>
+    <li><a href="capitulo3.html">3. Autonomía y Motivación</a></li>
+    <li><a href="capitulo4.html">4. Construyendo Resiliencia</a></li>
+    <li><a href="capitulo5.html">5. Propiedad y Práctica</a></li>
+  </ul>
+</nav>
+</header>
 
-  <main>
-    <div class="content-container">
-      <h1>Introducción</h1>
-      <!-- Aquí irá el contenido de la introducción -->
+<section class="hero-section">
+<div class="hero-content">
+  <div class="hero-title-container">
+    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Icono de Florecimiento Humano" class="hero-icon">
+    <h1 class="hero-title">Introducción al Curso</h1>
+  </div>
+</div>
+</section>
+
+<main id="main-content" tabindex="-1">
+  <div class="content-aligned-container">
+    
+    
+    <section class="lesson-section no-borders">
+      <h2><b>Descripción del Curso y Objetivos de Aprendizaje</b></h2>
+      <h3>Descripción del Curso</h3>
+      <p><strong>Florecimiento Humano</strong> es un curso sobre lo que significa ser humano. Este curso, 
+        desarrollado por el <strong>Centro de Salud y Bienestar de IE University</strong>, crea el 
+        espacio para el aprendizaje experiencial y el crecimiento para apoyar a los alumnos en el cultivo intencional de 
+        prácticas que apoyen proactivamente el florecimiento humano. Como seres humanos, tenemos 
+        conciencia de nuestra existencia, una conexión multifacética de cuerpo, mente y alma, y una 
+        capacidad para la creatividad, la innovación y el aprendizaje. También estamos programados para la conexión humana 
+        y para la supervivencia. Este curso adopta un enfoque holístico para comprender nuestras 
+        emociones, conexiones con los valores, el pensamiento, el comportamiento y la salud para explorar prácticas intencionales 
+        que nos empoderan para florecer y lograr una mayor realización e impacto positivo.</p>
       
-      <div class="navigation-buttons">
-        <a href="index.html" class="nav-button prev">Anterior</a>
-        <a href="capitulo1.html" class="nav-button next">Siguiente</a>
+      <h3>Objetivos de Aprendizaje del Curso</h3>
+      <div class="learning-objectives-grid">
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="objective-content">
+            <h4>Ser Humano</h4>
+            <p>Explorar cómo una mejor apreciación de <strong>lo que significa ser humano</strong> puede apoyar el florecimiento</p>
+          </div>
+        </div>
+        
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="objective-content">
+            <h4>Cultivando la Conciencia</h4>
+            <p>Cultivar la <strong>conciencia</strong> entendiendo el papel de las <strong>emociones</strong> y la <strong>metacognición</strong></p>
+          </div>
+        </div>
+        
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-compass"></i>
+          </div>
+          <div class="objective-content">
+            <h4>Motivación y Propósito</h4>
+            <p>Analizar la naturaleza de la <strong>motivación</strong> y las prácticas que pueden darnos un sentido de <strong>propósito</strong></p>
+          </div>
+        </div>
+        
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="objective-content">
+            <h4>Construyendo Resiliencia</h4>
+            <p>Definir la <strong>resiliencia</strong> y evaluar estrategias para construirla</p>
+          </div>
+        </div>
+        
+        <div class="learning-objective-card">
+          <div class="objective-icon" aria-hidden="true">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="objective-content">
+            <h4>Plan Personal</h4>
+            <p>Aplicar las mejores prácticas para crear un <strong>plan específico para tu propio florecimiento</strong> del que puedas responsabilizarte</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="lesson-section no-borders">
+<div class="survey-section">
+  <h2><b>Encuesta de Bienestar</b></h2>
+  <p>Esta breve autoevaluación utiliza medidas validadas científicamente para ayudarte a reflexionar sobre aspectos clave del bienestar al comenzar el curso. Estos <strong>resultados de referencia</strong> son un punto de partida, diseñados para aumentar la conciencia de tu estado actual en diferentes áreas de la vida y para ayudarte a identificar lo que podrías querer apoyar más intencionalmente mientras exploras prácticas que fomentan el <strong>florecimiento.</strong></p>
+  
+  <div class="survey-button-container">
+    <a href="https://ie.co1.qualtrics.com/jfe/form/SV_8cymWir9nTWHN42" target="_blank" class="survey-button" aria-label="Realizar Encuesta Inicial">
+      <i class="fas fa-poll" aria-hidden="true"></i>
+      Realizar Encuesta de Bienestar
+    </a>
+  </div>
+</div>
+</section>
+    
+    <section class="lesson-section no-borders">
+<h2><b>Objetivos de Aprendizaje de la Lección 0</b></h2>
+
+<div class="learning-objectives-grid">
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-book"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Conceptos Clave</h4>
+      <p>Comprender conceptos clave que servirán como base para el curso, como la definición de "bienestar"</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-balance-scale"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Marco de Cuerpo, Mente y Alma</h4>
+      <p>Explorar cómo el Marco de Cuerpo, Mente y Alma nos ayuda a comprender mejor el florecimiento humano</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <div class="objective-content">
+      <h4>Psicología Positiva</h4>
+      <p>Evaluar cómo las ideas de la psicología positiva han informado nuestra forma de pensar sobre el florecimiento humano</p>
+    </div>
+  </div>
+</div>
+</section>
+    
+    <section class="lesson-section no-borders welcome-module">
+<h2 style="font-family: 'Open Sans', Arial, sans-serif; font-weight: 300; font-size: 32px; margin-bottom: 64px;"><b>Bienvenida al Curso</b></h2>
+
+<div class="responsive-video" style="box-shadow: none;">
+  <video 
+    id="welcome-video" 
+    class="video-js vjs-ie-skin vjs-big-play-centered" 
+    controls 
+    preload="auto" 
+    poster="assets/images/human-flourishing-poster.jpg"
+    data-video-id="w0v01"
+    data-logo="assets/images/logo-ie-small.png"
+    aria-label="Video de Bienvenida al Curso"
+    style="box-shadow: none;"
+  >
+    <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v01-welcome-to-the-course/hls.m3u8" type="application/x-mpegURL"> 
+    <p class="vjs-no-js">
+      Para ver este video, por favor habilita JavaScript y considera actualizar a un
+      navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+    </p>
+  </video>
+</div>
+</section>
+    
+<section class="lesson-section no-borders">
+
+  
+    <h2><b>Lectura Opcional</b></h2>
+    <p>Lee más sobre el Centro de Salud y Bienestar de IE, su misión y el <strong>Marco de Cuerpo, Mente y Alma</strong> aquí.</p>
+    
+    <div class="reading-cards">
+      <div class="reading-card">
+        <div class="reading-card-content">
+          <h3><strong>Centro de Salud y Bienestar de IE</strong></h3>
+          <p>Explora la misión, visión e iniciativas del Centro de Salud y Bienestar de IE. Aprende sobre su enfoque holístico del bienestar y cómo integran el Marco de Cuerpo, Mente y Alma en sus programas.</p>
+          <div class="reading-card-footer">
+            <a href="https://www.ie.edu/center-for-health-and-well-being/" target="_blank" class="reading-link" aria-label="Visitar el sitio web del Centro de Salud y Bienestar de IE (se abre en una nueva pestaña)">
+              Visitar Sitio Web
+              <span class="reading-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
+  
 
-  <footer>
-    <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
-  </footer>
+</section>
 
-  <script src="js/main.js"></script>
+    <section class="lesson-section no-borders">
+      
+          
+          <h2><b>Una Bienvenida Especial de Mario Alonso Puig</b></h2>
+          
+            
+            <div class="responsive-video">
+              <video 
+                id="mario-puig-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025-05-08_11-35-06-7eKo08AyGuabOoNDEOVe4xSb8XOJ0p.png"
+                data-video-id="w0v02"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="Video de Una Bienvenida Especial de Mario Alonso Puig"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v02-a-special-welcome-from-mario-alonso-puig/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor habilita JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+          
+        
+      
+    </section>
+    
+    <section class="lesson-section no-borders">
+
+  
+    <h2><b>¿Qué Significa Bienestar?</b></h2>
+    
+    <div class="responsive-video">
+      <video 
+        id="wellbeing-video" 
+        class="video-js vjs-ie-skin vjs-big-play-centered" 
+        controls 
+        preload="auto" 
+        poster="assets/images/well-being-poster.png"
+        data-video-id="w0v03"
+        data-logo="assets/images/logo-ie-small.png"
+        aria-label="Video de ¿Qué Significa Bienestar?"
+      >
+        <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v03-what-does-well-being-mean/hls.m3u8" type="application/x-mpegURL"> 
+        <p class="vjs-no-js">
+          Para ver este video, por favor habilita JavaScript y considera actualizar a un
+          navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+        </p>
+      </video>
+    </div>
+    
+    <div class="key-point" role="note" aria-label="Punto clave sobre bienestar vs. wellness">
+      <h3>Punto Clave</h3>
+      <p><strong>Bienestar vs. Wellness:</strong> Bienestar y wellness a menudo se usan indistintamente, 
+      pero tienen significados distintos. Wellness se centra más en el cuidado físico de 
+      nosotros mismos. En contraste, el bienestar considera una combinación más integral de cuerpo, 
+      mente y alma y abarca los elementos de equilibrio, apreciación y 
+      perspectiva.</p>
+    </div>
+  
+
+</section>
+    
+    <section class="lesson-section no-borders">
+      
+          
+          <h2><b>Un Breve Repaso a la Psicología Positiva</b></h2>
+          
+            
+            <div class="responsive-video">
+              <video 
+                id="positive-psychology-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025-05-08_11-35-45-YhdoOwsSMbjBRGQ2E3aYyySbiHallb.png"
+                data-video-id="w0v04"
+                data-logo="assets/images/logo-ie-small.png"
+                aria-label="Video de Un Breve Repaso a la Psicología Positiva"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w0v04-a-brief-background-on-positive-psychology/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor habilita JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+          
+          
+          <div class="key-point" role="note" aria-label="Punto clave sobre la psicología positiva">
+            <h3>Punto Clave</h3>
+            <p>La <strong>psicología positiva</strong> plantea la idea de que remediar lo "malo" en nuestras vidas no es 
+            lo mismo que cultivar lo "bueno". En lugar de centrarse en solucionar problemas en nuestras 
+            vidas para llegar a un estado "neutral", un objetivo de la psicología positiva es empoderar a las personas 
+            para que vayan más allá de un estado neutral y cultiven un estado de florecimiento.</p>
+          </div>
+        
+      
+    </section>
+    
+    <section class="lesson-section no-borders">
+
+  
+    <h2><b>Lectura Opcional</b></h2>
+    <p>Consulta los siguientes recursos si estás interesado en aprender más.</p>
+    
+    <div class="reading-cards">
+      <div class="reading-card">
+        <div class="reading-card-content">
+          <h3><strong>Antonio Damasio</strong></h3>
+          <p><em>El error de Descartes: La emoción, la razón y el cerebro humano.</em> Putnam.</p>
+          <div class="reading-card-footer">
+            <a href="https://www.google.com/search?q=Antonio+Damasio+El+error+de+Descartes%3A+La+emoci%C3%B3n%2C+la+raz%C3%B3n+y+el+cerebro+humano" target="_blank" class="reading-link" aria-label="Buscar el libro de Antonio Damasio: El Error de Descartes (se abre en una nueva pestaña)">
+              Buscar Libro
+              <span class="reading-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reading-card">
+        <div class="reading-card-content">
+          <h3><strong>Martin Seligman</strong></h3>
+          <p><em>Flourish: Una nueva y visionaria comprensión de la felicidad y el bienestar.</em> Free Press.</p>
+          <div class="reading-card-footer">
+            <a href="https://www.google.com/search?q=Martin+Seligman+Flourish%3A+Una+nueva+y+visionaria+comprensi%C3%B3n+de+la+felicidad+y+el+bienestar" target="_blank" class="reading-link" aria-label="Buscar el libro de Martin Seligman: Flourish (se abre en una nueva pestaña)">
+              Buscar Libro
+              <span class="reading-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reading-card">
+        <div class="reading-card-content">
+          <h3><strong>Barbara Fredrickson</strong></h3>
+          <p><em>Amor 2.0: Cómo nuestra emoción suprema afecta todo lo que sentimos, pensamos, hacemos y llegamos a ser.</em> Hudson Street Press.</p>
+          <div class="reading-card-footer">
+            <a href="https://www.google.com/search?q=Barbara+Fredrickson+Amor+2.0%3A+C%C3%B3mo+nuestra+emoci%C3%B3n+suprema+afecta+todo+lo+que+sentimos%2C+pensamos%2C+hacemos+y+llegamos+a+ser" target="_blank" class="reading-link" aria-label="Buscar el libro de Barbara Fredrickson: Amor 2.0 (se abre en una nueva pestaña)">
+              Buscar Libro
+              <span class="reading-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</section>
+    
+    <section class="lesson-section no-borders">
+      
+          
+          <h2><b>Unas Palabras sobre el Diseño Visual de este Curso</b></h2>
+          <p>El <strong>diseño visual</strong> de este curso sobre Florecimiento Humano fue cuidadosamente creado para reflejar 
+          los valores y objetivos de aprendizaje del curso.</p>
+          <p>Como notarán los estudiantes, la imagen central de este curso es la de una <strong>huella dactilar</strong>, 
+          recordándonos lo que significa ser humano y que cada uno de nosotros tiene una identidad humana única.</p>
+          <p>Esta huella dactilar también está vinculada a la imagen de un laberinto, que recuerda las complejidades 
+          de ser humano y los desafíos que podemos tener que navegar en nuestro viaje hacia el 
+          florecimiento. Sin embargo, si persistimos en este viaje, ciertamente aprenderemos valiosas 
+          lecciones sobre nosotros mismos y los demás.</p>
+          <p>Finalmente, las imágenes de la huella dactilar y el <strong>laberinto</strong> se contextualizan dentro de la <strong>naturaleza</strong>, 
+          recordándonos que nuestra identidad humana está vinculada al mundo natural. Por supuesto, el 
+          concepto de florecimiento también evoca imágenes del crecimiento de plantas, árboles y otros seres vivos.</p>
+          <p>Esperamos que este diseño visual añada <strong>significado</strong> a tu experiencia en este curso. 
+          ¡Disfruta!</p>
+        
+      
+    </section>
+    
+    <div class="navigation-buttons" role="navigation" aria-label="Navegación de la lección">
+      <a href="portada.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Anterior</a>
+      <a href="capitulo1.html" class="nav-button next">Siguiente<span class="arrow-right" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</main>
+
+<footer role="contentinfo">
+<div class="footer-content">
+  <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+<!-- VideoJS JavaScript -->
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script src="js/video-player.js"></script>
+<script src="js/key-points.js"></script>
+<script src="js/main.js"></script>
+<script src="js/logo-checker.js"></script>
 </body>
 </html>

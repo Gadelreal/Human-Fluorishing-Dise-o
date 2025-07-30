@@ -3,48 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Online - Capítulo 4</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Florecimiento Humano - Capítulo 4</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="https://www.ie.edu" target="_blank">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Portada</a></li>
-        <li><a href="introduccion.html">Introducción</a></li>
-        <li><a href="capitulo1.html">Capítulo 1</a></li>
-        <li><a href="capitulo2.html">Capítulo 2</a></li>
-        <li><a href="capitulo3.html">Capítulo 3</a></li>
-        <li><a href="capitulo4.html" class="active">Capítulo 4</a></li>
-        <li><a href="capitulo5.html">Capítulo 5</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-  <main>
-    <div class="content-container">
-      <h1>Capítulo 4</h1>
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="Sitio web de IE University">
+          <img src="assets/images/logo-ie.svg" alt="Logo de IE University" class="logo" width="120">
+        </a>
+      </div>
+      <h2 class="header-title">Florecimiento Humano</h2>
+    </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="portada.html">Portada</a></li>
+      <li><a href="introduccion.html">0. Introducción</a></li>
+      <li><a href="capitulo1.html">1. Ser Humano</a></li>
+      <li><a href="capitulo2.html">2. Cultivando la Conciencia</a></li>
+      <li><a href="capitulo3.html">3. Autonomía y Motivación</a></li>
+      <li><a href="capitulo4.html" class="active" aria-current="page">4. Construyendo Resiliencia</a></li>
+      <li><a href="capitulo5.html">5. Pertenencia y Práctica</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Icono de Florecimiento Humano" class="hero-icon">
+      <h1 class="hero-title">LECCIÓN 4  |  Construyendo Resiliencia</h1>
+    </div>
+  </div>
+</section>
+
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
       
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Objetivos de Aprendizaje de la Lección 4</strong></h2>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Definir la Resiliencia</h4>
+              <p>Definir la resiliencia y su relevancia para el florecimiento</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Fortalezas del Carácter</h4>
+              <p>Identificar tus propias fortalezas de carácter para aprovechar tus habilidades para navegar desafíos, mantener una perspectiva positiva y recuperarte más rápidamente de los contratiempos</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Superar la Procrastinación</h4>
+              <p>Comprender el origen de la procrastinación y las estrategias para superarla</p>
+            </div>
+          </div>
+        </div>
+      </section>
       
-        <!-- Aquí irá el contenido del capítulo 4 -->
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>¿Cómo Podemos Definir la Resiliencia?</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="resilience-definition-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/how-can-we-define-resilience-poster.png"
+            data-video-id="w4v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video ¿Cómo Podemos Definir la Resiliencia?"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v01-how-can-we-define-resilience/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre la definición de resiliencia">
+          <h3>Punto Clave</h3>
+          <p>Podemos considerar una definición <strong>"evolucionada"</strong> de la resiliencia como la capacidad de reconocer 
+          lo que se necesita y responder de la manera más apropiada, considerando el aprendizaje que 
+          conlleva la experiencia. En este sentido, la resiliencia no se trata de soportar la presión a 
+          toda costa, sino de mantener el equilibrio y reconocer cuándo tomar descansos o adaptar 
+          los enfoques.</p>
+        </div>
+      </section>
       
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Lectura</b></h2>
+        <p>Por favor, completa la siguiente lectura:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Abrazando la Resiliencia: Desarrollando una Mentalidad de Crecimiento</h3>
+              <p>Explora cómo desarrollar una mentalidad de crecimiento puede mejorar tu resiliencia y tu capacidad para navegar los desafíos. Aprende estrategias prácticas para construir flexibilidad mental y adaptabilidad frente a la adversidad.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ie.edu/center-for-health-and-well-being/blog/embracing-resilience-developing-a-growth-mindset/" target="_blank" class="reading-link" aria-label="Leer artículo: Abrazando la Resiliencia: Desarrollando una Mentalidad de Crecimiento (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      <div class="navigation-buttons">
-        <a href="chapter3.html" class="nav-button prev"><span class="arrow-left">←</span>Previous</a>
-        <a href="chapter5.html" class="nav-button next">Next<span class="arrow-right">→</span></a>
+      <!-- 4. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>¿Qué Son las Fortalezas del Carácter y Cómo Apoyan la Resiliencia?</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="character-strengths-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/character-strengths-resilience-poster.png"
+            data-video-id="w4v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video ¿Qué Son las Fortalezas del Carácter y Cómo Apoyan la Resiliencia?"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v02-what-are-character-strenghts-and-how-do-they-support-resilience/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre las fortalezas del carácter">
+          <h3>Punto Clave</h3>
+          <p>Nuestras <strong>fortalezas de carácter</strong> son tendencias naturales que tenemos y que apoyan nuestra vitalidad. 
+          El Instituto VIA sobre el Carácter nos proporciona <strong>24 fortalezas de carácter respaldadas por la investigación</strong>, 
+          agrupadas en <strong>6 "virtudes"</strong>. Podemos aprovechar estas fortalezas para construir nuestra 
+          resiliencia en tiempos de adversidad.</p>
+        </div>
+      </section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Actividad: Identificando Tus Fortalezas de Carácter y las de los Demás</b></h2>
+        
+        <div class="character-strengths-activity">
+          <div class="activity-part">
+            <h3><strong>Parte 1: Fortalezas del Carácter</strong></h3>
+            <p><strong>Completa la encuesta de Fortalezas de Carácter VIA</strong></p>
+            
+            <div class="survey-links">
+              <a href="https://www.viacharacter.org/account/register" target="_blank" class="survey-link" aria-label="Completar la Encuesta de Fortalezas de Carácter VIA (se abre en una nueva pestaña)">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                Completar la Encuesta de Fortalezas de Carácter VIA
+              </a>
+            </div>
+            
+            <p><strong>Para más información sobre tus fortalezas, consulta esta página:</strong></p>
+            
+            <div class="survey-links">
+              <a href="https://www.viacharacter.org/character-strengths" target="_blank" class="survey-link" aria-label="Aprender más sobre las Fortalezas de Carácter (se abre en una nueva pestaña)">
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                Aprender Más Sobre las Fortalezas de Carácter
+              </a>
+            </div>
+          </div>
+          
+          <div class="activity-part">
+            <h3><strong>Parte 2: Identificando Fortalezas</strong></h3>
+            <p>Al considerar las 24 fortalezas de carácter, piensa en una persona que te recuerde a 
+            alguna de esas fortalezas. Escribe ejemplos de cómo puedes ver esa fortaleza en acción en 
+            esa persona. <strong>¿Por qué es importante para ti? ¿Cómo te beneficias?</strong></p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>Superando la Procrastinación</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="procrastination-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/overcoming-procrastination-poster.png"
+            data-video-id="w4v03"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Superando la Procrastinación"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w4v03-overcoming-prorastination/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre la procrastinación">
+          <h3>Punto Clave</h3>
+          <p>La <strong>procrastinación</strong> no puede ser simplemente descartada como <strong>pereza</strong>: está arraigada en un sentimiento de 
+          incomodidad con una tarea, a menudo debido a la sensación de que carecemos de la capacidad para completar esa 
+          tarea. Podemos superar la procrastinación <strong>aprovechando nuestras fortalezas</strong> como una forma de 
+          energizarnos, así como dividiendo la tarea en partes más pequeñas y manejables.</p>
+        </div>
+      </section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Lectura</b></h2>
+        <p>Completa la siguiente lectura:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Lo que Necesitas Saber Sobre la Fuerza de Voluntad: La Ciencia Psicológica del Autocontrol</h3>
+              <p>Descubre los fundamentos psicológicos de la fuerza de voluntad y el autocontrol. Aprende estrategias basadas en evidencia para fortalecer tu capacidad de resistir la tentación y mantener el enfoque en tus metas.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.apa.org/topics/personality/willpower" target="_blank" class="reading-link" aria-label="Leer artículo de la APA sobre la Fuerza de Voluntad (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 8. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>Meditación de Cierre: Lección 4</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="closing-meditation-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/human-flourishing-poster.jpg"
+            data-video-id="w7v04"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video de meditación: Cultivando la Resiliencia desde Dentro"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v04-cultivating-resilience-from-within/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+      </section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Lectura Opcional</b></h2>
+        <p>¡Por favor, completa las siguientes lecturas si estás interesado en aprender más sobre estos temas!</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Afecto Positivo y las Dinámicas Complejas del Florecimiento Humano</h3>
+              <p>Explora la intrincada relación entre las emociones positivas y el florecimiento humano. Este artículo de investigación examina cómo el afecto positivo contribuye a las dinámicas complejas del bienestar y el crecimiento personal.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3126111/#S4title" target="_blank" class="reading-link" aria-label="Leer artículo de investigación sobre Afecto Positivo y Florecimiento Humano (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Inteligencia Emocional y Liderazgo: ¿Cuál es la Conexión?</h3>
+              <p>Descubre la conexión vital entre la inteligencia emocional y el liderazgo efectivo. Aprende cómo desarrollar habilidades de conciencia y regulación emocional puede mejorar tu capacidad para liderar e inspirar a otros.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.ie.edu/center-for-health-and-well-being/blog/emotional-intelligence-and-leadership-whats-the-connection/" target="_blank" class="reading-link" aria-label="Leer artículo sobre Inteligencia Emocional y Liderazgo (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="navigation-buttons" role="navigation" aria-label="Navegación de la lección">
+        <a href="capitulo3.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Anterior</a>
+        <a href="capitulo5.html" class="nav-button next">Siguiente<span class="arrow-right" aria-hidden="true">→</span></a>
       </div>
     </div>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
+  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
-  </footer>
+  </div>
+</footer>
 
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,48 +3,717 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Online - Capítulo 5</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Florecimiento Humano - Capítulo 5</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="https://www.ie.edu" target="_blank">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Portada</a></li>
-        <li><a href="introduccion.html">Introducción</a></li>
-        <li><a href="capitulo1.html">Capítulo 1</a></li>
-        <li><a href="capitulo2.html">Capítulo 2</a></li>
-        <li><a href="capitulo3.html">Capítulo 3</a></li>
-        <li><a href="capitulo4.html">Capítulo 4</a></li>
-        <li><a href="capitulo5.html" class="active">Capítulo 5</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-  <main>
-    <div class="content-container">
-      <h1>Capítulo 5</h1>
-      
-      <!-- Aquí irá el contenido del capítulo 5 -->
-      
-      <div class="navigation-buttons">
-        <a href="chapter4.html" class="nav-button prev"><span class="arrow-left">←</span>Previous</a>
-        <a href="index.html" class="nav-button next">Back to Cover<span class="arrow-right">→</span></a>
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="Sitio web de IE University">
+          <img src="assets/images/logo-ie.svg" alt="Logo de IE University" class="logo" width="120">
+        </a>
       </div>
+      <h2 class="header-title">Florecimiento Humano</h2>
     </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="portada.html">Portada</a></li>
+      <li><a href="introduccion.html">0. Introducción</a></li>
+      <li><a href="capitulo1.html">1. Ser Humano</a></li>
+      <li><a href="capitulo2.html">2. Cultivando la Conciencia</a></li>
+      <li><a href="capitulo3.html">3. Autonomía y Motivación</a></li>
+      <li><a href="capitulo4.html">4. Construyendo Resiliencia</a></li>
+      <li><a href="capitulo5.html" class="active" aria-current="page">5. Pertenencia y Práctica</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Icono de Florecimiento Humano" class="hero-icon">
+      <h1 class="hero-title">LECCIÓN 5  |  Florecimiento Humano: Pertenencia y Práctica</h1>
+    </div>
+  </div>
+</section>
+
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
+      
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Objetivos de Aprendizaje de la Lección 5</b></h2>
+        
+        <div class="learning-objectives-grid-2x2">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Responsabilidad</h4>
+              <p>Considerar cómo responsabilizarse del aprendizaje, el compromiso y el crecimiento en el camino del florecimiento</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Indagación Apreciativa</h4>
+              <p>Aplicar el Marco de Indagación Apreciativa para evaluar cómo apropiarse de las prácticas para cultivar el florecimiento</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Modelo PERMA</h4>
+              <p>Utilizar el modelo PERMA al considerar cómo promover el propio florecimiento</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Plan Personal</h4>
+              <p>Crear un plan propio que se pueda implementar para un florecimiento a largo plazo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>El Marco de Indagación Apreciativa</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="appreciative-inquiry-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/appreciative-inquiry-framework-poster.jpg"
+            data-video-id="w5v01"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video sobre el Marco de Indagación Apreciativa"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v01-the-appreciative-inquiry-framework/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor, activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre el Marco de Indagación Apreciativa">
+          <h3>Punto Clave</h3>
+          <p>El <b>Marco de Indagación Apreciativa</b> se compone de <b>cuatro</b> elementos: <b>Descubrir, Soñar</b>, <b>Diseñar</b> y <b>Destino</b>. La fase de Descubrir permite una apreciación y comprensión de uno mismo; la fase de Soñar nos permite crear una visión para el futuro; la fase de Diseñar nos permite poner en práctica nuestras acciones; y la fase de Destino nos permite ejercer propiedad sobre nuestra práctica.</p>
+        </div>
+      </section>
+      
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Lectura</b></h2>
+        <p>Completa la siguiente lectura:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>¿Qué es la Indagación Apreciativa (IA)?</h3>
+              <p>Explora los principios fundamentales y la metodología de la Indagación Apreciativa. Aprende cómo este enfoque positivo para el desarrollo organizacional y personal puede transformar nuestra manera de abordar el cambio y el crecimiento.</p>
+              <div class="reading-card-footer">
+                <a href="https://centerforappreciativeinquiry.net/resources/what-is-appreciative-inquiry-ai/" target="_blank" class="reading-link" aria-label="Leer sobre Indagación Apreciativa (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 4. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>Actividad: Aplicando el Marco de Indagación Apreciativa</b></h2>
+        <p>Apliquemos más a fondo el Marco de Indagación Apreciativa a nuestras propias vidas.</p>
+        <p><strong>Toma tu diario o un cuaderno y sigue estos cuatro rápidos pasos, uno para cada etapa del ciclo de IA:</strong></p>
+        
+        
+          <div class="learning-objectives-grid-2x2">
+            <div class="learning-objective-card">
+              <div class="objective-icon" aria-hidden="true">
+                <span class="objective-number">1</span>
+              </div>
+              <div class="objective-content">
+                <h4><b>Descubrir:</b></h4>
+                <p>Piensa en un momento reciente en el que te sentiste orgulloso, con energía o verdaderamente en tu mejor momento.</p>
+                <p class="instruction"><strong>Anota:</strong> ¿Qué estabas haciendo? ¿Qué fortalezas estabas utilizando?</p>
+              </div>
+            </div>
+            
+            <div class="learning-objective-card">
+              <div class="objective-icon" aria-hidden="true">
+                <span class="objective-number">2</span>
+              </div>
+              <div class="objective-content">
+                <h4><b>Soñar:</b></h4>
+                <p>Ahora imagina un futuro en el que vives y trabajas así más a menudo.</p>
+                <p class="instruction"><strong>Anota:</strong> ¿Cómo sería tu día ideal si ese "mejor yo" apareciera con regularidad?</p>
+              </div>
+            </div>
+            
+            <div class="learning-objective-card">
+              <div class="objective-icon" aria-hidden="true">
+                <span class="objective-number">3</span>
+              </div>
+              <div class="objective-content">
+                <h4><b>Diseñar:</b></h4>
+                <p>¿Qué pequeño hábito o cambio podrías introducir para avanzar hacia ese sueño?</p>
+                <p class="instruction"><strong>Anota:</strong> Una acción que puedas realizar esta semana.</p>
+              </div>
+            </div>
+            
+            <div class="learning-objective-card">
+              <div class="objective-icon" aria-hidden="true">
+                <span class="objective-number">4</span>
+              </div>
+              <div class="objective-content">
+                <h4><b>Destino:</b></h4>
+                <p>¿De qué manera mantendrás este impulso?</p>
+                <p class="instruction"><strong>Anota:</strong> ¿Cómo te recordarás a ti mismo seguir creciendo en esa dirección? (p. ej., una nota adhesiva, un recordatorio en el calendario, un mantra)</p>
+              </div>
+            </div>
+          </div>
+        
+      </section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>El Modelo PERMA</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="perma-model-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/perma-model-poster.jpg"
+            data-video-id="w5v02"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video sobre el Modelo PERMA"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v02-the-perma-model/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor, activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point" role="note" aria-label="Punto clave sobre el Modelo PERMA">
+          <h3>Punto Clave</h3>
+          <p>La <b>Teoría del Bienestar PERMA</b>, creada por el <b>Dr. Martin Seligman</b>, define los elementos clave que permiten el florecimiento: <b>E</b>moción <b>P</b>ositiva, <b>C</b>ompromiso (Engagement), <b>R</b>elaciones, <b>S</b>entido (Meaning) y <b>L</b>ogro (Accomplishment). Al construir estrategias que nos permitan promover PERMA en nuestra vida diaria, podemos asumir una mayor propiedad sobre nuestro florecimiento.</p>
+        </div>
+      </section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>Lectura Opcional</b></h2>
+        <p>¡Explora la siguiente lectura si te interesa aprender más sobre PERMA!</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>Teoría del Bienestar PERMA y Talleres PERMA</h3>
+              <p>Profundiza en la teoría PERMA de Martin Seligman y descubre cómo estos cinco elementos pueden cultivarse a través de talleres estructurados y aplicaciones prácticas en la vida diaria.</p>
+              <div class="reading-card-footer">
+                <a href="https://ppc.sas.upenn.edu/learn-more/perma-theory-well-being-and-perma-workshops" target="_blank" class="reading-link" aria-label="Leer sobre la Teoría PERMA (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Actividad: Aplicando el Modelo PERMA</b></h2>
+        <p>Trabajemos para integrar aún más PERMA en nuestra vida diaria.</p>
+        <p><strong>Toma tu diario o cuaderno y repasa las siguientes preguntas sobre cada uno de los elementos del marco PERMA.</strong></p>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">1</span>
+            </div>
+            <div class="objective-content">
+              <h4><b>Emociones Positivas:</b></h4>
+              <p>¿Puedes describir lo mejor que te pasó ayer?</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">2</span>
+            </div>
+            <div class="objective-content">
+              <h4><b>Compromiso:</b></h4>
+              <p>¿Puedes compartir una fortaleza que te caracterice y cómo la usas en tu vida?</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">3</span>
+            </div>
+            <div class="objective-content">
+              <h4><b>Relaciones:</b></h4>
+              <p>¿Puedes nombrar a una persona que mejore tu vida?</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">4</span>
+            </div>
+            <div class="objective-content">
+              <h4><b>Sentido:</b></h4>
+              <p>¿Puedes nombrar una causa que te inspire?</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">5</span>
+            </div>
+            <div class="objective-content">
+              <h4><b>Logro:</b></h4>
+              <p>¿Puedes describir una cosa que te sacó de tu zona de confort pero que hiciste de todos modos?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 8. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>Actividad: Estableciendo la Responsabilidad</b></h2>
+        <p>Lee el siguiente artículo de Harvard Business Review y considera cómo puedes crear un plan para responsabilizarte de tu florecimiento utilizando las <strong>3 estrategias sugeridas:</strong></p>
+        
+        <div class="learning-objectives-grid" style="margin-top: 3rem; margin-bottom: 3rem;">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">1</span>
+            </div>
+            <div class="objective-content">
+              <h4>Busca un compañero de responsabilidad</h4>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">2</span>
+            </div>
+            <div class="objective-content">
+              <h4>Comparte tus metas públicamente</h4>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <span class="objective-number">3</span>
+            </div>
+            <div class="objective-content">
+              <h4>Cambia tu entorno</h4>
+            </div>
+          </div>
+        </div>
+
+        <p>Puedes encontrar el artículo <a href="https://hbr.org/2022/02/3-strategies-for-holding-yourself-accountable" target="_blank">aquí</a>.</p>
+      </section>
+      
+      <!-- Video 5.3 -->
+      <section class="lesson-section no-borders">
+        <h2><b>Meditación de Cierre: Lección 5</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="embodying-path-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/embodying-path-flourishing-poster.jpg"
+            data-video-id="w7v05"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Encarnando tu Camino hacia el Florecimiento"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v05-embodying-your-path-to-flourishing/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor, activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+      </section>
+      
+      <!-- Video 5.4 -->
+      <section class="lesson-section no-borders">
+        <h2><b>Un Momento de Gratitud</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="moment-gratitude-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/moment-of-gratitude-poster.jpg"
+            data-video-id="w5v03"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Un Momento de Gratitud"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v03-a-moment-of-gratitude/mp4/w5v03-a-moment-of-gratitude_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              Para ver este video, por favor, activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+      </section>
+      
+      <!-- Video 5.5 -->
+      <section class="lesson-section no-borders">
+        <h2><b>Continuando tu Viaje de Bienestar</b></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="continuing-journey-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            poster="assets/images/continuing-wellbeing-journey-poster.jpg"
+            data-video-id="w5v04"
+            data-logo="assets/images/logo-ie-small.png"
+            aria-label="Video Continuando tu Viaje de Bienestar"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w5v04-continuing-your-well-being-journey/mp4/w5v04-continuing-your-well-being-journey_1080p.mp4" type="video/mp4">
+            <p class="vjs-no-js">
+              Para ver este video, por favor, activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+      </section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Cuestionario Final</b></h2>
+        <p><b>Cuestionario de Opción Múltiple</b></p>
+        
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <h3><b>Pregunta 1: ¿Qué significa ser humano según el contenido del curso?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Ser impulsado enteramente por instintos</li>
+              <li>B) Tener una capacidad limitada para la memoria y el aprendizaje</li>
+              <li>C) Tener capacidades para el aprendizaje, el pensamiento crítico, la creatividad, la innovación y la memoria</li>
+              <li>D) Depender únicamente de las respuestas emocionales</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 2: ¿Cuál de las siguientes opciones describe mejor el concepto de florecimiento humano discutido en este curso?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Alcanzar el éxito financiero y profesional</li>
+              <li>B) Vivir una vida libre de desafíos o estrés</li>
+              <li>C) Cultivar el bienestar integral a través de prácticas intencionadas</li>
+              <li>D) Maximizar exclusivamente la salud física</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 3: Según el Estudio de Desarrollo Adulto de Harvard, ¿qué se considera crítico para el florecimiento humano y la satisfacción con la vida?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Altos niveles de rendimiento académico</li>
+              <li>B) Un gran número de conocidos casuales</li>
+              <li>C) Un pequeño número de relaciones muy cercanas</li>
+              <li>D) El éxito financiero</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 4: Según el curso, ¿cuál es la secuencia correcta de la respuesta de nuestro cuerpo a las emociones?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Apreciación subjetiva → Evaluación cognitiva → Respuesta conductual → Respuesta fisiológica</li>
+              <li>B) Respuesta fisiológica → Evaluación cognitiva → Respuesta conductual → Apreciación subjetiva</li>
+              <li>C) Evaluación cognitiva → Respuesta fisiológica → Apreciación subjetiva → Respuesta conductual</li>
+              <li>D) Respuesta conductual → Apreciación subjetiva → Evaluación cognitiva → Respuesta fisiológica</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 5: ¿Qué es la granularidad emocional?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Expresar emociones abiertamente en entornos sociales</li>
+              <li>B) Reconocer y distinguir experiencias emocionales matizadas</li>
+              <li>C) Evitar por completo las emociones negativas</li>
+              <li>D) Priorizar las emociones positivas en todo momento</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 6: Según la Teoría de Ampliación y Construcción de Barbara Fredrickson, ¿qué hacen principalmente las emociones positivas?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Reducir nuestro enfoque a tareas específicas</li>
+              <li>B) Expandir nuestra conciencia y capacidad de compromiso</li>
+              <li>C) Reducir nuestra resiliencia en situaciones difíciles</li>
+              <li>D) Eliminar el estrés permanentemente</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 7: ¿Qué acción ejemplifica mejor el aprovechamiento de la conexión entre cuerpo, mente y alma?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Ignorar la fatiga para completar tareas más rápido</li>
+              <li>B) Realizar ejercicio físico para mejorar la claridad mental</li>
+              <li>C) Evitar las interacciones sociales para concentrarse más</li>
+              <li>D) Priorizar exclusivamente el trabajo intelectual</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 8: La motivación intrínseca se diferencia de la motivación extrínseca porque:</b></h3>
+            <ul class="quiz-options">
+              <li>A) Depende únicamente de recompensas y reconocimientos externos</li>
+              <li>B) Proporciona satisfacción duradera y se alinea con los valores personales</li>
+              <li>C) Es impulsada exclusivamente por incentivos financieros</li>
+              <li>D) Se basa en gran medida en la aprobación social</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 9: Según el curso, la resiliencia implica:</b></h3>
+            <ul class="quiz-options">
+              <li>A) Evitar desafíos para permanecer cómodo</li>
+              <li>B) Soportar persistentemente el estrés sin descanso</li>
+              <li>C) Reconocer necesidades, responder adecuadamente y adaptarse eficazmente</li>
+              <li>D) Eliminar los contratiempos por completo</li>
+            </ul>
+          </div>
+          
+          <div class="quiz-question">
+            <h3><b>Pregunta 10: ¿Cuál es un aspecto clave de vivir con un sentido de propósito según el contenido del curso?</b></h3>
+            <ul class="quiz-options">
+              <li>A) Alcanzar una comprensión definitiva del sentido de la vida</li>
+              <li>B) Priorizar las relaciones y tomar decisiones que se alineen con los valores personales</li>
+              <li>C) Asegurarse de que la familia esté omnipresente en la vida diaria</li>
+              <li>D) Centrarse únicamente en los logros académicos o profesionales</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Tarea Final -->
+      <section class="lesson-section no-borders">
+        <h2><b>Tarea Final: Crea un Plan para tu Florecimiento</b></h2>
+        <p>Por favor, descarga y completa el siguiente plan para responsabilizarte de los próximos pasos en tu viaje de florecimiento humano. Este plan es personal y para tu propio uso.</p>
+        
+        <div class="survey-button-container">
+          <a href="assets/documents/my-wellbeing-plan.pdf" download="mi-plan-de-bienestar.pdf" class="survey-button">
+            <i class="fas fa-download"></i> Mi Plan de Bienestar
+          </a>
+        </div>
+      </section>
+
+      <!-- Encuesta de Bienestar -->
+      <section class="lesson-section no-borders">
+        <h2><b>Encuesta de Bienestar</b></h2>
+        <p>Para explorar tu bienestar y florecimiento y cómo han evolucionado a partir de lo que has aprendido a lo largo del curso, te animamos a realizar nuevamente la siguiente encuesta. Esta autoevaluación de seguimiento te invita a reflexionar sobre cualquier cambio que hayas podido experimentar desde que comenzaste el curso. Si bien esta encuesta utiliza medidas de bienestar validadas, los resultados no pretenden servir como un juicio o resultado final. En cambio, la evolución de tus resultados ofrece otro momento de reflexión, uno que puede revelar cómo tu experiencia y hábitos se están desarrollando en un contexto más amplio y en constante cambio. Recuerda, el florecimiento es un proceso gradual y personal. Sé paciente contigo mismo y observa cualquier cambio que surja a medida que integras conscientemente nuevas prácticas en tu vida.</p>
+        
+        <div class="survey-button-container">
+          <a href="https://ie.co1.qualtrics.com/jfe/form/SV_8cymWir9nTWHN42" target="_blank" class="survey-button">
+            <i class="fas fa-chart-bar"></i> Encuesta de Bienestar
+          </a>
+        </div>
+      </section>
+      <!-- Encuesta Final -->
+      <section class="lesson-section no-borders">
+        <h2><b>Encuesta Final</b></h2>
+        <p>¡Nos encantaría conocer tu opinión! Al tomarte unos minutos para completar esta breve encuesta, nos ayudarás a comprender cómo resonó contigo el contenido del curso y cómo podemos mejorarlo aún más en el futuro.</p>
+        
+        <p>Tus comentarios son increíblemente valiosos, y agradecemos sinceramente tu tiempo y tu aporte:</p>
+        
+        <div class="survey-button-container">
+          <a href="#" target="_blank" class="survey-button">
+            <i class="fas fa-comments"></i> Realizar la Encuesta Final
+          </a>
+        </div>
+        
+        <div style="background-color: #e8f4fd; border-left: 4px solid #000066; padding: 1rem; margin-top: 2rem; border-radius: 4px;">
+          <p style="margin: 0; font-style: italic; color: #666;">Enlace de la encuesta por añadir</p>
+        </div>
+      </section>
+      
+      <!-- Fuentes y Referencias del Contenido -->
+      <section class="lesson-section no-borders">
+        <h2><b>Fuentes y Referencias del Contenido</b></h2>
+        <div class="references-grid">
+          <div class="reference-card">
+            <div class="reference-number">1</div>
+            <p>Seligman, M. (2011). <em>Flourish: a new understanding of happiness and well-being - and how to achieve them.</em></p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">2</div>
+            <p>Zyl, V., & Llewellyn, E. (2013). Seligman's Flourishing: An Appraisal of What Lies beyond Happiness. <em>Sa Journal of Industrial Psychology, 39</em>, 1-3. <a href="https://doi.org/10.4102/SAJIP.V39I2.1168" target="_blank">https://doi.org/10.4102/SAJIP.V39I2.1168</a>.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">3</div>
+            <p>Camacho-Morles, J., Slemp, G. R., Pekrun, R., Loderer, K., Hou, H., & Oades, L. G. (2021). Activity achievement emotions and academic performance: A meta-analysis. <em>Educational Psychology Review, 33</em>(3), 1051-1095.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">4</div>
+            <p>Tan, T. Y., Wachsmuth, L., & Tugade, M. M. (2022). Emotional nuance: Examining positive emotional granularity and well-being. <em>Frontiers in psychology, 13</em>, 715966.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">5</div>
+            <p>Fredrickson, B. L. (2004). The broaden–and–build theory of positive emotions. <em>Philosophical transactions of the royal society of London. Series B: Biological Sciences, 359</em>(1449), 1367-1377.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">6</div>
+            <p>Shaughnessy, M. F., Veenman, M., & Kennedy, C. K. (Eds.). (2008). <em>Meta-cognition: A recent review of research, theory, and perspectives.</em></p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">7</div>
+            <p>Ryan, R. M., & Deci, E. L. (2000). Intrinsic and extrinsic motivations: Classic definitions and new directions. <em>Contemporary educational psychology, 25</em>(1), 54-67.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">8</div>
+            <p>Dolan, R. J. (2007). The human amygdala and orbital prefrontal cortex in behavioural regulation. <em>Philosophical Transactions of the Royal Society B: Biological Sciences, 362</em>(1481), 787-799.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">9</div>
+            <p>Mobbs, D., Hagan, C. C., Dalgleish, T., Silston, B., & Prévost, C. (2015). The ecology of human fear: survival optimization and the nervous system. <em>Frontiers in neuroscience, 9</em>, 121062.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">10</div>
+            <p>Harvard Study of Adult Development Fuchsman, K. (2023). Harvard Grant Study of Adult Development: 1938–2022. <em>Journal of Psychohistory, 51</em>(1). <a href="https://www.adultdevelopmentstudy.org/" target="_blank">https://www.adultdevelopmentstudy.org/</a></p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">11</div>
+            <p>Hilbert, M. (2012). Toward a synthesis of cognitive biases: how noisy information processing can bias human decision making. <em>Psychological bulletin, 138</em>(2), 211.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">12</div>
+            <p>Norris, C. J. (2021). The negativity bias, revisited: Evidence from neuroscience measures and an individual differences approach. <em>Social neuroscience, 16</em>(1), 68-82.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">13</div>
+            <p>Kahneman, D. (2011). <em>Thinking, fast and slow.</em> Farrar, Straus and Giroux.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">14</div>
+            <p>Clancy, A., & Binkert, J. (2017). Accessing the Inner Self: Beliefs. , 73-88. <a href="https://doi.org/10.1057/978-1-137-60263-3_4" target="_blank">https://doi.org/10.1057/978-1-137-60263-3_4</a>.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">15</div>
+            <p>Zaltman, G. (2003). <em>How customers think: Essential insights into the mind of the market.</em> Harvard Business School Publishing.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">16</div>
+            <p>Coulter, R., & Zaltman, G. (2003). The power of metaphor. In <em>The Why of Consumption</em> (pp. 259-281). Routledge.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">17</div>
+            <p>Niemiec, R. M. (2012). VIA character strengths: Research and practice (The first 10 years). In <em>Well-being and cultures: Perspectives from positive psychology</em> (pp. 11-29). Dordrecht: Springer Netherlands.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">18</div>
+            <p>Masten, A. S. (2001). Ordinary magic: Resilience processes in development. <em>American psychologist, 56</em>(3), 227.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">19</div>
+            <p>Bonanno, G. A. (2004). Loss, Trauma, and Human Resilience: Have We Underestimated the Human Capacity to Thrive After Extremely Aversive Events? <em>American Psychologist, 59</em>(1), 20–28. <a href="https://doi.org/10.1037/0003-066X.59.1.20" target="_blank">https://doi.org/10.1037/0003-066X.59.1.20</a></p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">20</div>
+            <p>Seligman, M. E., Steen, T. A., Park, N., & Peterson, C. (2005). Positive psychology progress: empirical validation of interventions. <em>American psychologist, 60</em>(5), 410.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">21</div>
+            <p>Niemiec, R. M. (2020). Six functions of character strengths for thriving at times of adversity and opportunity: A theoretical perspective. <em>Applied Research in Quality of Life, 15</em>(2), 551-572.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">22</div>
+            <p>Niemiec, R. M., & McGrath, R. E. (2019). <em>The power of character strengths: Appreciate and ignite your positive personality.</em> Cincinnati, OH: VIA Institute on Character.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">23</div>
+            <p>Bushe, G. R. (2012). Appreciative inquiry: Theory and critique. In <em>The Routledge companion to organizational change</em> (pp. 87-103). Routledge.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">24</div>
+            <p>Kern, M. L., Waters, L., Adler, A., & White, M. (2014). Assessing employee wellbeing in schools using a multifaceted approach: Associations with physical health, life satisfaction, and professional thriving.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">25</div>
+            <p>James, S. E. (2013). Charles Duhigg: The Power of Habit: Why We Do What We Do in Life and Business: Random House, New York, 2012, 371 pp.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">26</div>
+            <p>Goleman, D. (1998). <em>Working with emotional intelligence.</em> NY: Bantam Books.</p>
+          </div>
+          <div class="reference-card">
+            <div class="reference-number">27</div>
+            <p>Fredrickson, B. L., & Losada, M. F. (2005). Positive affect and the complex dynamics of human flourishing. <em>American psychologist, 60</em>(7), 678.</p>
+          </div>
+        </div>
+      </section>
+
+<div class="navigation-buttons" role="navigation" aria-label="Navegación de la lección">
+  <a href="capitulo4.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Anterior</a>
+  <a href="portada.html" class="nav-button next">Volver a la Portada<span class="arrow-right" aria-hidden="true">→</span></a>
+</div>
   </main>
 
-  <footer>
-    <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
-    <!-- Trigger para el feedback al finalizar el curso -->
-    <div id="course-completed" class="hidden"></div>
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
 </body>
 </html>

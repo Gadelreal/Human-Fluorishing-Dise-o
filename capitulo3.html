@@ -3,46 +3,488 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Online - Capítulo 3</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Florecimiento Humano - Capítulo 3</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="https://www.ie.edu" target="_blank">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Portada</a></li>
-        <li><a href="introduccion.html">Introducción</a></li>
-        <li><a href="capitulo1.html">Capítulo 1</a></li>
-        <li><a href="capitulo2.html">Capítulo 2</a></li>
-        <li><a href="capitulo3.html" class="active">Capítulo 3</a></li>
-        <li><a href="capitulo4.html">Capítulo 4</a></li>
-        <li><a href="capitulo5.html">Capítulo 5</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-  <main>
-    <div class="content-container">
-      <h1>Capítulo 3</h1>
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank" aria-label="Sitio web de IE University">
+          <img src="assets/images/logo-ie.svg" alt="Logo de IE University" class="logo" width="120">
+        </a>
+      </div>
+      <h2 class="header-title">Florecimiento Humano</h2>
+    </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="portada.html">Portada</a></li>
+      <li><a href="introduccion.html">0. Introducción</a></li>
+      <li><a href="capitulo1.html">1. Ser Humano</a></li>
+      <li><a href="capitulo2.html">2. Cultivando la Conciencia</a></li>
+      <li><a href="capitulo3.html" class="active" aria-current="page">3. Autonomía y Motivación</a></li>
+      <li><a href="capitulo4.html">4. Construyendo Resiliencia</a></li>
+      <li><a href="capitulo5.html">5. Pertenencia y Práctica</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Icono de Florecimiento Humano" class="hero-icon">
+      <h1 class="hero-title">LECCIÓN 3  |  Autonomía y Motivación</h1>
+    </div>
+  </div>
+</section>
+
+  <main id="main-content" tabindex="-1">
+    <div class="content-aligned-container">
       
-      <!-- Aquí irá el contenido del capítulo 3 -->
       
-      <div class="navigation-buttons">
-        <a href="capitulo2.html" class="nav-button prev"><span class="arrow-left">←</span>Previous</a>
-        <a href="capitulo4.html" class="nav-button next">Next<span class="arrow-right">→</span></a>
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Objetivos de Aprendizaje de la Lección 3</strong></h2>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-compass"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Vivir con Propósito</h4>
+              <p>Cultivar prácticas para vivir con un sentido de propósito</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Elementos de la Motivación</h4>
+              <p>Analizar los elementos que componen la motivación</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Motivación Intrínseca vs. Extrínseca</h4>
+              <p>Evaluar la motivación intrínseca, en qué se diferencia de la motivación extrínseca y su conexión con el florecimiento</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+  <h2><b>Vivir con un Sentido de Propósito</b></h2>
+  
+  <div class="responsive-video">
+    <video 
+      id="purpose-video" 
+      class="video-js vjs-ie-skin vjs-big-play-centered" 
+      controls 
+      preload="auto" 
+      poster="assets/images/living-with-sense-of-purpose-poster.png"
+      data-video-id="w3v01"
+      data-logo="assets/images/logo-ie-small.png"
+      aria-label="Video sobre Vivir con un Sentido de Propósito"
+    >
+      <source src="https://iep-media.ie.edu/olj/human-flourishing/w3v01-living-with-a-sense-of-purpose/hls.m3u8" type="application/x-mpegURL"> 
+      <p class="vjs-no-js">
+        Para ver este video, por favor activa JavaScript y considera actualizar a un
+        navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+      </p>
+    </video>
+  </div>
+  
+  <div class="key-point" role="note" aria-label="Punto clave sobre vivir con propósito">
+    <h3>Punto Clave</h3>
+    <p>Podemos cultivar un sentido de <strong>propósito</strong> reconociendo primero que estamos 
+    <strong>aprendiendo continuamente</strong> y que la naturaleza del propósito puede evolucionar con el tiempo. Al considerar nuestro 
+    propósito, debemos identificar lo que es verdaderamente importante para nosotros para poder <strong>priorizarlo</strong> 
+    adecuadamente y, en última instancia, acceder a una mejor comprensión de nuestros <strong>valores</strong>.</p>
+  </div>
+</section>
+      
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><strong>Actividad: Comprendiendo tus Valores Fundamentales</strong></h2>
+      <p><strong>¿Cuáles son tus valores fundamentales?</strong></p>
+      <p>Tómate un tiempo para responder las siguientes preguntas. En un diario o cuaderno, anota tus pensamientos y sentimientos mientras reflexionas sobre cada una:</p>
+      
+      <div class="learning-objectives-grid">
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">1</span>
+    </div>
+    <div class="objective-content">
+      <h4>Plenitud en la Vida</h4>
+      <p>¿Qué momentos de tu vida te han hecho sentir más pleno/a y por qué?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">2</span>
+    </div>
+    <div class="objective-content">
+      <h4>Orgullo Personal</h4>
+      <p>¿Cuándo te has sentido más orgulloso/a de ti mismo/a? ¿Qué estabas haciendo?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">3</span>
+    </div>
+    <div class="objective-content">
+      <h4>Conexión Profunda</h4>
+      <p>Piensa en un momento en que te sentiste profundamente conectado/a con los demás. ¿Qué estaba sucediendo?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">4</span>
+    </div>
+    <div class="objective-content">
+      <h4>Actividades de Flujo</h4>
+      <p>¿Qué actividades o experiencias te hacen perder la noción del tiempo porque las disfrutas mucho?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">5</span>
+    </div>
+    <div class="objective-content">
+      <h4>Innegociables</h4>
+      <p>¿Cuáles son tus innegociables?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">6</span>
+    </div>
+    <div class="objective-content">
+      <h4>Principios Rectores</h4>
+      <p>Cuando te enfrentas a una decisión difícil, ¿qué principios te guían?</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">7</span>
+    </div>
+    <div class="objective-content">
+      <h4>Personas que Admiras</h4>
+      <p>Escribe sobre las personas que admiras a tu alrededor y qué admiras de ellas.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <span class="objective-number">8</span>
+    </div>
+    <div class="objective-content">
+      <h4>Filosofía de Vida</h4>
+      <p>Escribe tus respuestas a estas preguntas: ¿Qué es realmente importante en la vida? ¿Qué es una buena vida? ¿Qué es una vida exitosa? ¿Vivir una buena vida es lo mismo que vivir una vida exitosa? Si no, ¿dónde está la diferencia?</p>
+    </div>
+  </div>
+</div>
+      
+<div style="margin-top: 3rem;"></div>
+<p>Teniendo en cuenta tus respuestas anteriores, revisa la siguiente lista de valores. Identifica los <strong>10 más importantes</strong> para ti. Luego, redúcelo a tus <strong>5 valores fundamentales</strong>. Reflexiona sobre por qué estos 5 valores son importantes para ti y cómo influyen en tus decisiones y acciones.</p>
+      
+      <ul class="values-list">
+        <li>Logro</li>
+        <li>Aventura</li>
+        <li>Autonomía</li>
+        <li>Equilibrio</li>
+        <li>Belleza</li>
+        <li>Compasión</li>
+        <li>Creatividad</li>
+        <li>Curiosidad</li>
+        <li>Determinación</li>
+        <li>Justicia</li>
+        <li>Familia</li>
+        <li>Amistad</li>
+        <li>Crecimiento</li>
+        <li>Felicidad</li>
+        <li>Honestidad</li>
+        <li>Humor</li>
+        <li>Integridad</li>
+        <li>Justicia</li>
+        <li>Amabilidad</li>
+        <li>Conocimiento</li>
+        <li>Liderazgo</li>
+        <li>Aprendizaje</li>
+        <li>Amor</li>
+        <li>Lealtad</li>
+        <li>Apertura</li>
+        <li>Optimismo</li>
+        <li>Paz</li>
+        <li>Respeto</li>
+        <li>Responsabilidad</li>
+        <li>Seguridad</li>
+        <li>Servicio</li>
+        <li>Espiritualidad</li>
+        <li>Éxito</li>
+        <li>Confianza</li>
+        <li>Sabiduría</li>
+      </ul>
+    
+<div style="margin-bottom: 3rem;"></div>
+</section>
+      
+      <!-- 4. Fondo gris -->
+<section class="lesson-section no-borders">
+  <h2><strong>Actividad: Encontrando tu Ikigai</strong></h2>
+  <p><strong>"Ikigai"</strong> es un concepto japonés que significa "una razón de ser" o "un propósito en la vida". 
+Es una combinación de cuatro palabras japonesas: "iki" (vida), "kai" (la realización de esperanzas y 
+expectativas), "ga" (yo) y "ai" (valor o valía). Este concepto se utiliza a menudo como 
+un marco para el desarrollo personal y el establecimiento de metas.</p>
+  
+  <p>Como se ve en el diagrama a continuación, el concepto de ikigai sugiere que cuando puedes encontrar 
+  la intersección entre lo que amas, en lo que eres bueno, lo que el mundo necesita 
+  y por lo que te pueden pagar, habrás encontrado tu "razón de ser" o "propósito 
+  en la vida".</p>
+  
+  <p>Al conectar con lo que es realmente importante en nuestras vidas, podemos alinear mejor nuestras prioridades 
+  y comportamientos diarios para una mayor plenitud.</p>
+  
+  <div class="ikigai-container">
+<img src="assets/images/ikigai-new.png" alt="Diagrama completo de Ikigai que muestra la intersección de lo que amas, en lo que eres bueno, lo que el mundo necesita y por lo que te pueden pagar, con descripciones detalladas de las intersecciones parciales">
+<div style="margin-top: 1rem; text-align: center;">
+  <button id="ikigai-description-btn" class="view-button" aria-label="Ver descripción detallada del diagrama de Ikigai">
+    Ver descripción de la imagen
+  </button>
+</div>
+
+<!-- Descripción que se muestra/oculta -->
+<div id="ikigai-description" class="key-point" style="display: none; margin-top: 2rem; text-align: left;">
+  <h3>Descripción del Diagrama de Ikigai</h3>
+  <p>Esta infografía completa visualiza el concepto japonés de "Ikigai", que se traduce como "una razón de ser". Utiliza un diagrama de Venn detallado con cuatro círculos superpuestos que representan: Lo que AMAS, en lo que eres BUENO, lo que el mundo NECESITA y por lo que te pueden PAGAR. Las intersecciones crean PASIÓN (Amor + Bueno en ello), MISIÓN (Amor + Necesidades), PROFESIÓN (Bueno en ello + Pagado por ello) y VOCACIÓN (Necesidades + Pagado por ello). El centro donde se encuentran los cuatro círculos representa el verdadero Ikigai. El diagrama también muestra los desafíos de la realización parcial: "Satisfacción, pero sentimiento de inutilidad" cuando falta propósito y pago; "Deleite y plenitud, pero sin riqueza" cuando faltan habilidades y pago; "Cómodo, pero con sensación de vacío" cuando falta amor y propósito; y "Emoción y complacencia, pero con sensación de incertidumbre" cuando faltan amor y habilidades.</p>
+</div>
+</div>
+
+<script>
+// Script para mostrar/ocultar la descripción de imagen
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('ikigai-description-btn');
+  const description = document.getElementById('ikigai-description');
+  let isVisible = false;
+  
+  button.addEventListener('click', function() {
+    if (isVisible) {
+      // Ocultar descripción
+      description.style.display = 'none';
+      button.textContent = 'Ver descripción de la imagen';
+      button.setAttribute('aria-label', 'Ver descripción detallada del diagrama de Ikigai');
+      isVisible = false;
+    } else {
+      // Mostrar descripción
+      description.style.display = 'block';
+      button.textContent = 'Cerrar descripción de la imagen';
+      button.setAttribute('aria-label', 'Cerrar descripción detallada del diagrama de Ikigai');
+      isVisible = true;
+    }
+  });
+});
+</script>
+</section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><b>La Teoría de la Autodeterminación</b></h2>
+      
+      <div class="responsive-video">
+        <video 
+          id="self-determination-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          poster="assets/images/self-determination-theory-poster.png"
+          data-video-id="w6v04"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="Video sobre la Teoría de la Autodeterminación"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v04-the-self-determination-theory/hls.m3u8" type="application/x-mpegURL"> 
+          <p class="vjs-no-js">
+            Para ver este video, por favor activa JavaScript y considera actualizar a un
+            navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+          </p>
+        </video>
+      </div>
+      
+      <div class="key-point" role="note" aria-label="Punto clave sobre la Teoría de la Autodeterminación">
+        <h3>Punto Clave</h3>
+        <p>La <strong>Teoría de la Autodeterminación</strong> se compone de tres partes: <strong>autonomía, conexión</strong> 
+        y <strong>competencia</strong>. La autonomía nos permite sentir que tenemos control sobre nuestras vidas. 
+        La conexión destaca nuestra necesidad de vincularnos con nuestras comunidades y el mundo 
+        que nos rodea. La competencia se refiere a nuestra capacidad para aprender y tener éxito. Todos estos 
+        tres elementos son críticos para nuestra motivación.</p>
+      </div>
+    
+  
+</section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+  <h2><b>Lectura</b></h2>
+  <p>Por favor, completa la siguiente lectura:</p>
+  
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Productividad, Motivación y Brillantez: Tres Elementos Clave de la Psicología de los Negocios</h3>
+        <p>Explora los fundamentos psicológicos del éxito empresarial y descubre cómo la productividad, la motivación y la brillantez trabajan juntas para crear un rendimiento excepcional en entornos profesionales.</p>
+        <div class="reading-card-footer">
+          <a href="https://www.ie.edu/insights/articles/productivity-motivation-and-brilliance-three-key-elements-of-psychobusiness/" target="_blank" class="reading-link" aria-label="Leer artículo: Productividad, Motivación y Brillantez (se abre en una nueva pestaña)">
+            Leer Artículo
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><b>Motivación Extrínseca vs. Motivación Intrínseca</b></h2>
+      
+      <div class="responsive-video">
+  <video 
+    id="motivation-types-video" 
+    class="video-js vjs-ie-skin vjs-big-play-centered" 
+    controls 
+    preload="auto" 
+    poster="assets/images/extrinsic-vs-intrinsic-motivation-poster.png"
+    data-video-id="w3v02"
+    data-logo="assets/images/logo-ie-small.png"
+    aria-label="Video sobre Motivación Extrínseca vs. Intrínseca"
+  >
+    <source src="https://iep-media.ie.edu/olj/human-flourishing/w3v02-extrinsic-motivation-vs-intrinsic-motivation/hls.m3u8" type="application/x-mpegURL"> 
+    <p class="vjs-no-js">
+      Para ver este video, por favor activa JavaScript y considera actualizar a un
+      navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+    </p>
+  </video>
+</div>
+      
+      <div class="key-point" role="note" aria-label="Punto clave sobre los tipos de motivación">
+        <h3>Punto Clave</h3>
+        <p>La <strong>motivación extrínseca</strong> es impulsada por factores externos como las expectativas sociales y 
+        la validación de los demás, lo que puede erosionar el sentido de significado con el tiempo, ya que la 
+        fuerza impulsora de nuestra motivación no proviene de nosotros mismos. En contraste, la <strong>motivación intrínseca</strong>, que proviene de nuestro interior y está más alineada con nuestros valores personales, se 
+        asocia con un mayor sentido de propósito y una satisfacción duradera.</p>
+      </div>
+    
+  
+</section>
+      
+      <!-- 8. Fondo gris -->
+<section class="lesson-section no-borders">
+  <h2><b>Lectura</b></h2>
+  <p>Por favor, completa la siguiente lectura:</p>
+  
+  <div class="reading-cards">
+    <div class="reading-card">
+      <div class="reading-card-content">
+        <h3>Cómo Aumentar la Motivación Intrínseca (Según la Ciencia)</h3>
+        <p>Descubre estrategias basadas en evidencia para mejorar tu motivación intrínseca. Aprende técnicas prácticas respaldadas por la investigación científica para cultivar una motivación duradera que provenga de tu interior.</p>
+        <div class="reading-card-footer">
+          <a href="https://positivepsychology.com/increase-intrinsic-motivation/" target="_blank" class="reading-link" aria-label="Leer artículo: Cómo Aumentar la Motivación Intrínseca (se abre en una nueva pestaña)">
+            Leer Artículo
+            <span class="reading-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+  
+    
+      <h2><b>Meditación de Cierre: Lección 3</b></h2>
+      
+      <div class="responsive-video">
+        <video 
+          id="closing-meditation-video" 
+          class="video-js vjs-ie-skin vjs-big-play-centered" 
+          controls 
+          preload="auto" 
+          poster="assets/images/human-flourishing-poster.jpg"
+          data-video-id="w7v03"
+          data-logo="assets/images/logo-ie-small.png"
+          aria-label="Video de meditación: Conectando con tu Motivación Interna"
+        >
+          <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v03-connecting-with-your-inner-motivation/hls.m3u8" type="application/x-mpegURL"> 
+          <p class="vjs-no-js">
+            Para ver este video, por favor activa JavaScript y considera actualizar a un
+            navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+          </p>
+        </video>
+      </div>
+      
+    
+  
+</section>
+      
+      <div class="navigation-buttons" role="navigation" aria-label="Navegación de la lección">
+        <a href="capitulo2.html" class="nav-button prev"><span class="arrow-left" aria-hidden="true">←</span>Anterior</a>
+        <a href="capitulo4.html" class="nav-button next">Siguiente<span class="arrow-right" aria-hidden="true">→</span></a>
       </div>
     </div>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
+  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
-  </footer>
+  </div>
+</footer>
 
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

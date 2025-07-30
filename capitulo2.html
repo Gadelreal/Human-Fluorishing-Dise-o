@@ -3,46 +3,498 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Online - Capítulo 2</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Florecimiento Humano - Capítulo 2</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="https://www.ie.edu" target="_blank">
-        <img src="assets/images/logo-ie.svg" alt="IE University Logo" class="logo" width="120">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Portada</a></li>
-        <li><a href="introduccion.html">Introducción</a></li>
-        <li><a href="capitulo1.html">Capítulo 1</a></li>
-        <li><a href="capitulo2.html" class="active">Capítulo 2</a></li>
-        <li><a href="capitulo3.html">Capítulo 3</a></li>
-        <li><a href="capitulo4.html">Capítulo 4</a></li>
-        <li><a href="capitulo5.html">Capítulo 5</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Añadir el enlace de saltar al contenido principal al inicio del body -->
+<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-  <main>
-    <div class="content-container">
-      <h1>Capítulo 2</h1>
-    
-      <!-- Aquí irá el contenido del capítulo 2 -->
-    
+<!-- Modificar la estructura del header para alinear elementos en una línea -->
+<header class="full-width header-full-bottom" role="banner">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="logo-container tiny-logo">
+        <a href="https://www.ie.edu" target="_blank">
+          <img src="assets/images/logo-ie.svg" alt="Logo de IE University" class="logo" width="120">
+        </a>
+      </div>
+      <h2 class="header-title">Florecimiento Humano</h2>
+    </div>
+    <div class="header-controls">
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle always-visible" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav hamburger-nav" id="main-nav">
+  <ul>
+    <li><a href="portada.html">Portada</a></li>
+    <li><a href="introduccion.html">0. Introducción</a></li>
+    <li><a href="capitulo1.html">1. Ser Humano</a></li>
+    <li><a href="capitulo2.html" class="active">2. Cultivando la Conciencia</a></li>
+    <li><a href="capitulo3.html">3. Autonomía y Motivación</a></li>
+    <li><a href="capitulo4.html">4. Construyendo Resiliencia</a></li>
+    <li><a href="capitulo5.html">5. Pertenencia y Práctica</a></li>
+  </ul>
+</nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-title-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Icon%20HF_2-KTyAlcLeagSNgUhXUTAMc1LUZmhNge.png" alt="Icono de Florecimiento Humano" class="hero-icon">
+      <h1 class="hero-title">LECCIÓN 2  |  Cultivando la Conciencia: Emociones y Cognición</h1>
+    </div>
+  </div>
+</section>
+
+  <main id="main-content">
+    <div class="content-aligned-container">
+      
+      
+      <!-- 1. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Objetivos de Aprendizaje de la Lección 2</strong></h2>
+        
+        <div class="learning-objectives-grid-2x2">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="objective-content">
+              <h4>El Valor de las Emociones</h4>
+              <p>Comprender la conexión de la emoción con los valores, el pensamiento y el comportamiento</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Emociones Positivas</h4>
+              <p>Apreciar la utilidad de las emociones positivas para la supervivencia y cómo esto moldea nuestra perspectiva</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Metacognición</h4>
+              <p>Entender la metacognición y cómo construir una conciencia más profunda</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="objective-content">
+              <h4>Cuerpo, Mente y Alma</h4>
+              <p>Aprovechar la integración de cuerpo, mente y alma para apoyar nuestra conciencia, emociones y cognición</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 2. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><strong>¿Qué son las Emociones? ¿Qué es la Granularidad Emocional?</strong></h2>
+        
+        <div class="responsive-video">
+          <video 
+            id="emotions-video" 
+            class="video-js vjs-ie-skin vjs-big-play-centered" 
+            controls 
+            preload="auto" 
+            data-video-id="w2v01"
+            data-logo="assets/images/logo-ie-small.png"
+            poster="assets/images/what-are-emotions-poster.png"
+          >
+            <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v01-what-are-emotions/hls.m3u8" type="application/x-mpegURL"> 
+            <p class="vjs-no-js">
+              Para ver este video, por favor activa JavaScript y considera actualizar a un
+              navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+            </p>
+          </video>
+        </div>
+        
+        <div class="key-point">
+          <h3><strong>Punto Clave</strong></h3>
+          <p>La <strong>granularidad emocional</strong> enfatiza la importancia de reconocer las <strong>diferencias matizadas</strong> entre diversas emociones. Esta <strong>conciencia elevada</strong> de la gama de emociones que experimentamos puede ayudarnos a interpretar mejor nuestras respuestas emocionales y a <strong>moldear nuestros comportamientos</strong> de una manera más productiva.</p>
+        </div>
+      </section>
+      
+      <!-- 3. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Lecturas</strong></h2>
+        <p>Por favor, completa las siguientes lecturas:</p>
+        
+        <div class="reading-cards">
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>La Rueda de la Granularidad Emocional</h3>
+              <p>Explora las diferencias matizadas entre diversas emociones y aprende cómo la granularidad emocional puede ayudarte a interpretar mejor tus respuestas emocionales y a moldear comportamientos de manera más productiva.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.restoringhoperca.com/the-feelings-wheel" target="_blank" class="reading-link" aria-label="Leer sobre La Rueda de la Granularidad Emocional (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reading-card">
+            <div class="reading-card-content">
+              <h3>El Papel de la Granularidad Emocional en la Regulación Emocional</h3>
+              <p>Descubre cómo la granularidad emocional juega un papel crucial en la regulación emocional, los trastornos mentales y el bienestar general a través de este completo artículo de investigación.</p>
+              <div class="reading-card-footer">
+                <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.1080713/full" target="_blank" class="reading-link" aria-label="Leer artículo de investigación sobre la granularidad emocional (se abre en una nueva pestaña)">
+                  Leer Artículo
+                  <span class="reading-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 4. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Actividad: Reflexionando sobre la Granularidad Emocional</strong></h2>
+        <p>¿Puedes identificar una situación en la que sentiste una emoción del círculo más externo de la rueda de la granularidad emocional? Te animamos a que tomes tu diario o un cuaderno y describas esa situación y cómo te sentiste.</p>
+      </section>
+      
+      <!-- 5. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Las Píldoras Emocionales que Todos Tomamos sin Saberlo</strong></h2>
+        <p>Lee Newman, Decano de IE Business School, comparte algunas reflexiones sobre las emociones en el siguiente video:</p>
+        
+        <div class="responsive-video">
+          <iframe 
+            width="100%" 
+            height="315" 
+            src="https://www.youtube.com/embed/H8UUWbQEH_E" 
+            title="Las Píldoras Emocionales que Todos Tomamos sin Saberlo - Lee Newman" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            style="aspect-ratio: 16/9; width: 100%; height: auto;">
+          </iframe>
+        </div>
+        
+      
+      </section>
+      
+      <!-- 6. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Actividad: ¿Qué Salió Bien?</strong></h2>
+        <p>Este es un ejercicio simple pero poderoso arraigado en la psicología positiva. Los estudios han demostrado que este ejercicio tiene efectos sólidos cuando se trata de aumentar la felicidad y el bienestar. Así es como puedes hacerlo:</p>
+
+            <div class="timeline-activity">
+              <div class="timeline-step">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                  <h4>Toma tu diario o un cuaderno</h4>
+                  <p>Prepara tus materiales de escritura para capturar tus reflexiones.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-step">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                  <h4>Escribe <strong>tres</strong> cosas que salieron bien hoy</h4>
+                  <p>Pueden ser grandes logros o pequeños placeres. Por ejemplo, "Tuve una gran conversación con un amigo", "Disfruté de una comida deliciosa" o "Completé una tarea desafiante en el trabajo".</p>
+                </div>
+              </div>
+              
+              <div class="timeline-step">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
+                  <h4>Reflexiona sobre por qué cada evento salió bien</h4>
+                  <p>Considera qué causó estos eventos positivos y qué significan para ti. Esto ayuda a profundizar tu aprecio y comprensión de las cosas buenas de tu vida.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-step">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
+                  <h4>La consistencia es clave</h4>
+                  <p>Haz este ejercicio diariamente durante al menos una semana, pero intenta hacerlo por más tiempo para ver beneficios más significativos.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3><strong>Beneficios:</strong></h3>
+<div class="learning-objectives-grid">
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-balance-scale"></i>
+    </div>
+    <div class="objective-content">
+      <h4><strong>Contrarresta el Sesgo de Negatividad</strong></h4>
+      <p>Esta práctica ayuda a equilibrar la tendencia natural a centrarse en experiencias negativas al cambiar activamente nuestro enfoque hacia eventos positivos.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="objective-content">
+      <h4><strong>Aumenta la Gratitud</strong></h4>
+      <p>Reconocer regularmente las cosas buenas, grandes o pequeñas, fomenta un sentido de aprecio que mejora el bienestar.</p>
+    </div>
+  </div>
+  
+  <div class="learning-objective-card">
+    <div class="objective-icon" aria-hidden="true">
+      <i class="fas fa-hands-helping"></i>
+    </div>
+    <div class="objective-content">
+      <h4><strong>Fomenta una Mayor Autocompasión</strong></h4>
+      <p>Reflexionar sobre lo que salió bien puede fomentar una actitud más amable y compasiva hacia ti mismo, reduciendo la autocrítica.</p>
+    </div>
+  </div>
+</div>
+      </section>
+      
+      <!-- 7. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>La Teoría de Ampliar y Construir</strong></h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="broaden-build-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w6v05"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/broaden-build-theory-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v05-the-broaden-and-build-theory/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor activa JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+            
+            <div class="key-point">
+              <h3><strong>Punto Clave</strong></h3>
+              <p><strong>La Teoría de Ampliar y Construir</strong>, desarrollada por <strong>Barbara Fredrickson</strong>, sugiere que las 
+              <strong>emociones positivas</strong> amplían nuestra conciencia y campo visual. Como resultado, desarrollamos una 
+              mayor apreciación y capacidad para interactuar con el mundo que nos rodea.</p>
+            </div>
+      </section>
+      
+      <!-- 8. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Metacognición y Aumento de la Conciencia</strong></h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="metacognition-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w2v02"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/metacognition-awareness-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v02-metacognition-and-increasing-awareness/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor activa JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+            
+            <div class="key-point">
+              <h3><strong>Punto Clave</strong></h3>
+              <p>La <strong>metacognición</strong> es el concepto de <strong>pensar sobre nuestro pensamiento</strong>. La metacognición nos da 
+              una mayor conciencia de nuestro pensamiento y aprendizaje para que podamos ser más proactivos en 
+              nuestra toma de decisiones y trabajar para evitar sesgos perjudiciales.</p>
+            </div>
+      </section>
+      
+      <!-- 9. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Actividad: Practicando la Metacognición</strong></h2>
+        <p>Ahora es el momento de practicar algunas formas de elevar tu metacognición. ¡Elige al menos dos de estas prácticas y pruébalas!</p>
+        
+        <div class="learning-objectives-grid">
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-pen"></i>
+            </div>
+            <div class="objective-content">
+              <h4><strong>Escribir un diario</strong></h4>
+              <p>Anotar tus pensamientos, sentimientos y experiencias ayuda a aumentar la autoconciencia y proporciona información sobre tus patrones de pensamiento.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="objective-content">
+              <h4><strong>Mindfulness (Atención Plena)</strong></h4>
+              <p>Enfocar tu conciencia en el momento presente puede reducir el estrés y mejorar la claridad cognitiva al evitar que tu mente divague.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-pause"></i>
+            </div>
+            <div class="objective-content">
+              <h4><strong>Tómate un tiempo para pausar</strong></h4>
+              <p>Pausar deliberadamente antes de reaccionar te permite considerar tus pensamientos y respuestas, lo que lleva a una toma de decisiones más reflexiva.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-walking"></i>
+            </div>
+            <div class="objective-content">
+              <h4><strong>Levántate y muévete</strong></h4>
+              <p>El movimiento físico puede impulsar la función cerebral y la creatividad, ayudándote a pensar con mayor claridad y eficacia.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-tree"></i>
+            </div>
+            <div class="objective-content">
+              <h4><strong>Aprecia la naturaleza</strong></h4>
+              <p>Pasar tiempo en la naturaleza, o incluso simplemente mirar por una ventana para apreciar el mundo natural, puede reducir el estrés y mejorar tu estado de ánimo, proporcionando una nueva perspectiva y claridad mental.</p>
+            </div>
+          </div>
+          
+          <div class="learning-objective-card">
+            <div class="objective-icon" aria-hidden="true">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="objective-content">
+              <h4><strong>Conecta con otro ser humano</strong></h4>
+              <p>Participar en conversaciones significativas puede proporcionar nuevas perspectivas y ayudarte a reflexionar sobre tus propios pensamientos y sentimientos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 10. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Conciencia, Emociones y Cognición a través del Cuerpo, la Mente y el Alma</strong></h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="awareness-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w2v03"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/awareness-emotions-cognition-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w2v03-awareness-emotions-and-cognition-across-body-mind-and-soul/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor activa JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+      </section>
+      
+      <!-- 11. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><strong>Actividad: Aprovechando el Cuerpo, la Mente y el Alma</strong></h2>
+            <p>Podemos aprovechar la integración del cuerpo, la mente y el alma para apoyar nuestra conciencia, emociones y cognición. Específicamente, podemos aprovechar aspectos del cuerpo, la mente y el alma para que se mejoren mutuamente. Por ejemplo, si nos sentimos mentalmente perezosos en el trabajo, podemos activar el cuerpo saliendo a caminar. Al energizar el cuerpo a través de la actividad física, podemos energizar la mente. Del mismo modo, si nos sentimos físicamente cansados, podemos recurrir al alma conectando con otros. Al energizar el alma con la conexión humana, podemos energizar el cuerpo.</p>
+            <p>Dados estos ejemplos, ¿qué prácticas puedes cultivar para aprovechar mejor la conexión cuerpo, mente y alma para apoyarte en tu florecimiento?</p>
+      </section>
+      
+      <!-- 12. Fondo gris -->
+      <section class="lesson-section no-borders">
+        <h2><b>Un Enfoque Integrado para el Aprendizaje</b></h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="integrated-learning-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w6v06"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/integrated-approach-learning-poster.png"
+              >
+                <source src="https://iep-media.ie.edu/olj/human-flourishing/w6v06-an-integrated-approach-to-learning/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor activa JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+      </section>
+      
+      <!-- 13. Fondo blanco -->
+      <section class="lesson-section no-borders">
+        <h2><b>Meditación de Cierre: Lección 2</b></h2>
+            
+            <div class="responsive-video">
+              <video 
+                id="meditation-video" 
+                class="video-js vjs-ie-skin vjs-big-play-centered" 
+                controls 
+                preload="auto" 
+                data-video-id="w7v02"
+                data-logo="assets/images/logo-ie-small.png"
+                poster="assets/images/human-flourishing-poster.jpg"
+              >
+               <source src="https://iep-media.ie.edu/olj/human-flourishing/w7v02-deepening-awareness-of-motions-and-thoughts/hls.m3u8" type="application/x-mpegURL"> 
+                <p class="vjs-no-js">
+                  Para ver este video, por favor activa JavaScript y considera actualizar a un
+                  navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporte video HTML5</a>
+                </p>
+              </video>
+            </div>
+      </section>
+      
       <div class="navigation-buttons">
-        <a href="chapter1.html" class="nav-button prev"><span class="arrow-left">←</span>Previous</a>
-        <a href="chapter3.html" class="nav-button next">Next<span class="arrow-right">→</span></a>
+        <a href="capitulo1.html" class="nav-button prev"><span class="arrow-left">←</span>Anterior</a>
+        <a href="capitulo3.html" class="nav-button next">Siguiente<span class="arrow-right">→</span></a>
       </div>
     </div>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
+  <div class="footer-content">
     <p class="copyright">&copy; <span id="current-year"></span> IE University. Todos los derechos reservados.</p>
-  </footer>
+  </div>
+</footer>
 
+  <!-- VideoJS JavaScript -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/key-points.js"></script>
+  <script src="js/reflections.js"></script>
+  <script src="js/metacognition.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
