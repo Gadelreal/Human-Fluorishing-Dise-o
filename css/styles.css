@@ -914,7 +914,8 @@ button,
 .button,
 .nav-button,
 .start-button,
-.save-button {
+.save-button,
+.view-button {
   padding: 0.75rem 1.5rem;
   min-height: 44px; /* Altura mínima para objetivos táctiles */
   min-width: 44px; /* Ancho mínimo para objetivos táctiles */
@@ -923,7 +924,8 @@ button,
 /* Mejorar el contraste de los botones */
 .nav-button,
 .start-button,
-.save-button {
+.save-button,
+.view-button {
   background-color: var(--primary-color);
   color: white;
   font-weight: bold;
@@ -932,12 +934,14 @@ button,
 
 .nav-button:hover,
 .start-button:hover,
-.save-button:hover {
+.save-button:hover,
+.view-button:hover {
   background-color: var(--primary-color-dark);
   color: white;
 }
 
-.save-button {
+.save-button,
+.view-button {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -948,11 +952,13 @@ button,
   pointer-events: auto; /* Rehabilita la interacción para el botón */
 }
 
-.save-button:hover {
+.save-button:hover,
+.view-button:hover {
   background-color: var(--link-hover-color);
 }
 
-.save-button:active {
+.save-button:active,
+.view-button:active {
   transform: scale(0.98);
 }
 
@@ -3249,7 +3255,8 @@ p {
 /* Ajustar el peso de la fuente para los botones */
 .start-button,
 .nav-button,
-.save-button {
+.save-button,
+.view-button {
   font-weight: 600;
 }
 
