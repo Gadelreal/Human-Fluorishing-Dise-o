@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth",
         })
       }
-    }, 100) // Pequeño retraso para asegurar que esté cargado
+    }, 100) // Pequeño retraso para asegurar que todo esté cargado
   }
 })
 
