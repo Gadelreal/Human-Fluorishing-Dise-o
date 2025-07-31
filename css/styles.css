@@ -1,4 +1,5 @@
 /* === INICIO part1.css === */
+
 /* Importar Open Sans de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
@@ -11,14 +12,14 @@
 
 /* Añadir estas variables de contraste mejorado */
 :root {
-  --primary-color: #000066; /* Cambiado de #d6208f a azul oscuro */
-  --primary-color-dark: #000044; /* Versión más oscura del azul para mejor contraste */
+  --primary-color: #006; /* Cambiado de #d6208f a azul oscuro */
+  --primary-color-dark: #004; /* Versión más oscura del azul para mejor contraste */
   --secondary-color: #f5f5f5;
   --text-color: #333;
   --text-color-dark: #222;
-  --link-color: #000066; /* Cambiado de #d6208f a azul oscuro */
-  --link-hover-color: #000044; /* Cambiado de #b01a75 a azul más oscuro */
-  --focus-outline-color: #000066; /* Cambiado de #d6208f a azul oscuro */
+  --link-color: #006; /* Cambiado de #d6208f a azul oscuro */
+  --link-hover-color: #004; /* Cambiado de #b01a75 a azul más oscuro */
+  --focus-outline-color: #006; /* Cambiado de #d6208f a azul oscuro */
   --focus-outline-width: 3px;
   --key-point-bg: #fce4f0;
   --key-point-border: #f8c2dd;
@@ -32,7 +33,7 @@
 
 /* Mejorar el contraste de texto */
 body {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: var(--text-color-dark);
   min-height: 100vh;
@@ -42,6 +43,7 @@ body {
 }
 
 /* Estilos para la accesibilidad */
+
 /* Mejorar el enfoque para accesibilidad por teclado */
 a:focus,
 button:focus,
@@ -58,13 +60,18 @@ textarea:focus,
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
   z-index: 9999;
+  top: -40px;
+  left: 0;
+  background: #0055a2;
+  color: white;
+  padding: 8px;
+  transition: top 0.3s;
 }
 
 .skip-to-content:focus {
@@ -76,7 +83,7 @@ textarea:focus,
   padding: 10px 15px;
   margin: 0;
   overflow: visible;
-  clip: auto;
+  clip-path: auto;
   white-space: normal;
   background: var(--primary-color);
   color: white;
@@ -90,7 +97,7 @@ textarea:focus,
 header {
   background-color: white;
   padding: 0.75rem 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
   position: relative;
   display: flex;
   align-items: center;
@@ -109,12 +116,12 @@ header {
   z-index: 1000;
   transition: height 0.3s ease, box-shadow 0.3s ease;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
 .header-fixed.scrolled {
   height: 70px !important; /* Altura reducida al hacer scroll */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 
 .header-fixed.scrolled .logo-container.tiny-logo {
@@ -138,7 +145,7 @@ header {
 }
 
 /* Ajustes responsivos para el header fijo */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .header-fixed.scrolled {
     height: 100px !important; /* Mantener altura original en tablets */
   }
@@ -153,7 +160,7 @@ header {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .header-fixed.scrolled {
     height: 80px !important; /* Mantener altura original en móviles */
   }
@@ -169,24 +176,14 @@ header {
 }
 
 /* Eliminar el borde rosa/magenta que aparece al hacer clic en el contenido */
-*:not(a):not(button):not(input):not(textarea):not([tabindex]):not([role="button"]):focus {
+*:not(a, button, input, textarea, [tabindex], [role="button"]):focus {
   outline: none !important;
   border: none !important;
 }
 
-/* Mantener los indicadores de focus solo para elementos verdaderamente interactivos */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-[tabindex]:focus,
-[role="button"]:focus {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-  outline-offset: 2px;
-}
 
 /* Eliminar cualquier borde en estados de click/active para elementos no interactivos */
-*:not(a):not(button):not(input):not(textarea):not([tabindex]):not([role="button"]):not(.reading-card):active {
+*:not(a, button, input, textarea, [tabindex], [role="button"], .reading-card):active {
   outline: none !important;
   border: none !important;
 }
@@ -194,7 +191,9 @@ textarea:focus,
 /* === FIN part1.css === */
 
 /* === INICIO part2.css === */
+
 /* Resto del CSS permanece igual... */
+
 /* Añadir estilos para la cabecera a ancho completo y el logo más pequeño */
 
 /* Cabecera a ancho completo */
@@ -280,7 +279,7 @@ textarea:focus,
 }
 
 /* Ajustes responsivos para el título en la cabecera */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .header-title {
     font-size: 14px !important; /* Forzar tamaño reducido */
   }
@@ -294,7 +293,7 @@ textarea:focus,
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .header-title {
     font-size: 12px !important; /* Forzar tamaño reducido */
   }
@@ -359,11 +358,6 @@ textarea:focus,
   height: auto;
 }
 
-/* Ajustar la posición del contenido para dar espacio al logo */
-.split-cover-content .cover-text {
-  padding-top: 80px;
-  position: relative; /* Para posicionamiento correcto */
-}
 
 .small-logo {
   max-width: 80px; /* Reducir el tamaño del logo */
@@ -427,6 +421,7 @@ textarea:focus,
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -439,15 +434,17 @@ textarea:focus,
 }
 
 /* Mejorar la visualización en dispositivos móviles */
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .logo-container {
     max-width: 100px; /* Reducir ligeramente el tamaño en móviles */
     margin: 0 auto 1rem; /* Centrar en dispositivos móviles */
   }
 }
+
 /* === FIN part2.css === */
 
 /* === INICIO part3.css === */
+
 /* Navegación */
 .main-nav {
   flex-grow: 1;
@@ -490,12 +487,9 @@ main {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  padding-top: 0;
 }
 
-/* Asegurar que el contenido principal se ajuste correctamente con la nueva cabecera */
-main {
-  padding-top: 1rem;
-}
 
 /* Después de la definición de .content-container */
 .content-container {
@@ -516,7 +510,7 @@ main {
 }
 
 /* Ajuste responsivo para la clase content-aligned-container */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .content-aligned-container {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -526,20 +520,20 @@ main {
 /* Estilo específico para mantener los bordes en otras páginas */
 .with-borders {
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 
 h1 {
   color: #000;
   margin-bottom: 1.5rem;
-  font-size: 2rem;
   font-weight: 700;
+  font-size: 1.8rem;
 }
 
 h2 {
   color: #000;
   margin: 1.5rem 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -548,12 +542,12 @@ h3 {
   margin: 1.5rem 0 0.75rem;
   margin-top: 1.5rem !important;
   margin-bottom: 0.75rem !important;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
   font-weight: 400;
   line-height: 1.7;
   color: #000;
@@ -567,7 +561,9 @@ ol {
 
 /* Secciones de lección - Sistema de alternancia automática */
 .lesson-section {
-/*  margin-bottom: 10rem; *//* Duplicado de 5rem a 10rem */
+/*  margin-bottom: 10rem; */
+
+/* Duplicado de 5rem a 10rem */
   padding-bottom: 2rem; /* Aumentado de 1.5rem a 2rem */
   border-bottom: 1px solid #eee;
   position: relative;
@@ -615,7 +611,7 @@ ol {
 }
 
 /* Ajustes responsivos para los módulos alternados */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .lesson-section:nth-child(odd),
   .lesson-section:nth-child(even) {
     padding: 2rem 0;
@@ -627,8 +623,7 @@ ol {
   }
 }
 
-@media (max-width: 480px) {
-  .lesson-section:nth-child(even),
+@media (width <= 480px) {
   .lesson-section:nth-child(even) {
     padding: 1.5rem 0;
   }
@@ -637,6 +632,7 @@ ol {
 /* Buscar la sección de "Puntos clave - Versión mejorada" y reemplazarla con esto: */
 
 /* Puntos clave - Versión mejorada */
+
 /* Icono para Key Points */
 .key-point::before {
   content: "\f0eb";
@@ -655,8 +651,8 @@ ol {
   background: white !important;
   border: 1px solid #e0e0e0 !important;
   border-radius: 0 !important;
-  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top para dar espacio al icono */
-  margin: 32px 0 1.5rem 0 !important;
+  padding: 3rem 1.5rem 1.2rem !important; /* Aumentar padding-top para dar espacio al icono */
+  margin: 32px 0 1.5rem !important;
   position: relative;
   box-shadow: none !important;
   transition: none !important;
@@ -676,8 +672,8 @@ ol {
   border: 1px solid #e0e0e0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top */
-  margin: 32px auto 1.5rem auto !important;
+  padding: 3rem 1.5rem 1.2rem !important; /* Aumentar padding-top */
+  margin: 32px auto 1.5rem !important;
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
   box-sizing: border-box !important;
@@ -689,8 +685,8 @@ ol {
  {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
-  padding: 3rem 1.5rem 1.2rem 1.5rem !important; /* Aumentar padding-top */
+  margin: 32px auto 1.5rem !important; /* Centrado */
+  padding: 3rem 1.5rem 1.2rem !important; /* Aumentar padding-top */
   box-sizing: border-box !important;
 }
 
@@ -699,11 +695,11 @@ ol {
 .survey-background .key-point {
   width: 1136px !important; /* Ancho fijo de 1136px en desktop */
   max-width: calc(100% - 4rem) !important; /* Responsive fallback */
-  margin: 32px auto 1.5rem auto !important; /* Centrado */
+  margin: 32px auto 1.5rem !important; /* Centrado */
 }
 
 /* Ajustes responsivos para tablets */
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .lesson-section:nth-child(even) .key-point,
   .lesson-section:nth-child(odd) .key-point,
   .module-background .key-point,
@@ -717,7 +713,7 @@ ol {
 }
 
 /* Eliminar el padding extra en dispositivos móviles */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .lesson-section:nth-child(even) .key-point,
   .lesson-section:nth-child(odd) .key-point,
   .module-background .key-point,
@@ -732,9 +728,11 @@ ol {
   outline: none !important;
   border: 1px solid #e0e0e0 !important;
 }
+
 /* === FIN part3.css === */
 
 /* === INICIO part4.css === */
+
 /* Estilos para tarjetas de lectura */
 .reading-cards {
   display: grid;
@@ -746,7 +744,7 @@ ol {
 .reading-card {
   background-color: white;
   border-radius: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
@@ -773,11 +771,11 @@ ol {
 
 .reading-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
   border-color: #d0d0d0;
 }
 
-.reading-card:before {
+.reading-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -790,7 +788,7 @@ ol {
   transition: transform 0.3s ease;
 }
 
-.reading-card:hover:before {
+.reading-card:hover::before {
   transform: scaleY(1);
 }
 
@@ -849,13 +847,13 @@ ol {
 }
 
 /* Estilos responsivos para tarjetas de lectura */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .reading-cards {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .reading-cards {
     grid-template-columns: 1fr;
   }
@@ -868,6 +866,7 @@ ol {
 
 .reflection-question {
   background-color: #f9f9f9;
+
   /* Se usa box-shadow para simular el borde y evitar que el reset global lo elimine
      al hacer clic en elementos hijos como el textarea. */
   box-shadow: 0 0 0 1px #e0e0e0;
@@ -928,8 +927,8 @@ button,
 .view-button {
   background-color: var(--primary-color);
   color: white;
-  font-weight: bold;
   border: 2px solid transparent;
+  font-weight: 600;
 }
 
 .nav-button:hover,
@@ -979,12 +978,15 @@ button,
   0% {
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -1027,7 +1029,7 @@ button,
 }
 
 .checkbox-container.selected {
-  background-color: rgba(0, 0, 102, 0.1);
+  background-color: rgb(0 0 102 / 10%);
 }
 
 /* Mejorar la visibilidad de los mensajes de error */
@@ -1048,10 +1050,12 @@ button,
   100% {
     transform: translateX(0);
   }
+
   20%,
   60% {
     transform: translateX(-5px);
   }
+
   40%,
   80% {
     transform: translateX(5px);
@@ -1083,7 +1087,7 @@ button,
   max-width: 640px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   margin-bottom: 15px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1092,7 +1096,7 @@ button,
 
 .video-container img:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
 }
 
 .video-container p {
@@ -1158,11 +1162,11 @@ button,
 }
 
 .vjs-ie-skin .vjs-control-bar {
-  background-color: rgba(0, 0, 102, 0.8); /* Color magenta IE semi-transparente */
+  background-color: rgb(0 0 102 / 80%); /* Color magenta IE semi-transparente */
 }
 
 .vjs-ie-skin .vjs-big-play-button {
-  background-color: rgba(0, 0, 102, 0.8);
+  background-color: rgb(0 0 102 / 80%);
   border-color: white;
   border-radius: 50%;
   width: 80px;
@@ -1243,10 +1247,13 @@ iframe[src*="vimeo"] {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
 /* === FIN part4.css === */
 
 /* === INICIO part5.css === */
+
 /* Enlaces */
+
 /* Asegurar que los enlaces tengan un subrayado visible */
 a {
   color: var(--link-color);
@@ -1277,13 +1284,14 @@ a:hover {
   border-radius: 4px;
   font-weight: bold; /* Añadir negrita para coincidir con el botón Start Course */
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .nav-button:hover {
   background-color: var(--primary-color-dark); /* Un magenta más oscuro */
   color: white !important; /* Forzar color blanco */
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
 }
 
 .nav-button.prev .arrow-left {
@@ -1315,19 +1323,8 @@ a:hover {
 }
 
 .cover-content h1 {
-  font-size: 2.5rem;
   margin-bottom: 1rem;
-}
-
-.author,
-.duration,
-.code {
-  margin-bottom: 0.5rem;
-}
-
-/* Añadir una clase para hacer el logo más pequeño */
-.small-logo {
-  max-width: 80px; /* Reducir el tamaño del logo */
+  font-size: 2rem;
 }
 
 /* Añadir una clase para el título en negro */
@@ -1351,6 +1348,7 @@ a:hover {
   font-size: 0.9rem; /* Punto medio para el tamaño de la fuente */
   color: #000;
   line-height: 1.2; /* Punto medio para el interlineado */
+  font-weight: 300;
 }
 
 .start-button-container {
@@ -1389,7 +1387,7 @@ a:hover {
   max-width: 50%;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
 }
 
 .simple-cover-content .cover-image img {
@@ -1421,7 +1419,7 @@ a:hover {
 }
 
 /* Estilos responsivos para la portada simple */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .simple-cover-content {
     flex-direction: column;
     text-align: center;
@@ -1438,7 +1436,7 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .simple-cover-content {
     padding: 1rem;
   }
@@ -1547,7 +1545,7 @@ a:hover {
   background-color: var(--primary-color-dark); /* Un magenta más oscuro */
   color: white; /* Mantener el texto en blanco */
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
 }
 
 .white-footer {
@@ -1562,12 +1560,12 @@ a:hover {
 }
 
 /* Estilos responsivos para la portada con fondo blanco */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .white-cover .logo-container {
     position: relative;
     top: 0;
     left: 0;
-    margin: 0 0 2rem 0;
+    margin: 0 0 2rem;
   }
 
   .white-cover-header {
@@ -1585,7 +1583,7 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .white-cover .cover-text {
     padding: 1rem;
   }
@@ -1658,6 +1656,7 @@ a:hover {
 }
 
 .split-cover-content .cover-text {
+  position: relative; /* Para posicionamiento correcto */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1673,7 +1672,7 @@ a:hover {
 }
 
 /* Estilos responsivos para la portada dividida */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .split-cover-layout {
     flex-direction: column;
     height: 100vh; /* Forzar altura completa del viewport */
@@ -1698,6 +1697,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; /* Distribuir uniformemente */
+    padding-top: 60px;
   }
 
   .title-separator.blue {
@@ -1709,10 +1709,6 @@ a:hover {
     left: 2rem;
     max-width: 50px;
     margin-bottom: 0;
-  }
-
-  .split-cover-content .cover-text {
-    padding-top: 60px;
   }
 
   /* Espaciados compactos en tablets */
@@ -1748,7 +1744,7 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .split-cover-layout {
     height: 100vh;
     overflow: hidden;
@@ -1776,6 +1772,7 @@ a:hover {
     text-align: left;
     height: calc(75vh - 50px);
     justify-content: center;
+    padding-top: 50px;
   }
 
   .title-separator.blue {
@@ -1787,10 +1784,6 @@ a:hover {
     left: 1.5rem;
     max-width: 40px;
     margin-bottom: 0;
-  }
-
-  .split-cover-content .cover-text {
-    padding-top: 50px;
   }
 
   /* Espaciados muy compactos en móviles */
@@ -1838,12 +1831,14 @@ a:hover {
     font-size: 0.75rem;
   }
 }
+
 /* === FIN part5.css === */
 
 /* === INICIO part6.css === */
+
 /* Estilos para la portada con fondo azul completo (mantener para compatibilidad) */
 .full-blue-cover {
-  background-color: #000066;
+  background-color: #006;
   color: white;
   margin: 0;
   padding: 0;
@@ -1952,7 +1947,7 @@ a:hover {
 
 .full-blue-cover .start-button {
   background-color: white;
-  color: #000066;
+  color: #006;
   padding: 1rem 2.5rem;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -1963,9 +1958,9 @@ a:hover {
 }
 
 .full-blue-cover .start-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255 255 255 / 90%);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
 }
 
 .full-blue-cover footer {
@@ -1977,7 +1972,7 @@ a:hover {
 }
 
 /* Estilos responsivos para la portada con fondo azul */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .full-cover-layout {
     flex-direction: column;
   }
@@ -2016,7 +2011,7 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .full-cover-image {
     height: 30vh;
   }
@@ -2052,7 +2047,7 @@ a:hover {
 /* Estilos para la portada mejorada */
 .enhanced-cover {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 102, 0.8), rgba(0, 0, 102, 0.6)), url("../assets/images/flourishing-bg.jpg");
+  background: linear-gradient(rgb(0 0 102 / 80%), rgb(0 0 102 / 60%)), url("../assets/images/flourishing-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -2099,7 +2094,7 @@ a:hover {
 .cover-image {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
   height: 100%;
   max-height: 400px;
   position: relative;
@@ -2124,8 +2119,10 @@ a:hover {
 .cover-text h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: #000;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cover-text p {
@@ -2142,7 +2139,7 @@ a:hover {
 }
 
 .feature-item {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255 255 255 / 10%);
   backdrop-filter: blur(10px);
   padding: 1rem;
   border-radius: 8px;
@@ -2156,7 +2153,7 @@ a:hover {
 
 .feature-item:hover {
   transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 20%);
 }
 
 .feature-icon {
@@ -2174,18 +2171,18 @@ a:hover {
   font-size: 1.2rem;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
   margin-top: 2rem;
 }
 
 .enhanced-start-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255 255 255 / 90%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgb(0 0 0 / 30%);
 }
 
 /* Estilos responsivos para la portada mejorada */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .enhanced-cover-grid {
     grid-template-columns: 1fr;
   }
@@ -2207,7 +2204,7 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .enhanced-cover-content {
     padding: 1rem;
   }
@@ -2224,16 +2221,17 @@ a:hover {
     flex: 1 1 100%;
   }
 }
+
 /* === FIN part6.css === */
 
 /* === INICIO part7.css === */
+
 /* Estilos para objetivos de aprendizaje */
 .learning-objectives {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
   border-radius: 0;
   padding: 2rem;
-  g: 2rem;
   margin: 2rem 0;
 }
 
@@ -2275,6 +2273,8 @@ a:hover {
   cursor: pointer;
   color: var(--primary-color);
   padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .mobile-menu {
@@ -2284,7 +2284,7 @@ a:hover {
   left: 0;
   right: 0;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
   z-index: 1000;
 }
 
@@ -2325,7 +2325,8 @@ a:hover {
 }
 
 .quiz-question {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
   padding: 1.5rem;
   background-color: white;
   border-radius: 0;
@@ -2350,7 +2351,19 @@ a:hover {
 
 .quiz-options li {
   margin-bottom: 0.8rem;
+  background-color: #f8f8f8;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer; /* Solo las opciones tienen cursor pointer */
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
+
 
 .quiz-options label {
   display: flex;
@@ -2436,7 +2449,7 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .footer-content {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2496,7 +2509,7 @@ footer {
 }
 
 .survey-option.selected {
-  background-color: rgba(0, 0, 102, 0.1);
+  background-color: rgb(0 0 102 / 10%);
 }
 
 .survey-submit {
@@ -2517,7 +2530,7 @@ footer {
   background-color: var(--link-hover-color);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
 
 .survey-submit:disabled {
@@ -2538,7 +2551,7 @@ footer {
 }
 
 /* Estilos responsivos para la encuesta */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .survey-container {
     padding: 1.5rem;
     margin: 1rem;
@@ -2573,19 +2586,18 @@ footer {
   background-color: var(--primary-color-dark) !important; /* Force the darker blue on hover */
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
 
 /* Estilos para el fondo de módulos */
 .module-background {
-  background-color: var(--module-bg-color);
+  background-color: #f5f5f5;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
+  margin: 6rem -50vw;
+  padding: 3rem 0; /* Duplicado de 3rem a 6rem */ /* Duplicado de 3rem a 6rem */
   box-sizing: border-box;
 }
 
@@ -2599,15 +2611,15 @@ footer {
 }
 
 .survey-background {
-  background-color: var(--module-bg-color);
+  background-color: #f5f5f5;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
+  margin: 6rem -50vw;
+  padding: 3rem 0; /* Duplicado de 3rem a 6rem */ /* Duplicado de 3rem a 6rem */
   box-sizing: border-box;
+
 }
 
 .survey-background > * {
@@ -2620,7 +2632,7 @@ footer {
 }
 
 /* Ajustes responsivos para fondos de módulos */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .module-background {
     padding: 2rem 0;
   }
@@ -2638,7 +2650,7 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .module-background {
     padding: 1.5rem 0;
   }
@@ -2648,44 +2660,20 @@ footer {
   }
 }
 
-/* Estilos para el fondo de módulos */
-.module-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
-  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
-  box-sizing: border-box;
-}
+
 
 .module-content {
-  max-width: 1200px;
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   box-sizing: border-box;
-  position: relative;
 }
 
-/* Aplicar los mismos estilos a survey-background y survey-content */
-.survey-background {
-  background-color: #f5f5f5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 3rem 0;
-  margin-top: 6rem; /* Duplicado de 3rem a 6rem */
-  margin-bottom: 6rem; /* Duplicado de 3rem a 6rem */
-  box-sizing: border-box;
-}
 
 .survey-content {
   max-width: 1200px;
@@ -2696,13 +2684,8 @@ footer {
   position: relative;
 }
 
-/* Asegurar que el body no tenga overflow horizontal */
-body {
-  overflow-x: hidden;
-}
-
 /* Ajustes responsivos para las secciones con fondo */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .module-background,
   .survey-background {
     padding: 2rem 0;
@@ -2716,7 +2699,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .module-background,
   .survey-background {
     padding: 1.5rem 0;
@@ -2731,16 +2714,6 @@ body {
   display: none;
 }
 
-/* Estilos para el contenido del módulo */
-.module-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
 
 /* Asegurar que videos y key points tengan el mismo ancho en módulos grises */
 .module-content .responsive-video,
@@ -2755,7 +2728,7 @@ body {
 }
 
 /* Ajustes responsivos para el contenido del módulo */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .module-content {
     padding: 0 1rem;
   }
@@ -2763,7 +2736,7 @@ body {
 
 /* Estilos para títulos h2 en el body - Open Sans Light 32px con separación de 48px */
 body h2 {
-  font-family: "Rubik", sans-serif !important;
+  font-family: Rubik, sans-serif !important;
   font-weight: 300 !important; /* Light */
   font-size: 32px !important;
   margin-top: 48px !important; /* Separación vertical de 48px */
@@ -2780,7 +2753,7 @@ body h2:first-of-type,
 }
 
 /* Ajustes responsivos para h2 */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   body h2 {
     font-size: 28px !important;
     margin-top: 36px !important;
@@ -2788,7 +2761,7 @@ body h2:first-of-type,
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   body h2 {
     font-size: 24px !important;
     margin-top: 32px !important;
@@ -2817,10 +2790,12 @@ body h2:first-of-type,
   margin: 0 auto;
   padding: 0 2rem;
   box-sizing: border-box;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero-title {
-  font-family: "Rubik", Arial, sans-serif !important;
+  font-family: Rubik, Arial, sans-serif !important;
   font-weight: 300 !important; /* Light */
   font-size: 48px !important;
   color: white !important;
@@ -2830,7 +2805,7 @@ body h2:first-of-type,
 }
 
 /* Responsive adjustments for hero title */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hero-title {
     font-size: 40px !important;
   }
@@ -2840,7 +2815,7 @@ body h2:first-of-type,
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .hero-title {
     font-size: 32px !important;
   }
@@ -2861,9 +2836,11 @@ body h2:first-of-type,
 .hidden {
   display: none;
 }
+
 /* === FIN part7.css === */
 
 /* === INICIO part8.css === */
+
 /* Estilos para el menú hamburguesa en todos los dispositivos */
 .always-visible {
   display: block !important;
@@ -2883,7 +2860,7 @@ body h2:first-of-type,
   min-width: 250px;
   max-width: 400px;
   background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgb(0 0 0 / 15%);
   z-index: 999;
   padding: 0;
   border: 1px solid #eee;
@@ -2904,16 +2881,17 @@ body h2:first-of-type,
 /* Asegurar que el menú se posicione correctamente en la página de introducción */
 .header-full-bottom .hamburger-nav {
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: 120px; /* Alinear con la nueva altura de la cabecera */
+  right: 2rem; /* Alinear con el padding del contenedor */
   left: auto;
   width: 33.33%;
   min-width: 250px;
   max-width: 400px;
 }
 
+
 /* Ajustes responsivos para el menú hamburguesa */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hamburger-nav,
   .header-full-bottom .hamburger-nav {
     width: 50%;
@@ -2921,7 +2899,7 @@ body h2:first-of-type,
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .hamburger-nav,
   .header-full-bottom .hamburger-nav {
     width: 80%;
@@ -2990,18 +2968,24 @@ body h2:first-of-type,
 }
 
 .hamburger-icon span {
-  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #000; /* Cambiado de var(--primary-color) a negro */
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
 }
 
 /* Añadir un overlay para cerrar el menú al hacer clic fuera */
 .menu-overlay {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background-color: rgb(0 0 0 / 50%);
   z-index: 998;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -3012,18 +2996,9 @@ body h2:first-of-type,
   opacity: 1;
 }
 
-/* Ajustar el estilo del botón de hamburguesa */
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
 
 .mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0 0 0 / 5%);
 }
 
 /* Asegurar que los elementos interactivos tengan estados de foco visibles */
@@ -3039,21 +3014,8 @@ body h2:first-of-type,
   height: 18px;
 }
 
-.hamburger-icon span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #000; /* Cambiado de var(--primary-color) a negro */
-  border-radius: 3px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-}
-
 .hamburger-icon span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 
 .hamburger-icon span:nth-child(2),
@@ -3066,7 +3028,7 @@ body h2:first-of-type,
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   header {
     flex-wrap: wrap;
     padding: 0.5rem 1rem;
@@ -3090,7 +3052,7 @@ body h2:first-of-type,
     left: 0;
     right: 0;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
     z-index: 999;
     padding: 1rem;
     border-top: 1px solid #eee;
@@ -3107,6 +3069,7 @@ body h2:first-of-type,
       opacity: 0;
       transform: translateY(-10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -3145,29 +3108,9 @@ body h2:first-of-type,
     gap: 1rem;
   }
 
-  .nav-button {
-    text-align: center;
-  }
-
-  .cover-content h1 {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-}
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
+@media (width <= 480px) {
   main {
     padding: 1rem;
   }
@@ -3225,40 +3168,15 @@ a,
 button,
 input,
 textarea {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
-}
-
-p {
-  margin-bottom: 1rem !important;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #000;
-}
-
-.cover-text h1 {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #000;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
 }
 
 .key-point p {
   font-weight: 400;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.author,
-.duration,
-.code {
-  font-weight: 300;
-}
-
-/* Ajustar el peso de la fuente para los botones */
-.start-button,
-.nav-button,
-.save-button,
-.view-button {
-  font-weight: 600;
-}
 
 /* Añadir la clase plain-title para el título sin efectos y con menor peso */
 .plain-title {
@@ -3278,7 +3196,7 @@ p {
 }
 
 /* Ajustes responsivos para la cabecera a ancho completo */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .full-width {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -3298,16 +3216,6 @@ p {
   box-sizing: border-box;
 }
 
-/* Ajustar el padding del contenedor principal para que coincida con el header */
-main {
-  flex: 1;
-  padding: 2rem 0;
-  padding-top: 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
 
 /* Asegurar que el logo esté alineado con el contenido */
 .content-aligned .header-left {
@@ -3322,7 +3230,7 @@ main {
 }
 
 /* Ajustar el espaciado en dispositivos móviles */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .content-aligned {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -3338,7 +3246,7 @@ main {
 .header-full-bottom {
   max-width: 100%;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
   border-left: none;
   border-right: none;
   padding-left: 0;
@@ -3380,14 +3288,9 @@ main {
   width: 40px;
 }
 
-/* Ajustar el menú de navegación para la cabecera con altura fija */
-.header-full-bottom .hamburger-nav {
-  top: 120px; /* Alinear con la nueva altura de la cabecera */
-  right: 2rem; /* Alinear con el padding del contenedor */
-}
 
 /* Ajustes responsivos */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .header-full-bottom {
     height: 100px; /* Mantener altura original en tablets */
   }
@@ -3403,7 +3306,7 @@ main {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .header-full-bottom {
     height: 80px; /* Mantener altura original en móviles */
   }
@@ -3441,7 +3344,7 @@ main {
 }
 
 /* Responsive adjustments for learning objectives */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .learning-objectives-grid,
   .learning-objectives-grid-2x2 {
     grid-template-columns: 1fr;
@@ -3450,14 +3353,13 @@ main {
 
 .learning-objective-card {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 0;
   box-shadow: none;
   overflow: hidden;
   padding: 1.5rem;
-  border-left: 4px solid #000066;
   border: 1px solid #e0e0e0;
-  border-left: 4px solid #000066;
+  border-left: 4px solid #006;
   pointer-events: none; /* Eliminar completamente la interacción */
   cursor: default; /* Cursor por defecto */
 }
@@ -3467,7 +3369,7 @@ main {
   background-color: white !important;
   border-radius: 0 !important;
   border: 1px solid #e0e0e0 !important;
-  border-left: 4px solid #000066 !important;
+  border-left: 4px solid #006 !important;
 }
 
 /* Eliminar cualquier estado de focus, active o click */
@@ -3476,7 +3378,7 @@ main {
 .learning-objective-card:hover {
   outline: none !important;
   border: 1px solid #e0e0e0 !important;
-  border-left: 4px solid #000066 !important;
+  border-left: 4px solid #006 !important;
   box-shadow: none !important;
   transform: none !important;
 }
@@ -3497,7 +3399,7 @@ main {
   justify-content: center;
   width: 40px;  /* Cambiado de 50px a 40px */
   height: 40px; /* Cambiado de 50px a 40px */
-  background-color: rgba(0, 0, 102, 0.1);
+  background-color: rgb(0 0 102 / 10%);
   border-radius: 50%;
   margin-right: 1rem;
   flex-shrink: 0;
@@ -3505,7 +3407,7 @@ main {
 
 .objective-icon i {
   font-size: 1.5rem;
-  color: #000066;
+  color: #006;
 }
 
 .objective-content {
@@ -3523,7 +3425,7 @@ main {
 .objective-number {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #000066;
+  color: #006;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3576,14 +3478,14 @@ html:focus,
       background-color: #003d73;
       color: white;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     }
 
     .download-button i {
       margin-right: 0.5rem;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .final-section {
         padding: 1.5rem;
       }
@@ -3608,7 +3510,7 @@ html:focus,
       display: inline-flex;
       align-items: center;
       padding: 1rem 2rem;
-      background-color: #000066;
+      background-color: #006;
       color: white;
       text-decoration: none;
       border-radius: 4px;
@@ -3618,10 +3520,10 @@ html:focus,
     }
 
     .survey-button:hover {
-      background-color: #000044;
+      background-color: #004;
       color: white;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
       text-decoration: none;
     }
 
@@ -3640,27 +3542,14 @@ html:focus,
       object-fit: contain;
     }
 
-    .hero-content {
-      align-items: flex-start;
-      text-align: left;
-    }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .hero-title-container {
         gap: 0.5rem;
       }
     }
 
-    /* Aumentar espaciado entre párrafos */
-    p {
-      margin-bottom: 1.5rem;
-    }
-
     .lesson-section p {
-      margin-bottom: 1.5rem;
-    }
-
-    .key-point p {
       margin-bottom: 1.5rem;
     }
 
@@ -3678,24 +3567,9 @@ html:focus,
 
     /* Estilos adicionales para VideoJS */
     .video-js .vjs-control-bar {
-      background-color: rgba(0, 85, 162, 0.8);
+      background-color: rgb(0 85 162 / 80%);
     }
     
-    /* Estilo para el enlace de saltar al contenido */
-    .skip-to-content {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #0055a2;
-      color: white;
-      padding: 8px;
-      z-index: 9999;
-      transition: top 0.3s;
-    }
-    
-    .skip-to-content:focus {
-      top: 0;
-    }
 
 .hero-fingerprints {
   max-width: 300px;
@@ -3704,7 +3578,7 @@ html:focus,
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hero-fingerprints {
     max-width: 200px;
   }
@@ -3758,7 +3632,7 @@ html:focus,
       line-height: 1.6;
       }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .activity-step {
         flex-direction: column;
         text-align: center;
@@ -3787,12 +3661,12 @@ html:focus,
       display: flex;
       flex-direction: column;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
     }
 
     .benefit-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 20px rgb(0 0 0 / 10%);
       border-color: #0055a2;
     }
 
@@ -3811,7 +3685,7 @@ html:focus,
       font-size: 0.95rem;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .benefits-cards {
         grid-template-columns: 1fr;
       }
@@ -3830,7 +3704,7 @@ html:focus,
       top: 0;
       bottom: 0;
       width: 2px;
-      background-color: #000066;
+      background-color: #006;
       z-index: 1;
     }
 
@@ -3850,7 +3724,7 @@ html:focus,
       top: 0;
       width: 40px;
       height: 40px;
-      background-color: #000066;
+      background-color: #006;
       color: white;
       border-radius: 50%;
       display: flex;
@@ -3859,7 +3733,7 @@ html:focus,
       font-weight: bold;
       font-size: 1.1rem;
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(0, 0, 102, 0.3);
+      box-shadow: 0 2px 8px rgb(0 0 102 / 30%);
     }
 
     .timeline-content {
@@ -3867,7 +3741,7 @@ html:focus,
       padding: 1.5rem;
       border-radius: 8px;
       border: 1px solid #e0e0e0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
       position: relative;
     }
 
@@ -3884,8 +3758,8 @@ html:focus,
       z-index: 3;
     }
 
-    .timeline-content h4 {
-      color: #000066;
+    .timeline-content h4, .timeline-content h3 {
+      color: #006;
       margin-bottom: 0.8rem;
       font-weight: 600;
       margin-top: 0;
@@ -3899,7 +3773,7 @@ html:focus,
     }
 
     /* Ajustes responsivos para el timeline */
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .timeline-activity {
         padding-left: 1.5rem;
       }
@@ -3932,7 +3806,7 @@ html:focus,
       }
     }
 
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       .timeline-activity {
         padding-left: 1rem;
       }
@@ -3975,10 +3849,10 @@ html:focus,
 .values-list li {
   list-style: none;
   padding: 1rem;
-  background-color: #000066;
+  background-color: #006;
   color: white;
   border-radius: 0;
-  border: 1px solid #000066;
+  border: 1px solid #006;
   text-align: left;
   transition: none;
 }
@@ -3999,19 +3873,19 @@ html:focus,
       height: auto;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .ikigai-container img {
         width: 90% !important;
       }
     }
 
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       .ikigai-container img {
         width: 95% !important;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .values-list {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
@@ -4035,13 +3909,13 @@ html:focus,
       padding: 1.5rem;
       transition: all 0.3s ease;
       position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     }
 
     .reflection-question-card:hover {
       border-color: #0055a2;
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 85, 162, 0.15);
+      box-shadow: 0 4px 15px rgb(0 85 162 / 15%);
     }
 
     .question-number {
@@ -4066,7 +3940,7 @@ html:focus,
       color: #333;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .reflection-questions-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -4077,23 +3951,6 @@ html:focus,
       }
     }
 
-/* Estilos para números en lugar de iconos en las cards de actividades */
-.objective-number {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #000066;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Asegurar que las cards de actividad no sean interactivas como las de learning objectives */
-.learning-objective-card .objective-number {
-  pointer-events: none;
-  cursor: default;
-}
 
 /* === Chapter 4 === */
 
@@ -4150,14 +4007,14 @@ html:focus,
     .survey-link:hover {
       background-color: #003d73;
       color: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     }
 
     .survey-link i {
       margin-right: 0.5rem;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .survey-links {
         align-items: stretch;
       }
@@ -4170,6 +4027,7 @@ html:focus,
 
 
 /* === Chapter 5 === */
+
     /* Estilos para las actividades estructuradas */
     .framework-activity {
       background-color: #f9f9f9;
@@ -4177,18 +4035,6 @@ html:focus,
       border-radius: 8px;
       padding: 1.5rem;
       margin: 1.5rem 0;
-    }
-
-    .activity-step {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 6px;
-      border-left: 4px solid #0055a2;
-    }
-
-    .activity-step:last-child {
-      margin-bottom: 0;
     }
 
     .activity-step h4 {
@@ -4204,51 +4050,19 @@ html:focus,
     }
 
     /* Estilos para el quiz interactivo */
+
 /* Estilos para el quiz interactivo mejorado */
-.quiz-question {
-  margin-bottom: 1rem !important;
-  margin-top: 1rem !important;
-  padding: 1.5rem;
-  background-color: white;
-  border-radius: 0;
-  border: 1px solid #ddd;
-  /* Remover cursor pointer del contenedor de pregunta */
-}
-
-.quiz-question h3 {
-  color: #000;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.quiz-options {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.quiz-options li {
-  margin-bottom: 0.8rem;
-  background-color: #f8f8f8;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  cursor: pointer; /* Solo las opciones tienen cursor pointer */
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-}
 
 .quiz-options li:hover {
   background-color: #e8f4fd;
   border-color: #0055a2;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 85, 162, 0.15);
+  box-shadow: 0 4px 12px rgb(0 85 162 / 15%);
 }
 
 .quiz-options li:active {
   transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0, 85, 162, 0.2);
+  box-shadow: 0 2px 6px rgb(0 85 162 / 20%);
 }
 
 .quiz-options li::before {
@@ -4313,7 +4127,7 @@ html:focus,
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 40%), transparent);
   transition: left 0.5s ease;
 }
 
@@ -4321,12 +4135,6 @@ html:focus,
   left: 100%;
 }
 
-/* Mejorar la tipografía de las opciones */
-.quiz-options li {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
 
 /* Efecto focus para accesibilidad solo en las opciones */
 .quiz-options li:focus {
@@ -4389,8 +4197,18 @@ html:focus,
   word-break: break-all;
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .references-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.objective-content
+{
+  h3{
+    margin:0 !important;
+    color: var(--text-color-dark) !important;
+    font-weight: 700;
+    font-size: 1rem !important;
   }
 }
