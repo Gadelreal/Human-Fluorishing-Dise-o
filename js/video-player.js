@@ -1,93 +1,83 @@
 // js/video-player.js
 
 // Declare the videojs variable as a global object
-const videojs = window.videojs;
-const allVideoPlayers = [];
+const videojs = window.videojs
 
-// Detectar idioma desde <html lang="..."> no lo tnemos en URL
-const language = document.documentElement.lang || 'en'; // por defecto inglés
-const language_tracks = (language === 'en') ? 'eng' : 'spa';
-
+// Array to store all video player instances
+const allVideoPlayers = []
 
 videojs.registerPlugin("examplePlugin", function (options) {
-  // Add this player to the global array
-  allVideoPlayers.push(this);
+  
 
- 
+  // Add this player to the global array
+  allVideoPlayers.push(this)
+
   this.on("play", () => {
+    videojs.log("The video is playing!")
+
     // Pause all other videos when this one starts playing
     allVideoPlayers.forEach((otherPlayer) => {
       if (otherPlayer !== this && !otherPlayer.paused()) {
-        otherPlayer.pause();
+        otherPlayer.pause()
       }
-    });
-  });
+    })
+  })
 
   this.on("ended", () => {
-  });
+    videojs.log("The video has ended!")
+  })
 
   // Clean up when player is disposed
   this.on("dispose", () => {
-    const index = allVideoPlayers.indexOf(this);
+    const index = allVideoPlayers.indexOf(this)
     if (index > -1) {
-      allVideoPlayers.splice(index, 1);
+      allVideoPlayers.splice(index, 1)
     }
-  });
+  })
 
-  // Inicialización cuando el player está listo
+  // Example of adding a control
+  var MyButton = videojs.extend(videojs.getComponent("Button"), {
+    constructor: function () {
+      videojs.getComponent("Button").apply(this, arguments)
+      this.addClass("vjs-my-custom-button")
+      this.controlText("My Custom Button")
+    },
+    handleClick: () => {
+      videojs.log("My custom button was clicked!")
+    },
+  })
+
+  videojs.registerComponent("MyButton", MyButton)
+
   this.ready(() => {
-    this.playbackRates([0.75, 1, 1.25, 1.5, 2]);
+    this.controlBar.addChild("MyButton", {})
+  })
 
-    // Activar subtítulos después de que los tracks estén cargados
-    this.on('loadedmetadata', () => {
-      const tracks = this.textTracks();
+  // Example of setting options
+  options = videojs.mergeOptions(
+    {
+      myOption: true,
+    },
+    options,
+  )
 
-      if (tracks && tracks.length >= 2) {
-        for (let i = 1; i < tracks.length; i++) {
-          tracks[i].mode = 'disabled';
-        }
-
-        if (language === 'es') {
-          if (tracks[2]) {
-            tracks[2].mode = 'showing';
-          }
-        } else {
-          if (tracks[1]) {
-            tracks[1].mode = 'showing';
-          }
-        }
-
-        this.trigger('texttrackchange');
-      } 
-    });
-
-      // Ajustar texto del botón de reproducción según idioma
-      const playButton = this.el().querySelector('.vjs-big-play-button');
-      const playButtonText = playButton?.querySelector('.vjs-control-text');
-
-      if (playButton && playButtonText) {
-        const label = language === 'es' ? 'Reproducir vídeo' : 'Play video';
-        playButtonText.textContent = label;
-        playButton.setAttribute('title', label);
-        playButton.setAttribute('aria-label', label);
-      }
-  });
-
-  // Opciones personalizadas (si aplican)
-  options = videojs.mergeOptions({ myOption: true }, options);
-});
+  if (options.myOption) {
+    videojs.log("My option is enabled!")
+  }
+})
 
 // Inicializar todos los videos con la clase .video-js
 document.addEventListener("DOMContentLoaded", () => {
-  const videoElements = document.querySelectorAll("video.video-js");
+  var videoElements = document.querySelectorAll("video.video-js")
   videoElements.forEach((el) => {
+    // Solo inicializar si aún no está inicializado
     if (!el.classList.contains("vjs-initialized")) {
       videojs(el, {
         plugins: {
           examplePlugin: {},
         },
-      });
-      el.classList.add("vjs-initialized");
+      })
+      el.classList.add("vjs-initialized")
     }
-  });
-});
+  })
+})
