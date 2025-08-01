@@ -4,5 +4,9 @@
   "private": true,
   "scripts": {
     "build": "echo 'no build script'"
+  },
+  "devDependencies": {
+    "stylelint": "^16.23.0",
+    "stylelint-config-standard": "^39.0.0"
   }
 }
