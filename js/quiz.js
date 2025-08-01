@@ -1,4 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Detectar el idioma del documento
+  const documentLang = document.documentElement.lang || 'en'
+  const isSpanish = documentLang.startsWith('es')
+  
+  // Literales en español e inglés
+  const literals = {
+    es: {
+      correct: "¡Correcto! Excelente trabajo.",
+      incorrect: "Incorrecto. La respuesta correcta es:",
+      quizResults: "Resultados del Cuestionario",
+      score: "Puntuación:",
+      excellentWork: "¡Excelente trabajo!",
+      goodAttempt: "¡Buen intento! Considera revisar el material del curso.",
+      correctAnswers: "respuestas correctas de",
+      quizCompleted: "Cuestionario completado. Obtuviste",
+      correctAnswersOf: "respuestas correctas de",
+      yourScoreIs: "Tu puntuación es",
+      percent: "por ciento.",
+      quizReset: "Cuestionario reiniciado. Ahora puedes responder todas las preguntas nuevamente.",
+      resetQuiz: "Reiniciar Cuestionario",
+      option: "Opción",
+      correctAnswer: "Respuesta correcta",
+      incorrectAnswer: "Respuesta incorrecta. La respuesta correcta es"
+    },
+    en: {
+      correct: "Correct! Excellent work.",
+      incorrect: "Incorrect. The correct answer is:",
+      quizResults: "Quiz Results",
+      score: "Score:",
+      excellentWork: "Excellent work!",
+      goodAttempt: "Good attempt! Consider reviewing the course material.",
+      correctAnswers: "correct answers of",
+      quizCompleted: "Quiz completed. You got",
+      correctAnswersOf: "correct answers of",
+      yourScoreIs: "Your score is",
+      percent: "percent.",
+      quizReset: "Quiz reset. You can now answer all questions again.",
+      resetQuiz: "Reset Quiz",
+      option: "Option",
+      correctAnswer: "Correct answer",
+      incorrectAnswer: "Incorrect answer. The correct answer is"
+    }
+  }
+  
+  // Función para obtener el literal apropiado
+  function getLiteral(key) {
+    return literals[isSpanish ? 'es' : 'en'][key]
+  }
+
   // Mejorar el efecto hover en las opciones
   const quizOptions = document.querySelectorAll(".quiz-options li")
   quizOptions.forEach((option) => {
@@ -95,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Añadir atributos de accesibilidad SOLO a las opciones
         option.setAttribute("role", "button")
         option.setAttribute("tabindex", "0")
-        option.setAttribute("aria-label", `Option ${optionLetter}: ${option.textContent}`)
+        option.setAttribute("aria-label", `${getLiteral('option')} ${optionLetter}: ${option.textContent}`)
         option.setAttribute("data-question", questionNumber)
         option.setAttribute("data-answer", optionLetter)
 
@@ -167,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!feedbackElement) {
         feedbackElement = document.createElement("div")
         feedbackElement.className = "quiz-feedback correct"
-        feedbackElement.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> Correct! Excellent work.'
+        feedbackElement.innerHTML = `<i class="fas fa-check-circle" aria-hidden="true"></i> ${getLiteral('correct')}`
         feedbackElement.style.cssText = `
           margin-top: 0.5rem;
           padding: 0.5rem;
@@ -217,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
         feedbackElement.className = "quiz-feedback incorrect"
         feedbackElement.innerHTML = `
           <i class="fas fa-times-circle" aria-hidden="true"></i> 
-          Incorrect. The correct answer is: ${correctAnswers[questionNumber]}
+          ${getLiteral('incorrect')} ${correctAnswers[questionNumber]}
         `
         feedbackElement.style.cssText = `
           margin-top: 0.5rem;
@@ -238,8 +287,8 @@ document.addEventListener("DOMContentLoaded", () => {
       announcement.setAttribute("aria-live", "polite")
       announcement.className = "sr-only"
       announcement.textContent = isCorrect
-        ? "Correct answer"
-        : `Incorrect answer. The correct answer is ${correctAnswers[questionNumber]}`
+        ? getLiteral('correctAnswer')
+        : `${getLiteral('incorrectAnswer')} ${correctAnswers[questionNumber]}`
       document.body.appendChild(announcement)
 
       // Eliminar el anuncio después de que se haya leído
@@ -276,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const resetButton = document.createElement("button")
       resetButton.className = "save-button"
-      resetButton.innerHTML = '<i class="fas fa-redo" aria-hidden="true"></i> Reset Quiz'
+      resetButton.innerHTML = `<i class="fas fa-redo" aria-hidden="true"></i> ${getLiteral('resetQuiz')}`
 
       resetButton.addEventListener("click", resetQuiz)
       resetButton.addEventListener("keydown", (e) => {
@@ -350,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const announcement = document.createElement("div")
     announcement.setAttribute("aria-live", "polite")
     announcement.className = "sr-only"
-    announcement.textContent = "Quiz reset. You can now answer all questions again."
+    announcement.textContent = getLiteral('quizReset')
     document.body.appendChild(announcement)
 
     setTimeout(() => {
@@ -405,17 +454,17 @@ document.addEventListener("DOMContentLoaded", () => {
       `
 
       const icon = percentage >= 70 ? "fa-trophy" : "fa-chart-bar"
-      const message = percentage >= 70 ? "Excellent work!" : "Good attempt! Consider reviewing the course material."
+      const message = percentage >= 70 ? getLiteral('excellentWork') : getLiteral('goodAttempt')
 
       resultsElement.innerHTML = `
         <h3 style="margin-top: 0; margin-bottom: 1rem;">
-          <i class="fas ${icon}" aria-hidden="true"></i> Quiz Results
+          <i class="fas ${icon}" aria-hidden="true"></i> ${getLiteral('quizResults')}
         </h3>
         <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-          <strong>${correctCount} of ${totalQuestions} correct answers</strong>
+          <strong>${correctCount} ${getLiteral('correctAnswersOf')} ${totalQuestions} ${getLiteral('correctAnswers')}</strong>
         </p>
         <p style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem;">
-          Score: ${percentage}%
+          ${getLiteral('score')} ${percentage}%
         </p>
         <p style="margin-bottom: 0;">${message}</p>
       `
@@ -435,7 +484,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const announcement = document.createElement("div")
       announcement.setAttribute("aria-live", "polite")
       announcement.className = "sr-only"
-      announcement.textContent = `Quiz completed. You got ${correctCount} of ${totalQuestions} correct answers. Your score is ${percentage} percent.`
+      announcement.textContent = `${getLiteral('quizCompleted')} ${correctCount} ${getLiteral('correctAnswersOf')} ${totalQuestions} ${getLiteral('correctAnswers')}. ${getLiteral('yourScoreIs')} ${percentage} ${getLiteral('percent')}`
       document.body.appendChild(announcement)
 
       setTimeout(() => {
